@@ -1,0 +1,64 @@
+body{
+  margin: 0%;
+  padding: 0%;
+}
+.navbar{
+  background: radial-gradient(circle, rgba(243, 247, 4, 0.753) , rgb(255, 208, 1));
+padding: 20px;
+overflow: hidden;
+
+}
+.navbar a {
+  float: left;
+  padding: 10px 16px;
+  color: white;
+  text-decoration: none;
+text-align: left;
+font-weight: bold;
+
+}
+.navbar a:hover{
+  background-color: rgb(197, 7, 255);
+  border-radius: 20px;
+
+}
+.sub-menu{
+  display: none;
+  margin: auto;
+background-color: none;
+z-index: 1;
+}
+.sub-menu li{
+  float: none;
+  text-decoration: none;
+  list-style-type: none;
+}
+.sub-menu li a {
+  padding: 10px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  color: aliceblue;
+}
+.dropdown{
+  float: left;
+  overflow: none;
+}
+.dropdown:hover .sub-menu {
+  display: block;
+padding: 2px;
+}
+
+footer{
+  bottom: 0;
+  position: absolute;
+  width: 100%;
+
+}
+
+.footer{
+  text-align: center;
+  background:radial-gradient(circle,rgb(255, 255, 255),rgb(0, 0, 0));
+  padding: 3px;
+}
+
