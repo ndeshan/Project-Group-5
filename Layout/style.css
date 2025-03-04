@@ -18,7 +18,7 @@ font-weight: bold;
 
 }
 .navbar a:hover{
-  background-color: rgb(197, 7, 255);
+  background:linear-gradient(to right,purple,pink);
   border-radius: 20px;
 
 }
@@ -47,6 +47,11 @@ z-index: 1;
 .dropdown:hover .sub-menu {
   display: block;
 padding: 2px;
+}
+.nav-items{
+  background:radial-gradient(circle,rgb(4, 184, 230),rgb(6, 76, 167));
+  border-radius: 100%;
+  padding: 10px;
 }
 
 footer{
