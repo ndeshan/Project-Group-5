@@ -46,7 +46,7 @@ z-index: 1;
 }
 .dropdown:hover .sub-menu {
   display: block;
-padding: 2px;
+padding: 3px;
 }
 
 footer{
