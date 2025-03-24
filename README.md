@@ -30,7 +30,7 @@
 
 #
 
-# ...coller_cedes...
+# ...collor_cedes...
 
 # #ffffff , #d9481f , #454f5a , #232d39 , #343a40
 
