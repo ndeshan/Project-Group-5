@@ -36,4 +36,38 @@
 
 #
 
+# Nipuna : Home , Contact_Us
+
+#
+
+# Naveen : Login , Sign up , Gym_membership_And_Fitness_Articles
+
+#
+
+# Damika : Event_and_Challenges , Blog_and_Articles
+
+#
+
+# Tharupama : BMI , Workout_Plans
+
+#
+
+# Binoy : Video_Tutorials , About_Us
+
+#
+
+# Maneesha : Diet_and_Nutrition
+
+#
+
+# Nimnadee : Personal_Training
+
+#
+
+# Eeshani : Fitness_Tips
+
+#
+
+#
+
 #
