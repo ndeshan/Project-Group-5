@@ -48,7 +48,7 @@ z-index: 1;
 }
 .dropdown:hover .sub-menu {
   display: block;
-padding: 2px;
+padding: 3px;
 }
 .nav-items{
   background:radial-gradient(circle,rgb(4, 184, 230),rgb(6, 76, 167));
