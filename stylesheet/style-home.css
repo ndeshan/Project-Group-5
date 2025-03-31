@@ -1,9 +1,11 @@
 *{padding: 0;
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
 
 }
-
+body{
+     font-family: "Poppins", sans-serif;
+    font-weight: 100;;
+}
 .section-0{
     background-image: url(../Images/Home-page-header-background.jpg);
     background-repeat: no-repeat;
@@ -15,16 +17,17 @@
     margin-left: auto;
     margin-right: auto;
     width: 60%;
-    background-color: aqua;
-    padding:30px 5%;
+    /* background-color: #adb5bd; */
+    background-color: transparent;
+    padding:30px 100px;
     align-items: center; 
 }
+
 .image img{
     width: 150px;
     height: 150px;
     margin-top: -80px;
     margin-left: 70px;
-
 }
 .header nav a{
     margin-top: 10px;
@@ -35,7 +38,10 @@
     font-size: 25px;
     font-weight: 20px; 
 }
-
+.header nav a:hover{
+    color:#f35b04 ;
+    background-color: transparent;
+}
 .container{
     display: grid;
     grid-template-columns: 50% 50%; ;
@@ -53,24 +59,25 @@
 }
 .h1part{
     grid-area: h1part;
-    font-weight: bolder;
-    font-size: 30px;
+    font-size: 50px;
     width: 100%;
     text-align: center;
-    padding: 20px;
+    padding: 50px;
+    color: antiquewhite;
+    font-family: "Rowdies", sans-serif;
+    font-weight: 300;
+    margin-bottom: 40px;
 }
 .fitnessTips{
     grid-area: fitnessTips;
     margin-left: auto;
     margin-right: auto;
-    
 }
 .aboutAs{
     grid-area: aboutAs;
     margin-left: auto;
     margin-right: auto;
     
-
 }
 .joinNow{
     grid-area: joinNow;
@@ -83,19 +90,20 @@
 }
 .button-fitness-tips{
     padding: 20px;
-    background-color: aqua;
+    background-color:#e7dfc6;
     font-size: 20px;
     width: 130%;
-    border-radius: 20px;
+   
 }
 .button-about-us{
     padding: 20px;
     font-size: 20px;
     width: 55%;
     background-color: transparent;
-    border-color: white;
+    border-color: #f0544f;
     color: white;
-    border-radius: 20px;
+   
+
 
 }
 .button-join-now{
@@ -103,7 +111,8 @@
     font-size: 20px;
     padding-right: 90px;
     padding-left: 70px;
-    border-radius: 20px;
+   
+    background-color:#f0544f ;
 }
 .paragraph{
     grid-area: paragraph;
@@ -111,12 +120,12 @@
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-    font-size: large;
+    font-size: 20px;
     color: antiquewhite;
 }
 
 .section-1{
-    background-color: tomato;
+    background-color:#e9f1f7;
     padding: 3%;
     font-size: xx-large;
     text-align: center;
@@ -237,15 +246,16 @@
 .bmi img{
     width: 400px;
     padding: 30px;
+    margin-left: -450px;
 }
 .bmi-advice{
     grid-area: bmi-advicce;
     color: white;
     font-size: 60px;
-    padding: 5%;
-    text-align: center;
-    margin-top: 70px;
-    margin-right: 90px;
+    padding: 10%;
+    text-align: left;
+   margin-left: -150px;
+    margin-top: 60px;
 }
 .section-2-flex{
     display: flex;
@@ -263,40 +273,50 @@
 .success-stories img{
     width: 200px;
     border-radius: 20px;
+    
 }
 .user-feedback{
     grid-area: user-feedback;
     color: white;
     font-size: 30px;
     text-align: center;
-
+    margin-right: -40px;
+    margin-bottom: 40px;
 }
 .user-feedback img{
     width: 200px;
     height: 280px;
     border-radius: 20px;
+    margin-right: -90px;
 }
 .testimonial{
     grid-area: testimonial;
     color: white;
     font-size: 50px;
-    padding: 30px;
-    text-align: center;
-
+    padding: 20px;
+    text-align: left;
+    padding-top: -20px;
+    margin-left: -90px;
+    margin-top: 50px;
 }
 .button-start-your-journey{
     font-size: 30px;
-    background-color: rgb(255, 226, 8);
-    padding: 15px;
+    background-color:#ff0000;
+    padding: 20px;
     font-weight: bold;
     border-radius: 20px;
+    color: rgb(255, 255, 255);
+    float: inline-start;
+    margin-left: -5px;
+
 }
 
 footer{
-    background-color: orange;
+    background-color:#464545;
     bottom: auto;
     position: relative;
     width: 100%;
+    
 }
 .footer-img img{
 
@@ -311,7 +331,8 @@ footer{
     text-decoration: none;
     padding: 40px 20px;
     font-size: 20px;
-
+    color: white;
+    
 }
 .footerlink{
     margin-top: auto;
@@ -335,7 +356,7 @@ footer{
 }
   footer .footer-second-part{
     text-align: center;
-    background-color: rgba(7, 7, 206, 0.8);
+    background-color: #2f2f2f;
     padding: 20px;
     color: white;
     font-weight: bold;
