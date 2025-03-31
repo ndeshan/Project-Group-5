@@ -14,7 +14,7 @@
 .header nav{
   margin-left: auto;
   margin-right: auto;
-  width: 50%;
+  width: 60%;
   background-color: aqua;
   padding:30px 5%;
   align-items: center; 
@@ -32,33 +32,58 @@
   margin: 0 20px;
   text-decoration: none;
   color: white;
-  font-size: 17px; 
+  font-size: 25px;
+  font-weight: 20px; 
 }
+
+
 
 
 footer{
+  background-color: orange;
   bottom: auto;
   position: relative;
   width: 100%;
+}
+.footer-img img{
+
+  width: 200px;
+}
+.footer-flexbox{
+  display: flex;
+  gap: 20px;
+  
+}
+.footerlink a{
+  text-decoration: none;
+  padding: 40px 20px;
+  font-size: 20px;
 
 }
-footer .footer-first-part{
-  background-color: rgba(11, 107, 197, 0.8);
-  padding: 80px 20px;  
-  color: white;
-  font-weight: bold;
+.footerlink{
+  margin-top: auto;
+  margin-bottom: auto;
 }
-footer .footer-first-part p{
-  text-decoration: none;
-  color: white;
-  text-align: center;
-  font-size: 20px;
-  margin-top: 0;
+.footer-social-line-1{
+  padding: 10px;
+  margin-left: 1200px;
+  margin-top: -160px;
+}
+.footer-social-line-1 img{
+  width: 30px;
+  padding: 10px;
+  
+}
+.h1{
+  width: 50%;
+  margin-left: 20%;
+  border: 2px solid white;
+  
 }
 footer .footer-second-part{
   text-align: center;
   background-color: rgba(7, 7, 206, 0.8);
-  padding: 3px;
+  padding: 20px;
   color: white;
   font-weight: bold;
   
@@ -67,7 +92,10 @@ footer .footer-second-part{
 footer .footer-second-part a{
   text-decoration: none;
   color: white;
-  padding: 20px;
+  padding: 40px 20px;
+}
+footer .footer-second-part p{
+  padding: 10px;
 }
 .footer-second-part a:hover{
   text-decoration: underline;
