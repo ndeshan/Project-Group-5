@@ -66,6 +66,50 @@ body{
 }
 .fitnessTips{
     grid-area: fitnessTips;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+.aboutAs{
+    grid-area: aboutAs;
+    margin-left: auto;
+    margin-right: auto;
+    
+
+}
+.joinNow{
+    grid-area: joinNow;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 20px;
+    padding: 20px;
+    
+
+}
+.button-fitness-tips{
+    padding: 20px;
+    background-color: aqua;
+    font-size: 20px;
+    width: 130%;
+}
+.button-about-us{
+    padding: 20px;
+    font-size: 20px;
+    width: 55%;
+    background-color: transparent;
+    border-color: white;
+    color: white;
+}
+.button-join-now{
+    padding: 20px;
+    font-size: 20px;
+    padding-right: 90px;
+    padding-left: 70px;
+    
+}
+
+/* .fitnessTips{
+    grid-area: fitnessTips;
     padding: 20px 30px;
     margin-left: auto;
     margin-right: auto;
@@ -111,7 +155,7 @@ body{
     font-size: large;
 
 }
-
+ */
 .paragraph{
     grid-area: paragraph;
     padding: 40px ;
@@ -256,6 +300,10 @@ body{
 .user-feedback{
     grid-area: user-feedback;
     color: white;
+
+}
+.user-feedback img{
+    width: 200px;
 
 }
 .testimonial{
