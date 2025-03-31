@@ -4,67 +4,139 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login</title>
-  </head>
-  <link rel="stylesheet" href="../Layout/style.css" />
+    <style>
+      body{
+        font-family: sans-serif;
+      }
+      .login-container{
+        display: flex;
+        align-items: center;
+        justify-content: center;       
+        margin-top: 40px;
+        box-shadow: 1px 3px 12px rgb(56, 56, 56);
+       width: 1000px;
+        border-radius:16px ;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .pic-container{
+        background-color: rgb(234, 234, 234);
+        height: 600px;
+        width:400px;
+        border-top-left-radius: 16px; 
+        border-bottom-left-radius:16px ;
+        
+      } 
+      .form-container{
+        background-color: rgb(255, 255, 255);  
+        height: 600px;
+        width:600px;
+        border-top-right-radius: 16px;
+        border-bottom-right-radius:16px ;
+        
+      }
+      .form-head{
+        text-align: center;
+        margin-top: 50PX;
+        margin-bottom: 30px;
+      }
+      .form-head h1{
+        color: #0067b6;
+      }
+      .login-form input[type="text"]{
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        width: 80%;
+        height: 40px;
+        border-radius: 10px;
+        border-style: solid ;
+        border: solid 1px #008bd0;
+        outline-color: #007fee;
+      
 
+      }
+      .login-form input[type="text"]::placeholder{
+        padding-left: 10px;
+        font-size: 14px;
+      }
+      .login-form input[type="button"]{
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        width: 80%;
+        height: 40px;
+        margin-top: 25px;
+        border-radius: 10px;
+        border: 0;
+       background-color: #0067b6;
+       color: white;
+       font-size: 18px;
+       transition: background-color  0.4s;
+       cursor: pointer;
+      }
+      .login-form input[type="button"]:hover{
+        background-color: #0080e2;
+      }
+      .login-form input[type="button"]:active{
+        scale: 1.01;
+
+      }
+      label{
+      margin-left: 58px;
+        color: #292929;
+        font-size: 26px;
+      }
+      .sign-up-part{
+        text-align: center;
+
+      }
+      .sign{
+        color: #007fbe;
+        text-decoration: none;
+        font-size: 17px;
+      }
+      .back-image{
+        height: 600px;
+         width: 400px;
+         border-top-left-radius: 16px;
+         border-bottom-left-radius: 16px;
+      }
+      .web-Logo{
+        margin-left: 65px;
+        margin-top: 120px;
+        height: 270px;
+        height: 270px ;
+        position:fixed ;
+      }
+    </style>
   <body>
-    <header class="header">
-      <nav class="navbar">
-        <a href="index.html" class="nav-items">Home</a>
-        <a href="Diet_and_Nutrition.html">Diet & Nutrition</a>
-        <a href="Fitness_Tips.html">Fitness Tips</a>
-        <a href="login.html">Login</a>
-        <a href="About_Us.html">About</a>
-        <a href="Contact_Us.html">Contact</a>
-      </nav>
-      <div class="image">
-        <img src="../Images/logo.png" alt="logo" />
-      </div>
-      <div>
-    </header>
+    <div class="login-container">
+      <div class="pic-container">
+        <img src="/Images/webLogo.png" alt="background-image" class="web-Logo" >
+        <img src="/Images/log-pic.jpg" alt="background-image" class="back-image" >
 
-    <footer>
-      <div class="footer-flexbox">
-        <div class="footer-img">
-          <img src="../Images/logo.png" alt="LOGO" />
-        </div>
-        <div class="footerlink">
-          <a href="index.html">Home</a> <br /><a href="About_Us.html"
-            >About us</a
-          >
-          <br /><a href="Contact_Us.html">contact us</a>
-        </div>
+
       </div>
-      <div>
-        <div class="footer-social-line-1">
-          <img
-            src="../Images/footer-mail-logo.png"
-            alt="mail-logo"
-          />fitnesslife@gmail.com
-          <br />
-          <img src="../Images/footer-facebook-logo.png" alt="facebook" />
-          <img src="../Images/footer-twiter-logo.png" alt="twitter" />
-          <img src="../Images/footer-message-logo.png" alt="linkedin" />
+      <div class="form-container">
+        <div class="form-head">
+        <h1>Welcome back</h1>
+        <p>Welcome user,please enter your details</p>
         </div>
+
+        <div class="login-form">
+        <label for="nameId">User Name</label><br>
+        <input type="text" id="nameId" placeholder="enter user name"><br>
+        <label for="passwordId">Password</label><br>
+        <input type="text" id="passwrordId" placeholder="enter password"><br>
+        <input type="button" value="Login"><br>
+        <p class="sign-up-part">Don't have an account?  <a href="" class="sign">Sign Up</a></p>
+       
       </div>
 
-      <hr class="h1" />
-      <div class="footer-second-part">
-        <a
-          href="https://en.wikipedia.org/wiki/Language_policy#:~:text=Language%20policy%20has%20been%20defined,xi)."
-          >Language Policy</a
-        >
-        <a href="https://en.wikipedia.org/wiki/Privacy_policy"
-          >Privacy Policy</a
-        >
-        <a href="https://en.wikipedia.org/wiki/Terms_of_service"
-          >Terms of Service</a
-        >
-        <a href="Contact_Us.html">Contact Us</a>
-        <a href="https://en.wikipedia.org/wiki/HTTP_cookie">Cookies</a>
+    </div>
 
-        <p>@ Group 5 mini project</p>
-      </div>
-    </footer>
+    </div>
+    
   </body>
 </html>
