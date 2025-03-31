@@ -3,24 +3,18 @@
     font-family: Arial, Helvetica, sans-serif;
 
 }
-body{
-    
-}
+
 .section-0{
     background-image: url(../Images/Home-page-header-background.jpg);
     background-repeat: no-repeat;
     background-size:cover;
     
 }
-.header{
-   
-    
-    
-}
+
 .header nav{
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
+    width: 60%;
     background-color: aqua;
     padding:30px 5%;
     align-items: center; 
@@ -38,7 +32,8 @@ body{
     margin: 0 20px;
     text-decoration: none;
     color: white;
-    font-size: 17px; 
+    font-size: 25px;
+    font-weight: 20px; 
 }
 
 .container{
@@ -91,6 +86,7 @@ body{
     background-color: aqua;
     font-size: 20px;
     width: 130%;
+    border-radius: 20px;
 }
 .button-about-us{
     padding: 20px;
@@ -99,63 +95,16 @@ body{
     background-color: transparent;
     border-color: white;
     color: white;
+    border-radius: 20px;
+
 }
 .button-join-now{
     padding: 20px;
     font-size: 20px;
     padding-right: 90px;
     padding-left: 70px;
-    
+    border-radius: 20px;
 }
-
-/* .fitnessTips{
-    grid-area: fitnessTips;
-    padding: 20px 30px;
-    margin-left: auto;
-    margin-right: auto;
-    gap: 0;
-}
-.fitnessTips a{
-    background-color: wheat;
-    text-decoration: none;
-    padding: 20px 90px;
-    text-align: center;
-    font-size: large;
-
-}
-.aboutUs{
-    grid-area: aboutUs;
-    text-decoration: none;  
-    background-color: rgba(255, 255, 255, 0.5);
-    padding: 20px 20px;
-    border-color: rgb(255, 255, 255); 
-    margin-right: 150px;
-    text-align: center;
-    font-size: large;
- }
-.aboutUs a{
-    color: rgb(255, 255, 255);
-    padding: 20px 0px;
-    margin-right: 20px;
-    }
-.joinNow{
-    grid-area: joinNow;
-    text-decoration: none;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 40px;
-    padding: 0px 20px;
-}
-.joinNow a{
-    text-decoration: none;
-    background-color: tomato;
-    color: white;
-   padding: 20px 160px;
-    text-align: center;
-    font-size: large;
-
-}
- */
 .paragraph{
     grid-area: paragraph;
     padding: 40px ;
@@ -281,60 +230,117 @@ body{
 }
 .bmi{
     grid-area: bmi;
+    padding: 30px;
+    margin-left: auto;
+    margin-right: auto;
 }
 .bmi img{
-    width: 300px;
+    width: 400px;
+    padding: 30px;
 }
 .bmi-advice{
     grid-area: bmi-advicce;
     color: white;
+    font-size: 60px;
+    padding: 5%;
+    text-align: center;
+    margin-top: 70px;
+    margin-right: 90px;
+}
+.section-2-flex{
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 20px;
 }
 .success-stories{
     grid-area: success-stories;
     color: white;
+    font-size: 30px;
+    text-align: center;
 
 }
 .success-stories img{
     width: 200px;
+    border-radius: 20px;
 }
 .user-feedback{
     grid-area: user-feedback;
     color: white;
+    font-size: 30px;
+    text-align: center;
 
 }
 .user-feedback img{
     width: 200px;
-
+    height: 280px;
+    border-radius: 20px;
 }
 .testimonial{
     grid-area: testimonial;
     color: white;
+    font-size: 50px;
+    padding: 30px;
+    text-align: center;
 
+}
+.button-start-your-journey{
+    font-size: 30px;
+    background-color: rgb(255, 226, 8);
+    padding: 15px;
+    font-weight: bold;
+    border-radius: 20px;
 }
 
 footer{
+    background-color: orange;
     bottom: auto;
     position: relative;
     width: 100%;
-  
-  }
-  footer .footer-first-part{
-    background-color: rgba(11, 107, 197, 0.8);
-    padding: 80px 20px;  
-    color: white;
-    font-weight: bold;
-  }
-  footer .footer-first-part p{
+}
+.footer-img img{
+
+    width: 200px;
+}
+.footer-flexbox{
+    display: flex;
+    gap: 20px;
+    
+}
+.footerlink a{
     text-decoration: none;
-    color: white;
-    text-align: center;
+    padding: 40px 20px;
     font-size: 20px;
-    margin-top: 0;
-  }
+
+}
+.footerlink{
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.footer-social-line-1{
+    padding: 10px;
+    margin-left: 1200px;
+    margin-top: -160px;
+}
+.footer-social-line-1 img{
+    width: 30px;
+    padding: 10px;
+    
+}
+
+
+
+
+.h1{
+    width: 50%;
+    margin-left: 20%;
+    border: 2px solid white;
+    
+}
   footer .footer-second-part{
     text-align: center;
     background-color: rgba(7, 7, 206, 0.8);
-    padding: 3px;
+    padding: 20px;
     color: white;
     font-weight: bold;
     
@@ -343,9 +349,12 @@ footer{
   footer .footer-second-part a{
     text-decoration: none;
     color: white;
-    padding: 20px;
+    padding: 40px 20px;
+  }
+  footer .footer-second-part p{
+    padding: 10px;
   }
   .footer-second-part a:hover{
     text-decoration: underline;
   }
-  
+   
