@@ -1,0 +1,303 @@
+*{padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+body{
+    
+}
+.section-0{
+    background-image: url(../Images/Home-page-header-background.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    
+}
+.header{
+   
+    
+    
+}
+.header nav{
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    background-color: aqua;
+    padding:30px 5%;
+    align-items: center; 
+}
+.image img{
+    width: 150px;
+    height: 150px;
+    margin-top: -80px;
+    margin-left: 70px;
+
+}
+.header nav a{
+    margin-top: 10px;
+    padding: 10px ;
+    margin: 0 20px;
+    text-decoration: none;
+    color: white;
+    font-size: 17px; 
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 50% 50%; ;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas:
+     "h1part h1part"
+    "fitnessTips aboutUs"
+    "joinNow joinNow"
+    "paragraph paragraph";
+   
+    width: 50%;
+    padding: 60px;
+    
+   
+}
+.h1part{
+    grid-area: h1part;
+    font-weight: bolder;
+    font-size: 30px;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+}
+.fitnessTips{
+    grid-area: fitnessTips;
+    padding: 20px 30px;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 0;
+}
+.fitnessTips a{
+    background-color: wheat;
+    text-decoration: none;
+    padding: 20px 90px;
+    text-align: center;
+    font-size: large;
+
+}
+.aboutUs{
+    grid-area: aboutUs;
+    text-decoration: none;  
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 20px 20px;
+    border-color: rgb(255, 255, 255); 
+    margin-right: 150px;
+    text-align: center;
+    font-size: large;
+ }
+.aboutUs a{
+    color: rgb(255, 255, 255);
+    padding: 20px 0px;
+    margin-right: 20px;
+    }
+.joinNow{
+    grid-area: joinNow;
+    text-decoration: none;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    padding: 0px 20px;
+}
+.joinNow a{
+    text-decoration: none;
+    background-color: tomato;
+    color: white;
+   padding: 20px 160px;
+    text-align: center;
+    font-size: large;
+
+}
+
+.paragraph{
+    grid-area: paragraph;
+    padding: 40px ;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: large;
+    color: antiquewhite;
+}
+
+.section-1{
+    background-color: tomato;
+    padding: 3%;
+    font-size: xx-large;
+    text-align: center;
+}
+
+.container-2{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    background-color: rgb(234, 224, 224);
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.container-2-1 img{
+    width: 250px;
+    height: 350px;
+    border-radius: 30px;
+    
+
+}
+.container-2-2 img{
+    width: 250px;
+    height: 350px;
+    border-radius: 30px;
+
+}
+.container-2-3 img{
+    width: 250px;
+    height: 350px;
+    border-radius: 30px;
+
+}
+.container-2-4 img{
+    width: 250px;
+    height: 350px;
+    border-radius: 30px;
+
+}
+.container-2-1{
+    text-align: center;
+    padding: 30px;
+}
+.container-2-2{
+    text-align: center;
+    padding: 30px;
+}
+.container-2-3{
+    text-align: center;
+    padding: 30px;
+}
+.container-2-4{
+    text-align: center;
+    padding: 30px;
+}
+
+.container-2-1 h2{
+    padding: 10px;
+    font-size: 30px;
+}
+.container-2-2 h2{
+    padding: 10px;
+    font-size: 30px;
+
+
+}
+.container-2-3 h2{
+    padding: 10px;
+    font-size: 30px;
+
+
+}
+.container-2-4 h2{
+    padding: 10px;
+    font-size: 30px;
+}
+.container-2-1 p{
+    padding: 5px;
+    font-size: 20px;
+    text-align: center;
+}
+.container-2-2 p{
+    padding: 5px;
+    font-size: 20px;
+    text-align: center;
+}
+.container-2-3 p{
+    padding: 5px;
+    font-size: 20px;
+    text-align: center;
+}
+.container-2-4 p{
+    padding: 5px;
+    font-size: 20px;
+    text-align: center;
+}
+.section-2{
+    background-image: url(../Images/home-page-section-2-background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.container-3{
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+    "bmi bmi bmi-advicce" 
+    "success-stories user-feedback testimonial";
+    border-color: 2px solid white;
+}
+.bmi{
+    grid-area: bmi;
+}
+.bmi img{
+    width: 300px;
+}
+.bmi-advice{
+    grid-area: bmi-advicce;
+    color: white;
+}
+.success-stories{
+    grid-area: success-stories;
+    color: white;
+
+}
+.success-stories img{
+    width: 200px;
+}
+.user-feedback{
+    grid-area: user-feedback;
+    color: white;
+
+}
+.testimonial{
+    grid-area: testimonial;
+    color: white;
+
+}
+
+footer{
+    bottom: auto;
+    position: relative;
+    width: 100%;
+  
+  }
+  footer .footer-first-part{
+    background-color: rgba(11, 107, 197, 0.8);
+    padding: 80px 20px;  
+    color: white;
+    font-weight: bold;
+  }
+  footer .footer-first-part p{
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    margin-top: 0;
+  }
+  footer .footer-second-part{
+    text-align: center;
+    background-color: rgba(7, 7, 206, 0.8);
+    padding: 3px;
+    color: white;
+    font-weight: bold;
+    
+  }
+  
+  footer .footer-second-part a{
+    text-decoration: none;
+    color: white;
+    padding: 20px;
+  }
+  .footer-second-part a:hover{
+    text-decoration: underline;
+  }
+  
