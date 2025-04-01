@@ -1,12 +1,9 @@
 *{padding: 0;
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
 
 }
 .section-0{
-  background-image: url(../Images/Home-page-header-background.jpg);
-  background-repeat: no-repeat;
-  background-size:cover;
+ background-color: rgb(0, 0, 0,0.9);
   
 }
 
@@ -14,16 +11,16 @@
   margin-left: auto;
   margin-right: auto;
   width: 60%;
-  background-color: rgb(77, 73, 73);
-  padding:30px 5%;
+  background-color: transparent;
+  padding:30px 100px;
   align-items: center; 
 }
+
 .image img{
   width: 150px;
   height: 150px;
   margin-top: -80px;
   margin-left: 70px;
-
 }
 .header nav a{
   margin-top: 10px;
@@ -34,15 +31,19 @@
   font-size: 25px;
   font-weight: 20px; 
 }
-
+.header nav a:hover{
+  color:#f35b04 ;
+  background-color: transparent;
+}
 
 
 
 footer{
-  background-color: orange;
+  background-color:#464545;
   bottom: auto;
   position: relative;
   width: 100%;
+  
 }
 .footer-img img{
 
@@ -57,7 +58,8 @@ footer{
   text-decoration: none;
   padding: 40px 20px;
   font-size: 20px;
-
+  color: white;
+  
 }
 .footerlink{
   margin-top: auto;
@@ -81,7 +83,7 @@ footer{
 }
 footer .footer-second-part{
   text-align: center;
-  background-color: rgba(7, 7, 206, 0.8);
+  background-color: #2f2f2f;
   padding: 20px;
   color: white;
   font-weight: bold;
@@ -99,4 +101,4 @@ footer .footer-second-part p{
 .footer-second-part a:hover{
   text-decoration: underline;
 }
-
+ 
