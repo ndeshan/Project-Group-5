@@ -1,0 +1,374 @@
+*{padding: 0;
+    margin: 0;
+
+}
+body{
+     font-family: "Poppins", sans-serif;
+    font-weight: 100;;
+}
+.section-0{
+    background-image: url(../Images/Home-page-header-background.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    
+}
+
+.header nav{
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    /* background-color: #adb5bd; */
+    background-color: transparent;
+    padding:30px 100px;
+    align-items: center; 
+}
+
+.image img{
+    width: 150px;
+    height: 150px;
+    margin-top: -80px;
+    margin-left: 70px;
+}
+.header nav a{
+    margin-top: 10px;
+    padding: 10px ;
+    margin: 0 20px;
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+    font-weight: 20px; 
+}
+.header nav a:hover{
+    color:#f35b04 ;
+    background-color: transparent;
+}
+.container{
+    display: grid;
+    grid-template-columns: 50% 50%; ;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas:
+     "h1part h1part"
+    "fitnessTips aboutUs"
+    "joinNow joinNow"
+    "paragraph paragraph";
+   
+    width: 50%;
+    padding: 60px;
+    
+   
+}
+.h1part{
+    grid-area: h1part;
+    font-size: 50px;
+    width: 100%;
+    text-align: center;
+    padding: 50px;
+    color: antiquewhite;
+    font-family: "Rowdies", sans-serif;
+    font-weight: 300;
+    margin-bottom: 40px;
+}
+.fitnessTips{
+    grid-area: fitnessTips;
+    margin-left: auto;
+    margin-right: auto;
+}
+.aboutAs{
+    grid-area: aboutAs;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+.joinNow{
+    grid-area: joinNow;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 20px;
+    padding: 20px;
+    
+
+}
+.button-fitness-tips{
+    padding: 20px;
+    background-color:#e7dfc6;
+    font-size: 20px;
+    width: 130%;
+   
+}
+.button-about-us{
+    padding: 20px;
+    font-size: 20px;
+    width: 55%;
+    background-color: transparent;
+    border-color: #f0544f;
+    color: white;
+}
+.button-join-now{
+    padding: 20px;
+    font-size: 20px;
+    padding-right: 90px;
+    padding-left: 70px;
+   
+    background-color:#f0544f ;
+}
+.paragraph{
+    grid-area: paragraph;
+    padding: 40px ;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: 20px;
+    color: antiquewhite;
+}
+
+.section-1{
+    background-color:#e9f1f7;
+    padding: 3%;
+    font-size: xx-large;
+    text-align: center;
+}
+
+.container-2{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    background-color: rgb(234, 224, 224);
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.container-2-1 img{
+    width: 250px;
+    height: 350px;
+    border-radius: 30px;
+    
+
+}
+.container-2-2 img{
+    width: 250px;
+    height: 350px;
+    border-radius: 30px;
+
+}
+.container-2-3 img{
+    width: 250px;
+    height: 350px;
+    border-radius: 30px;
+
+}
+.container-2-4 img{
+    width: 250px;
+    height: 350px;
+    border-radius: 30px;
+
+}
+.container-2-1{
+    text-align: center;
+    padding: 30px;
+}
+.container-2-2{
+    text-align: center;
+    padding: 30px;
+}
+.container-2-3{
+    text-align: center;
+    padding: 30px;
+}
+.container-2-4{
+    text-align: center;
+    padding: 30px;
+}
+
+.container-2-1 h2{
+    padding: 10px;
+    font-size: 30px;
+}
+.container-2-2 h2{
+    padding: 10px;
+    font-size: 30px;
+
+
+}
+.container-2-3 h2{
+    padding: 10px;
+    font-size: 30px;
+
+
+}
+.container-2-4 h2{
+    padding: 10px;
+    font-size: 30px;
+}
+.container-2-1 p{
+    padding: 5px;
+    font-size: 20px;
+    text-align: center;
+}
+.container-2-2 p{
+    padding: 5px;
+    font-size: 20px;
+    text-align: center;
+}
+.container-2-3 p{
+    padding: 5px;
+    font-size: 20px;
+    text-align: center;
+}
+.container-2-4 p{
+    padding: 5px;
+    font-size: 20px;
+    text-align: center;
+}
+.section-2{
+    background-image: url(../Images/home-page-section-2-background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.container-3{
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+    "bmi bmi bmi-advicce" 
+    "success-stories user-feedback testimonial";
+    border-color: 2px solid white;
+}
+.bmi{
+    grid-area: bmi;
+    padding: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.bmi img{
+    width: 400px;
+    padding: 30px;
+    margin-left: -450px;
+}
+.bmi-advice{
+    grid-area: bmi-advicce;
+    color: white;
+    font-size: 60px;
+    padding: 10%;
+    text-align: left;
+   margin-left: -150px;
+    margin-top: 60px;
+}
+.section-2-flex{
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 20px;
+}
+.success-stories{
+    grid-area: success-stories;
+    color: white;
+    font-size: 30px;
+    text-align: center;
+
+}
+.success-stories img{
+    width: 200px;
+    border-radius: 20px;
+    
+}
+.user-feedback{
+    grid-area: user-feedback;
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    margin-right: -40px;
+    margin-bottom: 40px;
+}
+.user-feedback img{
+    width: 200px;
+    height: 280px;
+    border-radius: 20px;
+    margin-right: -90px;
+}
+.testimonial{
+    grid-area: testimonial;
+    color: white;
+    font-size: 50px;
+    padding: 20px;
+    text-align: left;
+    padding-top: -20px;
+    margin-left: -90px;
+    margin-top: 50px;
+}
+.button-start-your-journey{
+    font-size: 30px;
+    background-color:#ff0000;
+    padding: 20px;
+    font-weight: bold;
+    border-radius: 20px;
+    color: rgb(255, 255, 255);
+    float: inline-start;
+    margin-left: -5px;
+
+}
+
+footer{
+    background-color:#464545;
+    bottom: auto;
+    position: relative;
+    width: 100%;
+    
+}
+.footer-img img{
+
+    width: 200px;
+}
+.footer-flexbox{
+    display: flex;
+    gap: 20px;
+    
+}
+.footerlink a{
+    text-decoration: none;
+    padding: 40px 20px;
+    font-size: 20px;
+    color: white;
+    
+}
+.footerlink{
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.footer-social-line-1{
+    padding: 10px;
+    margin-left: 1200px;
+    margin-top: -160px;
+}
+.footer-social-line-1 img{
+    width: 30px;
+    padding: 10px;
+    
+}
+.h1{
+    width: 50%;
+    margin-left: 20%;
+    border: 2px solid white;
+    
+}
+  footer .footer-second-part{
+    text-align: center;
+    background-color: #2f2f2f;
+    padding: 20px;
+    color: white;
+    font-weight: bold;
+    
+  }
+  
+  footer .footer-second-part a{
+    text-decoration: none;
+    color: white;
+    padding: 40px 20px;
+  }
+  footer .footer-second-part p{
+    padding: 10px;
+  }
+  .footer-second-part a:hover{
+    text-decoration: underline;
+  }
+   
