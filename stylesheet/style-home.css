@@ -4,7 +4,7 @@
 }
 body{
      font-family: "Poppins", sans-serif;
-    font-weight: 100;;
+    font-weight: 100;
 }
 .section-0{
     background-image: url(../Images/Home-page-header-background.jpg);
@@ -16,32 +16,51 @@ body{
 .header nav{
     margin-left: auto;
     margin-right: auto;
-    width: 60%;
-    /* background-color: #adb5bd; */
     background-color: transparent;
-    padding:30px 100px;
-    align-items: center; 
+    align-items: center;
+}
+.navbar{
+    float: inline-end;
+    padding: 20px;
+    font-size: 30px
 }
 
-.image img{
-    width: 150px;
-    height: 150px;
-    margin-top: -80px;
-    margin-left: 70px;
+.navbar .nav-login{
+    color: #f5ebeb;
+    padding: 20px 30px;
+    background-color: rgba(255, 0, 0, 0.9);
+    border-radius: 30px 0px 30px 0px;
+    transition: transform 0.3s ease-in-out;
+    border: none;
 }
-.header nav a{
-    margin-top: 10px;
-    padding: 10px ;
-    margin: 0 20px;
+.navbar .nav-login:hover{
+    background-color: rgba(196, 59, 17);
+    color: black;
+    transform: scale(1.5);
+}
+
+.navbar a{
+    padding: 40px;
     text-decoration: none;
     color: white;
-    font-size: 25px;
-    font-weight: 20px; 
+    padding: 20px;
+
 }
-.header nav a:hover{
-    color:#f35b04 ;
-    background-color: transparent;
+.navbar a:hover{
+    color: orange;
+
 }
+.images img{
+    width: 120px;
+    float: inline-start;
+    padding: 10px 10px 10px 10px;
+}
+.navbar{
+    padding-top: 40px;
+}
+
+
+
 .container{
     display: grid;
     grid-template-columns: 50% 50%; ;
@@ -51,9 +70,10 @@ body{
     "fitnessTips aboutUs"
     "joinNow joinNow"
     "paragraph paragraph";
-   
     width: 50%;
-    padding: 60px;
+    padding: 20px 20px 20px 20px;
+    gap: 20px;
+    row-gap: 30px;
     
    
 }
@@ -62,54 +82,41 @@ body{
     font-size: 50px;
     width: 100%;
     text-align: center;
-    padding: 50px;
+    padding: 20px;
     color: antiquewhite;
     font-family: "Rowdies", sans-serif;
     font-weight: 300;
-    margin-bottom: 40px;
+    margin-bottom: 10px;
 }
-.fitnessTips{
+.fitnessTips button{
     grid-area: fitnessTips;
-    margin-left: auto;
-    margin-right: auto;
+    float: right;
+    padding: 20px 20px 20px 20px;
+    font-size: 25px;
+    background-color: #A27B5C;
+    border: none;
+
+
 }
-.aboutAs{
+.button-about-us{
     grid-area: aboutAs;
-    margin-left: auto;
-    margin-right: auto;
-    
+    padding: 20px 20px 20px 20px;
+    font-size: 25px;
+    background-color: #A27B5C;
+    border: none;
 }
-.joinNow{
+
+.joinNow button{
     grid-area: joinNow;
     margin-left: auto;
     margin-right: auto;
-    font-size: 20px;
     padding: 20px;
-    
+    display: block;
+    margin-right: -20%;
+    font-size: 25px;
+    border: none;
+    background-color: #FF0303;
 
-}
-.button-fitness-tips{
-    padding: 20px;
-    background-color:#e7dfc6;
-    font-size: 20px;
-    width: 130%;
-   
-}
-.button-about-us{
-    padding: 20px;
-    font-size: 20px;
-    width: 55%;
-    background-color: transparent;
-    border-color: #f0544f;
-    color: white;
-}
-.button-join-now{
-    padding: 20px;
-    font-size: 20px;
-    padding-right: 90px;
-    padding-left: 70px;
-   
-    background-color:#f0544f ;
 }
 .paragraph{
     grid-area: paragraph;
@@ -308,42 +315,80 @@ body{
 
 }
 
+
 footer{
     background-color:#464545;
     bottom: auto;
     position: relative;
     width: 100%;
-    
+   
+}
+.footer-section-one{
+    height: 300px;
+}
+.footer-table{
+    width: 90%;
+    margin-left: auto;
+    margin-right:auto ;
+    text-align: center;
+    font-size: 20px;
+    border: none;
+    color: white;
+    padding-top: 20px;
+}
+.footer-table a{
+    text-decoration: none;
+    color: white;
+}
+.footer-table a:hover{
+    color: rgb(252, 143, 0);
+}
+.footer-table th{
+    font-size: 30px;
+    width: 15%;
 }
 .footer-img img{
 
     width: 200px;
 }
-.footer-flexbox{
-    display: flex;
-    gap: 20px;
-    
+
+.logo-footer{
+    width: 200px;
 }
-.footerlink a{
-    text-decoration: none;
-    padding: 40px 20px;
-    font-size: 20px;
-    color: white;
-    
+.footer-1{
+    width: 40px;
+    transition: transform 0.2s ease-in-out;
 }
-.footerlink{
-    margin-top: auto;
-    margin-bottom: auto;
+.footer-1:hover{
+    transform: scale(1.5);
 }
-.footer-social-line-1{
-    padding: 10px;
-    margin-left: 1200px;
-    margin-top: -160px;
+.footer-2{
+    width: 40px;
+    transition: transform 0.2s ease-in-out;
 }
-.footer-social-line-1 img{
-    width: 30px;
-    padding: 10px;
-    
+.footer-2:hover{
+    transform: scale(1.5);
+}
+.footer-3{
+    width: 40px;
+    transition: transform 0.2s ease-in-out;
+}
+.footer-3:hover{
+    transform: scale(1.5);
+}
+.footer-4{
+    width: 40px;
+    transition: transform 0.2s ease-in-out;
+}
+.footer-4:hover{
+    transform: scale(1.5);
+}
+.footer-5{
+    width: 40px;
+    transition: transform 0.2s ease-in-out;
+}
+.footer-5:hover{
+    transform: scale(1.5);
 }
 .h1{
     width: 50%;
