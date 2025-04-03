@@ -1,70 +1,282 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login</title>
-  </head>
-  <link rel="stylesheet" href="../Layout/style.css" />
+    <meta
+      name="keywords"
+      content="HTML, Helth & Fitness, Fitness, Health, Wellness, yoga, Gym"
+    />
+    <meta name="author" content="Group-5 project" />
 
+    <title>Login</title>
+
+
+
+    <link rel="stylesheet" href="../Layout/style.css" />
+
+    <style>
+      body{
+        font-family: sans-serif;
+      }
+      .login-container{
+        display: flex;
+        align-items: center;
+        justify-content: center;       
+        margin-top: 10px;
+        box-shadow: 1px 3px 12px rgb(56, 56, 56);
+       width: 1000px;
+        border-radius:16px ;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 40px;
+      }
+      .pic-container{
+        background-color: rgb(234, 234, 234);
+        height: 600px;
+        width:400px;
+        border-top-left-radius: 16px; 
+        border-bottom-left-radius:16px ;
+        
+      } 
+      .form-container{
+        background-color: rgb(255, 255, 255);  
+        height: 600px;
+        width:600px;
+        border-top-right-radius: 16px;
+        border-bottom-right-radius:16px ;
+        
+      }
+      .form-head{
+        text-align: center;
+        margin-top: 50PX;
+        margin-bottom: 30px;
+      }
+      .form-head h1{
+        color: #0067b6;
+      }
+      .login-form input[type="text"]{
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        width: 80%;
+        height: 40px;
+        border-radius: 10px;
+        border-style: solid ;
+        border: solid 1px #008bd0;
+        outline-color: #007fee;
+      
+
+      }
+      .login-form input[type="text"]::placeholder{
+        padding-left: 10px;
+        font-size: 14px;
+      }
+      .login-form input[type="button"]{
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        width: 80%;
+        height: 40px;
+        margin-top: 25px;
+        border-radius: 10px;
+        border: 0;
+       background-color: #0067b6;
+       color: white;
+       font-size: 18px;
+       transition: background-color  0.4s;
+       cursor: pointer;
+      }
+      .login-form input[type="button"]:hover{
+        background-color: #0080e2;
+      }
+      .login-form input[type="button"]:active{
+        scale: 1.01;
+
+      }
+      label{
+      margin-left: 58px;
+        color: #292929;
+        font-size: 26px;
+      }
+      .sign-up-part{
+        text-align: center;
+
+      }
+      .sign{
+        color: #007fbe;
+        text-decoration: none;
+        font-size: 17px;
+      }
+      .back-image{
+        height: 600px;
+         width: 400px;
+         border-top-left-radius: 16px;
+         border-bottom-left-radius: 16px;
+      }
+      .web-Logo{
+        margin-left: 65px;
+        margin-top: 120px;
+        height: 270px;
+        height: 270px ;
+        position:absolute ;
+      }
+    </style>
+
+
+  </head>
+
+
+    <link rel="stylesheet" href="../Layout/style.css" />
+  </head>
   <body>
-    <header class="header">
-      <nav class="navbar">
-        <a href="index.html" class="nav-items">Home</a>
-        <a href="Diet_and_Nutrition.html">Diet & Nutrition</a>
-        <a href="Fitness_Tips.html">Fitness Tips</a>
-        <a href="login.html">Login</a>
-        <a href="About_Us.html">About</a>
-        <a href="Contact_Us.html">Contact</a>
-      </nav>
-      <div class="image">
-        <img src="../Images/logo.png" alt="logo" />
+    <section class="section-0">
+      <header class="header">
+        <nav class="navbar">
+          <a href="index.html" class="nav-home">Home</a>
+          <a href="Diet_and_Nutrition.html" class="nav-diet"
+            >Diet & Nutrition</a
+          >
+          <a href="Fitness_Tips.html" class="nav-fitness">Fitness Tips</a>
+          <a href="About_Us.html" class="nav-about">About</a>
+          <a href="Contact_Us.html" class="nav-contact">Contact</a>
+          <a href="login.html" class="nav-login">Login</a>
+        </nav>
+        <div class="images">
+          <a href="index.html"
+            ><img src="../Images/webLogo.png" alt="logo" />
+          </a>
+        </div>
+      </header>
+    
+    </section>
+
+
+
+
+    <div class="login-container">
+      <div class="pic-container">
+        <img src="../Images/webLogo.png" alt="background-image" class="web-Logo" >
+        <img src="../Images/log-pic.jpg" alt="background-image" class="back-image" >
+
+
       </div>
+
+      <div class="form-container">
+        <div class="form-head">
+        <h1>Welcome back</h1>
+        <p>Welcome user,please enter your details</p>
+
+
+        </div>
+
+        <div class="login-form">
+        <label for="nameId">User Name</label><br>
+        <input type="text" id="nameId" placeholder="enter user name"><br>
+        <label for="passwordId">Password</label><br>
+        <input type="text" id="passwrordId" placeholder="enter password"><br>
+        <input type="button" value="Login"><br>
+        <p class="sign-up-part">Don't have an account?  <a href="" class="sign">Sign Up</a></p>
+       
+      </div>
+
+    </div>
+
+    </div>
+
       <div>
     </header>
 
     <footer>
+
       <div class="footer-flexbox">
         <div class="footer-img">
-          <img src="../Images/logo.png" alt="LOGO" />
+          
         </div>
-        <div class="footerlink">
-          <a href="index.html">Home</a> <br /><a href="About_Us.html"
-            >About us</a
+
+
+       <section class="footer-section-one">
+          <table class="footer-table">
+            <tr>
+              <th rowspan="4"><img src="../Images/webLogo.png" alt="LOGO" class="logo-footer" /></th>
+              <th>Haircare</th>
+              <th>Services</th>
+              <th>Follow Us</th>
+              <th>Links</th>
+            </tr>
+            <tr>
+              <td>Empowering you with expert health and fitness tips to achieve a stronger, healthier life. Stay motivated, stay fit!</td>
+              <td><a href="User_Feedback.html">Feedback</a></td>
+              <td><a href="https://en.wikipedia.org/wiki/Gmail">Gmail</a></td>
+              <td><a href="index.html">Home</a></td>
+              
+            </tr>
+            <tr>
+              <td>
+                <a href="https://en.wikipedia.org/wiki/Gmail">
+                  <img src="../Images/footer-email .png" alt="email" class="footer-1">
+                </a>
+                <a href="https://en.wikipedia.org/wiki/Facebook">
+                  <img src="../Images/footer-facebook .png" alt="facebook" class="footer-2">
+                </a>
+                <a href="https://en.wikipedia.org/wiki/Mobile_phone">
+                  <img src="../Images/footer-mobile .png" alt="mobile" class="footer-3">
+                </a>
+                <a href="https://en.wikipedia.org/wiki/Twitter">
+                  <img src="../Images/footer-twiter-logo.png" alt="twitter" class="footer-4">
+                </a>
+                <a href="https://en.wikipedia.org/wiki/WhatsApp">
+                  <img src="../Images/footer-whatsapp.png" alt="whatsapp" class="footer-5">
+                </a>
+              </td>
+              <td><a href="Contact_Us.html">Contact Us</a></td>
+              <td><a href="https://en.wikipedia.org/wiki/Facebook">FaceBook</a></td>
+              <td><a href="About_Us.html">About_Us</a></td>
+            </tr>
+            <tr>
+              <td> </td>
+              <td><a href="About_Us.html">About Us</a></td>
+              <td><a href="https://en.wikipedia.org/wiki/Mobile_phone">Mobile</a></td>
+             <td><a href="">Contact_Us</a></td>
+            </tr>
+            <tr>
+              <td> </td>
+              <td> </td>
+              <td></td>
+              <td><a href="https://en.wikipedia.org/wiki/Twitter">Instergrame</a></td>
+              <td><a href="login.html">Login</a></td>
+            </tr>
+            <tr>
+              <td>  </td>
+              <td> </td>
+              <td> </td>
+              <td><a href="https://en.wikipedia.org/wiki/WhatsApp">whatsapp</a></td>
+              <td><a href="register.html">Register</a></td>
+            </tr>
+          </table>
+       </section>
+
+
+      <section>
+        <hr class="h1" />
+        <div class="footer-second-part">
+          <a
+            href="https://en.wikipedia.org/wiki/Language_policy#:~:text=Language%20policy%20has%20been%20defined,xi)."
+            >Language Policy</a
           >
-          <br /><a href="Contact_Us.html">contact us</a>
-        </div>
-      </div>
-      <div>
-        <div class="footer-social-line-1">
-          <img
-            src="../Images/footer-mail-logo.png"
-            alt="mail-logo"
-          />fitnesslife@gmail.com
-          <br />
-          <img src="../Images/footer-facebook-logo.png" alt="facebook" />
-          <img src="../Images/footer-twiter-logo.png" alt="twitter" />
-          <img src="../Images/footer-message-logo.png" alt="linkedin" />
-        </div>
-      </div>
+          <a href="https://en.wikipedia.org/wiki/Privacy_policy"
+            >Privacy Policy</a
+          >
+          <a href="https://en.wikipedia.org/wiki/Terms_of_service"
+            >Terms of Service</a
+          >
+          <a href="Contact_Us.html">Contact Us</a>
+          <a href="https://en.wikipedia.org/wiki/HTTP_cookie">Cookies</a>
 
-      <hr class="h1" />
-      <div class="footer-second-part">
-        <a
-          href="https://en.wikipedia.org/wiki/Language_policy#:~:text=Language%20policy%20has%20been%20defined,xi)."
-          >Language Policy</a
-        >
-        <a href="https://en.wikipedia.org/wiki/Privacy_policy"
-          >Privacy Policy</a
-        >
-        <a href="https://en.wikipedia.org/wiki/Terms_of_service"
-          >Terms of Service</a
-        >
-        <a href="Contact_Us.html">Contact Us</a>
-        <a href="https://en.wikipedia.org/wiki/HTTP_cookie">Cookies</a>
-
-        <p>@ Group 5 mini project</p>
-      </div>
+          <p>@ Group 5 mini project</p>
+        </div>
+      </section>
     </footer>
   </body>
 </html>
