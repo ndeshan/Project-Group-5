@@ -7,10 +7,26 @@ body{
     font-weight: 100;
 }
 .section-0{
-    background-image: url(../Images/Home-page-header-background.jpg);
     background-repeat: no-repeat;
     background-size:cover;
-    
+    animation: changeBackground 30s infinite;
+}
+@keyframes changeBackground {
+    0% {
+        background-image: url('../Images/home-page-background-2.jpg');
+    }
+    25% {
+        background-image: url('../Images/home-page-background-3.jpg');
+    }
+    50% {
+        background-image: url('../Images/home-page-background-5.jpg');
+    }
+    75% {
+        background-image: url('../Images/Home-page-header-background.jpg');
+    }
+    100% {
+        background-image: url('../Images/home-page-background-6.jpg'); 
+    }
 }
 
 .header nav{
@@ -95,8 +111,11 @@ body{
     font-size: 25px;
     background-color: #A27B5C;
     border: none;
-
-
+    color: white;
+    transition: transform 0.3s ease-in-out;
+}
+.fitnessTips button:hover{
+    transform: scale(1.07);
 }
 .button-about-us{
     grid-area: aboutAs;
@@ -104,8 +123,14 @@ body{
     font-size: 25px;
     background-color: #A27B5C;
     border: none;
-}
+    color: white;
+    transition: transform 0.3s ease-in-out;
 
+}
+.button-about-us:hover{
+    transform: scale(1.06);
+
+}
 .joinNow button{
     grid-area: joinNow;
     margin-left: auto;
@@ -116,7 +141,14 @@ body{
     font-size: 25px;
     border: none;
     background-color: #FF0303;
-
+    color: white;
+    transition: transform 0.3s ease-in-out;
+}
+.joinNow button:hover{
+    transform: scale(1.07);
+}
+.joinNow a{
+    text-decoration: none;
 }
 .paragraph{
     grid-area: paragraph;
@@ -149,26 +181,41 @@ body{
     width: 250px;
     height: 350px;
     border-radius: 30px;
-    
-
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 5px 5px 5px 0px rgb(99, 98, 98);
+}
+.container-2-1 img:hover{
+    transform: scale(1.03);
 }
 .container-2-2 img{
     width: 250px;
     height: 350px;
     border-radius: 30px;
-
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 5px 5px 5px 0px rgb(99, 98, 98);
+}
+.container-2-2 img:hover{
+    transform: scale(1.07);
 }
 .container-2-3 img{
     width: 250px;
     height: 350px;
     border-radius: 30px;
-
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 5px 5px 5px 0px rgb(99, 98, 98);
+}
+.container-2-3 img:hover{
+    transform: scale(1.07);
 }
 .container-2-4 img{
     width: 250px;
     height: 350px;
     border-radius: 30px;
-
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 5px 5px 5px 0px rgb(99, 98, 98);
+}
+.container-2-4 img:hover{
+    transform: scale(1.07);
 }
 .container-2-1{
     text-align: center;
@@ -251,6 +298,10 @@ body{
     width: 400px;
     padding: 30px;
     margin-left: -450px;
+    transition: transform 0.3s ease-in-out;
+}
+.bmi img:hover{
+    transform: scale(1.04);
 }
 .bmi-advice{
     grid-area: bmi-advicce;
@@ -265,7 +316,7 @@ body{
     display: flex;
     margin-left: auto;
     margin-right: auto;
-    gap: 20px;
+    gap: 0px;
 }
 .success-stories{
     grid-area: success-stories;
@@ -277,7 +328,10 @@ body{
 .success-stories img{
     width: 200px;
     border-radius: 20px;
-    
+    transition: transform 0.3s ease-in-out;
+}
+.success-stories img:hover{
+    transform: scale(1.05);
 }
 .user-feedback{
     grid-area: user-feedback;
@@ -286,12 +340,18 @@ body{
     text-align: center;
     margin-right: -40px;
     margin-bottom: 40px;
+
 }
 .user-feedback img{
-    width: 200px;
-    height: 280px;
+    width: 180px;
+    height: 240px;
     border-radius: 20px;
     margin-right: -90px;
+    margin-top: 40px;
+    transition: transform 0.3s ease-in-out;
+}
+.user-feedback img:hover{
+    transform: scale(1.05);
 }
 .testimonial{
     grid-area: testimonial;
@@ -309,12 +369,19 @@ body{
     padding: 20px;
     font-weight: bold;
     border-radius: 20px;
-    color: rgb(255, 255, 255);
+    
     float: inline-start;
     margin-left: -5px;
-
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 2px 2px white;
 }
-
+.button-start-your-journey a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+.button-start-your-journey:hover{
+    transform: scale(1.05);
+}
 
 footer{
     background-color:#464545;
