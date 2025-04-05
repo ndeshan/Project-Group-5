@@ -11,8 +11,111 @@
     <meta http-equiv="refresh" content="10" />
     <title>Fitness Tips</title>
     <link rel="stylesheet" href="../Layout/style.css" />
+
+
+
+
+<style>
+
+     
+    .container {
+      position: relative;
+      width: 50%;
+      display:grid ;
+      grid
+    }
+.overlay{
+position: absolute;
+top:0;
+left:0;
+
+
+
+
+}
+
+
+
+    }
+    
+    .image {
+      opacity: 1;
+      display: block;
+      width: 50%;
+      height: auto;
+      transition: .5s ease;
+      backface-visibility: hidden;
+    }
+    
+    .middle {
+      transition: .5s ease;
+      opacity: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%)
+    }
+    
+    .container:hover .image {
+      opacity: 0.3;
+    
+    }
+    
+    .container:hover .middle {
+      opacity: 1;
+    }
+    
+    
+    .text {
+      background-color: #888a88;
+      color: rgb(240, 237, 235);
+      font-size: 30px;
+    
+      padding: 10px 25px;
+    }
+    
+    
+    
+    
+    
+        
+    .gallery {
+                display: grid;
+
+                grid-template-columns:auto auto auto;
+                grid-gap: 20px;
+                padding: 10px;
+                border-radius: 8px;
+                filter:drop-shadow(8px 8px 10px rgb(14, 14, 15));
+    
+                
+     
+    
+    
+            }
+    
+    
+            .gallery img {
+                width: 100%;
+                height: auto;
+            }
+    
+    .p1::first-letter{
+font-size: 200%;
+font-weight: bold;
+
+    }
+    
+    .gallery2{
+display: grid;
+grid-template-columns: auto auto;
+
+    }
+    
+      </style>
   </head>
-  <body>
+ <body style="background-color:#232d39 ;">
     <section class="section-0">
       <header class="header">
         <nav class="navbar">
@@ -31,17 +134,192 @@
           </a>
         </div>
       </header>
-      <p>adasd</p>
-    <p>khkihki</p>
-    <p>hjohjo</p>
-    <p>ojoj</p>
-    <p>ojojohj</p>
-    <p>ojoj</p>
-    <p>ojojohj</p>
-    <p>ojoop</p>
-    <p>pok</p>
-    <p>kjopj</p>
-    </section>
+     
+
+
+        <P style="color: #FDFD96; font-size: 70px;"> <b>Impotance of Fitness Tips:</b></p>
+        <p style="font-size:30px; background-color: white;" class="p1"> Fitness tips help you stay active, prevent injuries, and achieve your health goals efficiently. They provide
+            guidance on proper workouts, balanced nutrition, and recovery, ensuring a well-rounded approach to physical and mental well-being. 
+           By following fitness  tips, you can build strength, improve endurance, and maintain a healthy lifestyle. </p>
+        
+        
+                <section class="gallery">
+        
+            <div class="container">
+               <h2  style="color:  #ffffff;">1. Warm-Up & Cool-Down </h2> 
+              
+                <img src="../Images/fit 2.jpeg"   class="image">
+        <table border="1">
+        <td style="color: aquamarine; font-size: larger;"><ul><li>Always start with a 5-10 minute warm-up (jumping jacks, arm circles) to prevent injuries.</li></ul></td>
+        <tr></tr>
+        <td style="color: aquamarine; font-size: larger;"><ul><li> End workouts with stretching to improve flexibility and recovery.
+        
+        </li></ul></td>
+        </table>
+        
+                
+                <div class="middle">
+                  <div class="text">"Cool 
+                    Down,
+                    Recover 
+                    Well"
+                  </div>
+          
+                </div>
+             
+              </div>
+          
+          
+          
+              <div class="container"> 
+        
+               <h1  style="color:  #ffffff;"> 2. Stay Consistent </h1>
+                <img src="../Images/fit-correctform.jpeg"   class="image">
+                <table border="1">
+                    <td  style="color: aquamarine; font-size: larger;"><ul><li> Set a realistic workout schedule (at least 3-5 days a week).</li></ul></td>
+                    <tr></tr>
+                    <td  style="color: aquamarine; font-size: larger;"><ul><li>Track progress to stay motivated.
+                    </li></ul></td>
+                    </table>
+                <div class="middle">
+                  <div class="text">"Perfect
+                     Your
+                      Form"</div>
+                </div>
+              </div>
+          
+              <div class="container">
+               
+            <h1  style="color:  hsl(0, 0%, 100%);">3. Mental Health & Motivation </h1>
+                <img src="../Images/fit-mental.jpeg"   class="image">
+                
+                         <table border="1">
+                    <td  style="color: aquamarine; font-size: larger;"><ul><li>
+                        Set realistic goals and track progress.</li></ul></td>
+                    <tr></tr>
+                    
+                    <td  style="color: aquamarine; font-size: larger;"><ul><li>
+                       
+        Practice meditation or yoga for stress relief.</li></ul></td>
+                    <tr></tr>
+                    <td  style="color: aquamarine; font-size: larger;"><ul><li>Listen to music or podcasts to stay motivated.</li></ul></td>
+                    <tr></tr>
+                         </table>
+                   
+                <div class="middle">
+               
+                  <div class="text"><b>"Stonger 
+                    Than 
+                    You 
+                    Think"</b></div>
+                </div>
+              
+              </div>
+          
+              <div class="container">
+                <h1  style="color:  #ffffff;">4. Strength & Cardio Balance </h1>
+                <img src="../Images/fit-strength.jpeg"   class="image">
+                <table border="1">
+                    <td  style="color: aquamarine; font-size: larger;"><ul><li>Combine strength training (weights, bodyweight exercises) with cardio (running, cycling) for overall fitness.
+                        .</li></ul></td>
+                    <tr></tr>
+                    <td  style="color: aquamarine; font-size: larger;"><ul><li> 
+                        Include high-intensity interval training (HIIT) for fat burning.
+                    </li></ul></td>
+                    </table>
+                <div class="middle">
+                  <div class="text">"Core
+                     To 
+                     The
+                      Floor"</div>
+                </div>
+              </div>
+          
+          
+          
+              <div class="container">
+               <h1  style="color:  #ffffff;"> 5. Proper Rest & Recovery </h1>
+                <img src="../Images/fit-sleep.webp"   class="image">
+        
+        
+                <table border="1">
+                    <td  style="color: aquamarine; font-size: larger;"><ul><li> Get at least 7-9 hours of sleep per night.
+                        </li></ul></td>
+                    <tr></tr>
+                    <td  style="color: aquamarine; font-size: larger;"><ul><li> 
+                        Allow muscles to recover by alternating workout days
+                    </li></ul></td>
+                    </table>
+        
+                <div class="middle">
+                  <div class="text">"Sleep.Heal.
+                    Repeat"</div>
+                </div>
+              </div>
+          
+              <div class="container">
+              <h1 style="color:  #ffffff;">  6. Balanced Nutrition </h1>
+                <img src="../Images/fit-nutrition.webp"   class="image">
+                <table border="1">
+                    <td  style="color: aquamarine; font-size: larger;"><ul><li>
+                        Eat a mix of proteins, healthy fats, and complex carbs for energy..</li></ul></td>
+                    <tr></tr>
+                    <td  style="color: aquamarine; font-size: larger;"><ul><li> Stay hydrated—drink at least 8 glasses of water daily.
+                    
+                    </li></ul></td>
+                    <tr></tr>
+                    <td  style="color: aquamarine; font-size: larger;"><ul><li>
+                        Avoid processed foods and excessive sugar.
+                    
+                    </li></ul></td>
+                    </table>
+                <div class="middle">
+                  <div class="text">"Smart Eating"
+                     
+                    </div>
+                </div>
+              </div>
+        
+        
+          
+          
+              
+          </section> 
+          <br>
+          <br>
+          <br>
+        <section >
+        <table border="3" width="100%" height="40%"> 
+        <tr><td style="font-size: 50px; color: rgb(24, 1, 21); background-image: url('../Images/fit\ last.webp');"><center> <marquee behavior="scroll" direction="left"><i><b>"Listen To Your Body, Not Your Ego"</marquee>
+        
+        </i><br>Don't be afraid to put a foot forward for something<br>
+        that's good for your body </b></center> </td></tr>
+        
+        </table>
+        
+        
+              </section>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      
 
 
 
