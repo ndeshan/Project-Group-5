@@ -4,10 +4,137 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Register</title>
-    <link rel="stylesheet" href="../Layout/style.css" />
+    <link rel="stylesheet" href="../Layout/login-css2.css" />
+    <style>
+      body{
+        font-family: sans-serif;
+      }
+      .login-container{
+        display: flex;
+        align-items: center;
+        justify-content: center;       
+        margin-top: 0;
+        box-shadow: 1px 3px 12px rgb(56, 56, 56);
+        width: 1000px;
+        border-radius:16px ;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 40px;
+      }
+      .pic-container{
+        background-color: rgb(234, 234, 234);
+        height: 650px;
+        width:400px;
+        border-top-left-radius: 16px; 
+        border-bottom-left-radius:16px ;
+        
+      } 
+      .form-container{
+        background-color: rgb(255, 255, 255);  
+        height: 650px;
+        width:600px;
+        border-top-right-radius: 16px;
+        border-bottom-right-radius:16px ;
+        
+      }
+      .form-head{
+        text-align: center;
+        margin-top: 50PX;
+        margin-bottom: 30px;
+      }
+      .form-head h1{
+        color: #FF6600;
+        font-size:35px ;
+      }
+      .login-form input[type="text"]{
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        width: 80%;
+        height: 40px;
+        border-radius: 10px;
+        border-style: solid ;
+        border: solid 1px #e35b00;
+        outline-color: #FF6600;
+        font-size: 18px;
+
+      }
+      .login-form input[type="text"]::placeholder{
+        padding-left: 10px;
+        font-size: 14px;
+      }
+      .login-form input[type="password"]{
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        width: 80%;
+        height: 40px;
+        border-radius: 10px;
+        border-style: solid ;
+        border: solid 1px #e35b00;
+        outline-color: #FF6600;
+        font-size: 18px;
+   
+
+      }
+      .login-form input[type="password"]::placeholder{
+        padding-left: 10px;
+        font-size: 14px;
+      }
+
+      .login-form input[type="button"]{
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        width: 80%;
+        height: 40px;
+        margin-top: 25px;
+        border-radius: 10px;
+        border: 0;
+       background-color: #292929;
+       color: white;
+       font-size: 18px;
+       transition: background-color  0.4s;
+       cursor: pointer;
+      }
+      .login-form input[type="button"]:hover{
+        background-color: #FF6600;
+      }
+      .login-form input[type="button"]:active{
+        scale: 1.01;
+
+      }
+      label{
+      margin-left: 58px;
+        color: #292929;
+        font-size: 26px;
+      }
+      .sign-up-part{
+        text-align: center;
+
+      }
+      .sign{
+        color: #FF6600;
+        text-decoration: none;
+        font-size: 17px;
+      }
+      .back-image{
+        height: 650px;
+         width: 400px;
+         border-top-left-radius: 16px;
+         border-bottom-left-radius: 16px;
+      }
+      .web-Logo{
+        margin-left: 65px;
+        margin-top: 150px;
+        height: 270px;
+        height: 270px ;
+        position:absolute ;
+      }
+    </style>
   </head>
   <body>
-    <section class="section-0">
+   
       <header class="header">
         <nav class="navbar">
           <a href="index.html" class="nav-home">Home</a>
@@ -24,18 +151,42 @@
             ><img src="../Images/webLogo.png" alt="logo" />
           </a>
         </div>
-      </header>
-      <p>adasd</p>
-    <p>khkihki</p>
-    <p>hjohjo</p>
-    <p>ojoj</p>
-    <p>ojojohj</p>
-    <p>ojoj</p>
-    <p>ojojohj</p>
-    <p>ojoop</p>
-    <p>pok</p>
-    <p>kjopj</p>
-    </section>
+      </header><div class="login-container">
+        <div class="pic-container">
+          <img src="/Images/webLogo.png" alt="background-image" class="web-Logo" >
+          <img src="/Images/sign-up-photo.jpg" alt="background-image" class="back-image" >
+  
+  
+        </div>
+        <div class="form-container">
+          <div class="form-head">
+          <h1>Sign Up</h1>
+          <p>Let's sign up quickly to get started</p>
+          </div>
+  
+          <div class="login-form">
+          <label for="nameId">User Name</label><br>
+          <input type="text" id="nameId" placeholder="enter user name"><br>
+  
+          <label for="nameId">Email</label><br>
+          <input type="text" id="nameId" placeholder="enter email"><br>
+  
+          <label for="passwordId">Password</label><br>
+          <input type="password" id="passwrordId" placeholder="enter password"><br>
+  
+          <label for="passwordId">Confirm Password</label><br>
+          <input type="password" id="passwrordId" placeholder="confirm password"><br>
+  
+          <input type="button" value="Sign Up"><br>
+  
+         
+        </div>
+  
+      </div>
+  
+      </div>
+     
+
 
 
 

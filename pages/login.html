@@ -1,188 +1,59 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="keywords"
-      content="HTML, Helth & Fitness, Fitness, Health, Wellness, yoga, Gym"
-    />
-    <meta name="author" content="Group-5 project" />
-
     <title>Login</title>
-    <link rel="stylesheet" href="../Layout/style.css" />
-    <style>
-      body{
-        font-family: sans-serif;
-      }
-      .login-container{
-        display: flex;
-        align-items: center;
-        justify-content: center;       
-        margin-top: 10px;
-        box-shadow: 1px 3px 12px rgb(56, 56, 56);
-       width: 1000px;
-        border-radius:16px ;
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: 40px;
-      }
-      .pic-container{
-        background-color: rgb(234, 234, 234);
-        height: 600px;
-        width:400px;
-        border-top-left-radius: 16px; 
-        border-bottom-left-radius:16px ;
-        
-      } 
-      .form-container{
-        background-color: rgb(255, 255, 255);  
-        height: 600px;
-        width:600px;
-        border-top-right-radius: 16px;
-        border-bottom-right-radius:16px ;
-        
-      }
-      .form-head{
-        text-align: center;
-        margin-top: 50PX;
-        margin-bottom: 30px;
-      }
-      .form-head h1{
-        color: #FF6600;
-      }
-      .login-form input[type="text"]{
-        margin-left: auto;
-        margin-right: auto;
-        display: block;
-        width: 80%;
-        height: 40px;
-        border-radius: 10px;
-        border-style: solid ;
-        border: solid 1px #FF6600;
-        outline-color: #FF6600;
-      
-
-      }
-      .login-form input[type="text"]::placeholder{
-        padding-left: 10px;
-        font-size: 14px;
-      }
-      .login-form input[type="button"]{
-        margin-left: auto;
-        margin-right: auto;
-        display: block;
-        width: 80%;
-        height: 40px;
-        margin-top: 25px;
-        border-radius: 10px;
-        border: 0;
-       background-color: #373A40;
-       color: white;
-       font-size: 18px;
-       transition: background-color  0.4s;
-       cursor: pointer;
-      }
-      .login-form input[type="button"]:hover{
-        background-color: #FF6600;
-      }
-      .login-form input[type="button"]:active{
-        scale: 1.01;
-
-      }
-      label{
-      margin-left: 58px;
-        color: #292929;
-        font-size: 26px;
-      }
-      .sign-up-part{
-        text-align: center;
-
-      }
-      .sign{
-        color: #FF6600;
-        text-decoration: none;
-        font-size: 17px;
-      }
-      .back-image{
-        height: 600px;
-         width: 400px;
-         border-top-left-radius: 16px;
-         border-bottom-left-radius: 16px;
-      }
-      .web-Logo{
-        margin-left: 65px;
-        margin-top: 120px;
-        height: 270px;
-        height: 270px ;
-        position:absolute ;
-      }
-    </style>
-
-
-  </head>
-
-
-    <link rel="stylesheet" href="../Layout/style.css" />
+    <link rel="stylesheet" href="../Layout/login-css2.css">
+<link rel="stylesheet" href="../Layout/login-css.css">
   </head>
   <body>
-    <section class="section-0">
-      <header class="header">
-        <nav class="navbar">
-          <a href="index.html" class="nav-home">Home</a>
-          <a href="Gym_membership_And_Fitness_Articles.html" class="nav-diet"
-            >Membership</a
-          >
-          <a href="Blog_and_Articles.html" class="nav-fitness">Blogs</a>
-          <a href="About_Us.html" class="nav-about">About</a>
-          <a href="Contact_Us.html" class="nav-contact">Contact</a>
-          <a href="login.html" class="nav-login">Login</a>
-        </nav>
-        <div class="images">
-          <a href="index.html"
-            ><img src="../Images/webLogo.png" alt="logo" />
-          </a>
-        </div>
-      </header>
-    
-    </section>
 
-
-
+    <header class="header">
+      <nav class="navbar">
+        <a href="index.html" class="nav-home">Home</a>
+        <a href="Gym_membership_And_Fitness_Articles.html" class="nav-diet"
+          >Membership</a
+        >
+        <a href="Blog_and_Articles.html" class="nav-fitness">Blogs</a>
+        <a href="About_Us.html" class="nav-about">About</a>
+        <a href="Contact_Us.html" class="nav-contact">Contact</a>
+        <a href="login.html" class="nav-login">Login</a>
+      </nav>
+      <div class="images">
+        <a href="index.html"
+          ><img src="../Images/logo.png" alt="logo" />
+        </a>
+      </div>
+    </header>
 
     <div class="login-container">
       <div class="pic-container">
-        <img src="../Images/webLogo.png" alt="background-image" class="web-Logo" >
-        <img src="../Images/log-pic.jpg" alt="background-image" class="back-image" >
+        <img src="/Images/webLogo.png" alt="background-image" class="web-Logo" >
+        <img src="/Images/login-photo.jpg" alt="background-image" class="back-image" >
 
 
       </div>
-
       <div class="form-container">
         <div class="form-head">
         <h1>Welcome back</h1>
-        <p>Welcome user,please enter your details</p>
-
-
+        <p>Welcome back ! user,please enter your details</p>
         </div>
 
         <div class="login-form">
         <label for="nameId">User Name</label><br>
         <input type="text" id="nameId" placeholder="enter user name"><br>
         <label for="passwordId">Password</label><br>
-        <input type="text" id="passwrordId" placeholder="enter password"><br>
+        <input type="password" id="passwrordId" placeholder="enter password"><br>
         <input type="button" value="Login"><br>
-        <p class="sign-up-part">Don't have an account?  <a href="" class="sign">Sign Up</a></p>
+        <p class="sign-up-part">Don't have an account?  <a href="register.html" class="sign">Sign Up</a></p>
        
       </div>
 
     </div>
 
     </div>
-
-      <div>
-    </header>
+    
 
     <footer>
 
@@ -274,5 +145,12 @@
         </div>
       </section>
     </footer>
+
+
+
+
+
+
+    
   </body>
 </html>
