@@ -81,3 +81,16 @@ form{
     padding: 30px;
     padding-top: 20px;
 }
+.contact-section-2{
+    display: flex;
+    background-color:rgb(204, 204, 203) ;
+    justify-content: center;
+    gap: 160px;
+    text-align: center;
+    padding: 20px 0px 20px 0px;
+    font-size: 20px;
+}
+.contact-section-2 img{
+    width: 5rem;
+    padding: 10px;
+}

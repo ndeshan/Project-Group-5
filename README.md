@@ -24,6 +24,8 @@
 
 # style-5 / script-5 : login, register, workoutVideos , BmiCalculater
 
+.
+
 #
 
 # style-home / script-home : Home page
