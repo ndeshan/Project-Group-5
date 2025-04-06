@@ -361,7 +361,9 @@
           <img src="/Images/art1.jpg" alt="Exercise">
           <div id="article_topic">
             <b>How to Exercise at Home</b><br>
-            📅 April 5, 2025 &nbsp;&nbsp;&nbsp; ✍️ John Doe &nbsp;<br> ❤️ 120 Likes
+            📅 April 5, 2025 &nbsp;&nbsp;&nbsp; ✍️ John Doe &nbsp;<br> <span class="likes"  onclick="increaseLikes()" style="cursor: pointer;">
+              ❤️ <span id="like-count">223</span> Likes
+            </span>
           </div>
           <div id="article_content">
             <input type="checkbox" id="ch1">
@@ -386,7 +388,9 @@
             <img src="/Images/art2.webp" alt="heart">
             <div id="article_topic">
               <b>Exercise for a Healthy Heart</b><br>
-              📅 April 2, 2025 &nbsp;&nbsp;&nbsp; ✍️ Tyler Wheeler &nbsp;<br> ❤️ 77 Likes
+              📅 April 2, 2025 &nbsp;&nbsp;&nbsp; ✍️ Tyler Wheeler &nbsp;<br> <span class="likes2"  onclick="increaseLikes2()" style="cursor: pointer;">
+                ❤️ <span id="like-count2">173</span> Likes
+              </span>
             </div>
             <div id="article_content">
               <input type="checkbox" id="ch2">
@@ -426,7 +430,9 @@
             <img src="/Images/art3.jpg" alt="Yoga">
             <div id="article_topic">
               <b>Yoga and Cholesterol</b><br>
-              📅 April 3, 2025 &nbsp;&nbsp;&nbsp; ✍️  Alexandra  &nbsp;<br> ❤️ 210 Likes
+              📅 April 3, 2025 &nbsp;&nbsp;&nbsp; ✍️  Alexandra  &nbsp;<br> <span class="likes3"  onclick="increaseLikes3()" style="cursor: pointer;">
+                ❤️ <span id="like-count3">343</span> Likes
+              </span>
             </div>
             <div id="article_content">
               <input type="checkbox" id="ch3">
@@ -451,7 +457,9 @@
           <img src="/Images/art4.jpg" alt="Depression">
           <div id="article_topic">
             <b>Depression</b><br>
-            📅 April 12, 2025 &nbsp;&nbsp;&nbsp; ✍️ John Doe &nbsp;<br> ❤️ 136 Likes
+            📅 April 12, 2025 &nbsp;&nbsp;&nbsp; ✍️ John Doe &nbsp;<br> <span class="likes4"  onclick="increaseLikes4()" style="cursor: pointer;">
+              ❤️ <span id="like-count4">292</span> Likes
+            </span>
           </div>
           <div id="article_content">
             <input type="checkbox" id="ch4">
@@ -478,7 +486,9 @@
             <img src="/Images/art5.jpg" alt="Healthy Food">
             <div id="article_topic">
               <b>High-Protein Diet for Weight Loss</b><br>
-              📅 April 2, 2025 &nbsp;&nbsp;&nbsp; ✍️  Kathleen &nbsp;<br> ❤️ 244 Likes
+              📅 April 2, 2025 &nbsp;&nbsp;&nbsp; ✍️  Kathleen &nbsp;<br> <span class="likes5"  onclick="increaseLikes5()" style="cursor: pointer;">
+                ❤️ <span id="like-count5">116</span> Likes
+              </span>
             </div>
             <div id="article_content">
               <input type="checkbox" id="ch5">
@@ -511,7 +521,9 @@
             <img src="/Images/art6.jpg" alt="Healthy Food">
             <div id="article_topic">
               <b>How to Sleep Better</b><br>
-              📅 April 13, 2025 &nbsp;&nbsp;&nbsp; ✍️   Michael  &nbsp;<br> ❤️ 111 Likes
+              📅 April 13, 2025 &nbsp;&nbsp;&nbsp; ✍️   Michael  &nbsp;<br> <span class="likes6"  onclick="increaseLikes6()" style="cursor: pointer;">
+                ❤️ <span id="like-count6">89</span> Likes
+              </span>
             </div>
             <div id="article_content">
               <input type="checkbox" id="ch6">
@@ -530,7 +542,47 @@
             </div>
           </div>
         
-      </section> 
+      </section>
+      
+      <script>
+        function increaseLikes() {
+          const countSpan = document.getElementById("like-count");
+          let count = parseInt(countSpan.innerText);
+          count++;
+          countSpan.innerText = count;
+        }
+        function increaseLikes2() {
+          const countSpan = document.getElementById("like-count2");
+          let count = parseInt(countSpan.innerText);
+          count++;
+          countSpan.innerText = count;
+        }
+        function increaseLikes3() {
+          const countSpan = document.getElementById("like-count3");
+          let count = parseInt(countSpan.innerText);
+          count++;
+          countSpan.innerText = count;
+        }
+        function increaseLikes4() {
+          const countSpan = document.getElementById("like-count4");
+          let count = parseInt(countSpan.innerText);
+          count++;
+          countSpan.innerText = count;
+        }
+        function increaseLikes5() {
+          const countSpan = document.getElementById("like-count5");
+          let count = parseInt(countSpan.innerText);
+          count++;
+          countSpan.innerText = count;
+        }
+
+        function increaseLikes6() {
+          const countSpan = document.getElementById("like-count6");
+          let count = parseInt(countSpan.innerText);
+          count++;
+          countSpan.innerText = count;
+        }
+      </script>
     <footer>
 
       <div class="footer-flexbox">
