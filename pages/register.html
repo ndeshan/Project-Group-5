@@ -64,6 +64,23 @@
         padding-left: 10px;
         font-size: 14px;
       }
+      .login-form input[type="email"]{
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        width: 80%;
+        height: 40px;
+        border-radius: 10px;
+        border-style: solid ;
+        border: solid 1px #e35b00;
+        outline-color: #FF6600;
+        font-size: 18px;
+
+      }
+      .login-form input[type="email"]::placeholder{
+        padding-left: 10px;
+        font-size: 14px;
+      }
       .login-form input[type="password"]{
         margin-left: auto;
         margin-right: auto;
@@ -83,7 +100,7 @@
         font-size: 14px;
       }
 
-      .login-form input[type="button"]{
+      .login-form input[type="submit"]{
         margin-left: auto;
         margin-right: auto;
         display: block;
@@ -98,10 +115,10 @@
        transition: background-color  0.4s;
        cursor: pointer;
       }
-      .login-form input[type="button"]:hover{
+      .login-form input[type="submit"]:hover{
         background-color: #FF6600;
       }
-      .login-form input[type="button"]:active{
+      .login-form input[type="submit"]:active{
         scale: 1.01;
 
       }
@@ -164,25 +181,25 @@
           <h1>Sign Up</h1>
           <p>Let's sign up quickly to get started</p>
           </div>
-  
+  <form action="" method="post">
           <div class="login-form">
           <label for="nameId">User Name</label><br>
-          <input type="text" id="nameId" placeholder="enter user name"><br>
+          <input type="text" id="nameId" placeholder="enter user name" required><br>
   
           <label for="nameId">Email</label><br>
-          <input type="text" id="nameId" placeholder="enter email"><br>
+          <input type="email" id="nameId" placeholder="enter email" required><br>
   
           <label for="passwordId">Password</label><br>
-          <input type="password" id="passwrordId" placeholder="enter password"><br>
+          <input type="password" id="passwrordId" placeholder="enter password" required><br>
   
           <label for="passwordId">Confirm Password</label><br>
-          <input type="password" id="passwrordId" placeholder="confirm password"><br>
+          <input type="password" id="passwrordId" placeholder="confirm password" required><br>
   
-          <input type="button" value="Sign Up"><br>
+          <input type="submit" value="Sign Up"><br>
   
          
         </div>
-  
+      </form>
       </div>
   
       </div>

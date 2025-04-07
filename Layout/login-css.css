@@ -82,7 +82,7 @@
 
 
 
-      .login-form input[type="button"]{
+      .login-form input[type="submit"]{
         margin-left: auto;
         margin-right: auto;
         display: block;
@@ -97,10 +97,10 @@
        transition: background-color  0.4s;
        cursor: pointer;
       }
-      .login-form input[type="button"]:hover{
+      .login-form input[type="submit"]:hover{
         background-color: #FF6600;
       }
-      .login-form input[type="button"]:active{
+      .login-form input[type="submit"]:active{
         scale: 1.01;
 
       }
