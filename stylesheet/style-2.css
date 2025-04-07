@@ -4,7 +4,7 @@ body {
 }
 
 .section-0 {
-  background-image: url("../Images/photo\ 8.jpg");
+  background-image: url("../Images/photo/ 8.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -261,12 +261,17 @@ footer .footer-second-part p {
   transition: transform 0.3s ease-in-out;
   box-shadow: 10px 10px 10px black;
 }
-.training-package-1:hover{
+
+.training-package-1:hover {
   transform: scale(1.05);
 }
-.training-package-1 p,ul,li{
+
+.training-package-1 p,
+ul,
+li {
   padding: 10px 0px;
 }
+
 .training-package-1 h3 {
   font-size: 35px;
   font-weight: 600;
@@ -283,9 +288,11 @@ footer .footer-second-part p {
   transition: transform 0.3s ease-in-out;
   box-shadow: 10px 10px 10px black;
 }
-.training-package-2:hover{
+
+.training-package-2:hover {
   transform: scale(1.05);
 }
+
 .training-package-2 h3 {
   font-size: 35px;
   font-weight: 600;
@@ -302,9 +309,11 @@ footer .footer-second-part p {
   transition: transform 0.3s ease-in-out;
   box-shadow: 10px 10px 10px black;
 }
-.training-package-3:hover{
+
+.training-package-3:hover {
   transform: scale(1.05);
 }
+
 .training-package-3 h3 {
   font-size: 35px;
   font-weight: 600;
@@ -312,12 +321,13 @@ footer .footer-second-part p {
   padding: 10px 0px;
 
 }
-.training-button-1{
+
+.training-button-1 {
   text-align: center;
   padding-bottom: 20px;
 }
 
-.button{
+.button {
   font-size: 30px;
   background-color: orange;
   color: white;
@@ -328,7 +338,8 @@ footer .footer-second-part p {
   transition: transform 0.3s ease-in-out;
   border: none;
 }
-.button:hover{
+
+.button:hover {
   color: #2f2f2f;
   transform: scale(1.05);
 }
@@ -337,7 +348,7 @@ footer .footer-second-part p {
   text-decoration: none;
 }
 
-.training-section-4{
+.training-section-4 {
   width: 80%;
   display: flex;
   gap: 60px;
@@ -347,25 +358,29 @@ footer .footer-second-part p {
   margin-left: auto;
   margin-right: auto;
 }
-.training-section-4 p{
+
+.training-section-4 p {
   font-size: 20px;
   padding: 10px 0px;
 }
-.section-4-h2{
+
+.section-4-h2 {
   padding: 20px;
   font-size: 50px;
   text-align: center;
   color: blue;
   font-weight: 900;
 }
-.header-top{
+
+.header-top {
   border: 3px solid blue;
   width: 50%;
   margin-left: auto;
   margin-right: auto;
-  
+
 }
-.header-bottum{
+
+.header-bottum {
   border: 3px solid blue;
   width: 35%;
   margin-left: auto;
