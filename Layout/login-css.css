@@ -50,14 +50,14 @@
         height: 40px;
         border-radius: 10px;
         border-style: solid ;
-        border: solid 1px #e35b00;
+        border: solid 1px #353535;
         outline-color: #FF6600;
         font-size: 18px;
-   
+        padding-left:10px;
 
       }
       .login-form input[type="text"]::placeholder{
-        padding-left: 10px;
+        
         font-size: 14px;
       }
       .login-form input[type="password"]{
@@ -68,14 +68,14 @@
         height: 40px;
         border-radius: 10px;
         border-style: solid ;
-        border: solid 1px #e35b00;
+        border: solid 1px #353535;
         outline-color: #FF6600;
         font-size: 18px;
-   
+        padding-left:10px;
 
       }
       .login-form input[type="password"]::placeholder{
-        padding-left: 10px;
+       
         font-size: 14px;
       }
 
@@ -86,21 +86,47 @@
         margin-left: auto;
         margin-right: auto;
         display: block;
-        width: 80%;
+        width: 82%;
         height: 40px;
-        margin-top: 25px;
+        margin-top: 10px;
         border-radius: 10px;
         border: 0;
-       background-color: #292929;
+       background-color: #ff6600;
        color: white;
        font-size: 18px;
        transition: background-color  0.4s;
        cursor: pointer;
+       
+
       }
       .login-form input[type="submit"]:hover{
-        background-color: #FF6600;
+        background-color: #ff4800;
       }
       .login-form input[type="submit"]:active{
+        scale: 1.01;
+
+      }
+      .login-form input[type="reset"]{
+        margin-top: 0;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        width: 82%;
+        height: 40px;
+        margin-top: 5px;
+        border-radius: 10px;
+        border: 0;
+       background-color:  #636363;
+       color: white;
+       font-size: 18px;
+       transition: background-color  0.4s;
+       cursor: pointer;
+       margin-bottom: 10px;
+      }
+      .login-form input[type="reset"]:hover{
+        background-color: #292929;
+      }
+      .login-form input[type="reset"]:active{
         scale: 1.01;
 
       }
@@ -110,6 +136,7 @@
         font-size: 26px;
       }
       .sign-up-part{
+        margin-top: 30px;
         text-align: center;
 
       }

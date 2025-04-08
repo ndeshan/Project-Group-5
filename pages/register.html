@@ -40,7 +40,7 @@
       }
       .form-head{
         text-align: center;
-        margin-top: 50PX;
+        margin-top: 30PX;
         margin-bottom: 30px;
       }
       .form-head h1{
@@ -55,13 +55,13 @@
         height: 40px;
         border-radius: 10px;
         border-style: solid ;
-        border: solid 1px #e35b00;
+        border: solid 1px #353535;
         outline-color: #FF6600;
         font-size: 18px;
-
+        padding-left: 10px;
       }
       .login-form input[type="text"]::placeholder{
-        padding-left: 10px;
+        
         font-size: 14px;
       }
       .login-form input[type="email"]{
@@ -72,13 +72,13 @@
         height: 40px;
         border-radius: 10px;
         border-style: solid ;
-        border: solid 1px #e35b00;
+        border: solid 1px #353535;
         outline-color: #FF6600;
         font-size: 18px;
-
+        padding-left: 10px;
       }
       .login-form input[type="email"]::placeholder{
-        padding-left: 10px;
+    
         font-size: 14px;
       }
       .login-form input[type="password"]{
@@ -89,39 +89,71 @@
         height: 40px;
         border-radius: 10px;
         border-style: solid ;
-        border: solid 1px #e35b00;
+        border: solid 1px #353535;
         outline-color: #FF6600;
         font-size: 18px;
-   
-
+        padding-left: 10px;
+        
       }
       .login-form input[type="password"]::placeholder{
-        padding-left: 10px;
+        
         font-size: 14px;
       }
 
       .login-form input[type="submit"]{
+        
         margin-left: auto;
         margin-right: auto;
         display: block;
-        width: 80%;
+        width: 82%;
         height: 40px;
-        margin-top: 25px;
+        margin-top: 10px;
         border-radius: 10px;
         border: 0;
-       background-color: #292929;
+       background-color: #ff6600;
        color: white;
        font-size: 18px;
-       transition: background-color  0.4s;
+       transition: background-color  0.4s,transform 0.2s;
        cursor: pointer;
+       
       }
       .login-form input[type="submit"]:hover{
-        background-color: #FF6600;
+        background-color: #ff4800;
+       
       }
       .login-form input[type="submit"]:active{
-        scale: 1.01;
+        
+        transform: scale(1.01);
 
       }
+      
+      .login-form input[type="reset"]{
+        
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        width: 82%;
+        height: 40px;
+        margin-top: 5px;
+        border-radius: 10px;
+        border: 0;
+       background-color:  #636363;
+       color: white;
+       font-size: 18px;
+       transition: background-color  0.4s,transform 0.2s;
+       cursor: pointer;
+       
+      }
+      .login-form input[type="reset"]:hover{
+        background-color: #292929;
+      }
+      .login-form input[type="reset"]:active{
+        transform: scale(1.01);
+
+      }
+
+
+
       label{
       margin-left: 58px;
         color: #292929;
@@ -181,7 +213,7 @@
           <h1>Sign Up</h1>
           <p>Let's sign up quickly to get started</p>
           </div>
-  <form action="" method="post">
+          <form action="" method="post" onsubmit="return signDataCheck()">
           <div class="login-form">
           <label for="nameId">User Name</label><br>
           <input type="text" id="nameId" placeholder="enter user name" required><br>
@@ -190,12 +222,13 @@
           <input type="email" id="nameId" placeholder="enter email" required><br>
   
           <label for="passwordId">Password</label><br>
-          <input type="password" id="passwrordId" placeholder="enter password" required><br>
+          <input type="password" id="passwrordId1" placeholder="enter password" required><br>
   
           <label for="passwordId">Confirm Password</label><br>
-          <input type="password" id="passwrordId" placeholder="confirm password" required><br>
+          <input type="password" id="passwrordId2" placeholder="confirm password" required><br>
   
-          <input type="submit" value="Sign Up"><br>
+          <input type="submit" value="Sign Up" ><br>
+          <input type="reset" value="Reset">
   
          
         </div>
@@ -301,5 +334,48 @@
         </div>
       </section>
     </footer>
+<script>
+
+
+function signDataCheck(){
+  let letters=/^[A-Za-z]+$/;
+  let password1=document.getElementById("passwrordId1").value;
+  let password2=document.getElementById("passwrordId2").value;
+  
+  let name=document.getElementById("nameId").value;
+    if(name==null||name==""){
+      window.alert("Name should be filledout!");
+           return false;
+    }else{
+      if(name.match(letters)){
+
+        if(password1==password2){
+          window.location.href='login.html';
+          return false;
+
+
+        }else{
+          window.alert("password doesn't match!");
+          return false;
+        }
+
+
+
+      }else{
+       window.alert("You can only enter character only!");
+          return false;
+}
+
+
+
+    }
+   
+
+}
+
+
+</script>
+
+
   </body>
 </html>
