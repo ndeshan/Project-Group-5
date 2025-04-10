@@ -165,6 +165,7 @@ Methanin yata thinne user feedback page eke css tika */
     background-color: rgb(210, 212, 216);
     height: 1000px;
     font-size: 30px;
+    
 
 }
 
@@ -181,6 +182,7 @@ Methanin yata thinne user feedback page eke css tika */
 }
 .user-feedback-form-inputs{
     width: 80%;
+    
 }
 .user-feedback-form-inputs input {
     display: block;
@@ -199,28 +201,27 @@ Methanin yata thinne user feedback page eke css tika */
     border: 2px solid black;
 }
 
-input [type="radio"] {
-    background-color: transparent;
-    height: 50px;
-    width: 20px;
-}
+
 .user-feedback-radio input{
    
-    padding: 10px 10px;
+    gap: 0px;
+    margin-left: 0px;
     background-color: transparent;
     opacity: 10;
     width: 20px;
     height: 20px;
-    
+   
 }
 .user-feedback-radio, label{
     display: inline-flex;
     align-items: center;
-    gap: 30px;
+   gap: 80px;
+    margin-left: -50px;
     cursor: pointer;
-    padding: 10px 10px;
+    padding: 10px ;
+    
     background-color: transparent;
-    margin-left: -40px;
+    
 }
 
 
@@ -231,13 +232,22 @@ input [type="radio"] {
     padding: 20px 20px;
     
 }
+.user-feedback-form-inputs input{
+    margin-left: -75px;
+}
+.user-feedback-form-inputs span{
+    margin-left: -75px;
+}
+.user-feedback-form-inputs textarea{
+    margin-left: -75px;
+}
 .user-feedback-form-inputs span{
     text-align: left;
-    float: left;
-    padding-top: 20px;
+    
+    padding-top: 0px;
     font-size: 30px;
     font-weight: 500;
-    padding: 10px;
+    
     color: chocolate;
 }
 .user-feedback-textarea{
@@ -268,6 +278,8 @@ input[type="button"] {
     font-weight: 600;
     margin-top: 30px;
     border: none;
+    margin-left: auto;
+    margin-right: auto;
 }
 input[type="button"]:hover {
     background-color: #ffd000;
