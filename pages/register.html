@@ -1,203 +1,243 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Register</title>
-  <link rel="icon" href="../Images/webLogo.png" type="icon" />
-  <link rel="stylesheet" href="../Layout/login-css2.css" />
-  <style>
-    body {
-      font-family: sans-serif;
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+    <link rel="icon" href="../Images/webLogo.png" type="icon"/>
+    <link rel="stylesheet" href="../Layout/login-css2.css" />
+    <style>
+      body{
+        font-family: sans-serif;
+      }
+      .login-container{
+        display: flex;
+        align-items: center;
+        justify-content: center;       
+        margin-top: 0;
+        box-shadow: 1px 3px 12px rgb(56, 56, 56);
+        width: 1000px;
+        border-radius:16px ;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 40px;
+      }
+      .pic-container{
+        background-color: rgb(234, 234, 234);
+        height: 650px;
+        width:400px;
+        border-top-left-radius: 16px; 
+        border-bottom-left-radius:16px ;
+        
+      } 
+      .form-container{
+        background-color: rgb(255, 255, 255);  
+        height: 650px;
+        width:600px;
+        border-top-right-radius: 16px;
+        border-bottom-right-radius:16px ;
+        
+      }
+      .form-head{
+        text-align: center;
+        margin-top: 30PX;
+        margin-bottom: 30px;
+      }
+      .form-head h1{
+        color: #FF6600;
+        font-size:35px ;
+      }
+      .login-form input[type="text"]{
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        width: 80%;
+        height: 40px;
+        border-radius: 10px;
+        border-style: solid ;
+        border: solid 1px #353535;
+        outline-color: #FF6600;
+        font-size: 18px;
+        padding-left: 10px;
+      }
+      .login-form input[type="text"]::placeholder{
+        
+        font-size: 14px;
+      }
+      .login-form input[type="email"]{
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        width: 80%;
+        height: 40px;
+        border-radius: 10px;
+        border-style: solid ;
+        border: solid 1px #353535;
+        outline-color: #FF6600;
+        font-size: 18px;
+        padding-left: 10px;
+      }
+      .login-form input[type="email"]::placeholder{
+    
+        font-size: 14px;
+      }
+      .login-form input[type="password"]{
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        width: 80%;
+        height: 40px;
+        border-radius: 10px;
+        border-style: solid ;
+        border: solid 1px #353535;
+        outline-color: #FF6600;
+        font-size: 18px;
+        padding-left: 10px;
+        
+      }
+      .login-form input[type="password"]::placeholder{
+        
+        font-size: 14px;
+      }
 
-    .login-container {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-top: 0;
-      box-shadow: 1px 3px 12px rgb(56, 56, 56);
-      width: 1000px;
-      border-radius: 16px;
-      margin-left: auto;
-      margin-right: auto;
-      margin-bottom: 40px;
-    }
+      .login-form input[type="submit"]{
+        
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        width: 82%;
+        height: 40px;
+        margin-top: 10px;
+        border-radius: 10px;
+        border: 0;
+       background-color: #ff6600;
+       color: white;
+       font-size: 18px;
+       transition: background-color  0.4s,transform 0.2s;
+       cursor: pointer;
+       
+      }
+      .login-form input[type="submit"]:hover{
+        background-color: #ff4800;
+       
+      }
+      .login-form input[type="submit"]:active{
+        
+        transform: scale(1.01);
 
-    .pic-container {
-      background-color: rgb(234, 234, 234);
-      height: 650px;
-      width: 400px;
-      border-top-left-radius: 16px;
-      border-bottom-left-radius: 16px;
+      }
+      
+      .login-form input[type="reset"]{
+        
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        width: 82%;
+        height: 40px;
+        margin-top: 5px;
+        border-radius: 10px;
+        border: 0;
+       background-color:  #636363;
+       color: white;
+       font-size: 18px;
+       transition: background-color  0.4s,transform 0.2s;
+       cursor: pointer;
+       
+      }
+      .login-form input[type="reset"]:hover{
+        background-color: #292929;
+      }
+      .login-form input[type="reset"]:active{
+        transform: scale(1.01);
 
-    }
-
-    .form-container {
-      background-color: rgb(255, 255, 255);
-      height: 650px;
-      width: 600px;
-      border-top-right-radius: 16px;
-      border-bottom-right-radius: 16px;
-
-    }
-
-    .form-head {
-      text-align: center;
-      margin-top: 50PX;
-      margin-bottom: 30px;
-    }
-
-    .form-head h1 {
-      color: #FF6600;
-      font-size: 35px;
-    }
-
-    .login-form input[type="text"] {
-      margin-left: auto;
-      margin-right: auto;
-      display: block;
-      width: 80%;
-      height: 40px;
-      border-radius: 10px;
-      border-style: solid;
-      border: solid 1px #e35b00;
-      outline-color: #FF6600;
-      font-size: 18px;
-
-    }
-
-    .login-form input[type="text"]::placeholder {
-      padding-left: 10px;
-      font-size: 14px;
-    }
-
-    .login-form input[type="password"] {
-      margin-left: auto;
-      margin-right: auto;
-      display: block;
-      width: 80%;
-      height: 40px;
-      border-radius: 10px;
-      border-style: solid;
-      border: solid 1px #e35b00;
-      outline-color: #FF6600;
-      font-size: 18px;
+      }
 
 
-    }
 
-    .login-form input[type="password"]::placeholder {
-      padding-left: 10px;
-      font-size: 14px;
-    }
-
-    .login-form input[type="button"] {
-      margin-left: auto;
-      margin-right: auto;
-      display: block;
-      width: 80%;
-      height: 40px;
-      margin-top: 25px;
-      border-radius: 10px;
-      border: 0;
-      background-color: #292929;
-      color: white;
-      font-size: 18px;
-      transition: background-color 0.4s;
-      cursor: pointer;
-    }
-
-    .login-form input[type="button"]:hover {
-      background-color: #FF6600;
-    }
-
-    .login-form input[type="button"]:active {
-      scale: 1.01;
-
-    }
-
-    label {
+      label{
       margin-left: 58px;
-      color: #292929;
-      font-size: 26px;
-    }
+        color: #292929;
+        font-size: 26px;
+      }
+      .sign-up-part{
+        text-align: center;
 
-    .sign-up-part {
-      text-align: center;
+      }
+      .sign{
+        color: #FF6600;
+        text-decoration: none;
+        font-size: 17px;
+      }
+      .back-image{
+        height: 650px;
+         width: 400px;
+         border-top-left-radius: 16px;
+         border-bottom-left-radius: 16px;
+      }
+      .web-Logo{
+        margin-left: 65px;
+        margin-top: 150px;
+        height: 270px;
+        height: 270px ;
+        position:absolute ;
+      }
+    </style>
+  </head>
+  <body>
+   
+      <header class="header">
+        <nav class="navbar">
+          <a href="index.html" class="nav-home">Home</a>
+          <a href="Gym_membership_And_Fitness_Articles.html" class="nav-diet"
+            >Membership</a
+          >
+          <a href="Blog_and_Articles.html" class="nav-fitness">Blogs</a>
+          <a href="About_Us.html" class="nav-about">About</a>
+          <a href="Contact_Us.html" class="nav-contact">Contact</a>
+          <a href="login.html" class="nav-login">Login</a>
+        </nav>
+        <div class="images">
+          <a href="index.html"
+            ><img src="../Images/webLogo.png" alt="logo" />
+          </a>
+        </div>
+      </header><div class="login-container">
+        <div class="pic-container">
+          <img src="/Images/webLogo.png" alt="background-image" class="web-Logo" >
+          <img src="/Images/sign-up-photo.jpg" alt="background-image" class="back-image" >
+  
+  
+        </div>
+        <div class="form-container">
+          <div class="form-head">
+          <h1>Sign Up</h1>
+          <p>Let's sign up quickly to get started</p>
+          </div>
+          <form action="" method="post" onsubmit="return signDataCheck()">
+          <div class="login-form">
+          <label for="nameId">User Name</label><br>
+          <input type="text" id="nameId" placeholder="enter user name" required><br>
+  
+          <label for="nameId">Email</label><br>
+          <input type="email" id="nameId" placeholder="enter email" required><br>
+  
+          <label for="passwordId">Password</label><br>
+          <input type="password" id="passwrordId1" placeholder="enter password" required><br>
+  
+          <label for="passwordId">Confirm Password</label><br>
+          <input type="password" id="passwrordId2" placeholder="confirm password" required><br>
+  
+          <input type="submit" value="Sign Up" ><br>
+          <input type="reset" value="Reset">
+  
+         
+        </div>
+      </form>
 
-    }
-
-    .sign {
-      color: #FF6600;
-      text-decoration: none;
-      font-size: 17px;
-    }
-
-    .back-image {
-      height: 650px;
-      width: 400px;
-      border-top-left-radius: 16px;
-      border-bottom-left-radius: 16px;
-    }
-
-    .web-Logo {
-      margin-left: 65px;
-      margin-top: 150px;
-      height: 270px;
-      height: 270px;
-      position: absolute;
-    }
-  </style>
-</head>
-
-<body>
-
-  <header class="header">
-    <nav class="navbar">
-      <a href="index.html" class="nav-home">Home</a>
-      <a href="Gym_membership_And_Fitness_Articles.html" class="nav-diet">Membership</a>
-      <a href="Blog_and_Articles.html" class="nav-fitness">Blogs</a>
-      <a href="About_Us.html" class="nav-about">About</a>
-      <a href="Contact_Us.html" class="nav-contact">Contact</a>
-      <a href="login.html" class="nav-login">Login</a>
-    </nav>
-    <div class="images">
-      <a href="index.html"><img src="../Images/webLogo.png" alt="logo" />
-      </a>
-    </div>
-  </header>
-  <div class="login-container">
-    <div class="pic-container">
-      <img src="/Images/webLogo.png" alt="background-image" class="web-Logo">
-      <img src="/Images/sign-up-photo.jpg" alt="background-image" class="back-image">
-
-
-    </div>
-    <div class="form-container">
-      <div class="form-head">
-        <h1>Sign Up</h1>
-        <p>Let's sign up quickly to get started</p>
       </div>
 
-      <div class="login-form">
-        <label for="nameId">User Name</label><br>
-        <input type="text" id="nameId" placeholder="enter user name"><br>
-
-        <label for="nameId">Email</label><br>
-        <input type="text" id="nameId" placeholder="enter email"><br>
-
-        <label for="passwordId">Password</label><br>
-        <input type="password" id="passwrordId" placeholder="enter password"><br>
-
-        <label for="passwordId">Confirm Password</label><br>
-        <input type="password" id="passwrordId" placeholder="confirm password"><br>
-
-        <input type="button" value="Sign Up"><br>
-
-
-      </div>
+     
 
     </div>
 
@@ -255,19 +295,19 @@
             </td>
             <td><a href="Contact_Us.html">Contact Us</a></td>
             <td><a href="https://en.wikipedia.org/wiki/Facebook">FaceBook</a></td>
-            <td><a href="About_Us.html">About_Us</a></td>
+            <td><a href="About_Us.html">About Us</a></td>
           </tr>
           <tr>
             <td> </td>
             <td><a href="About_Us.html">About Us</a></td>
             <td><a href="https://en.wikipedia.org/wiki/Mobile_phone">Mobile</a></td>
-            <td><a href="">Contact_Us</a></td>
+            <td><a href="">Contact Us</a></td>
           </tr>
           <tr>
             <td> </td>
             <td> </td>
             <td></td>
-            <td><a href="https://en.wikipedia.org/wiki/Twitter">Instergrame</a></td>
+            <td><a href="https://en.wikipedia.org/wiki/Twitter">Instagram</a></td>
             <td><a href="login.html">Login</a></td>
           </tr>
           <tr>
@@ -294,7 +334,51 @@
           <p>@ Group 5 mini project</p>
         </div>
       </section>
-  </footer>
-</body>
 
+    </footer>
+<script>
+
+
+function signDataCheck(){
+  let letters=/^[A-Za-z]+$/;
+  let password1=document.getElementById("passwrordId1").value;
+  let password2=document.getElementById("passwrordId2").value;
+  
+  let name=document.getElementById("nameId").value;
+    if(name==null||name==""){
+      window.alert("Name should be filledout!");
+           return false;
+    }else{
+      if(name.match(letters)){
+
+        if(password1==password2){
+          window.location.href='login.html';
+          return false;
+
+
+        }else{
+          window.alert("password doesn't match!");
+          return false;
+        }
+
+
+
+      }else{
+       window.alert("You can only enter character only!");
+          return false;
+}
+
+
+
+    }
+   
+
+}
+
+
+</script>
+
+
+  </body>
 </html>
+
