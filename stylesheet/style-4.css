@@ -59,7 +59,21 @@ textarea {
     padding: 30px;
 
 }
-
+.contact-header-underline-1{
+    border: 2px solid black;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 80px;
+}
+.contact-header-underline{
+    border: 2px solid black;
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -20px;
+    
+}
 .contact-section-1 p {
     padding-top: 30px;
     padding-left: 10px;
@@ -108,11 +122,41 @@ textarea {
 }
 
 .contact-section-2 img {
-    width: 5rem;
+    width: 4rem;
     padding: 10px;
+    transition: transform 0.3s ease-in-out;
+    
 }
+.contact-section-2 img:hover {
+    transform: scale(1.2);
 
-
+}
+.contact-section-3{
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+.contact-section-3-div-1{
+    padding-top: 80px;
+}
+.contact-section-3-div-1 h1{
+    font-size: 60px;
+    font-weight: 800;
+    padding: 50px 0px 20px 0px;
+    text-align: center;
+}
+.contact-section-3-div-1 p{
+    font-size: 20px;
+    font-weight: 400;
+    padding: 0px 20px;
+    text-align: center;
+}
+.contact-section-3-div-2 img{
+    border-radius: 20px;
+}
 /* 
 Methanin yata thinne user feedback page eke css tika */
 
