@@ -14,11 +14,11 @@
 
 #
 
-# style-3 / script-3 : Success Stories , Blog & Articles ,  , Fitness Articles
+# style-3 / script-3 : Success Stories , Blog & Articles  , Fitness Articles
 
 #
 
-# style-4 / script-4 : Gym membership pricing , Event and Challenges , Contact
+# style-4 / script-4 : Gym membership pricing , Event and Challenges , Contact , user feedback
 
 #
 

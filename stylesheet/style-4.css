@@ -1,72 +1,86 @@
-*{
+* {
     margin: 0;
 }
-.header nav{
-   
+
+.header nav {
+
     background-color: transparent;
     padding: 50px 140px;
     padding-right: -50px;
-    
-  }
-  .navbar a{
+
+}
+
+.navbar a {
     color: rgb(0, 0, 0);
-  }
-  .images img{
+}
+
+.images img {
     width: 120px;
     float: inline-start;
     padding: 10px 10px 10px 10px;
     z-index: 1;
-  }
-.contact-section-1{
+}
+
+.contact-section-1 {
     background-image: url(../Images/contact-page-background.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 
 }
-.contact-section-1 h1{
+
+.contact-section-1 h1 {
     margin-top: 100px;
 }
-.contact-section-1 input,textarea{
+
+.contact-section-1 input,
+textarea {
     margin-left: auto;
     margin-right: auto;
     display: block;
     padding: 20px 180px;
     border: transparent;
     font-size: 20px;
-    background-color: rgb(255, 255, 255,0.6);
+    background-color: rgb(255, 255, 255, 0.6);
     border-radius: 10px;
 }
-.contact-section-1 textarea:hover{
-    background-color: rgb(255, 255, 255,0.9) ;
+
+.contact-section-1 textarea:hover {
+    background-color: rgb(255, 255, 255, 0.9);
 }
-.contact-section-1 input:hover{
-    background-color: rgb(255, 255, 255,0.9) ;
+
+.contact-section-1 input:hover {
+    background-color: rgb(255, 255, 255, 0.9);
 }
-.contact-section-1{
+
+.contact-section-1 {
     text-align: left;
-    font-size:30px;
+    font-size: 30px;
     font-weight: 400;
     padding: 30px;
-       
+
 }
-.contact-section-1 p{
+
+.contact-section-1 p {
     padding-top: 30px;
     padding-left: 10px;
 }
-.contact-section-1 .button{
+
+.contact-section-1 .button {
     padding: 20px 70px;
     margin-top: 30px;
     font-size: 30px;
     border-radius: 10px;
     background-color: #ffdd00;
-    
+
 }
-.contact-section-1 .button:hover{
-    background-color:#ffd000 ;
+
+.contact-section-1 .button:hover {
+    background-color: #ffd000;
 }
-form{
+
+.contact-form {
     padding: 20px;
-    background-color:rgb(255, 255, 255,0.3);
+    background-color: rgb(255, 255, 255, 0.3);
     margin-left: auto;
     margin-right: auto;
     width: 900px;
@@ -75,22 +89,201 @@ form{
     margin-top: 30px;
     border-radius: 0px 90px 0px 90px;
 }
-.contact-h1{
+
+.contact-h1 {
     font-size: 100px;
     text-align: center;
     padding: 30px;
     padding-top: 20px;
 }
-.contact-section-2{
+
+.contact-section-2 {
     display: flex;
-    background-color:rgb(204, 204, 203) ;
+    background-color: rgb(204, 204, 203);
     justify-content: center;
     gap: 160px;
     text-align: center;
     padding: 20px 0px 20px 0px;
     font-size: 20px;
 }
-.contact-section-2 img{
+
+.contact-section-2 img {
     width: 5rem;
     padding: 10px;
+}
+
+
+/* 
+Methanin yata thinne user feedback page eke css tika */
+
+.user-feedback-background-1 {
+    background-image: url(../Images/user-feedback-background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: -30px;
+    height: 500px;
+
+}
+
+.user-feedback-background-1 {
+    padding-top: 300px;
+    width: 100%;
+}
+
+.user-feedback-background-1 img {
+    height: 200px;
+    margin-top: 100px;
+}
+
+.user-feedback-background-p1 {
+    font-size: 30px;
+    color: white;
+    padding: 20px 20px;
+    margin-left: 25px;
+    margin-top: -70px;
+    width: 60%;
+}
+
+.user-feedback-background-p2 {
+    font-size: 15px;
+    color: white;
+    padding: 0px 20px;
+    margin-left: 30px;
+}
+
+.user-feedback-background-2 {
+    background-color: rosybrown;
+    margin-top: -30px;
+
+}
+
+.user-feedback-form {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30px;
+    background-color: rgb(210, 212, 216);
+    height: 1000px;
+    font-size: 30px;
+    
+
+}
+
+.user-feedback-form h1 {
+    font-size: 70px;
+    font-weight: 800;
+}
+
+.user-feedback-form p {
+    font-size: 20px;
+    font-weight: 400;
+    padding: 10px 0px;
+
+}
+.user-feedback-form-inputs{
+    width: 80%;
+    
+}
+.user-feedback-form-inputs input {
+    display: block;
+    padding: 25px 90px ;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    font-size: 25px;
+}
+
+.user-feedback-form span {
+    font-size: 25px;
+}
+
+.form-hr {
+    border: 2px solid black;
+}
+
+
+.user-feedback-radio input{
+   
+    gap: 0px;
+    margin-left: 0px;
+    background-color: transparent;
+    opacity: 10;
+    width: 20px;
+    height: 20px;
+   
+}
+.user-feedback-radio, label{
+    display: inline-flex;
+    align-items: center;
+   gap: 80px;
+    margin-left: -50px;
+    cursor: pointer;
+    padding: 10px ;
+    
+    background-color: transparent;
+    
+}
+
+
+.user-feedback-form-inputs{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px 20px;
+    
+}
+.user-feedback-form-inputs input{
+    margin-left: -75px;
+}
+.user-feedback-form-inputs span{
+    margin-left: -75px;
+}
+.user-feedback-form-inputs textarea{
+    margin-left: -75px;
+}
+.user-feedback-form-inputs span{
+    text-align: left;
+    
+    padding-top: 0px;
+    font-size: 30px;
+    font-weight: 500;
+    
+    color: chocolate;
+}
+.user-feedback-textarea{
+    margin-top: 20px;
+}
+.user-feedback-textarea textarea{
+    width: 70%;
+    resize: none;
+    border: none;
+   
+    
+}
+
+.user-feedback-input-name input{
+    width: 100%;
+    border: none;
+    
+}
+.user-feedback-input-email input{
+    width: 100%;
+    border: none;
+    
+}
+input[type="button"] {
+    background-color: #ffdd00;
+    padding: 20px 70px;
+    font-size: 30px;
+    font-weight: 600;
+    margin-top: 30px;
+    border: none;
+    margin-left: auto;
+    margin-right: auto;
+}
+input[type="button"]:hover {
+    background-color: #ffd000;
+}
+.user-feedback-form-inputs input:hover {
+    background-color: rgb(255, 255, 255, 0.9);
 }
