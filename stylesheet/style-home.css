@@ -211,6 +211,8 @@ body {
 
 .container-2-1 img:hover {
     transform: scale(1.03);
+    box-shadow: black 10px 10px 10px;
+
 }
 
 .container-2-2 img {
@@ -223,6 +225,7 @@ body {
 
 .container-2-2 img:hover {
     transform: scale(1.07);
+    box-shadow: black 10px 10px 10px;
 }
 
 .container-2-3 img {
@@ -235,6 +238,7 @@ body {
 
 .container-2-3 img:hover {
     transform: scale(1.07);
+    box-shadow: black 10px 10px 10px;
 }
 
 .container-2-4 img {
@@ -247,6 +251,7 @@ body {
 
 .container-2-4 img:hover {
     transform: scale(1.07);
+    box-shadow: black 10px 10px 10px;
 }
 
 .container-2-1 {
@@ -323,126 +328,65 @@ body {
     background-size: cover;
 }
 
-.container-3 {
-    display: grid;
-    grid-template-columns: 33% 33% 33%;
-    grid-template-rows: auto auto;
-    grid-template-areas:
-        "bmi bmi bmi-advicce"
-        "success-stories user-feedback testimonial";
-    border-color: 2px solid white;
-}
-
-.bmi {
-    grid-area: bmi;
-    padding: 30px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.bmi img {
-    width: 400px;
-    padding: 30px;
-    margin-left: -450px;
-    transition: transform 0.3s ease-in-out;
-}
-
-.bmi img:hover {
-    transform: scale(1.04);
-}
-
-.bmi-advice {
-    grid-area: bmi-advicce;
-    color: white;
-    font-size: 60px;
-    padding: 10%;
-    text-align: left;
-    margin-left: -150px;
-    margin-top: 60px;
-}
-
-.section-2-flex {
+ .container-3{
     display: flex;
-    margin-left: auto;
-    margin-right: auto;
-    gap: 0px;
-}
-
-.success-stories {
-    grid-area: success-stories;
+    flex-direction: column;
     color: white;
-    font-size: 30px;
-    text-align: center;
-
-}
-
-.success-stories img {
-    width: 200px;
-    border-radius: 20px;
-    transition: transform 0.3s ease-in-out;
-}
-
-.success-stories img:hover {
+    font-size: 30PX;
+    pa
+ }
+ .success-stories img{
+    width: 250px;
+ }
+ .success-stories img:hover{
     transform: scale(1.05);
-}
-
-.user-feedback {
-    grid-area: user-feedback;
-    color: white;
-    font-size: 30px;
-    text-align: center;
-    margin-right: -40px;
-    margin-bottom: 40px;
-
-}
-
-.user-feedback img {
-    width: 180px;
-    height: 240px;
-    border-radius: 20px;
-    margin-right: -90px;
-    margin-top: 40px;
     transition: transform 0.3s ease-in-out;
-}
-
-.user-feedback img:hover {
-    transform: scale(1.05);
-}
-
-.testimonial {
-    grid-area: testimonial;
-    color: white;
+    box-shadow: white 4px 4px 4px;
+ }
+ .user-feedback img{
+    width: 250px;
+    height: 350px;
+ }
+ .user-feedback img:hover{
+        transform: scale(1.05);
+        transition: transform 0.3s ease-in-out;
+        box-shadow: white 4px 4px 4px;}
+.section-2-flex{
+    display: flex;
+    gap: 20px;
+    padding-top: 50px;
+    padding-left: 140px;
+    text-align: center;
+  }  
+ .testimonial{
+    padding: 10px;
     font-size: 50px;
+    font-weight: 900;
+    padding-top: 40px;
+    padding-left: 140px;
+ }
+ .button-start-your-journey{
+    padding-left: 100px;
+    padding-bottom: 90px;
+ }
+ .button-start-your-journey button{
     padding: 20px;
-    text-align: left;
-    padding-top: -20px;
-    margin-left: -90px;
-    margin-top: 50px;
-}
-
-.button-start-your-journey {
-    font-size: 30px;
-    background-color: #ff0000;
-    padding: 20px;
+    font-size: 20px;
     font-weight: bold;
-    border-radius: 20px;
+    background-color: red;
+    color: white;
+    border: none;
 
-    float: inline-start;
-    margin-left: -5px;
-    transition: transform 0.3s ease-in-out;
-    box-shadow: 2px 2px white;
-}
-
-.button-start-your-journey a {
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-}
-
-.button-start-your-journey:hover {
+ }
+ .button-start-your-journey button:hover{
     transform: scale(1.05);
-}
-
-footer {
+    transition: transform 0.3s ease-in-out;
+    box-shadow: white 2px 3px 2px;
+ }
+ 
+ 
+ 
+ footer {
     background-color: #464545;
     bottom: auto;
     position: relative;
@@ -561,4 +505,24 @@ footer .footer-second-part p {
 
 .footer-second-part a:hover {
     text-decoration: underline;
+}
+.section-1-2{
+    display: flex;
+    height: 500px;
+    gap: 80px;
+    justify-content: center;
+    background-color: rgb(202, 178, 146);
+}
+.bmi-1 img{
+    width: 500px;
+    margin-top: 40px;
+    transition: transform 0.3s ease-in-out;
+}
+.bmi-1 img:hover{
+    transform: scale(1.05);
+}
+.bmi-advice-1{
+    margin-top: 70px;
+    font-size: 80px;
+    font-weight: 900;
 }
