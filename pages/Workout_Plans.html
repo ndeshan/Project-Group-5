@@ -2,6 +2,7 @@
 <html lang="en">
 
 
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -57,6 +58,12 @@
       text-align: center;
     }
 
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+
     #workoutPlan {
       display: flex;
       flex-wrap: wrap;
@@ -96,7 +103,7 @@
       background: #fff;
       border: 1px solid #ccc;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      background-image: url('../Images/bg.webp');
+      background-image: url('../Images/bg.jpg');
       background-size: cover;
       background-position: center;
       border-radius: 20px;
@@ -136,7 +143,7 @@
 
     .titleplan {
       text-align: center;
-      font-size: 20px;
+      font-size: 30px;
       font-weight: bold;
       margin-bottom: 10px;
     }
@@ -145,6 +152,10 @@
       background-color: #191f26;
 
 
+    }
+    caption{
+      font-size: 30px;
+      color: #d9480f;
     }
 
 
@@ -188,13 +199,13 @@
     }
 
     .title {
-      font-family: "Roboto", sans-serif;
+      font-family: "Arial", sans-serif;
       font-optical-sizing: auto;
       font-weight: 800;
       font-style: normal;
       font-size: 3.5rem;
       margin-left: 20px;
-
+      
     }
 
     .con2 {
@@ -229,6 +240,13 @@
 
     .submitbtn:hover {
       background-color: #b8471a;
+    }
+
+    .gridtitle {
+     
+      font-size: 30px;
+      font-weight: bold;
+      
     }
   </style>
 </head>
@@ -303,46 +321,46 @@
 
   <div class="container">
     <div class="i1">
-      <h3>8 Week Fat Loss Workout for Beginners</h3><br>
+      <h3 class="gridtitle"><strong style="color: #d9480f;">8 Week</strong> Fat Loss Workout for Beginners</h3><br>
       <img src="../Images/a.webp" alt="" onclick="showPopup('popup1')" class="image">
 
 
     </div>
     <div class="i2">
-      <h3>8 Week Strength Building Workout</h3><br>
+      <h3 class="gridtitle"><strong style="color: #d9480f;">8 Week</strong> Strength Building Workout</h3><br>
       <img src="../Images/b.avif" alt="" onclick="showPopup('popup2')" class="image">
     </div>
     <div class="i3">
-      <h3>10 Week Mass Building Program</h3><br>
+      <h3 class="gridtitle"><strong style="color: #d9480f;">10 Week</strong> Mass Building Program</h3><br>
       <img src="../Images/c.webp" alt="" onclick="showPopup('popup3')" class="image">
     </div>
     <div class="i4">
-      <h3>3 Day Push/Pull/Legs Workout</h3><br>
+      <h3 class="gridtitle"><strong style="color: #d9480f;">3 Day</strong> Push/Pull/Legs Workout</h3><br>
       <img src="../Images/d.jpeg" alt="" onclick="showPopup('popup4')" class="image">
     </div>
 
     <div class="i5">
       <br><br>
-      <h3>4 Day Maximum Mass Workout</h3><br>
-      <img src="../Images/i5.webp" alt="" onclick="showPopup('popup5')" class="image">
+      <h3 class="gridtitle" style="margin-top: 35px;"><strong style="color: #d9480f;">4 Day</strong> Maximum Mass Workout</h3><br>
+      <img src="../Images/i5.webp" alt="" onclick="showPopup('popup5')" class="image" >
     </div>
 
     <div class="i6">
       <br><br>
-      <h3>12 Week Fat Destroyer</h3><br>
-      <img src="../Images/i6.webp" alt="" onclick="showPopup('popup6')" class="image">
+      <h3 class="gridtitle" style="margin-top: 38px;"><strong style="color: #d9480f;">12 Week</strong> Fat Destroyer</h3><br>
+      <img src="../Images/i6.webp" alt="" onclick="showPopup('popup6')" class="image"style="margin-top: 30px;">
     </div>
 
     <div class="i7">
       <br><br>
-      <h3>Fast Mass Program</h3><br>
-      <img src="../Images/i7.jpg" alt="" onclick="showPopup('popup7')" class="image">
+      <h3 class="gridtitle"style="margin-top: 38px;"><strong style="color: #d9480f;">Fast</strong> Mass Program</h3><br>
+      <img src="../Images/i7.jpg" alt="" onclick="showPopup('popup7')" class="image"style="margin-top: 30px;">
     </div>
 
     <div class="i8">
       <br><br>
-      <h3>4 Day Advanced Upper/Lower</h3><br>
-      <img src="../Images/i8.jpg" alt="" onclick="showPopup('popup8')" class="image">
+      <h3 class="gridtitle"style="margin-top: 38px;"><strong style="color: #d9480f;">4 Day</strong>  Advanced Upper/Lower</h3><br>
+      <img src="../Images/i8.jpg" alt="" onclick="showPopup('popup8')" class="image"style="margin-top: -5px;">
     </div>
 
 
@@ -1923,7 +1941,7 @@
 
 
 
-  <footer>
+  
 
 
 
@@ -1933,7 +1951,7 @@
 
 
 
-    <footer style="margin-top: 100px;">
+    <footer style="margin-top: 200px;">
 
 
       <div class="footer-flexbox">
