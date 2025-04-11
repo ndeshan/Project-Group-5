@@ -10,6 +10,132 @@
   <title>Event & Challenges</title>
   <link rel="icon" href="../Images/webLogo.png" type="icon" />
   <link rel="stylesheet" href="../Layout/style.css" />
+  <script src="https://kit.fontawesome.com/45cc59e5cb.js" crossorigin="anonymous"></script>
+  <style>
+    body {
+      background-color: #343a40;
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    #event_coverimage img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
+
+    #upcoming {
+      
+      color: aliceblue;
+      font-size: 2em;
+      font-family: 'Poppins';
+      
+      margin-left: 100px;
+    }
+
+    #event_cover_text {
+      position:absolute;
+      top: 35%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: aliceblue;
+      font-size: 3em;
+      font-family: 'Poppins';
+    }
+
+    #event-container {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      padding: 40px;
+      flex-wrap: wrap;
+      align-items:flex-start;
+    }
+    #event {
+      width: 300px;
+      border-radius: 10px;
+      overflow: hidden;
+      background: white;
+      display: flex;
+      flex-direction: column;
+    }
+
+    #event img {
+      width: 300px;
+      height: 250px;
+      object-fit: cover;
+    }
+
+    #event_topic {
+      height: auto;
+      background: lightgray;
+      text-align: center;
+      font-size: 20px;
+      padding: 15px;
+      font-family: 'Poppins';
+      font-weight: 800;
+      
+    }
+
+    #event_content {
+      background: lightgray;
+      padding: 15px;
+      position: relative;
+    }
+
+    #joinnow_btn {
+  background-color: #ff6b00; 
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#joinnow_btn:hover {
+  background-color: #e65c00; 
+}
+
+.old{
+font-size: 2em;margin-left: 80px;font-family: 'Poppins';color: aliceblue;}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+}
+
+.event {
+  flex: 1;
+  margin: 10px;
+}
+
+.event img {
+  width: 100%;
+  height: auto;
+  max-width: 1000px; 
+  object-fit: cover;
+}
+
+.eventhead {
+  font-weight: bold;
+  margin-left: 150px;
+  font-size: 2em;
+  margin-bottom: 10px;
+  color:#e65c00;
+}
+
+.event p {
+  font-size: 1em;
+  line-height: 1.5;
+  color: aliceblue;
+  
+}
+
+</style>
 </head>
 
 <body>
@@ -28,18 +154,98 @@
         </a>
       </div>
     </header>
-    <p>adasd</p>
-    <p>khkihki</p>
-    <p>hjohjo</p>
-    <p>ojoj</p>
-    <p>ojojohj</p>
-    <p>ojoj</p>
-    <p>ojojohj</p>
-    <p>ojoop</p>
-    <p>pok</p>
-    <p>kjopj</p>
+   
   </section>
+  <div id="event_coverimage">
+    <img src="/Images/cover.jpg" alt="blog_cover">
+    <span id="event_cover_text">Events & Challenges</span>
+  </div><br>
+  <span id="upcoming">Upcoming Events</span>
 
+  <section id="event-container">
+    <div id="event">
+      <img src="/Images/event1.jpg" alt="Yoga">
+      <div id="event_topic">
+        <b>Yoga Workshop</b><br>
+        📅 June 22, 2024 &nbsp;<br> <i class="fas fa-map-marker-alt"></i> Matara<br><br><a style="text-decoration: none;"  href="event_register.html" <button id="joinnow_btn" >Join Now</button></a>
+      </div>
+      
+        
+     
+    </div>
+    <div id="event">
+        <img src="/Images/event2.jpg" alt="Weight">
+        <div id="event_topic">
+            <b>Weight Loss Challenge</b><br>
+            📅 May 22, 2024 &nbsp;<br> <i class="fas fa-map-marker-alt"></i> Kandy<br><br>
+            <a style="text-decoration: none;"  href="event_register.html" <button id="joinnow_btn" >Join Now</button></a> 
+          </div>
+        
+      </div>
+      <div id="event">
+        <img src="/Images/event3.jpg" alt="Exercise">
+        <div id="event_topic">
+          <b>Marathon</b><br>
+          📅 December 11, 2024 &nbsp;<br> <i class="fas fa-map-marker-alt"></i> Colombo <br><br><a style="text-decoration: none;"  href="event_register.html" <button id="joinnow_btn" >Join Now</button></a>
+        </div>
+        
+      </div>
+      <div id="event">
+        <img src="/Images/event4.jpg" alt="Exercise">
+        <div id="event_topic">
+            <b>Nutrition workshop</b><br>
+            📅 June 17, 2024 &nbsp;<br> <i class="fas fa-map-marker-alt"></i> Jaffna <br><br><a style="text-decoration: none;"  href="event_register.html" <button id="joinnow_btn" >Join Now</button></a>
+          </div>
+        
+      </div>
+     
+      
+
+    
+    
+  </section>
+  <div class="old">Highlights and Memories</div>
+
+<div class="container">
+  <div class="event">
+    <img src="/Images/pevent2.jpg" alt="Bootcamp Image">
+  </div>
+  <div class="event">
+    <div class="eventhead">Outdoor Bootcamp</div>
+    <p>Participants of all fitness levels came together for a dynamic session packed with bodyweight exercises, sprint intervals, and circuit training. The energy was electric, the motivation was contagious, and everyone crushed their workout goals. Thanks to everyone who showed up and made it such a fun and empowering event!</p>
+  </div>
+</div>
+
+<div class="container">
+  <div class="event">
+    <div class="eventhead">Dance Fitness Expo</div>
+    <p>A one-day festival celebrating all types of dance fitness, including Zumba, hip-hop, and jazzercise. Enjoy live performances, try different classes, and meet other fitness enthusiasts</p>
+  </div>
+  <div class="event">
+    <img src="/Images/pevent4.jpg" alt="Bootcamp Image">
+  </div>
+</div>
+
+<div class="container">
+  <div class="event">
+    <img src="/Images/Pevent1.jpg" alt="Yoga">
+  </div>
+  <div class="event">
+    <div class="eventhead">Weekend Yoga Session</div>
+    <p>Yogis of all levels joined us for a relaxing flow surrounded by fresh air and nature. It was a beautiful time to stretch, breathe, and reconnect—with ourselves and each other. Thanks to everyone who brought their mats and good vibe</p>
+  </div>
+</div>
+
+<div class="container">
+  <div class="event">
+    <div class="eventhead">Family Fitness Fun Day</div>
+    <p>
+      A fitness event for all ages, with kid-friendly workout stations, family-friendly races, and interactive games that encourage movement and fun for the whole family</p>
+  </div>
+  <div class="event">
+    <img src="/Images/pevent3.jpg" alt="Bootcamp Image">
+  </div>
+</div>
 
 
 
@@ -114,6 +320,7 @@
           </tr>
         </table>
       </section>
+      
 
 
       <section>
