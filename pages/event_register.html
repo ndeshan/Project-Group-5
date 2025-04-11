@@ -120,13 +120,13 @@
         <textarea rows="4"></textarea>
         <label>Event</label>
         <select id="event_select" onchange="events()">
-          <option value="0">Yoga Workshop</option>
-          <option value="1">Weight Loss Challenge</option>
-          <option value="2">Marathon</option>
-          <option value="3">Nutrition workshop</option>
+          <option value="Yoga Workshop">Yoga Workshop</option>
+          <option value="Weight Loss Challenge">Weight Loss Challenge</option>
+          <option value="Marathon">Marathon</option>
+          <option value="Nutrition workshop">Nutrition workshop</option>
         </select>
 
-        <button type="button" value="Submit">Register</button>
+        <button type="button" value="Submit" onclick="Submit()">Register</button>
       </form>
     </div>
 
@@ -158,7 +158,7 @@
     function events() {
   let x = document.getElementById("event_select").value;
   switch (x) {
-    case '0':
+    case 'Yoga Workshop':
       document.getElementById("event_date").innerHTML = "📅 June 22, 2024";
       document.getElementById("event_time").innerHTML = "⏰ 9:00 AM - 11:00 AM";
       document.getElementById("event_loc").innerHTML = '<i class="fas fa-map-marker-alt"></i> Community Center, 909 Central Rd., Matara';
@@ -169,7 +169,7 @@
       document.getElementById("disc").innerHTML = "Unwind with a calming yoga session focusing on flexibility and mindfulness. All levels welcome. Bring your own mat and water bottle.";
       break;
 
-    case '1':
+    case 'Weight Loss Challenge':
       document.getElementById("event_date").innerHTML = "📅 May 22, 2024";
       document.getElementById("event_time").innerHTML = "⏰ 7:00 AM - 11:00 AM";
       document.getElementById("event_loc").innerHTML = '<i class="fas fa-map-marker-alt"></i> Lakeside Park, 812 River Drive, Kandy';
@@ -180,7 +180,7 @@
       document.getElementById("disc").innerHTML = "A strength training workshop with guidance on form, technique, and progression. Open to all fitness levels. Bring a notebook if you want to track your workouts.";
       break;
 
-    case '2':
+    case 'Marathon':
       document.getElementById("event_date").innerHTML = "📅 December 11, 2024";
       document.getElementById("event_time").innerHTML = "⏰ 9:00 AM - 12:00 AM";
       document.getElementById("event_loc").innerHTML = '<i class="fas fa-map-marker-alt"></i> Wellness Studio, 5678 Oak Ave, Colombo';
@@ -191,7 +191,7 @@
       document.getElementById("disc").innerHTML = "Join thousands of runners for a scenic 42.195 km (26.2 miles) route through urban streets and park trails. The event includes hydration stations every 2 km, live music zones, medical support, and cheering squads to keep you motivated from start to finish.";
       break;
 
-    case '3':
+    case 'Nutrition workshop':
       document.getElementById("event_date").innerHTML = "📅 June 17, 2024";
       document.getElementById("event_time").innerHTML = "⏰ 7:00 AM - 10:00 AM";
       document.getElementById("event_loc").innerHTML = '<i class="fas fa-map-marker-alt"></i> Gym, 222 King St, Jaffna';
@@ -202,6 +202,10 @@
       document.getElementById("disc").innerHTML = "Learn how to fuel your body for energy, performance, and overall wellness. This workshop will cover meal planning, reading nutrition labels, and mindful eating. Materials provided—just bring a notepad and a curious mind!";
       break;
   }
+}
+
+function Submit(){
+    window.alert("")
 }
 
   </script>
