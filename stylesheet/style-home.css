@@ -197,7 +197,7 @@ body {
     flex-wrap: wrap;
     background-color: rgb(234, 224, 224);
     padding-top: 100px;
-    padding-bottom: 100px;
+    padding-bottom: 90px;
 
 }
 
@@ -256,22 +256,22 @@ body {
 
 .container-2-1 {
     text-align: center;
-    padding: 30px;
+    padding: 10px;
 }
 
 .container-2-2 {
     text-align: center;
-    padding: 30px;
+    padding: 10px;
 }
 
 .container-2-3 {
     text-align: center;
-    padding: 30px;
+    padding: 10px;
 }
 
 .container-2-4 {
     text-align: center;
-    padding: 30px;
+    padding: 10px;
 }
 
 .container-2-1 h2 {
@@ -333,7 +333,7 @@ body {
     flex-direction: column;
     color: white;
     font-size: 30PX;
-    pa
+    padding-top: 30px;
  }
  .success-stories img{
     width: 250px;
