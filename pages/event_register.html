@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Event Registration</title>
+  <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+  <script src="https://kit.fontawesome.com/45cc59e5cb.js" crossorigin="anonymous"></script>
+  <style>
+    body {
+      font-family: 'Poppins';
+      background-color: gray;
+      margin: 0;
+      padding: 0;
+    }
+    #header {
+      position: relative;
+      height: 400px;
+      
+      font-family: 'Poppins';
+    }
+    #header img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    #header-text {
+      position: absolute;
+      top: 45%;
+      left: 40%;
+      
+      color: rgb(0, 0, 0);
+      font-size: 3em;
+      font-weight: bold;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 20px;
+      display: flex;
+      background-color: #ccc;
+      border-radius: 20px;
+      
+      gap: 30px;
+    }
+    .form-section, .details-section {
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      
+      
+    }
+   
+    form label {
+      
+      
+      font-weight: 600;
+      color: #ff6b00;
+    }
+    form input, form textarea,form select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 26px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      resize: vertical;
+      font-weight: 800;
+    }
+
+    
+    form button {
+      width: 100%;
+      padding: 10px;
+      background-color: #000;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  
+    .trainer img {
+      width: 256px;
+      height: 256px;
+      border-radius: 50%;
+      margin-right: 16px;
+    }
+   
+    
+    form input:focus, form textarea:focus, form select:focus {
+  outline: none;
+  border-color: #ff6b00;
+  box-shadow: 0 0 5px rgba(255, 107, 0, 0.5);
+}
+
+  </style>
+</head>
+<body>
+  
+  <div id="header">
+    <img src="/Images/formcover.jpg" alt="Trainer with tablet">
+    <div id="header-text">Event Registration</div>
+  </div>
+
+  <div class="container">
+    
+    <div class="form-section">
+      <h2>Register</h2>
+      <form>
+        <label>Name*</label>
+        <input type="text" required>
+
+        <label>Email*</label>
+        <input type="email" required>
+
+        <label>Phone</label>
+        <input type="tel">
+
+        <label>Comments</label>
+        <textarea rows="4"></textarea>
+        <label>Event</label>
+        <select id="event_select" onchange="events()">
+          <option value="0">Yoga Workshop</option>
+          <option value="1">Weight Loss Challenge</option>
+          <option value="2">Marathon</option>
+          <option value="3">Nutrition workshop</option>
+        </select>
+
+        <button type="button" value="Submit">Register</button>
+      </form>
+    </div>
+
+    
+    <div class="details-section">
+      <h2>Event Details</h2>
+      <ul>
+        <li id="event_date"><strong>📅 June 10, 2024</strong></li>
+        <li id="event_time"><strong>⏰ 9:00 AM - 11:00 AM</strong></li>
+        <li id="event_loc"><strong><i class="fas fa-map-marker-alt"></i> Fitness Center, 1234 Eim St.</strong></li>
+      </ul>
+
+      <h3>About the Trainer</h3>
+      <div class="trainer">
+        <img id="trainer_img" src="/Images/trainer2.jpg" alt="Trainer">
+        <div>
+          <p id="trainer"><strong>Sarah Lee</strong></p>
+          <p id="info">Certified Yoga Instructor</p>
+        </div>
+      </div>
+
+      <h3>What to Expect</h3>
+      <p id="disc">Unwind with a calming yoga session focusing on flexibility and mindfulness. All levels welcome. Bring your own mat and water bottle.</p>
+
+      
+    </div>
+  </div>
+  <script>
+    function events() {
+  let x = document.getElementById("event_select").value;
+  switch (x) {
+    case '0':
+      document.getElementById("event_date").innerHTML = "📅 June 22, 2024";
+      document.getElementById("event_time").innerHTML = "⏰ 9:00 AM - 11:00 AM";
+      document.getElementById("event_loc").innerHTML = '<i class="fas fa-map-marker-alt"></i> Community Center, 909 Central Rd., Matara';
+
+      document.getElementById("trainer_img").src = "/Images/trainer2.jpg";
+      document.getElementById("trainer").innerHTML = "Sarah Lee";
+      document.getElementById("info").innerHTML = "Certified Yoga Instructor";
+      document.getElementById("disc").innerHTML = "Unwind with a calming yoga session focusing on flexibility and mindfulness. All levels welcome. Bring your own mat and water bottle.";
+      break;
+
+    case '1':
+      document.getElementById("event_date").innerHTML = "📅 May 22, 2024";
+      document.getElementById("event_time").innerHTML = "⏰ 7:00 AM - 11:00 AM";
+      document.getElementById("event_loc").innerHTML = '<i class="fas fa-map-marker-alt"></i> Lakeside Park, 812 River Drive, Kandy';
+
+      document.getElementById("trainer_img").src = "/Images/trainer4.jpg";
+      document.getElementById("trainer").innerHTML = "Mike Johnson";
+      document.getElementById("info").innerHTML = "Strength & Conditioning Coach";
+      document.getElementById("disc").innerHTML = "A strength training workshop with guidance on form, technique, and progression. Open to all fitness levels. Bring a notebook if you want to track your workouts.";
+      break;
+
+    case '2':
+      document.getElementById("event_date").innerHTML = "📅 December 11, 2024";
+      document.getElementById("event_time").innerHTML = "⏰ 9:00 AM - 12:00 AM";
+      document.getElementById("event_loc").innerHTML = '<i class="fas fa-map-marker-alt"></i> Wellness Studio, 5678 Oak Ave, Colombo';
+
+      document.getElementById("trainer_img").src = "/Images/trainer3.jpg";
+      document.getElementById("trainer").innerHTML = "Jessica Miles";
+      document.getElementById("info").innerHTML = "Event Director";
+      document.getElementById("disc").innerHTML = "Join thousands of runners for a scenic 42.195 km (26.2 miles) route through urban streets and park trails. The event includes hydration stations every 2 km, live music zones, medical support, and cheering squads to keep you motivated from start to finish.";
+      break;
+
+    case '3':
+      document.getElementById("event_date").innerHTML = "📅 June 17, 2024";
+      document.getElementById("event_time").innerHTML = "⏰ 7:00 AM - 10:00 AM";
+      document.getElementById("event_loc").innerHTML = '<i class="fas fa-map-marker-alt"></i> Gym, 222 King St, Jaffna';
+
+      document.getElementById("trainer_img").src = "/Images/trainer1.jpg";
+      document.getElementById("trainer").innerHTML = "Rachel Kim";
+      document.getElementById("info").innerHTML = "Registered Dietitian & Nutrition Coach";
+      document.getElementById("disc").innerHTML = "Learn how to fuel your body for energy, performance, and overall wellness. This workshop will cover meal planning, reading nutrition labels, and mindful eating. Materials provided—just bring a notepad and a curious mind!";
+      break;
+  }
+}
+
+  </script>
+
+
+  
+</body>
+</html>
