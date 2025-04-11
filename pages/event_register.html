@@ -107,14 +107,14 @@
     <div class="form-section">
       <h2>Register</h2>
       <form>
-        <label>Name*</label>
-        <input type="text" required>
+        <label >Name*</label>
+        <input type="text" id="name"required>
 
-        <label>Email*</label>
-        <input type="email" required>
+        <label >Email*</label>
+        <input type="email"id="email" required>
 
-        <label>Phone</label>
-        <input type="tel">
+        <label >Phone</label>
+        <input type="tel" id="contact">
 
         <label>Comments</label>
         <textarea rows="4"></textarea>
@@ -204,9 +204,34 @@
   }
 }
 
+
 function Submit(){
-    window.alert("")
-}
+    let x = document.getElementById("event_select").value;
+        var name=document.getElementById("name").value;
+        
+        var email=document.getElementById("email").value;
+        var contact=document.getElementById("contact").value;
+        
+        
+        
+        if (name== null||name===""){
+            alert("Name Cant Be Empty");
+            return;
+        }
+        else if (email== null||email===""){
+            alert("Email Cant Be Empty");
+            return;
+        }
+        
+        else if (contact== null||contact===""){
+            alert("Contact Cant Be Empty");
+            return;
+        }
+        window.alert("You Have Successfully Registerd To the "+x+"Event");
+    }
+    
+    
+
 
   </script>
 
