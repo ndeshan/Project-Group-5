@@ -13,6 +13,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     animation: changeBackground 30s infinite;
+    
 }
 
 @keyframes changeBackground {
@@ -45,12 +46,16 @@ body {
 }
 
 .navbar {
-    float: inline-end;
+    float: inline-end ;
     padding: 1.2rem;
     font-size: 1.9rem;
+    
 }
-
-.navbar .nav-login {
+.home-button{
+    background-color: transparent;
+    border: none;
+}
+.home-button .nav-login {
     color: #f5ebeb;
     padding: 20px 30px;
     background-color: rgba(255, 0, 0, 0.9);
@@ -59,23 +64,23 @@ body {
     border: none;
 }
 
-.navbar .nav-login:hover {
+.home-button .nav-login:hover {
     background-color: rgba(196, 59, 17);
     color: black;
     transform: scale(1.5);
 }
 
-.navbar a {
+.home-button a {
     padding: 40px;
     text-decoration: none;
     color: white;
     padding: 20px;
-
+    font-size: 25px;
 }
 
-.navbar a:hover {
+ .home-button a:hover {
     color: orange;
-
+    border-bottom: #FF0303 solid 2px;
 }
 
 .images img {
@@ -87,8 +92,6 @@ body {
 .navbar {
     padding-top: 40px;
 }
-
-
 
 .container {
     display: grid;
@@ -364,6 +367,7 @@ body {
     font-weight: 900;
     padding-top: 40px;
     padding-left: 140px;
+    letter-spacing: 2px;
  }
  .button-start-your-journey{
     padding-left: 100px;
@@ -406,7 +410,7 @@ body {
     font-size: 20px;
     border: none;
     color: white;
-    padding-top: 20px;
+    padding-top: 30px;
 }
 
 .footer-table a {
