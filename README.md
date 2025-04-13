@@ -38,11 +38,11 @@
 
 #
 
-# Nipuna : Home , Contact_Us
+# Nipuna : Home , Contact_Us , User Feedback
 
 #
 
-# Naveen : Login , Sign up , Gym_membership_And_Fitness_Articles
+# Naveen : Login , Sign up , Gym_membership
 
 #
 

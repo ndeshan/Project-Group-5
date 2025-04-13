@@ -7,12 +7,14 @@
 body {
     font-family: "Poppins", sans-serif;
     font-weight: 100;
+    background-color: #FFFDF0;
 }
 
 .section-0 {
     background-repeat: no-repeat;
     background-size: cover;
     animation: changeBackground 30s infinite;
+    
 }
 
 @keyframes changeBackground {
@@ -45,12 +47,16 @@ body {
 }
 
 .navbar {
-    float: inline-end;
+    float: inline-end ;
     padding: 1.2rem;
     font-size: 1.9rem;
+    
 }
-
-.navbar .nav-login {
+.home-button{
+    background-color: transparent;
+    border: none;
+}
+.home-button .nav-login {
     color: #f5ebeb;
     padding: 20px 30px;
     background-color: rgba(255, 0, 0, 0.9);
@@ -59,23 +65,23 @@ body {
     border: none;
 }
 
-.navbar .nav-login:hover {
+.home-button .nav-login:hover {
     background-color: rgba(196, 59, 17);
     color: black;
     transform: scale(1.5);
 }
 
-.navbar a {
+.home-button a {
     padding: 40px;
     text-decoration: none;
     color: white;
     padding: 20px;
-
+    font-size: 30px;
 }
 
-.navbar a:hover {
+ .home-button a:hover {
     color: orange;
-
+    border-bottom: #FF0303 solid 2px;
 }
 
 .images img {
@@ -87,8 +93,6 @@ body {
 .navbar {
     padding-top: 40px;
 }
-
-
 
 .container {
     display: grid;
@@ -125,7 +129,7 @@ body {
     float: right;
     padding: 20px 20px 20px 20px;
     font-size: 25px;
-    background-color: #A27B5C;
+    background-color: #024CAA;
     border: none;
     color: white;
     transition: transform 0.3s ease-in-out;
@@ -139,8 +143,8 @@ body {
     grid-area: aboutAs;
     padding: 20px 20px 20px 20px;
     font-size: 25px;
-    background-color: #A27B5C;
-    border: none;
+    background-color: transparent;
+    
     color: white;
     transition: transform 0.3s ease-in-out;
 
@@ -160,7 +164,7 @@ body {
     margin-right: -20%;
     font-size: 25px;
     border: none;
-    background-color: #FF0303;
+    background-color: #FF8000;
     color: white;
     transition: transform 0.3s ease-in-out;
 }
@@ -197,7 +201,7 @@ body {
     flex-wrap: wrap;
     background-color: rgb(234, 224, 224);
     padding-top: 100px;
-    padding-bottom: 100px;
+    padding-bottom: 90px;
 
 }
 
@@ -211,6 +215,8 @@ body {
 
 .container-2-1 img:hover {
     transform: scale(1.03);
+    box-shadow: black 10px 10px 10px;
+
 }
 
 .container-2-2 img {
@@ -223,6 +229,7 @@ body {
 
 .container-2-2 img:hover {
     transform: scale(1.07);
+    box-shadow: black 10px 10px 10px;
 }
 
 .container-2-3 img {
@@ -235,6 +242,7 @@ body {
 
 .container-2-3 img:hover {
     transform: scale(1.07);
+    box-shadow: black 10px 10px 10px;
 }
 
 .container-2-4 img {
@@ -247,26 +255,27 @@ body {
 
 .container-2-4 img:hover {
     transform: scale(1.07);
+    box-shadow: black 10px 10px 10px;
 }
 
 .container-2-1 {
     text-align: center;
-    padding: 30px;
+    padding: 10px;
 }
 
 .container-2-2 {
     text-align: center;
-    padding: 30px;
+    padding: 10px;
 }
 
 .container-2-3 {
     text-align: center;
-    padding: 30px;
+    padding: 10px;
 }
 
 .container-2-4 {
     text-align: center;
-    padding: 30px;
+    padding: 10px;
 }
 
 .container-2-1 h2 {
@@ -323,126 +332,66 @@ body {
     background-size: cover;
 }
 
-.container-3 {
-    display: grid;
-    grid-template-columns: 33% 33% 33%;
-    grid-template-rows: auto auto;
-    grid-template-areas:
-        "bmi bmi bmi-advicce"
-        "success-stories user-feedback testimonial";
-    border-color: 2px solid white;
-}
-
-.bmi {
-    grid-area: bmi;
-    padding: 30px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.bmi img {
-    width: 400px;
-    padding: 30px;
-    margin-left: -450px;
-    transition: transform 0.3s ease-in-out;
-}
-
-.bmi img:hover {
-    transform: scale(1.04);
-}
-
-.bmi-advice {
-    grid-area: bmi-advicce;
-    color: white;
-    font-size: 60px;
-    padding: 10%;
-    text-align: left;
-    margin-left: -150px;
-    margin-top: 60px;
-}
-
-.section-2-flex {
+ .container-3{
     display: flex;
-    margin-left: auto;
-    margin-right: auto;
-    gap: 0px;
-}
-
-.success-stories {
-    grid-area: success-stories;
+    flex-direction: column;
     color: white;
-    font-size: 30px;
-    text-align: center;
-
-}
-
-.success-stories img {
-    width: 200px;
-    border-radius: 20px;
-    transition: transform 0.3s ease-in-out;
-}
-
-.success-stories img:hover {
+    font-size: 30PX;
+    padding-top: 30px;
+ }
+ .success-stories img{
+    width: 250px;
+ }
+ .success-stories img:hover{
     transform: scale(1.05);
-}
-
-.user-feedback {
-    grid-area: user-feedback;
-    color: white;
-    font-size: 30px;
-    text-align: center;
-    margin-right: -40px;
-    margin-bottom: 40px;
-
-}
-
-.user-feedback img {
-    width: 180px;
-    height: 240px;
-    border-radius: 20px;
-    margin-right: -90px;
-    margin-top: 40px;
     transition: transform 0.3s ease-in-out;
-}
-
-.user-feedback img:hover {
-    transform: scale(1.05);
-}
-
-.testimonial {
-    grid-area: testimonial;
-    color: white;
+    box-shadow: white 4px 4px 4px;
+ }
+ .user-feedback img{
+    width: 250px;
+    height: 350px;
+ }
+ .user-feedback img:hover{
+        transform: scale(1.05);
+        transition: transform 0.3s ease-in-out;
+        box-shadow: white 4px 4px 4px;}
+.section-2-flex{
+    display: flex;
+    gap: 20px;
+    padding-top: 50px;
+    padding-left: 140px;
+    text-align: center;
+  }  
+ .testimonial{
+    padding: 10px;
     font-size: 50px;
+    font-weight: 900;
+    padding-top: 40px;
+    padding-left: 140px;
+    letter-spacing: 2px;
+ }
+ .button-start-your-journey{
+    padding-left: 100px;
+    padding-bottom: 90px;
+ }
+ .button-start-your-journey button{
     padding: 20px;
-    text-align: left;
-    padding-top: -20px;
-    margin-left: -90px;
-    margin-top: 50px;
-}
-
-.button-start-your-journey {
-    font-size: 30px;
-    background-color: #ff0000;
-    padding: 20px;
+    font-size: 20px;
     font-weight: bold;
-    border-radius: 20px;
+    background-color: red;
+    color: white;
+    border: none;
 
-    float: inline-start;
-    margin-left: -5px;
-    transition: transform 0.3s ease-in-out;
-    box-shadow: 2px 2px white;
-}
-
-.button-start-your-journey a {
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-}
-
-.button-start-your-journey:hover {
+ }
+ .button-start-your-journey button:hover{
     transform: scale(1.05);
-}
-
-footer {
+    transition: transform 0.3s ease-in-out;
+    box-shadow: white 2px 3px 2px;
+ }
+ 
+ 
+ 
+ footer {
     background-color: #464545;
     bottom: auto;
     position: relative;
@@ -462,7 +411,7 @@ footer {
     font-size: 20px;
     border: none;
     color: white;
-    padding-top: 20px;
+    padding-top: 30px;
 }
 
 .footer-table a {
@@ -561,4 +510,24 @@ footer .footer-second-part p {
 
 .footer-second-part a:hover {
     text-decoration: underline;
+}
+.section-1-2{
+    display: flex;
+    height: 500px;
+    gap: 80px;
+    justify-content: center;
+    background-color: #FFF2F2;
+}
+.bmi-1 img{
+    width: 500px;
+    margin-top: 40px;
+    transition: transform 0.3s ease-in-out;
+}
+.bmi-1 img:hover{
+    transform: scale(1.05);
+}
+.bmi-advice-1{
+    margin-top: 70px;
+    font-size: 80px;
+    font-weight: 900;
 }
