@@ -10,11 +10,17 @@
   <title>Fitness Tips</title>
   <link rel="icon" href="../Images/webLogo.png" type="icon" />
   <link rel="stylesheet" href="../Layout/fitness-style.css" />
+  
   <style>
+
     .container {
       position: relative;
-      width: 50%;
-      display: grid;
+      width: 60%;
+      /* display: grid; */
+      /* text-align: center; */
+      margin: 10px;
+     /*  background-color: aqua; */
+      
 
     }
 
@@ -27,10 +33,11 @@
     .image {
       opacity: 1;
       display: block;
-      width: 50%;
+      width: auto;
       height: auto;
       transition: .5s ease;
       backface-visibility: hidden;
+     
     }
 
     .middle {
@@ -68,9 +75,12 @@
 
     .gallery {
       display: grid;
-      -ms-grid-column-align: center;
-      grid-template-columns: auto auto auto;
-      grid-gap: 20px;
+     /*  background-color: #fd8114; */
+      /* -ms-grid-columns: auto auto auto; */
+      grid-template-columns: 1fr 1fr 1fr;
+     /*  -ms-grid-column-align: center;
+      grid-template-columns: auto auto auto; */
+      /* grid-gap: 20px; */
       padding: 20px;
       border-radius: 8px;
       filter: drop-shadow(8px 8px 10px rgb(14, 14, 15));
@@ -85,6 +95,7 @@
     .gallery img {
       width: 100%;
       height: auto;
+      vertical-align: top;
     }
 
     .p1::first-letter {
@@ -99,7 +110,7 @@
       background-color: aliceblue;
       height: 200px;
       width: 80%;
-      border-radius: 10px;
+      border-radius:  0px 0px 50px 50px;
       padding: 0 100px;
       margin-left: auto;
       margin-right: auto;
@@ -109,7 +120,20 @@
       color: #fd8114;
       font-size: 50px;
       margin-left: 70px;
+      
 
+    }
+
+    .list {
+      color: #fd8114;
+      font-size: 20px;
+      margin-top: 10px;
+      list-style-type: none;
+    }
+
+    .lihov li:hover{
+      transform: scale(1.1);
+      transition: transform 0.3s ease;
     }
   </style>
 
@@ -161,25 +185,26 @@
 
     <div class="container">
       <h2
-        style="color:  #d06a0b; font-size: 24px; font-weight: bold; color: rgb(242, 240, 240); transition: color 0.3s ease;"
-        onmouseover="this.style.color='red';" onmouseout="this.style.color='white';">1. Warm-Up & Cool-Down </h2>
+        style="margin-bottom: 30px; color:  #d06a0b; font-size: 24px; font-weight: bold; color: rgb(242, 240, 240); transition: color 0.3s ease;"
+        onmouseover="this.style.color='red';" onmouseout="this.style.color='white';">Warm-Up & Cool-Down </h2>
 
       <img src="../Images/fit 2.jpeg" class="image">
-      <table border="1">
-        <td style="color: aquamarine; font-size: larger;">
-          <ul>
-            <li>Always start with a 5-10 minute warm-up (jumping jacks, arm circles) to prevent injuries.</li>
-          </ul>
-        </td>
-        <tr></tr>
-        <td style="color: aquamarine; font-size: larger;">
-          <ul>
-            <li> End workouts with stretching to improve flexibility and recovery.
+    <!--   <table border="1">
+        <td style="color: aquamarine; font-size: larger;">-->
+          <ul class="list"> 
+           <li>&#128073 Always start with a 5-10 minute warm-up (jumping jacks, arm circles) to prevent injuries. </li><br>
+          <!-- </ul> -->
+        <!-- </td>
+        <tr></tr> -->
+        <!-- <td style="color: aquamarine; font-size: larger;"> -->
+        <!--   <ul> -->
+            <li>&#128073  End workouts with stretching to improve flexibility and recovery.
 
-            </li>
+           </li>
           </ul>
-        </td>
-      </table>
+          
+       <!--  </td>
+      </table>  -->
 
 
       <div class="middle">
@@ -198,22 +223,22 @@
     <div class="container">
       <h2
         style="color:  #d06a0b; font-size: 24px; font-weight: bold; color: rgb(242, 240, 240); transition: color 0.3s ease;"
-        onmouseover="this.style.color='red';" onmouseout="this.style.color='white';"> 2. Stay Consistent </h1>
-        <img src="../Images/fit-correctform.jpeg" class="image">
-        <table border="1">
-          <td style="color: aquamarine; font-size: larger;">
-            <ul>
-              <li> Set a realistic workout schedule (at least 3-5 days a week).</li>
-            </ul>
+        onmouseover="this.style.color='red';" onmouseout="this.style.color='white';">Stay Consistent </h1>
+        <img src="../Images/fit-correctform.jpeg" class="image" style="margin-top: 30px;">
+        <!-- <table border="1">
+          <td style="color: aquamarine; font-size: larger;">-->
+            <ul class="list" >
+              <li> &#128073 Set a realistic workout schedule (at least 3-5 days a week). </li><br>
+            <!-- </ul>
           </td>
           <tr></tr>
           <td style="color: aquamarine; font-size: larger;">
-            <ul>
-              <li>Track progress to stay motivated.
+          -->
+              <li>&#128073 Track progress to stay motivated.
               </li>
             </ul>
-          </td>
-        </table>
+          <!-- </td>
+        </table> -->
         <div class="middle">
           <div class="text">"Perfect
             Your
@@ -223,34 +248,35 @@
 
     <div class="container">
       <h2
-        style="color:  #d06a0b; font-size: 24px; font-weight: bold; color: rgb(242, 240, 240); transition: color 0.3s ease;"
-        onmouseover="this.style.color='red';" onmouseout="this.style.color='white';">3. Mental Health & Motivation </h1>
+        style="margin-top: 3px; color:  #d06a0b; font-size: 24px; font-weight: bold; color: rgb(242, 240, 240); transition: color 0.3s ease;"
+        onmouseover="this.style.color='red';" onmouseout="this.style.color='white';">Mental Health & Motivation </h1>
         <img src="../Images/fit-mental.jpeg" class="image">
 
-        <table border="1">
-          <td style="color: aquamarine; font-size: larger;">
-            <ul>
+        <!-- <table border="1">
+          <td style="color: aquamarine; font-size: larger;"> -->
+            <ul class="list">
               <li>
-                Set realistic goals and track progress.</li>
-            </ul>
+                &#128073 Set realistic goals and track progress.</li><br>
+            
+            <!-- 
           </td>
-          <tr></tr>
+          <tr></tr> -->
 
-          <td style="color: aquamarine; font-size: larger;">
-            <ul>
-              <li>
+          <!-- <td style="color: aquamarine; font-size: larger;">
+            <ul>-->
+              <li> 
 
-                Practice meditation or yoga for stress relief.</li>
-            </ul>
-          </td>
+                &#128073 Practice meditation or yoga for stress relief. </li><br>
+            <!-- </ul> -->
+          <!--</td>
           <tr></tr>
-          <td style="color: aquamarine; font-size: larger;">
-            <ul>
-              <li>Listen to music or podcasts to stay motivated.</li>
+          <td style="color: aquamarine; font-size: larger;">-->
+            <!-- <ul> -->
+              <li>&#128073 Listen to music or podcasts to stay motivated.</li>
             </ul>
-          </td>
+          <!-- </td>
           <tr></tr>
-        </table>
+        </table> -->
 
         <div class="middle">
 
@@ -265,25 +291,25 @@
     <div class="container">
       <h2
         style="color:  #d06a0b; font-size: 24px; font-weight: bold; color: rgb(242, 240, 240); transition: color 0.3s ease;"
-        onmouseover="this.style.color='red';" onmouseout="this.style.color='white';">4. Strength & Cardio Balance </h1>
+        onmouseover="this.style.color='red';" onmouseout="this.style.color='white';">Strength & Cardio Balance </h1>
         <img src="../Images/fit-strength.jpeg" class="image">
-        <table border="1">
-          <td style="color: aquamarine; font-size: larger;">
-            <ul>
-              <li>Combine strength training (weights, bodyweight exercises) with cardio (running, cycling) for overall
-                fitness.
-                .</li>
-            </ul>
+        <!-- <table border="1">
+          <td style="color: aquamarine; font-size: larger;">-->
+            <ul class="list">
+              <li>&#128073 Combine strength training (weights, bodyweight exercises) with cardio (running, cycling) for overall
+                fitness. 
+                </li><br>
+            <!-- </ul>
           </td>
           <tr></tr>
           <td style="color: aquamarine; font-size: larger;">
-            <ul>
-              <li>
-                Include high-intensity interval training (HIIT) for fat burning.
-              </li>
+            <ul>-->
+              <li> 
+                &#128073 Include high-intensity interval training (HIIT) for fat burning.
+               </li>
             </ul>
-          </td>
-        </table>
+          <!--</td>
+        </table> -->
         <div class="middle">
           <div class="text">"Core
             To
@@ -299,27 +325,27 @@
 
     <div class="container">
       <h2
-        style="color:  #d06a0b; font-size: 24px; font-weight: bold; color: rgb(242, 240, 240); transition: color 0.3s ease;"
-        onmouseover="this.style.color='red';" onmouseout="this.style.color='white';"> 5. Proper Rest & Recovery </h1>
-        <img src="../Images/fit-sleep.webp" class="image">
+        style="margin-bottom: 27px; color:  #d06a0b; font-size: 24px; font-weight: bold; color: rgb(242, 240, 240); transition: color 0.3s ease;"
+        onmouseover="this.style.color='red';" onmouseout="this.style.color='white'; ">Proper Rest & Recovery </h1>
+        <img src="../Images/fit-sleep.webp" class="image" >
 
 
-        <table border="1">
-          <td style="color: aquamarine; font-size: larger;">
-            <ul>
-              <li> Get at least 7-9 hours of sleep per night.
-              </li>
-            </ul>
-          </td>
+        <!-- <table border="1">
+          <td style="color: aquamarine; font-size: larger;"> -->
+            <ul class="list">
+              <li>&#128073 Get at least 7-9 hours of sleep per night. 
+             </li><br>
+            
+           <!-- </td>
           <tr></tr>
-          <td style="color: aquamarine; font-size: larger;">
-            <ul>
-              <li>
-                Allow muscles to recover by alternating workout days
-              </li>
+          <td style="color: aquamarine; font-size: larger;">-->
+            
+              <li> 
+                &#128073 Allow muscles to recover by alternating workout days
+             </li>
             </ul>
-          </td>
-        </table>
+           <!-- </td>
+        </table> -->
 
         <div class="middle">
           <div class="text">"Sleep.Heal.
@@ -330,33 +356,33 @@
     <div class="container">
       <h2
         style="color:  #d06a0b; font-size: 24px; font-weight: bold; color: rgb(242, 240, 240); transition: color 0.3s ease;"
-        onmouseover="this.style.color='red';" onmouseout="this.style.color='white';"> 6. Balanced Nutrition </h1>
-        <img src="../Images/fit-nutrition.webp" class="image">
-        <table border="1">
-          <td style="color: aquamarine; font-size: larger;">
-            <ul>
-              <li>
-                Eat a mix of proteins, healthy fats, and complex carbs for energy..</li>
-            </ul>
+        onmouseover="this.style.color='red';" onmouseout="this.style.color='white';">Balanced Nutrition</h1>
+        <img src="../Images/fit-nutrition.webp" class="image" style="margin-top: 26px;">
+        <!-- <table border="1">
+          <td style="color: aquamarine; font-size: larger;">-->
+            <ul class="list">
+              <li> 
+                &#128073 Eat a mix of proteins, healthy fats, and complex carbs for energy.
+              </li><br>
+          <!--</td>
+          <tr></tr>
+          <td style="color: aquamarine; font-size: larger;">--> 
+            
+              <li> &#128073 Stay hydrated—drink at least 8 glasses of water daily. 
+
+             </li><br>
+             <!-- </ul>
           </td>
           <tr></tr>
           <td style="color: aquamarine; font-size: larger;">
-            <ul>
-              <li> Stay hydrated—drink at least 8 glasses of water daily.
+            <ul>-->
+              <li> 
+                &#128073 Avoid processed foods and excessive sugar.
 
-              </li>
+             </li>
             </ul>
-          </td>
-          <tr></tr>
-          <td style="color: aquamarine; font-size: larger;">
-            <ul>
-              <li>
-                Avoid processed foods and excessive sugar.
-
-              </li>
-            </ul>
-          </td>
-        </table>
+          <!--  </td>
+        </table> -->
         <div class="middle">
           <div class="text">"Smart Eating"
 
@@ -391,7 +417,7 @@
         <tr>
           <center>
             <td style="border: none; color:yellowgreen; font-size: 25px; padding: 10px;">
-              <ul type="square">
+              <ul type="square" class="lihov">
                 <li>walk more</li>
                 <li>
                   <t>Use a standing desk </t>
@@ -404,7 +430,7 @@
           </center>
           <td style="border: none; color:yellowgreen; font-size: 25px;">
 
-            <ul type="square">
+            <ul type="square"class="lihov">
               <li>Drink more water</li>
               <li>Practice deep breathing </li>
               <li>snack healthily</li>
@@ -437,15 +463,15 @@
     <table border="3" width="100%" height="40%">
       <tr>
         <td
-          style="font-size: 50px;font-family:Roboto bold; color:rgb(254, 251, 251); background-image: url('../Images/fit\ last.webp');">
+          style="font-size: 50px;font-family:Roboto bold; color:rgb(254, 251, 251); background-image: url('../Images/last.jpg'); background-size: cover;">
           <center>
             <marquee direction="left" scrollamount="30">
-              <p style="color: beige;"><i><b>"Listen To Your Body, Not Your Ego"
+              <p style="color: rgb(11, 11, 11);"><i><b>"Listen To Your Body, Not Your Ego"
             </marquee>
             </p>
 
             </i><br>
-            <p style="background-color: #fd8114;opacity: 0.7;">Don't be afraid to put a foot forward for something<br>
+            <p style="background-color: #191f26;opacity: 0.7;">Don't be afraid to put a foot forward for something<br>
               that's good for your body</p> </b>
           </center>
         </td>
