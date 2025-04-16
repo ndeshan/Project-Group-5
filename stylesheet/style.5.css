@@ -23,11 +23,11 @@
 
 }
 .first-one{
-    background-color: antiquewhite;
+    background-color: rgb(215, 212, 208);
     padding: 20px;
 }
 .first-one img{
-   
+    aspect-ratio: 1/1;
     border-radius: 10px;
 }
 .first-one h2{
@@ -43,14 +43,15 @@
 .first-one img:hover{
     transform: scale(1.05);
     transition: 0.3s;
-    box-shadow: 10px 10px 20px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 10px 0px 10px 0px black;
 }
 .second-one{
-    background-color: lightblue;
+    background-color: rgb(215, 212, 208);
     padding: 20px;
 }
 .second-one img{
     border-radius: 10px;
+    aspect-ratio: 1/1;
 }
 .second-one h2{
     font-size: 30px;
@@ -65,14 +66,14 @@
 .second-one img:hover{
     transform: scale(1.05);
     transition: 0.3s;
-    box-shadow: 10px 10px 20px 10px rgba(0, 0, 0, 0.2);
-}
+    box-shadow: 10px 0px 10px 0px black;}
 .third-one{
-    background-color: lightgreen;
+    background-color: rgb(215, 212, 208);
     padding: 20px;
 }
 .third-one img{
     border-radius: 10px;
+    aspect-ratio: 1/1;
 }
 .third-one h2{
     font-size: 30px;
@@ -87,14 +88,14 @@
 .third-one img:hover{
     transform: scale(1.05);
     transition: 0.3s;
-    box-shadow: 10px 10px 20px 10px rgba(0, 0, 0, 0.2);
-}
+    box-shadow: 10px 0px 10px 0px black;}
 .four-one{
-    background-color: lightpink;
+    background-color: rgb(215, 212, 208);
     padding: 20px;
 }
 .four-one img{
     border-radius: 10px;
+    aspect-ratio: 1/1;
 }
 .four-one h2{
     font-size: 30px;
@@ -109,14 +110,14 @@
 .four-one img:hover{
     transform: scale(1.05);
     transition: 0.3s;
-    box-shadow: 10px 10px 20px 10px rgba(0, 0, 0, 0.2);
-}
+    box-shadow: 10px 0px 10px 0px black;}
 .five-one{
-    background-color: lightyellow;
+    background-color: rgb(215, 212, 208);
     padding: 20px;
 }
 .five-one img{
     border-radius: 10px;
+    aspect-ratio: 1/1;
 }
 .five-one h2{
     font-size: 30px;
@@ -131,15 +132,15 @@
 .five-one img:hover{
     transform: scale(1.05);
     transition: 0.3s;
-    box-shadow: 10px 10px 20px 10px rgba(0, 0, 0, 0.2);
-}
+    box-shadow: 10px 0px 10px 0px black;}
 
 .six-one{
-    background-color: lightgray;
+    background-color: rgb(215, 212, 208);
     padding: 20px;
 }
 .six-one img{
     border-radius: 10px;
+    aspect-ratio: 1/1;
 }
 .six-one h2{
     font-size: 30px;
@@ -154,5 +155,4 @@
 .six-one img:hover{
     transform: scale(1.05);
     transition: 0.3s;
-    box-shadow: 10px 10px 20px 10px rgba(0, 0, 0, 0.2);
-}
+    box-shadow: 10px 0px 10px 0px black;}
