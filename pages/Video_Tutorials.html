@@ -13,6 +13,10 @@
     <link rel="icon" href="../Images/webLogo.png" type="icon"/>
     <link rel="stylesheet" href="../Layout/style.css" />
     <style type="text/css">
+      .section-0{
+        background-color: aliceblue;
+        background-image: none;
+      }
       .sec_1{
         background-image: url(../Images/video-toutoriyal-1.jpg);
         width: 100%;
@@ -58,6 +62,27 @@
         padding-bottom: 20px;
 
       }
+      .search-container {
+      text-align: center;
+      margin-bottom: 30px;
+      margin-top: 30px;
+      }
+      input[type="text"] {
+      padding: 10px;
+      width: 300px;
+      border: 2px solid #555;
+      border-radius: 25px;
+      outline: none;
+      }
+      button {
+      padding: 10px 20px;
+      background-color: #555;
+      color: white;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      }
+      
       .vidcall{
         display: grid;
         grid-template-columns: auto auto auto;
@@ -96,19 +121,10 @@
           </a>
         </div>
       </header>
-      <p>adasd</p>
-    <p>khkihki</p>
-    <p>hjohjo</p>
-    <p>ojoj</p>
-    <p>ojojohj</p>
-    <p>ojoj</p>
-    <p>ojojohj</p>
-    <p>ojoop</p>
-    <p>pok</p>
-    <p>kjopj</p>
+     
     </section>
 
-<<<<<<< HEAD
+
     <section class="sec_1">
       <div class="vid1">
       <h1>Exercise Video Tutorials</h1>
@@ -142,20 +158,27 @@
       <p> to find the best exercises for the equipment you have, your training experience, and goals.</p>
       </div>
     </section>
+
+    <div class="search-container">
+      <input type="text" id="searchInput" placeholder="Search keywords...">
+      <button onclick="searchKeyword()">Search</button>
+    </div>
+
     <section>
       <div class="vidcall">
-      <div class="vid01">
+      <div class="vid01" id="vidabs">
         
       <iframe width="450px" height="250px" src="https://www.youtube.com/embed/sHVj7pdF4mc?si=AdXiuxjWM-qZIJIC"></iframe>
       <h3>ABS</h3>
       </div>
       <div class="vid02">
         <iframe width="450px" height="250px" src="https://youtube.com/embed/BQQ-fRCyUU8?si=8hAK6gaGJZoshbRL" ></iframe>
+        <h3>Leg & Glutes</h3>
       </div>
 
       <div class="vid03">
         <iframe width="450px" height="250px" src="https://youtube.com/embed/tyBstYa5IdA?si=mUpDf_ZY5g56bSSd"></iframe>
-      
+        <h3>Arms</h3>
 
       </div>
     </section>
@@ -164,60 +187,23 @@
       <div class="vid01">
         
       <iframe width="450px" height="250px" src="https://youtube.com/embed/zUZ19cl7C88?si=_lcuq30Ss5eY1uqQ"></iframe>
-      
+      <h3>Back & Biceps</h3>
       </div>
       <div class="vid02">
         <iframe width="450px" height="250px" src="https://youtube.com/embed/Yx0BW-H5W0Y?si=l2J3aaqus01PoxSW" ></iframe>
+        <h3>Body Weigt Workout</h3>
       </div>
 
       <div class="vid03">
         <iframe width="450px" height="250px" src="https://youtube.com/embed/Mp_lLI8e0AQ?si=jeGPVPpV2MvBoVcj"></iframe>
+        <h3>Chest & Tricep</h3>
       
 
       </div>
     </div>
     </section>
-    <section>
-      <div class="vidcall">
-      <div class="vid01">
-        
-      <iframe width="450px" height="250px" src="https://youtube.com/embed/zUZ19cl7C88?si=_lcuq30Ss5eY1uqQ"></iframe>
-      
-      </div>
-      <div class="vid02">
-        <iframe width="450px" height="250px" src="https://youtube.com/embed/Yx0BW-H5W0Y?si=l2J3aaqus01PoxSW" ></iframe>
-      </div>
+   
 
-      <div class="vid03">
-        <iframe width="450px" height="250px" src="https://youtube.com/embed/Mp_lLI8e0AQ?si=jeGPVPpV2MvBoVcj"></iframe>
-      
-
-      </div>
-    </div>
-    </section>
-    <section>
-      <div class="vidcall">
-      <div class="vid01">
-        
-      <iframe width="450px" height="250px" src="https://youtube.com/embed/zUZ19cl7C88?si=_lcuq30Ss5eY1uqQ"></iframe>
-      
-      </div>
-      <div class="vid02">
-        <iframe width="450px" height="250px" src="https://youtube.com/embed/Yx0BW-H5W0Y?si=l2J3aaqus01PoxSW" ></iframe>
-      </div>
-
-      <div class="vid03">
-        <iframe width="450px" height="250px" src="https://youtube.com/embed/Mp_lLI8e0AQ?si=jeGPVPpV2MvBoVcj"></iframe>
-      
-
-      </div>
-    </div>
-    </section>
-=======
-
-
-
->>>>>>> 8241b6c7bf7f8b82f50c4dced1ea730b4bc4714d
 
     <footer>
 
@@ -309,5 +295,27 @@
         </div>
       </section>
     </footer>
+    <script>
+      function searchKeyword() {
+  const input = document.getElementById('searchInput').value.toLowerCase();
+  const sections = document.querySelectorAll('section');
+
+  let found = false;
+
+  sections.forEach(section => {
+    section.classList.remove('highlight');  // remove old highlight
+
+    if (section.textContent.toLowerCase().includes(input) && input !== "") {
+      section.scrollIntoView({ behavior: 'smooth' });
+      section.classList.add('highlight');
+      found = true;
+    }
+  });
+
+  if (!found && input !== "") {
+    alert('Keyword not found!');
+  }
+}
+    </script>
   </body>
 </html>
