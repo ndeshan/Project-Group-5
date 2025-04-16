@@ -1,0 +1,158 @@
+.success-stories-flexbox{
+    text-align: center;
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    
+}
+.first-raw{
+    display: flex;
+    gap: 30px;
+}
+.second-raw{
+    display: flex;
+    gap: 30px;
+
+}
+.third-raw{
+    display: flex;
+    gap: 30px;
+
+}
+.first-one{
+    background-color: antiquewhite;
+    padding: 20px;
+}
+.first-one img{
+   
+    border-radius: 10px;
+}
+.first-one h2{
+    font-size: 30px;
+    font-weight: 700;
+    padding: 20px;
+}
+.first-one p{
+    font-size: 16px;
+    font-weight: 400;
+    padding: 10px;
+}
+.first-one img:hover{
+    transform: scale(1.05);
+    transition: 0.3s;
+    box-shadow: 10px 10px 20px 10px rgba(0, 0, 0, 0.2);
+}
+.second-one{
+    background-color: lightblue;
+    padding: 20px;
+}
+.second-one img{
+    border-radius: 10px;
+}
+.second-one h2{
+    font-size: 30px;
+    font-weight: 700;
+    padding: 20px;
+}
+.second-one p{
+    font-size: 16px;
+    font-weight: 400;
+    padding: 10px;
+}
+.second-one img:hover{
+    transform: scale(1.05);
+    transition: 0.3s;
+    box-shadow: 10px 10px 20px 10px rgba(0, 0, 0, 0.2);
+}
+.third-one{
+    background-color: lightgreen;
+    padding: 20px;
+}
+.third-one img{
+    border-radius: 10px;
+}
+.third-one h2{
+    font-size: 30px;
+    font-weight: 700;
+    padding: 20px;
+}
+.third-one p{
+    font-size: 16px;
+    font-weight: 400;
+    padding: 10px;
+}
+.third-one img:hover{
+    transform: scale(1.05);
+    transition: 0.3s;
+    box-shadow: 10px 10px 20px 10px rgba(0, 0, 0, 0.2);
+}
+.four-one{
+    background-color: lightpink;
+    padding: 20px;
+}
+.four-one img{
+    border-radius: 10px;
+}
+.four-one h2{
+    font-size: 30px;
+    font-weight: 700;
+    padding: 20px;
+}
+.four-one p{
+    font-size: 16px;
+    font-weight: 400;
+    padding: 10px;
+}
+.four-one img:hover{
+    transform: scale(1.05);
+    transition: 0.3s;
+    box-shadow: 10px 10px 20px 10px rgba(0, 0, 0, 0.2);
+}
+.five-one{
+    background-color: lightyellow;
+    padding: 20px;
+}
+.five-one img{
+    border-radius: 10px;
+}
+.five-one h2{
+    font-size: 30px;
+    font-weight: 700;
+    padding: 20px;
+}
+.five-one p{
+    font-size: 16px;
+    font-weight: 400;
+    padding: 10px;
+}
+.five-one img:hover{
+    transform: scale(1.05);
+    transition: 0.3s;
+    box-shadow: 10px 10px 20px 10px rgba(0, 0, 0, 0.2);
+}
+
+.six-one{
+    background-color: lightgray;
+    padding: 20px;
+}
+.six-one img{
+    border-radius: 10px;
+}
+.six-one h2{
+    font-size: 30px;
+    font-weight: 700;
+    padding: 20px;
+}
+.six-one p{
+    font-size: 16px;
+    font-weight: 400;
+    padding: 10px;
+}
+.six-one img:hover{
+    transform: scale(1.05);
+    transition: 0.3s;
+    box-shadow: 10px 10px 20px 10px rgba(0, 0, 0, 0.2);
+}
