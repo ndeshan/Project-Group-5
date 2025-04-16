@@ -19,6 +19,7 @@ body {
   height: 300px;
   position: absolute;
 
+
 }
 
 .diet-section-1 img {
@@ -52,6 +53,9 @@ body {
   display: block;
   width: 100%;
   height: auto;
+  border-radius: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .overlay {
@@ -80,4 +84,38 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
+}
+
+.listt li:hover{
+  color: red;
+  
+  
+}
+
+.listt{
+  list-style-type: disc;
+  text-align: left;
+}
+
+.listt2 li:hover{
+  color: red;
+  
+  
+  
+}
+.listt2{
+  list-style-type: none;
+  text-align: left;
+}
+
+
+
+.imgt{
+  margin: 20px;
+
+}
+
+.imgt:hover{
+  transform: scale(1.1);
+  transition: all 0.3s ease-in-out;
 }
