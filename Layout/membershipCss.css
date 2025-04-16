@@ -1,0 +1,167 @@
+body{padding: 0;
+    margin: 0;
+  
+  } 
+  body{
+     font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    background-color: #ffffff;
+  }
+  .section-0{
+
+    background-repeat: no-repeat;
+    background-size:cover;
+    
+  }
+  
+  .header nav{
+    margin-left: auto;
+    margin-right: auto;
+    background-color: transparent;
+    align-items: center;
+  }
+  .navbar{
+    float: inline-end;
+    padding: 20px;
+    font-size: 30px;
+    
+  }
+  
+  .navbar .nav-login{
+    color: #ffffff;
+    padding: 20px 30px;
+    background-color:  #FF6600;
+    border-radius: 30px 0px 30px 0px;
+   transition: background-color 0.3s ease;
+    border: none;
+  }
+  .navbar .nav-login:hover{
+    background-color: #ff4800 ;
+    color: rgb(255, 255, 255);
+    transform: scale(1.5);
+  }
+  
+  .navbar a{
+    padding: 40px;
+    text-decoration: none;
+    color: rgb(29, 29, 29);
+    padding: 20px;
+  transition: color 0.3s ease;
+  }
+  .navbar a:hover{
+    color: #FF6600;
+  
+  } 
+
+/*   dfsdfd */
+  .images img{
+    width: 120px;
+    
+    padding: 10px 10px 10px 10px;
+  }
+  .navbar{
+    padding-top: 40px;
+  }
+  
+  
+  
+  footer{
+    background-color:#464545;
+    bottom: auto;
+    position: relative;
+    width: 100%;
+   
+  }
+  .footer-section-one{
+    height: 300px;
+  }
+  .footer-table{
+    width: 90%;
+    margin-left: auto;
+    margin-right:auto ;
+    text-align: center;
+    font-size: 20px;
+    border: none;
+    color: white;
+    padding-top: 20px;
+  }
+  .footer-table a{
+    text-decoration: none;
+    color: white;
+  }
+  .footer-table a:hover{
+    color: rgb(252, 143, 0);
+  }
+  .footer-table th{
+    font-size: 30px;
+    width: 15%;
+  }
+  .footer-img img{
+  
+    width: 200px;
+  }
+  
+  .logo-footer{
+    width: 200px;
+  }
+  .footer-1{
+    width: 40px;
+    transition: transform 0.2s ease-in-out;
+  }
+  .footer-1:hover{
+    transform: scale(1.5);
+  }
+  .footer-2{
+    width: 40px;
+    transition: transform 0.2s ease-in-out;
+  }
+  .footer-2:hover{
+    transform: scale(1.5);
+  }
+  .footer-3{
+    width: 40px;
+    transition: transform 0.2s ease-in-out;
+  }
+  .footer-3:hover{
+    transform: scale(1.5);
+  }
+  .footer-4{
+    width: 40px;
+    transition: transform 0.2s ease-in-out;
+  }
+  .footer-4:hover{
+    transform: scale(1.5);
+  }
+  .footer-5{
+    width: 40px;
+    transition: transform 0.2s ease-in-out;
+  }
+  .footer-5:hover{
+    transform: scale(1.5);
+  }
+  .h1{
+    width: 50%;
+    margin-left: 20%;
+    border: 2px solid white;
+    
+  }
+  footer .footer-second-part{
+    text-align: center;
+    background-color: #2f2f2f;
+    padding: 20px;
+    color: white;
+    font-weight: bold;
+    
+  }
+  
+  footer .footer-second-part a{
+    text-decoration: none;
+    color: white;
+    padding: 40px 20px;
+  }
+  footer .footer-second-part p{
+    padding: 10px;
+  }
+  .footer-second-part a:hover{
+    text-decoration: underline;
+  }

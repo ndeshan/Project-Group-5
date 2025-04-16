@@ -1,47 +1,62 @@
-*{padding: 0;
+* {
+    padding: 0;
     margin: 0;
 
 }
-body{
-     font-family: "Poppins", sans-serif;
+
+body {
+    font-family: "Poppins", sans-serif;
     font-weight: 100;
+    background-color: #FFFDF0;
 }
-.section-0{
+
+.section-0 {
     background-repeat: no-repeat;
-    background-size:cover;
+    background-size: cover;
     animation: changeBackground 30s infinite;
+    
 }
+
 @keyframes changeBackground {
     0% {
         background-image: url('../Images/home-page-background-2.jpg');
     }
+
     25% {
         background-image: url('../Images/home-page-background-3.jpg');
     }
+
     50% {
         background-image: url('../Images/home-page-background-5.jpg');
     }
+
     75% {
         background-image: url('../Images/Home-page-header-background.jpg');
     }
+
     100% {
-        background-image: url('../Images/home-page-background-6.jpg'); 
+        background-image: url('../Images/home-page-background-6.jpg');
     }
 }
 
-.header nav{
+.header nav {
     margin-left: auto;
     margin-right: auto;
     background-color: transparent;
     align-items: center;
 }
-.navbar{
-    float: inline-end;
-    padding: 20px;
-    font-size: 30px
-}
 
-.navbar .nav-login{
+.navbar {
+    float: inline-end ;
+    padding: 1.2rem;
+    font-size: 1.9rem;
+    
+}
+.home-button{
+    background-color: transparent;
+    border: none;
+}
+.home-button .nav-login {
     color: #f5ebeb;
     padding: 20px 30px;
     background-color: rgba(255, 0, 0, 0.9);
@@ -49,51 +64,55 @@ body{
     transition: transform 0.3s ease-in-out;
     border: none;
 }
-.navbar .nav-login:hover{
+
+.home-button .nav-login:hover {
     background-color: rgba(196, 59, 17);
     color: black;
     transform: scale(1.5);
 }
 
-.navbar a{
+.home-button a {
     padding: 40px;
     text-decoration: none;
     color: white;
     padding: 20px;
-
+    font-size: 30px;
 }
-.navbar a:hover{
+
+ .home-button a:hover {
     color: orange;
-
+    border-bottom: #FF0303 solid 2px;
 }
-.images img{
+
+.images img {
     width: 120px;
     float: inline-start;
     padding: 10px 10px 10px 10px;
 }
-.navbar{
+
+.navbar {
     padding-top: 40px;
 }
 
-
-
-.container{
+.container {
     display: grid;
-    grid-template-columns: 50% 50%; ;
+    grid-template-columns: 50% 50%;
+    ;
     grid-template-rows: auto auto auto auto;
     grid-template-areas:
-     "h1part h1part"
-    "fitnessTips aboutUs"
-    "joinNow joinNow"
-    "paragraph paragraph";
+        "h1part h1part"
+        "fitnessTips aboutUs"
+        "joinNow joinNow"
+        "paragraph paragraph";
     width: 50%;
     padding: 20px 20px 20px 20px;
     gap: 20px;
     row-gap: 30px;
-    
-   
+
+
 }
-.h1part{
+
+.h1part {
     grid-area: h1part;
     font-size: 50px;
     width: 100%;
@@ -104,34 +123,39 @@ body{
     font-weight: 300;
     margin-bottom: 10px;
 }
-.fitnessTips button{
+
+.fitnessTips button {
     grid-area: fitnessTips;
     float: right;
     padding: 20px 20px 20px 20px;
     font-size: 25px;
-    background-color: #A27B5C;
+    background-color: #024CAA;
     border: none;
     color: white;
     transition: transform 0.3s ease-in-out;
 }
-.fitnessTips button:hover{
+
+.fitnessTips button:hover {
     transform: scale(1.07);
 }
-.button-about-us{
+
+.button-about-us {
     grid-area: aboutAs;
     padding: 20px 20px 20px 20px;
     font-size: 25px;
-    background-color: #A27B5C;
-    border: none;
+    background-color: transparent;
+    
     color: white;
     transition: transform 0.3s ease-in-out;
 
 }
-.button-about-us:hover{
+
+.button-about-us:hover {
     transform: scale(1.06);
 
 }
-.joinNow button{
+
+.joinNow button {
     grid-area: joinNow;
     margin-left: auto;
     margin-right: auto;
@@ -140,19 +164,22 @@ body{
     margin-right: -20%;
     font-size: 25px;
     border: none;
-    background-color: #FF0303;
+    background-color: #FF8000;
     color: white;
     transition: transform 0.3s ease-in-out;
 }
-.joinNow button:hover{
+
+.joinNow button:hover {
     transform: scale(1.07);
 }
-.joinNow a{
+
+.joinNow a {
     text-decoration: none;
 }
-.paragraph{
+
+.paragraph {
     grid-area: paragraph;
-    padding: 40px ;
+    padding: 40px;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
@@ -160,327 +187,347 @@ body{
     color: antiquewhite;
 }
 
-.section-1{
-    background-color:#e9f1f7;
+.section-1 {
+    background-color: #e9f1f7;
     padding: 3%;
     font-size: xx-large;
     text-align: center;
 }
 
-.container-2{
+.container-2 {
     display: flex;
     justify-content: center;
     gap: 20px;
     flex-wrap: wrap;
     background-color: rgb(234, 224, 224);
     padding-top: 100px;
-    padding-bottom: 100px;
+    padding-bottom: 90px;
+
 }
 
-.container-2-1 img{
+.container-2-1 img {
     width: 250px;
     height: 350px;
     border-radius: 30px;
     transition: transform 0.3s ease-in-out;
     box-shadow: 5px 5px 5px 0px rgb(99, 98, 98);
 }
-.container-2-1 img:hover{
+
+.container-2-1 img:hover {
     transform: scale(1.03);
+    box-shadow: black 10px 10px 10px;
+
 }
-.container-2-2 img{
+
+.container-2-2 img {
     width: 250px;
     height: 350px;
     border-radius: 30px;
     transition: transform 0.3s ease-in-out;
     box-shadow: 5px 5px 5px 0px rgb(99, 98, 98);
 }
-.container-2-2 img:hover{
+
+.container-2-2 img:hover {
     transform: scale(1.07);
+    box-shadow: black 10px 10px 10px;
 }
-.container-2-3 img{
+
+.container-2-3 img {
     width: 250px;
     height: 350px;
     border-radius: 30px;
     transition: transform 0.3s ease-in-out;
     box-shadow: 5px 5px 5px 0px rgb(99, 98, 98);
 }
-.container-2-3 img:hover{
+
+.container-2-3 img:hover {
     transform: scale(1.07);
+    box-shadow: black 10px 10px 10px;
 }
-.container-2-4 img{
+
+.container-2-4 img {
     width: 250px;
     height: 350px;
     border-radius: 30px;
     transition: transform 0.3s ease-in-out;
     box-shadow: 5px 5px 5px 0px rgb(99, 98, 98);
 }
-.container-2-4 img:hover{
+
+.container-2-4 img:hover {
     transform: scale(1.07);
-}
-.container-2-1{
-    text-align: center;
-    padding: 30px;
-}
-.container-2-2{
-    text-align: center;
-    padding: 30px;
-}
-.container-2-3{
-    text-align: center;
-    padding: 30px;
-}
-.container-2-4{
-    text-align: center;
-    padding: 30px;
+    box-shadow: black 10px 10px 10px;
 }
 
-.container-2-1 h2{
+.container-2-1 {
+    text-align: center;
+    padding: 10px;
+}
+
+.container-2-2 {
+    text-align: center;
+    padding: 10px;
+}
+
+.container-2-3 {
+    text-align: center;
+    padding: 10px;
+}
+
+.container-2-4 {
+    text-align: center;
+    padding: 10px;
+}
+
+.container-2-1 h2 {
     padding: 10px;
     font-size: 30px;
 }
-.container-2-2 h2{
+
+.container-2-2 h2 {
     padding: 10px;
     font-size: 30px;
 
 
 }
-.container-2-3 h2{
+
+.container-2-3 h2 {
     padding: 10px;
     font-size: 30px;
 
 
 }
-.container-2-4 h2{
+
+.container-2-4 h2 {
     padding: 10px;
     font-size: 30px;
 }
-.container-2-1 p{
+
+.container-2-1 p {
     padding: 5px;
     font-size: 20px;
     text-align: center;
 }
-.container-2-2 p{
+
+.container-2-2 p {
     padding: 5px;
     font-size: 20px;
     text-align: center;
 }
-.container-2-3 p{
+
+.container-2-3 p {
     padding: 5px;
     font-size: 20px;
     text-align: center;
 }
-.container-2-4 p{
+
+.container-2-4 p {
     padding: 5px;
     font-size: 20px;
     text-align: center;
 }
-.section-2{
+
+.section-2 {
     background-image: url(../Images/home-page-section-2-background.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
-.container-3{
-    display: grid;
-    grid-template-columns: 33% 33% 33%;
-    grid-template-rows: auto auto;
-    grid-template-areas:
-    "bmi bmi bmi-advicce" 
-    "success-stories user-feedback testimonial";
-    border-color: 2px solid white;
-}
-.bmi{
-    grid-area: bmi;
-    padding: 30px;
-    margin-left: auto;
-    margin-right: auto;
-}
-.bmi img{
-    width: 400px;
-    padding: 30px;
-    margin-left: -450px;
-    transition: transform 0.3s ease-in-out;
-}
-.bmi img:hover{
-    transform: scale(1.04);
-}
-.bmi-advice{
-    grid-area: bmi-advicce;
+
+ .container-3{
+    display: flex;
+    flex-direction: column;
     color: white;
-    font-size: 60px;
-    padding: 10%;
-    text-align: left;
-   margin-left: -150px;
-    margin-top: 60px;
-}
+    font-size: 30PX;
+    padding-top: 30px;
+ }
+ .success-stories img{
+    width: 250px;
+ }
+ .success-stories img:hover{
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+    box-shadow: white 4px 4px 4px;
+ }
+ .user-feedback img{
+    width: 250px;
+    height: 350px;
+ }
+ .user-feedback img:hover{
+        transform: scale(1.05);
+        transition: transform 0.3s ease-in-out;
+        box-shadow: white 4px 4px 4px;}
 .section-2-flex{
     display: flex;
-    margin-left: auto;
-    margin-right: auto;
-    gap: 0px;
-}
-.success-stories{
-    grid-area: success-stories;
-    color: white;
-    font-size: 30px;
+    gap: 20px;
+    padding-top: 50px;
+    padding-left: 140px;
     text-align: center;
-
-}
-.success-stories img{
-    width: 200px;
-    border-radius: 20px;
-    transition: transform 0.3s ease-in-out;
-}
-.success-stories img:hover{
-    transform: scale(1.05);
-}
-.user-feedback{
-    grid-area: user-feedback;
-    color: white;
-    font-size: 30px;
-    text-align: center;
-    margin-right: -40px;
-    margin-bottom: 40px;
-
-}
-.user-feedback img{
-    width: 180px;
-    height: 240px;
-    border-radius: 20px;
-    margin-right: -90px;
-    margin-top: 40px;
-    transition: transform 0.3s ease-in-out;
-}
-.user-feedback img:hover{
-    transform: scale(1.05);
-}
-.testimonial{
-    grid-area: testimonial;
-    color: white;
+  }  
+ .testimonial{
+    padding: 10px;
     font-size: 50px;
+    font-weight: 900;
+    padding-top: 40px;
+    padding-left: 140px;
+    letter-spacing: 2px;
+ }
+ .button-start-your-journey{
+    padding-left: 100px;
+    padding-bottom: 90px;
+ }
+ .button-start-your-journey button{
     padding: 20px;
-    text-align: left;
-    padding-top: -20px;
-    margin-left: -90px;
-    margin-top: 50px;
-}
-.button-start-your-journey{
-    font-size: 30px;
-    background-color:#ff0000;
-    padding: 20px;
+    font-size: 20px;
     font-weight: bold;
-    border-radius: 20px;
-    
-    float: inline-start;
-    margin-left: -5px;
-    transition: transform 0.3s ease-in-out;
-    box-shadow: 2px 2px white;
-}
-.button-start-your-journey a{
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-}
-.button-start-your-journey:hover{
-    transform: scale(1.05);
-}
+    background-color: red;
+    color: white;
+    border: none;
 
-footer{
-    background-color:#464545;
+ }
+ .button-start-your-journey button:hover{
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+    box-shadow: white 2px 3px 2px;
+ }
+ 
+ 
+ 
+ footer {
+    background-color: #464545;
     bottom: auto;
     position: relative;
     width: 100%;
-   
+
 }
-.footer-section-one{
+
+.footer-section-one {
     height: 300px;
 }
-.footer-table{
+
+.footer-table {
     width: 90%;
     margin-left: auto;
-    margin-right:auto ;
+    margin-right: auto;
     text-align: center;
     font-size: 20px;
     border: none;
     color: white;
-    padding-top: 20px;
+    padding-top: 30px;
 }
-.footer-table a{
+
+.footer-table a {
     text-decoration: none;
     color: white;
 }
-.footer-table a:hover{
+
+.footer-table a:hover {
     color: rgb(252, 143, 0);
 }
-.footer-table th{
+
+.footer-table th {
     font-size: 30px;
     width: 15%;
 }
-.footer-img img{
+
+.footer-img img {
 
     width: 200px;
 }
 
-.logo-footer{
+.logo-footer {
     width: 200px;
 }
-.footer-1{
+
+.footer-1 {
     width: 40px;
     transition: transform 0.2s ease-in-out;
 }
-.footer-1:hover{
+
+.footer-1:hover {
     transform: scale(1.5);
 }
-.footer-2{
+
+.footer-2 {
     width: 40px;
     transition: transform 0.2s ease-in-out;
 }
-.footer-2:hover{
+
+.footer-2:hover {
     transform: scale(1.5);
 }
-.footer-3{
+
+.footer-3 {
     width: 40px;
     transition: transform 0.2s ease-in-out;
 }
-.footer-3:hover{
+
+.footer-3:hover {
     transform: scale(1.5);
 }
-.footer-4{
+
+.footer-4 {
     width: 40px;
     transition: transform 0.2s ease-in-out;
 }
-.footer-4:hover{
+
+.footer-4:hover {
     transform: scale(1.5);
 }
-.footer-5{
+
+.footer-5 {
     width: 40px;
     transition: transform 0.2s ease-in-out;
 }
-.footer-5:hover{
+
+.footer-5:hover {
     transform: scale(1.5);
 }
-.h1{
+
+.h1 {
     width: 50%;
     margin-left: 20%;
     border: 2px solid white;
-    
+
 }
-  footer .footer-second-part{
+
+footer .footer-second-part {
     text-align: center;
     background-color: #2f2f2f;
     padding: 20px;
     color: white;
     font-weight: bold;
-    
-  }
-  
-  footer .footer-second-part a{
+
+}
+
+footer .footer-second-part a {
     text-decoration: none;
     color: white;
     padding: 40px 20px;
-  }
-  footer .footer-second-part p{
+}
+
+footer .footer-second-part p {
     padding: 10px;
-  }
-  .footer-second-part a:hover{
+}
+
+.footer-second-part a:hover {
     text-decoration: underline;
-  }
-   
+}
+.section-1-2{
+    display: flex;
+    height: 500px;
+    gap: 80px;
+    justify-content: center;
+    background-color: #FFF2F2;
+}
+.bmi-1 img{
+    width: 500px;
+    margin-top: 40px;
+    transition: transform 0.3s ease-in-out;
+}
+.bmi-1 img:hover{
+    transform: scale(1.05);
+}
+.bmi-advice-1{
+    margin-top: 70px;
+    font-size: 80px;
+    font-weight: 900;
+}

@@ -1,76 +1,2201 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="keywords"
-      content="HTML, Helth & Fitness, Fitness, Health, Wellness, yoga, Gym"
-    />
-    <meta name="author" content="Group-5 project" />
-    <meta http-equiv="refresh" content="10" />
-    <title>Workout Plans</title>
-    <link rel="icon" href="../Images/webLogo.png" type="icon"/>
-    <link rel="stylesheet" href="../Layout/style.css" />
-  </head>
-  <body>
-    <section class="section-0">
-      <header class="header">
-        <nav class="navbar">
-          <a href="index.html" class="nav-home">Home</a>
-          <a href="Gym_membership_And_Fitness_Articles.html" class="nav-diet"
-            >Membership</a
-          >
-          <a href="Blog_and_Articles.html" class="nav-fitness">Blogs</a>
-          <a href="About_Us.html" class="nav-about">About</a>
-          <a href="Contact_Us.html" class="nav-contact">Contact</a>
-          <a href="login.html" class="nav-login">Login</a>
-        </nav>
-        <div class="images">
-          <a href="index.html"
-            ><img src="../Images/webLogo.png" alt="logo" />
-          </a>
+
+
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="keywords" content="HTML, Helth & Fitness, Fitness, Health, Wellness, yoga, Gym" />
+  <meta name="author" content="Group-5 project" />
+
+  <title>Workout Plans</title>
+  <link rel="icon" href="../Images/webLogo.png" type="icon" />
+  <link rel="stylesheet" href="../Layout/style.css" />
+
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+
+      url("../Images/wb.jpg");
+      background-position: fixed;
+      background-size: cover;
+      background-attachment: fixed;
+      color: white;
+      
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      max-width: 300px;
+      margin: auto;
+    }
+
+    label,
+    select,
+    button {
+      margin-bottom: 10px;
+    }
+
+    .sec2 {
+      background: rgba(255, 255, 255, 0.8);
+      padding: 10px;
+      width: 50%;
+      margin: auto;
+      border-radius: 20px;
+      color: black;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(5px);
+      font-size: 20px;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    p {
+      text-align: center;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+
+    #workoutPlan {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: /* repeat(4, 1fr) */1fr;
+      margin-left: 50px;
+
+
+    }
+
+    .image {
+      width: 40%;
+      /* height: 90%; */
+      border-radius: 10px;
+      cursor: pointer;
+      margin-right: 40px;
+
+    }
+
+    .image:hover {
+      transform: scale(1.1);
+      transition: transform 0.3s ease;
+      border-color: #d9480f;
+    }
+
+    .popup {
+      display: none;
+      position: fixed;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      height: 100%;
+      padding: 20px;
+      background: #fff;
+      border: 1px solid #ccc;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      background-image: url('../Images/bg.jpg');
+      background-size: cover;
+      background-position: center;
+      border-radius: 20px;
+      color: white;
+      
+
+    }
+
+    .popup.show {
+      display: block;
+      z-index: 1;
+      
+    }
+
+    .close {
+      position: relative;
+      padding: 10px;
+      font-size: 20px;
+      cursor: pointer;
+      color: white;
+      background-color: #d9480f;
+      border-radius: 10px;
+      margin-left: 30px;
+    }
+
+    .Downloadbtn {
+      position: relative;
+      padding: 10px;
+      font-size: 20px;
+      cursor: pointer;
+      color: white;
+      background-color: #d9480f;
+      border-radius: 10px;
+      margin-left: 20px;
+    }
+
+    .Downloadbtn:hover {
+      background-color: #191f26;
+    }
+
+    .titleplan {
+      text-align: center;
+      font-size: 30px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .close:hover {
+      background-color: #191f26;
+
+
+    }
+    caption{
+      font-size: 30px;
+      color: #d9480f;
+    }
+
+
+
+    .cursor {
+      position: relative;
+      width: 24em;
+      margin: 0 auto;
+      border-right: 2px solid rgba(255, 255, 255, .75);
+      font-size: 30px;
+      text-align: center;
+      white-space: nowrap;
+      overflow: hidden;
+      transform: translateY(-50%);
+    }
+
+    .typewriter-animation {
+      animation:
+        typewriter 5s steps(50) 0.1s 1 normal both,
+        blinkingCursor 500ms steps(50) infinite normal;
+    }
+
+    @keyframes typewriter {
+      from {
+        width: 0;
+      }
+
+      to {
+        width: 100%;
+      }
+    }
+
+    @keyframes blinkingCursor {
+      from {
+        border-right-color: rgba(255, 255, 255, .75);
+      }
+
+      to {
+        border-right-color: transparent;
+      }
+    }
+
+    .title {
+      font-family: "Arial", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 800;
+      font-style: normal;
+      font-size: 3.5rem;
+      margin-left: 20px;
+      
+    }
+
+    .con2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+
+    }
+
+    .t {
+      text-align: center;
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      width: 90%;
+      margin-left: 30px;
+    }
+
+    .selection {
+      width: 100%;
+      height: 100%;
+      border-radius: 5px;
+      font-size: 20px;
+    }
+
+    .submitbtn {
+      background-color: #d9480f;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 20px;
+    }
+
+    .submitbtn:hover {
+      background-color: #b8471a;
+    }
+
+    .gridtitle {
+     
+      font-size: 30px;
+      font-weight: bold;
+      
+    }
+
+    .i1{
+      display: flex;
+      flex-direction: row;
+      margin-top: 20px;
+      margin-bottom: 40px
+    }
+    .i2{
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 40px;
+    }
+    .i3{
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 40px;
+    }
+    .i4{
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 40px;
+    }
+    .i5{
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 40px;
+    }
+    .i6{
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 40px;
+    }
+    .i7{
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 40px;
+    }
+    .i8{
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 40px;
+    }
+    .pralpara{
+      font-size: 20px;
+      text-align: inherit;
+      
+    }
+    @keyframes blink {
+            0% { opacity: 1; }
+            50% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        .blinking-text {
+            animation: blink 2s infinite;
+            
+        }
+  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <section class="section-0">
+    <header class="header">
+      <nav class="navbar">
+        <a href="index.html" class="nav-home">Home</a>
+        <a href="Gym_membership_And_Fitness_Articles.html" class="nav-diet">Membership</a>
+        <a href="Blog_and_Articles.html" class="nav-fitness">Blogs</a>
+        <a href="About_Us.html" class="nav-about">About</a>
+        <a href="Contact_Us.html" class="nav-contact">Contact</a>
+        <a href="login.html" class="nav-login">Login</a>
+      </nav>
+      <div class="images">
+        <a href="index.html"><img src="../Images/webLogo.png" alt="logo" />
+        </a>
+      </div>
+    </header>
+
+
+
+  </section>
+  
+
+  <h1 class="title"><br><br> Workout Plan Selector</h1>
+  <p class="cursor typewriter-animation">Fill out the form below to get a workout plan tailored to your needs.</p>
+
+  <section class="sec2">
+    <form id="workoutForm">
+      <label for="gender">Choose your gender:</label>
+      <select id="gender" name="gender" class="selection">
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+      </select>
+
+      <label for="height">Choose your height range:</label>
+      <select id="height" name="height" class="selection">
+        <option value="short">Below 5'5"</option>
+        <option value="medium">5'5" - 6'</option>
+        <option value="tall">Above 6'</option>
+      </select>
+
+      <label for="weight">Choose your weight range:</label>
+      <select id="weight" name="weight" class="selection">
+        <option value="light">Below 150 lbs</option>
+        <option value="medium">150 - 200 lbs</option>
+        <option value="heavy">Above 200 lbs</option>
+      </select>
+
+      <label for="age">Choose your age range:</label>
+      <select id="age" name="age" class="selection">
+        <option value="young">Below 30</option>
+        <option value="middle">30 - 50</option>
+        <option value="old">Above 50</option>
+      </select>
+
+      <label for="time">Choose how much time you can spend a day:</label>
+      <select id="time" name="time" class="selection">
+        <option value="short">Less than 30 minutes</option>
+        <option value="medium">30 - 60 minutes</option>
+        <option value="long">More than 60 minutes</option>
+      </select>
+
+      <button type="submit" class="submitbtn">Submit</button>
+    </form>
+  </section>
+  <!-- <div id="workoutPlan"></div> -->
+  <br><br><br><br><br>
+
+  <h2 class="title" id="target">Workout Plans</h2>
+
+  <div class="container">
+    <div class="i1">
+      
+      <img src="../Images/a.webp" alt="" onclick="showPopup('popup1')" class="image">
+      <div class="gridtitle"><strong style="color: #d9480f;">8 Week</strong> Fat Loss Workout for Beginners <br><br>
+        <table>
+          <tr>
+            <td>
+      <p class = pralpara>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This 4-day program is designed to help you burn fat without burning too much 
+        time on the clock. You'll also learn the basics of fat loss nutrition and recovery.
+        It's said that how  you start something is the key to how successful you'll be. 
+        This statement rings true, especially when applied to fitness and weight loss.  
+        Many people who want to lose weight  and get in shape start working out and become 
+        so confused about what to do versus what not to do, that they eventually get
+        frustrated and give up. <br><br>
+        <hr>
+        <b class="blinking-text">&#128072;&#128072; click here to see the full workout plan. </b>
+
+      </p>
+    </td>
+    </tr>
+    </table>
+      </div>
+    
+      
+      
+
+    </div>
+    <div class="i2">
+      <img src="../Images/b.webp" alt="" onclick="showPopup('popup2')" class="image">
+      <div class="gridtitle"><strong style="color: #d9480f;">8 Week</strong> Strength Building Workout<br><br>
+      <table>
+      <tr>
+        <td>
+      <p class = pralpara>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Build total body strength with this 5-day strength-building program! You’re going 
+      to train five days a week and should be in and out of the gym in less than an hour.This
+      eight-week program is designed to help you get stronger throughout the entire body. 
+      Yes, the big three power lifts are involved, but this isn’t necessarily a powerlifting 
+      program. The goal will be to lift more weight with all the major body parts. <br><br>
+      <hr>
+      <b class="blinking-text">&#128072;&#128072; click here to see the full workout plan. </b>
+     </p>
+    </td>
+    </tr>
+    </table>
+
+    </div>
+      
+    </div>
+    <div class="i3">
+      <img src="../Images/c.webp" alt="" onclick="showPopup('popup3')" class="image">
+      <div class="gridtitle"><strong style="color: #d9480f;">10 Week</strong> Mass Building Program <br><br>
+        <table>
+          <tr>
+            <td>
+              <p class = pralpara>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This workout is designed to increase your muscle mass as much as possible in 10 weeks. Works each muscle group hard once per week using mostly heavy compound exercises.
+                The program works each muscle group hard once per week using mostly heavy compound exercises. You will train on a 4 day split routine, resting on Wednesdays and the weekends. To get the most out of this program you need to be eating BIG. Big meals, at least 5 times a day. <br><br>
+                <hr>
+                <b class="blinking-text">&#128072;&#128072; click here to see the full workout plan. </b>
+              </p>
+            </td>
+          </tr>
+        </table>
+
+
+      </div>
+      
+    </div>
+    <div class="i4">
+      <img src="../Images/d.webp" alt="" onclick="showPopup('popup4')" class="image">
+      <div class="gridtitle"><strong style="color: #d9480f;">3 Day</strong> Push/Pull/Legs Workout<br><br>
+        <table>
+          <tr>
+            <td>
+              <p class = pralpara>  
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This push/pull/legs routine is a simple, yet effective workout split that hits the whole body in just 3 days a week, and helps you increase strength and build muscle.If you’re new to working out and are driven to make yourself bigger, leaner, or stronger, then you want to channel that passion and energy in the right direction. This 3-day push, pull, legs (PPL) routine will get you started on the right foot. You will learn the ropes of serious training while improving every week for the next 10 weeks. <br><br>
+                <hr>
+                <b class="blinking-text">&#128072;&#128072; click here to see the full workout plan. </b>
+
+              </p>
+            </td>
+          </tr>
+        </table>
+
+
         </div>
-      </header>
-      <p>adasd</p>
-    <p>khkihki</p>
-    <p>hjohjo</p>
-    <p>ojoj</p>
-    <p>ojojohj</p>
-    <p>ojoj</p>
-    <p>ojojohj</p>
-    <p>ojoop</p>
-    <p>pok</p>
-    <p>kjopj</p>
-    </section>
+      
+    </div>
+
+    <div class="i5">
+      <br><br>
+      <img src="../Images/i5.webp" alt="" onclick="showPopup('popup5')" class="image" >
+      <div class="gridtitle" ><strong style="color: #d9480f;">4 Day</strong> Maximum Mass Workout<br><br>
+       <table>
+        <tr>
+          <td>
+            <p class = pralpara>  
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A mass building routine that features a great combination of effective compound and isolation movements along with intense, high impact five minute burn sets.
+              This is an intermediate muscle building workout for lifters who have experienced beginner gains and are confident they know how to build muscle.
+who have a solid grasp of exercise form on the major compound movements.
+who Know how to set up an effective muscle building eating plan. <br><br>
+<hr>
+<b class="blinking-text">&#128072;&#128072; click here to see the full workout plan. </b>
+            </p>
+          </td>
+        </tr>
+       </table>
+        
+      </div>
+      
+    </div>
+
+    <div class="i6">
+      <br><br>
+      <img src="../Images/i6.webp" alt="" onclick="showPopup('popup6')" class="image">
+      <div class="gridtitle"><strong style="color: #d9480f;">12 Week</strong> Fat Destroyer<br><br>
+
+        <table>
+          <tr>
+            <td>
+              <p class = pralpara>  
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This is a complete 12 week program to help you get ripped. Feature includes detailed diet plan and cardio schedule, along with a 4 day upper/lower muscle building split.
+                This workout plan is designed to help you shred fat and get in shape in only 12 weeks. This might sound like hype, but it's not. The following plan is not easy. It starts slowly, but builds rapidly. <br><br>
+                <hr>
+                <b class="blinking-text">&#128072;&#128072; click here to see the full workout plan.</b>
+
+
+              </p>
+            </td>
+          </tr>
+        </table>
+
+        </div>
+      
+    </div>
+
+    <div class="i7">
+      <br><br>
+      <img src="../Images/i7.jpg" alt="" onclick="showPopup('popup7')" class="image">
+      <div class="gridtitle"><strong style="color: #d9480f;">Fast</strong> Mass Program<br><br>
+      <table>
+        <tr>
+          <td>
+            <p class = pralpara>  
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tired of spending hours in the gym without getting the results you want? Try the Fast Mass program; a superset workout to get you pumped and on your way!
+              If you want results you have to work for them.
+
+However, you probably already knew that being a loyal Muscle & Strength reader.
+
+But obtaining an awesome physique shouldn’t cost you hours of your time a day and it shouldn’t take years to obtain.
+
+In short, that type of time commitment just isn’t fair! <br><br>
+<hr>
+<b class="blinking-text">&#128072;&#128072; click here to see the full workout plan.</b>
+
+
+            </p>
+          </td>
+        </tr>
+      </table>
+
+        </div>
+      
+    </div>
+
+    <div class="i8">
+      <br><br>
+      <img src="../Images/i8.jpg" alt="" onclick="showPopup('popup8')" class="image">
+      <div class="gridtitle"><strong style="color: #d9480f;">4 Day</strong>  Advanced Upper/Lower<br><br>
+
+        <table>
+          <tr>
+            <td>
+              <p class = pralpara>  
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This advanced upper/lower workout is geared to those looking to put on muscle mass. Up the training volume and training frequency to build mass for spring!
+                It’s that weird time of year where it’s still getting dark early, it’s too cold to be outside, and there’s not many social events going on because the holidays are over.
+
+This makes it the perfect time to hit the gym hard and heavy.
+
+This workout routine takes advantage of that extra free time that you can’t spend outdoors. <br><br>
+<hr>
+<b class="blinking-text">&#128072;&#128072; click here to see the full workout plan.</b>
+              </p>
+            </td>
+          </tr>
+        </table>
+
+        </div>
+      
+    </div>
+
+
+
+  </div>
+  <div id="popup1" class="popup">
+    <h2 class="titleplan">8 Week Fat Loss Workout for Beginners </h2>
+    <button onclick="closePopup('popup1')" class="close">Close</button>
+    <button id="download-button1" class="Downloadbtn">Download Workout</button>
+
+    <div class=con2>
+
+
+      <table border="1" class="t">
+        <caption>Workout #1 - Upper Body Workout A</caption>
+        <tr>
+          <th>Exercise</th>
+          <th>Sets</th>
+          <th>Reps</th>
+          <th>Rest</th>
+        </tr>
+        <tr>
+          <td>Dumbbell Pullover</td>
+          <td>2</td>
+          <td>10</td>
+          <td>45 sec</td>
+        </tr>
+        <tr>
+          <td>Dumbbell Bench Press</td>
+          <td>2</td>
+          <td>10</td>
+          <td>45 sec</td>
+        </tr>
+        <tr>
+          <td>Arnold Press</td>
+          <td>2</td>
+          <td>10</td>
+          <td>45 sec</td>
+        </tr>
+        <tr>
+          <td>Dumbbell Curl</td>
+          <td>2</td>
+          <td>10</td>
+          <td>30 sec</td>
+        </tr>
+        <tr>
+          <td>Overhead Tricep Extension</td>
+          <td>2</td>
+          <td>10</td>
+          <td>30 sec</td>
+        </tr>
+        <tr>
+          <td>Lying Leg Raise</td>
+          <td>2</td>
+          <td>10</td>
+          <td>30 sec</td>
+        </tr>
+      </table>
+
+      <table border="1" class="t">
+        <caption>Workout #2 - Lower Body Workout A</caption>
+        <tr>
+          <th>Exercise</th>
+          <th>Sets</th>
+          <th>Reps</th>
+          <th>Rest</th>
+        </tr>
+        <tr>
+          <td>Goblet Squat</td>
+          <td>2</td>
+          <td>10</td>
+          <td>45 sec</td>
+        </tr>
+        <tr>
+          <td>Hip Thrust</td>
+          <td>2</td>
+          <td>10</td>
+          <td>45 sec</td>
+        </tr>
+        <tr>
+          <td>Walking Lunge</td>
+          <td>2</td>
+          <td>10, each leg</td>
+          <td>45 sec</td>
+        </tr>
+        <tr>
+          <td>Stiff Leg Deadlift</td>
+          <td>2</td>
+          <td>10</td>
+          <td>30 sec</td>
+        </tr>
+        <tr>
+          <td>Standing Calf Raise</td>
+          <td>2</td>
+          <td>10</td>
+          <td>30 sec</td>
+        </tr>
+        <tr>
+          <td>Oblique Crunch</td>
+          <td>2</td>
+          <td>10, each side</td>
+          <td>30 sec</td>
+        </tr>
+      </table>
+
+      <table border="1" class="t">
+        <caption>Workout #3 - Upper Body Workout B</caption>
+        <tr>
+          <th>Exercise</th>
+          <th>Sets</th>
+          <th>Reps</th>
+          <th>Rest</th>
+        </tr>
+        <tr>
+          <td>Bent Over Dumbbell Row</td>
+          <td>2</td>
+          <td>20</td>
+          <td>45 sec</td>
+        </tr>
+        <tr>
+          <td>Incline Dumbbell Bench Press</td>
+          <td>2</td>
+          <td>20</td>
+          <td>45 sec</td>
+        </tr>
+        <tr>
+          <td>Dumbbell Reverse Fly</td>
+          <td>2</td>
+          <td>20</td>
+          <td>30 sec</td>
+        </tr>
+        <tr>
+          <td>Cable Curl</td>
+          <td>2</td>
+          <td>20</td>
+          <td>30 sec</td>
+        </tr>
+        <tr>
+          <td>Straight Bar Tricep Extension</td>
+          <td>2</td>
+          <td>20</td>
+          <td>30 sec</td>
+        </tr>
+        <tr>
+          <td>Plank</td>
+          <td>2</td>
+          <td>30 sec</td>
+          <td>30 sec</td>
+        </tr>
+      </table>
+
+      <table border="1" class="t">
+        <caption>Workout #4 - Lower Body Workout B</caption>
+        <tr>
+          <th>Exercise</th>
+          <th>Sets</th>
+          <th>Reps</th>
+          <th>Rest</th>
+        </tr>
+        <tr>
+          <td>Squat Jumps</td>
+          <td>2</td>
+          <td>20</td>
+          <td>45 sec</td>
+        </tr>
+        <tr>
+          <td>Standing Glute Kickback</td>
+          <td>2</td>
+          <td>20, each leg</td>
+          <td>45 sec</td>
+        </tr>
+        <tr>
+          <td>Leg Curl</td>
+          <td>2</td>
+          <td>20</td>
+          <td>30 sec</td>
+        </tr>
+        <tr>
+          <td>Leg Extension</td>
+          <td>2</td>
+          <td>20</td>
+          <td>30 sec</td>
+        </tr>
+        <tr>
+          <td>Seated Calf Raise</td>
+          <td>2</td>
+          <td>20</td>
+          <td>30 sec</td>
+        </tr>
+        <tr>
+          <td>Sit-Up</td>
+          <td>2</td>
+          <td>20</td>
+          <td>30 sec</td>
+        </tr>
+      </table>
+
+
+      <ul><b>Training + Cardio Schedule Option 1 (Same Day, Separate Times)</b>
+
+        <li>Monday: Cardio (AM), Workout 1 (PM)</li>
+        <li>Wednesday: Cardio (AM), Workout 2 (PM)</li>
+        <li>Thursday: Rest</li>
+        <li>Friday: Cardio (AM), Workout 3 (PM)</li>
+        <li>Saturday: Rest</li>
+        <li>Sunday: Cardio (AM), Workout 4 (PM)</li>
+
+      </ul>
+
+
+
+      <ul><b>Training + Cardio Schedule Option 2 (Post-Weight Training)</b>
+        <li>Monday: Workout 1 + Cardio</li>
+        <li>Tuesday: Workout 2 + Cardio</li>
+        <li>Wednesday: Rest</li>
+        <li>Thursday: Workout 3 + Cardio</li>
+        <li>Friday: Workout 4 + Cardio</li>
+        <li>Saturday: Rest</li>
+        <li>Sunday: Rest</li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="popup2" class="popup">
+    <h2 class="titleplan">Big and Strong: 8 Week Advanced Strength Building Workout</h2>
+    <button onclick="closePopup('popup2')" class="close">Close</button>
+    <button id="download-button2" class="Downloadbtn">Download Workout</button>
+    <div class="con2">
+      <table border="1" class="t">
+        <caption>Workout 1: Push Power Day</caption>
+        <tr>
+          <th>Exercise</th>
+          <th>Sets</th>
+          <th>Reps</th>
+          <th>Rest</th>
+        </tr>
+        <tr>
+          <td>Military Press</td>
+          <td>5</td>
+          <td>3-5</td>
+          <td>3 min</td>
+        </tr>
+        <tr>
+          <td>Incline Bench Press</td>
+          <td>4</td>
+          <td>3-5</td>
+          <td>3 min</td>
+        </tr>
+        <tr>
+          <td>Dumbbell Bench Press</td>
+          <td>3</td>
+          <td>5</td>
+          <td>2 min</td>
+        </tr>
+        <tr>
+          <td>Tricep Dip</td>
+          <td>3</td>
+          <td>5</td>
+          <td>2 min</td>
+        </tr>
+        <tr>
+          <td>Overhead EZ Bar Tricep Extension</td>
+          <td>3</td>
+          <td>5</td>
+          <td>2 min</td>
+        </tr>
+      </table>
+
+      <table border="1" class="t">
+        <caption>Workout 2: Legs Power Day</caption>
+        <tr>
+          <th>Exercise</th>
+          <th>Sets</th>
+          <th>Reps</th>
+          <th>Rest</th>
+        </tr>
+        <tr>
+          <td>Front Squat</td>
+          <td>5</td>
+          <td>3-5</td>
+          <td>3 min</td>
+        </tr>
+        <tr>
+          <td>Pause Back Squat*</td>
+          <td>4</td>
+          <td>3-5</td>
+          <td>3 min</td>
+        </tr>
+        <tr>
+          <td>Hack Squat or Leg Press</td>
+          <td>3</td>
+          <td>5</td>
+          <td>2 min</td>
+        </tr>
+        <tr>
+          <td>Seated Leg Curl</td>
+          <td>3</td>
+          <td>5</td>
+          <td>2 min</td>
+        </tr>
+        <tr>
+          <td>Leg Extension</td>
+          <td>3</td>
+          <td>5</td>
+          <td>2 min</td>
+        </tr>
+      </table>
+
+      <table border="1" class="t">
+        <caption>Workout 3: Pull Power Day</caption>
+        <tr>
+          <th>Exercise</th>
+          <th>Sets</th>
+          <th>Reps</th>
+          <th>Rest</th>
+        </tr>
+        <tr>
+          <td>Trap Bar or Barbell Rack Pull</td>
+          <td>5</td>
+          <td>3-5</td>
+          <td>3 min</td>
+        </tr>
+        <tr>
+          <td>Pull Ups</td>
+          <td>4</td>
+          <td>3-5</td>
+          <td>3 min</td>
+        </tr>
+        <tr>
+          <td>One Arm Dumbbell Row</td>
+          <td>3</td>
+          <td>5, each side</td>
+          <td>2 min</td>
+        </tr>
+        <tr>
+          <td>Concentration Curl</td>
+          <td>3</td>
+          <td>5</td>
+          <td>2 min</td>
+        </tr>
+        <tr>
+          <td>Shrug (with hold)</td>
+          <td>3</td>
+          <td>5</td>
+          <td>2 min</td>
+        </tr>
+      </table>
+
+      <table border="1" class="t">
+        <caption>Workout 4: Lower Dynamic Day</caption>
+        <tr>
+          <th>Exercise</th>
+          <th>Sets</th>
+          <th>Reps</th>
+          <th>Rest</th>
+        </tr>
+        <tr>
+          <td>Speed Front Squat</td>
+          <td>6</td>
+          <td>3</td>
+          <td>30 sec</td>
+        </tr>
+        <tr>
+          <td>Speed Pause Squat*</td>
+          <td>6</td>
+          <td>3</td>
+          <td>30 sec</td>
+        </tr>
+        <tr>
+          <td>Leg Press</td>
+          <td>4</td>
+          <td>4</td>
+          <td>30 sec</td>
+        </tr>
+        <tr>
+          <td>Seated Calf Raise</td>
+          <td>2</td>
+          <td>6</td>
+          <td>30 sec</td>
+        </tr>
+        <tr>
+          <td>Lying Leg Raise</td>
+          <td>2</td>
+          <td>6</td>
+          <td>30 sec</td>
+        </tr>
+      </table>
+
+      <table border="1" class="t">
+        <caption>Workout 5: Upper Dynamic Day</caption>
+        <tr>
+          <th>Exercise</th>
+          <th>Sets</th>
+          <th>Reps</th>
+          <th>Rest</th>
+        </tr>
+        <tr>
+          <td>Speed Barbell Press</td>
+          <td>6</td>
+          <td>3</td>
+          <td>30 sec</td>
+        </tr>
+        <tr>
+          <td>Speed Trap Bar or Barbell Rack Pull</td>
+          <td>6</td>
+          <td>3</td>
+          <td>30 sec</td>
+        </tr>
+        <tr>
+          <td>Lateral Raise</td>
+          <td>4</td>
+          <td>4</td>
+          <td>30 sec</td>
+        </tr>
+        <tr>
+          <td>Barbell Curl</td>
+          <td>2</td>
+          <td>6</td>
+          <td>30 sec</td>
+        </tr>
+        <tr>
+          <td>Tricep Extension</td>
+          <td>2</td>
+          <td>6</td>
+          <td>30 sec</td>
+        </tr>
+
+      </table>
+    </div>
+
+  </div>
+
+  <div id="popup3" class="popup">
+    <h2 class="titleplan">10 Week Mass Building Program</h2>
+    <button onclick="closePopup('popup3')" class="close">Close</button>
+    <button id="download-button3" class="Downloadbtn">Download Workout</button>
+    <div class="con2">
+      <table border="1" class="t">
+        <caption>Monday - Chest and Triceps</caption>
+        <tr>
+          <th>Exercise</th>
+          <th>Sets</th>
+          <th>Reps</th>
+        </tr>
+        <tr>
+          <td>Barbell Bench Press</td>
+          <td>4</td>
+          <td>10, 8, 8, 6</td>
+        </tr>
+        <tr>
+          <td>Incline Bench Press</td>
+          <td>3</td>
+          <td>8, 8, 6</td>
+        </tr>
+        <tr>
+          <td>Decline Bench Press</td>
+          <td>3</td>
+          <td>8, 8, 6</td>
+        </tr>
+        <tr>
+          <td>Dumbbell Flys</td>
+          <td>2</td>
+          <td>10</td>
+        </tr>
+        <tr>
+          <td>Dumbbell Pullover</td>
+          <td>2</td>
+          <td>8</td>
+        </tr>
+        <tr>
+          <td>Tricep Extension</td>
+          <td>4</td>
+          <td>10, 8, 8, 6 adding weight</td>
+        </tr>
+        <tr>
+          <td>Tricep Dip</td>
+          <td>3</td>
+          <td>10</td>
+        </tr>
+        <tr>
+          <td>Tricep Bench Dip</td>
+          <td>3</td>
+          <td>8</td>
+        </tr>
+      </table>
+
+      <table border="1" class="t">
+        <caption>Tuesday - Back and Biceps</caption>
+        <tr>
+          <th>Exercise</th>
+          <th>Sets</th>
+          <th>Reps</th>
+        </tr>
+        <tr>
+          <td>Deadlift</td>
+          <td>5</td>
+          <td>10, 8, 8, 6, 4</td>
+        </tr>
+        <tr>
+          <td>Chin Up</td>
+          <td>2</td>
+          <td>8</td>
+        </tr>
+        <tr>
+          <td>One Arm Dumbbell Row</td>
+          <td>3</td>
+          <td>8</td>
+        </tr>
+        <tr>
+          <td>Seated Row</td>
+          <td>2</td>
+          <td>8</td>
+        </tr>
+        <tr>
+          <td>Close Grip Lat Pull Down</td>
+          <td>3</td>
+          <td>10, 10, 8</td>
+        </tr>
+        <tr>
+          <td>Standing Barbell Curl</td>
+          <td>3</td>
+          <td>8, 8, 6</td>
+        </tr>
+        <tr>
+          <td>Close Grip Preacher Curl</td>
+          <td>3</td>
+          <td>8, 8, 6</td>
+        </tr>
+        <tr>
+          <td>Incline Dumbbell Curl</td>
+          <td>2</td>
+          <td>12-14</td>
+        </tr>
+        <tr>
+          <td>Concentration Curl</td>
+          <td>2</td>
+          <td>10</td>
+        </tr>
+      </table>
+
+      <table border="1" class="t">
+        <caption>Thursday - Shoulders and Forearms</caption>
+        <tr>
+          <th>Exercise</th>
+          <th>Sets</th>
+          <th>Reps</th>
+        </tr>
+        <tr>
+          <td>Machine Shoulder Press</td>
+          <td>3</td>
+          <td>10</td>
+        </tr>
+        <tr>
+          <td>Dumbbell Reverse Fly</td>
+          <td>3</td>
+          <td>8-10</td>
+        </tr>
+        <tr>
+          <td>Military Press</td>
+          <td>4</td>
+          <td>10</td>
+        </tr>
+        <tr>
+          <td>Dumbbell Lateral Raise</td>
+          <td>2</td>
+          <td>10</td>
+        </tr>
+        <tr>
+          <td>Dumbbell Shrugs</td>
+          <td>2</td>
+          <td>10</td>
+        </tr>
+        <tr>
+          <td>Upright Row</td>
+          <td>2</td>
+          <td>10</td>
+        </tr>
+        <tr>
+          <td>Standing Wrist Curl</td>
+          <td>4</td>
+          <td>10</td>
+        </tr>
+        <tr>
+          <td>Barbell Wrist Curl</td>
+          <td>4</td>
+          <td>10</td>
+        </tr>
+      </table>
+
+      <table border="1" class="t">
+        <caption>Friday - Legs</caption>
+        <tr>
+          <th>Exercise</th>
+          <th>Sets</th>
+          <th>Reps</th>
+        </tr>
+        <tr>
+          <td>Squat</td>
+          <td>5</td>
+          <td>10, 8, 8, 6, 4</td>
+        </tr>
+        <tr>
+          <td>Leg Extension</td>
+          <td>3</td>
+          <td>12</td>
+        </tr>
+        <tr>
+          <td>Leg Curl</td>
+          <td>3</td>
+          <td>12</td>
+        </tr>
+      </table>
+
+      <!--   <table border="1" class="t">
+            <caption>Calves</caption>
+            <tr>
+                <th>Exercise</th>
+                <th>Sets</th>
+                <th>Reps</th>
+            </tr>
+            <tr>
+                <td>Standing Calf Raise</td>
+                <td>4</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>Seated Calf Raise</td>
+                <td>2</td>
+                <td>12</td>
+            </tr>
+        </table> -->
+    </div>
+
+  </div>
+
+  <div id="popup4" class="popup">
+
+    <h2 class="titleplan">3 Day Push/Pull/Legs Workout</h2>
+    <button onclick="closePopup('popup4')" class="close">Close</button>
+    <button id="download-button4" class="Downloadbtn">Download Workout</button>
+    <div class="con2">
+      <table border="1" class="t">
+        <caption>Workout 1: Push Day</caption>
+        <tr>
+          <th>Exercise</th>
+          <th>Sets</th>
+          <th>Reps</th>
+          <th>Rest</th>
+        </tr>
+        <tr>
+          <td>Military Press (AKA Overhead Press)</td>
+          <td>5</td>
+          <td>5</td>
+          <td>1-2 min</td>
+        </tr>
+        <tr>
+          <td>Dumbbell Bench Press</td>
+          <td>3</td>
+          <td>5</td>
+          <td>1-2 min</td>
+        </tr>
+        <tr>
+          <td>Tricep Dip</td>
+          <td>3</td>
+          <td>8</td>
+          <td>1-2 min</td>
+        </tr>
+        <tr>
+          <td>Lateral Raise</td>
+          <td>3</td>
+          <td>8</td>
+          <td>1-2 min</td>
+        </tr>
+        <tr>
+          <td>Lying Dumbbell Extension</td>
+          <td>3</td>
+          <td>8</td>
+          <td>1-2 min</td>
+        </tr>
+        <tr>
+          <td>Tricep Pushdown</td>
+          <td>3</td>
+          <td>8</td>
+          <td>1-2 min</td>
+        </tr>
+      </table>
+
+      <table border="1" class="t">
+        <caption>Workout 2: Pull Day</caption>
+        <tr>
+          <th>Exercise</th>
+          <th>Sets</th>
+          <th>Reps</th>
+          <th>Rest</th>
+        </tr>
+        <tr>
+          <td>Pull Up (or Lat Pull Down)</td>
+          <td>5</td>
+          <td>5</td>
+          <td>1-2 min</td>
+        </tr>
+        <tr>
+          <td>Bent-Over Barbell Row</td>
+          <td>3</td>
+          <td>5</td>
+          <td>1-2 min</td>
+        </tr>
+        <tr>
+          <td>T-Bar Row</td>
+          <td>3</td>
+          <td>8</td>
+          <td>1-2 min</td>
+        </tr>
+        <tr>
+          <td>Dumbbell Shrug</td>
+          <td>3</td>
+          <td>8</td>
+          <td>1-2 min</td>
+        </tr>
+        <tr>
+          <td>Preacher Curl</td>
+          <td>3</td>
+          <td>8</td>
+          <td>1-2 min</td>
+        </tr>
+        <tr>
+          <td>Hammer Curl</td>
+          <td>3</td>
+          <td>8</td>
+          <td>1-2 min</td>
+        </tr>
+      </table>
+
+      <table border="1" class="t">
+        <caption>Workout 3: Leg Day</caption>
+        <tr>
+          <th>Exercise</th>
+          <th>Sets</th>
+          <th>Reps</th>
+          <th>Rest</th>
+        </tr>
+        <tr>
+          <td>Barbell Squat</td>
+          <td>5</td>
+          <td>5</td>
+          <td>1-2 min</td>
+        </tr>
+        <tr>
+          <td>Deadlift</td>
+          <td>3</td>
+          <td>5</td>
+          <td>1-2 min</td>
+        </tr>
+        <tr>
+          <td>Leg Press</td>
+          <td>3</td>
+          <td>8</td>
+          <td>1-2 min</td>
+        </tr>
+        <tr>
+          <td>Lying Leg Curl</td>
+          <td>3</td>
+          <td>8</td>
+          <td>1-2 min</td>
+        </tr>
+        <tr>
+          <td>Leg Extension</td>
+          <td>3</td>
+          <td>8</td>
+          <td>1-2 min</td>
+        </tr>
+        <tr>
+          <td>Seated Calf Raise</td>
+          <td>3</td>
+          <td>8</td>
+          <td>1-2 min</td>
+        </tr>
+      </table>
+
+    </div>
+  </div>
+
+  <div id="popup5" class="popup">
+    <h2 class="titleplan">4 Day Maximum Mass Workout</h2>
+    <button onclick="closePopup('popup5')" class="close">Close</button>
+    <button id="download-button5" class="Downloadbtn">Download Workout</button>
+    <div class="con2">
+
+      <table border="1" class="t">
+        <caption>Day 1 - Back & Biceps</caption>
+        <thead>
+          <tr>
+            <th>Exercise</th>
+            <th>Sets</th>
+            <th>Reps</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Deadlift</td>
+            <td>2</td>
+            <td>5</td>
+          </tr>
+          <tr>
+            <td>One Arm Dumbbell Row</td>
+            <td>3</td>
+            <td>8-12</td>
+          </tr>
+          <tr>
+            <td>Wide Grip Pull Up or Lat Pull Down</td>
+            <td>3</td>
+            <td>10-12</td>
+          </tr>
+          <tr>
+            <td>Barbell Row</td>
+            <td>3</td>
+            <td>8-12</td>
+          </tr>
+          <tr>
+            <td>Seated Cable Row or Machine Row</td>
+            <td>5 Minutes</td>
+            <td>Burn</td>
+          </tr>
+          <tr>
+            <td>EZ Bar Preacher Curl</td>
+            <td>3</td>
+            <td>10-12</td>
+          </tr>
+          <tr>
+            <td>Concentration Curl</td>
+            <td>3</td>
+            <td>10-12</td>
+          </tr>
+          <tr>
+            <td>Seated Dumbbell Curl</td>
+            <td>5 Minutes</td>
+            <td>Burn</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table border="1" class="t">
+        <caption>Day 2 - Chest & Triceps</caption>
+        <thead>
+          <tr>
+            <th>Exercise</th>
+            <th>Sets</th>
+            <th>Reps</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Bench Press</td>
+            <td>3</td>
+            <td>6-10</td>
+          </tr>
+          <tr>
+            <td>Incline Dumbbell Bench Press</td>
+            <td>3</td>
+            <td>8-12</td>
+          </tr>
+          <tr>
+            <td>Chest Dip</td>
+            <td>3</td>
+            <td>AMRAP</td>
+          </tr>
+          <tr>
+            <td>Cable Crossover or Pec Dec</td>
+            <td>3</td>
+            <td>12-15</td>
+          </tr>
+          <tr>
+            <td>Machine Press or Dumbbell Bench Press</td>
+            <td>5 Minutes</td>
+            <td>Burn</td>
+          </tr>
+          <tr>
+            <td>EZ Bar Skullcrusher</td>
+            <td>3</td>
+            <td>8-12</td>
+          </tr>
+          <tr>
+            <td>Two Arm Seated Dumbbell Extension</td>
+            <td>3</td>
+            <td>8-12</td>
+          </tr>
+          <tr>
+            <td>Cable Tricep Extension</td>
+            <td>5 Minutes</td>
+            <td>Burn</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table border="1" class="t">
+        <caption>Day 3 - Quads, Hamstrings, and Calves</caption>
+        <thead>
+          <tr>
+            <th>Exercise</th>
+            <th>Sets</th>
+            <th>Reps</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Squat</td>
+            <td>3</td>
+            <td>6-10</td>
+          </tr>
+          <tr>
+            <td>Leg Press</td>
+            <td>3</td>
+            <td>15-20</td>
+          </tr>
+          <tr>
+            <td>Hack Squat or Dumbbell Lunge</td>
+            <td>3</td>
+            <td>8-12</td>
+          </tr>
+          <tr>
+            <td>Leg Extension</td>
+            <td>5 Minutes</td>
+            <td>Burn</td>
+          </tr>
+          <tr>
+            <td>Stiff Leg Deadlift</td>
+            <td>3</td>
+            <td>8-12</td>
+          </tr>
+          <tr>
+            <td>Leg Curl</td>
+            <td>5 Minutes</td>
+            <td>Burn</td>
+          </tr>
+          <tr>
+            <td>Standing Calf Raise</td>
+            <td>3</td>
+            <td>10-15</td>
+          </tr>
+          <tr>
+            <td>Seated Calf Raise</td>
+            <td>5 Minutes</td>
+            <td>Burn</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table border="1" class="t">
+        <caption>Day 4 - Shoulders, Traps, and Forearms</caption>
+        <thead>
+          <tr>
+            <th>Exercise</th>
+            <th>Sets</th>
+            <th>Reps</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Seated Barbell Press</td>
+            <td>3</td>
+            <td>6-10</td>
+          </tr>
+          <tr>
+            <td>Seated Arnold Press</td>
+            <td>3</td>
+            <td>8-12</td>
+          </tr>
+          <tr>
+            <td>Dumbbell Lateral Raise</td>
+            <td>3</td>
+            <td>10-15</td>
+          </tr>
+          <tr>
+            <td>Hammer Strength Press or Smith Press</td>
+            <td>5 Minutes</td>
+            <td>Burn</td>
+          </tr>
+          <tr>
+            <td>Upright Row</td>
+            <td>3</td>
+            <td>8-12</td>
+          </tr>
+          <tr>
+            <td>Barbell Shrug or Dumbbell Shrug</td>
+            <td>5 Minutes</td>
+            <td>Burn</td>
+          </tr>
+          <tr>
+            <td>Seated Barbell Wrist Curl</td>
+            <td>3</td>
+            <td>12-15</td>
+          </tr>
+          <tr>
+            <td>Barbell Static Hold</td>
+            <td>5 Minutes</td>
+            <td>Burn</td>
+          </tr>
+        </tbody>
+      </table>
+
+      Day 1 - Back and Biceps,
+      Day 2 - Chest and Triceps,
+      Day 3 - OFF,
+      Day 4 - Quads, Hamstrings and Calves,
+      Day 5 - Shoulders, Traps and Forearms,
+      Day 6 - OFF,
+      Day 7 - OFF.
+
+    </div>
+  </div>
+
+  <div id="popup6" class="popup">
+    <h2 class="titleplan">12 week fat destroyer</h2>
+    <button onclick="closePopup('popup6')" class="close">Close</button>
+    <button id="download-button6" class="Downloadbtn">Download Workout</button>
+    <div class="con2">
+      <table border="1" class="t">
+        <caption>Upper A</caption>
+        <tr>
+          <td>Exercise</td>
+          <td>Sets</td>
+          <td>Reps</td>
+        </tr>
+        <tr>
+          <td>Incline Bench Press</td>
+          <td>3</td>
+          <td>8-10</td>
+        </tr>
+        <tr>
+          <td>One Arm Dumbbell Row</td>
+          <td>3</td>
+          <td>10-12</td>
+        </tr>
+        <tr>
+          <td>Seated Barbell Press</td>
+          <td>3</td>
+          <td>8-10</td>
+        </tr>
+        <tr>
+          <td>Pull Ups</td>
+          <td>3</td>
+          <td>10</td>
+        </tr>
+        <tr>
+          <td>Skullcrushers</td>
+          <td>3</td>
+          <td>10-12</td>
+        </tr>
+        <tr>
+          <td>Dumbbell Curl</td>
+          <td>3</td>
+          <td>10-12</td>
+        </tr>
+      </table>
+
+
+      <table border="1" class="t">
+        <caption>Lower A</caption>
+        <tr>
+          <td>Exercise</td>
+          <td>Sets</td>
+          <td>Reps</td>
+        </tr>
+        <tr>
+          <td>Squats</td>
+          <td>3</td>
+          <td>8-10</td>
+        </tr>
+        <tr>
+          <td>Leg Curl</td>
+          <td>3</td>
+          <td>12-15</td>
+        </tr>
+        <tr>
+          <td>Leg Extension</td>
+          <td>3</td>
+          <td>12-15</td>
+        </tr>
+        <tr>
+          <td>Leg Press Calf Raise</td>
+          <td>3</td>
+          <td>15-20</td>
+        </tr>
+        <tr>
+          <td>Plank</td>
+          <td>3</td>
+          <td>60 sec</td>
+        </tr>
+        <tr>
+          <td>Twisting Hanging Knee Raise</td>
+          <td>3</td>
+          <td>20</td>
+        </tr>
+      </table>
+
+      <table border="1" class="t">
+        <caption>Upper B</caption>
+        <tr>
+          <td>Exercise</td>
+          <td>Sets</td>
+          <td>Reps</td>
+        </tr>
+        <tr>
+          <td>Dumbbell Bench Press</td>
+          <td>3</td>
+          <td>10</td>
+        </tr>
+        <tr>
+          <td>Barbell Row</td>
+          <td>3</td>
+          <td>8-10</td>
+        </tr>
+        <tr>
+          <td>Dumbbell Lateral Raise</td>
+          <td>3</td>
+          <td>12-15</td>
+        </tr>
+        <tr>
+          <td>Lat Pull Down</td>
+          <td>3</td>
+          <td>10-12</td>
+        </tr>
+        <tr>
+          <td>Cable Tricep Extensions</td>
+          <td>3</td>
+          <td>10-12</td>
+        </tr>
+        <tr>
+          <td>EZ Bar Preacher Curl</td>
+          <td>3</td>
+          <td>10-12</td>
+        </tr>
+      </table>
+
+      <table border="1" class="t">
+        <caption>Lower B</caption>
+        <tr>
+          <td>Exercise</td>
+          <td>Sets</td>
+          <td>Reps</td>
+        </tr>
+        <tr>
+          <td>Leg Press</td>
+          <td>3</td>
+          <td>15-20</td>
+        </tr>
+        <tr>
+          <td>Stiff Leg Deadlift</td>
+          <td>3</td>
+          <td>8-10</td>
+        </tr>
+        <tr>
+          <td>Walking Dumbbell Lunge</td>
+          <td>3</td>
+          <td>10</td>
+        </tr>
+        <tr>
+          <td>Seated Calf Raise</td>
+          <td>3</td>
+          <td>15-20</td>
+        </tr>
+        <tr>
+          <td>Cable Crunch</td>
+          <td>3</td>
+          <td>20</td>
+        </tr>
+        <tr>
+          <td>Russian Twist</td>
+          <td>3</td>
+          <td>20</td>
+        </tr>
+      </table>
+
+      Day 1 - Upper A,
+      Day 2 - Lower A,
+      Day 3 - Off,
+      Day 4 - Upper B,
+      Day 5 - Lower B,
+      Day 6 - Off,
+      Day 7 - Off.
+
+
+
+
+    </div>
+  </div>
+
+  <div id="popup7" class="popup">
+    <h2 class="titleplan">Fast mass program</h2>
+    <button onclick="closePopup('popup7')" class="close">Close</button>
+    <button id="download-button7" class="Downloadbtn">Download Workout</button>
+    <div class="con2">
+
+      <table border="1" class="t">
+        <caption>Day 1</caption>
+        <tr>
+          <td>Exercise</td>
+          <td>Sets</td>
+          <td>Reps</td>
+        </tr>
+        <tr>
+          <td>1a. Squat</td>
+          <td>4</td>
+          <td>8-12</td>
+        </tr>
+        <tr>
+          <td>1b. Lateral Raise</td>
+          <td>4</td>
+          <td>8-12</td>
+        </tr>
+        <tr>
+          <td>2a. Dumbbell RDL</td>
+          <td>3</td>
+          <td>8-12</td>
+        </tr>
+        <tr>
+          <td>2b. Rear Delt Raises</td>
+          <td>3</td>
+          <td>8-12</td>
+        </tr>
+        <tr>
+          <td>3a. Leg Extension</td>
+          <td>3</td>
+          <td>8-12</td>
+        </tr>
+        <tr>
+          <td>3b. Leg Curls</td>
+          <td>3</td>
+          <td>8-12</td>
+        </tr>
+      </table>
+
+      <table border="1" class="t">
+        <caption>Day 2</caption>
+        <tr>
+          <td>Exercise</td>
+          <td>Sets</td>
+          <td>Reps</td>
+        </tr>
+        <tr>
+          <td>1a. Dumbbell Bench Press</td>
+          <td>4</td>
+          <td>8-12</td>
+        </tr>
+        <tr>
+          <td>1b. Dumbbell Pullover</td>
+          <td>4</td>
+          <td>8-12</td>
+        </tr>
+        <tr>
+          <td>2a. Incline Dumbbell Bench</td>
+          <td>3</td>
+          <td>8-12</td>
+        </tr>
+        <tr>
+          <td>2b. Dumbbell Row on Incline Bench</td>
+          <td>3</td>
+          <td>8-12</td>
+        </tr>
+        <tr>
+          <td>3a. EZ Bar Curl</td>
+          <td>3</td>
+          <td>10-12</td>
+        </tr>
+        <tr>
+          <td>3b. Skullcrusher</td>
+          <td>3</td>
+          <td>10-12</td>
+        </tr>
+      </table>
+
+      <table border="1" class="t">
+        <caption>Day 4</caption>
+        <tr>
+          <td>Exercise</td>
+          <td>Sets</td>
+          <td>Reps</td>
+        </tr>
+        <tr>
+          <td>1a. Goblet Squat</td>
+          <td>4</td>
+          <td>12</td>
+        </tr>
+        <tr>
+          <td>1b. Goblet Lunge</td>
+          <td>4</td>
+          <td>12</td>
+        </tr>
+        <tr>
+          <td>2a. Leg Extension</td>
+          <td>4</td>
+          <td>10-12</td>
+        </tr>
+        <tr>
+          <td>2b. Leg Curl</td>
+          <td>4</td>
+          <td>10-12</td>
+        </tr>
+        <tr>
+          <td>3a. Standing Calf Raises</td>
+          <td>4</td>
+          <td>12-15</td>
+        </tr>
+        <tr>
+          <td>3b. Seated Calf Raises</td>
+          <td>4</td>
+          <td>12-15</td>
+        </tr>
+      </table>
+
+      <table border="1" class="t">
+        <caption>Day 5</caption>
+        <tr>
+          <td>Exercise</td>
+          <td>Sets</td>
+          <td>Reps</td>
+        </tr>
+        <tr>
+          <td>1a. Standing Dumbbell Press</td>
+          <td>4</td>
+          <td>8-12</td>
+        </tr>
+        <tr>
+          <td>1b. Bent-Over Dumbbell Row</td>
+          <td>4</td>
+          <td>8-12</td>
+        </tr>
+        <tr>
+          <td>2a. Lat Pulldown</td>
+          <td>4</td>
+          <td>10-12</td>
+        </tr>
+        <tr>
+          <td>2b. Pushup</td>
+          <td>4</td>
+          <td>10-12</td>
+        </tr>
+        <tr>
+          <td>3a. Alternating Hammer Curl</td>
+          <td>3</td>
+          <td>10</td>
+        </tr>
+        <tr>
+          <td>3b. Overhead Tricep Extension</td>
+          <td>3</td>
+          <td>10</td>
+        </tr>
+      </table>
+      Day 3
+
+      off (light cardio 20-40 minutes of walking for active recovery) <br>
+      Day 6 & 7
+
+      off (light cardio 20-40 minutes of walking for active recovery)
+
+
+    </div>
+  </div>
+
+  <div id="popup8" class="popup">
+    <h2 class="titleplan">4 Day Advanced Upper/Lower</h2>
+    <button onclick="closePopup('popup8')" class="close">Close</button>
+    <button id="download-button8" class="Downloadbtn">Download Workout</button>
+    <div class="con2">
+
+      <table border="1" class="t">
+        <caption>Monday: Upper Body Workout</caption>
+        <tr>
+          <td>Exercise</td>
+          <td>Sets</td>
+          <td>Reps</td>
+        </tr>
+        <tr>
+          <td>Pull Up</td>
+          <td>3</td>
+          <td>6-12*</td>
+        </tr>
+        <tr>
+          <td>Dumbbell Bench Press</td>
+          <td>4</td>
+          <td>10</td>
+        </tr>
+        <tr>
+          <td>Landmine T-Bar Row</td>
+          <td>3</td>
+          <td>10</td>
+        </tr>
+        <tr>
+          <td>Standing Dumbbell Press</td>
+          <td>3</td>
+          <td>10</td>
+        </tr>
+        <tr>
+          <td>Seated Cable Rows</td>
+          <td>2</td>
+          <td>10</td>
+        </tr>
+        <tr>
+          <td>Side Lateral Raise</td>
+          <td>2</td>
+          <td>10</td>
+        </tr>
+        <tr>
+          <td>Barbell Curl</td>
+          <td>2</td>
+          <td>10</td>
+        </tr>
+        <tr>
+          <td>French Press</td>
+          <td>2</td>
+          <td>10</td>
+        </tr>
+        <tr>
+          <td>Dumbbell Shrug</td>
+          <td>2</td>
+          <td>15</td>
+        </tr>
+      </table>
+
+      <table border="1" class="t">
+        <caption>Tuesday: Lower Body Workout</caption>
+        <tr>
+          <td>Exercise</td>
+          <td>Sets</td>
+          <td>Reps</td>
+        </tr>
+        <tr>
+          <td>Dumbbell Goblet Squat</td>
+          <td>4</td>
+          <td>10</td>
+        </tr>
+        <tr>
+          <td>Banded Nordic Hamstring Curl</td>
+          <td>2</td>
+          <td>10</td>
+        </tr>
+        <tr>
+          <td>Romanian Deadlift</td>
+          <td>3</td>
+          <td>10</td>
+        </tr>
+        <tr>
+          <td>Leg Press</td>
+          <td>3</td>
+          <td>12</td>
+        </tr>
+        <tr>
+          <td>Barbell Hip Thrust</td>
+          <td>2</td>
+          <td>10</td>
+        </tr>
+        <tr>
+          <td>Standing Machine Calf Raise</td>
+          <td>3</td>
+          <td>12</td>
+        </tr>
+        <tr>
+          <td>Hanging Leg Raise</td>
+          <td>2</td>
+          <td>15</td>
+        </tr>
+        <tr>
+          <td>Exercise Ball Crunch</td>
+          <td>2</td>
+          <td>15</td>
+        </tr>
+      </table>
+
+      <table border="1" class="t">
+        <caption>Thursday: Upper Body Workout</caption>
+        <tr>
+          <td>Exercise</td>
+          <td>Sets</td>
+          <td>Reps</td>
+        </tr>
+        <tr>
+          <td>Lat Pull Down</td>
+          <td>3</td>
+          <td>10</td>
+        </tr>
+        <tr>
+          <td>Incline Dumbbell Bench Press</td>
+          <td>3</td>
+          <td>12</td>
+        </tr>
+        <tr>
+          <td>Bent Over Dumbbell Row</td>
+          <td>3</td>
+          <td>10</td>
+        </tr>
+        <tr>
+          <td>Machine Fly</td>
+          <td>3</td>
+          <td>10</td>
+        </tr>
+        <tr>
+          <td>Standing Military Press</td>
+          <td>4</td>
+          <td>10</td>
+        </tr>
+        <tr>
+          <td>Machine Row</td>
+          <td>2</td>
+          <td>10</td>
+        </tr>
+        <tr>
+          <td>Reverse Machine Fly</td>
+          <td>2</td>
+          <td>10</td>
+        </tr>
+        <tr>
+          <td>Standing Cable Curl</td>
+          <td>2</td>
+          <td>10</td>
+        </tr>
+        <tr>
+          <td>Dips</td>
+          <td>2</td>
+          <td>10*</td>
+        </tr>
+        <tr>
+          <td>Standing Dumbbell Reverse Curl</td>
+          <td>2</td>
+          <td>10**</td>
+        </tr>
+
+      </table>
+
+      <table border="1" class="t">
+        <caption>Friday: Lower Body Workout</caption>
+        <tr>
+          <td>Exercise</td>
+          <td>Sets</td>
+          <td>Reps</td>
+        </tr>
+        <tr>
+          <td>Sumo Deadlift</td>
+          <td>4</td>
+          <td>10</td>
+        </tr>
+        <tr>
+          <td>Front Squat</td>
+          <td>3</td>
+          <td>10</td>
+        </tr>
+        <tr>
+          <td>Exercise Ball Leg Curl</td>
+          <td>3</td>
+          <td>10</td>
+        </tr>
+        <tr>
+          <td>Leg Extensions</td>
+          <td>3</td>
+          <td>10</td>
+        </tr>
+        <tr>
+          <td>Hyperextensions (glute-focused)</td>
+          <td>2</td>
+          <td>12</td>
+        </tr>
+        <tr>
+          <td>Bulgarian Split Squat</td>
+          <td>2</td>
+          <td>10</td>
+        </tr>
+        <tr>
+          <td>Seated Calf Raise</td>
+          <td>2</td>
+          <td>15</td>
+        </tr>
+
+      </table>
+
+
+
+    </div>
+  </div>
+
+
+
+  
 
 
 
 
 
-    <footer>
+
+
+
+
+    <footer style="margin-top: 200px;">
+
 
       <div class="footer-flexbox">
         <div class="footer-img">
-          
+
         </div>
 
 
-       <section class="footer-section-one">
+        <section class="footer-section-one">
           <table class="footer-table">
             <tr>
               <th rowspan="4"><img src="../Images/webLogo.png" alt="LOGO" class="logo-footer" /></th>
-              <th>Haircare</th>
+              <th>Fitness</th>
               <th>Services</th>
               <th>Follow Us</th>
               <th>Links</th>
             </tr>
             <tr>
-              <td>Empowering you with expert health and fitness tips to achieve a stronger, healthier life. Stay motivated, stay fit!</td>
+              <td>Empowering you with expert health and fitness tips to achieve a stronger, healthier life. Stay
+                motivated, stay fit!</td>
               <td><a href="User_Feedback.html">Feedback</a></td>
               <td><a href="https://en.wikipedia.org/wiki/Gmail">Gmail</a></td>
               <td><a href="index.html">Home</a></td>
-              
+
             </tr>
             <tr>
               <td>
@@ -92,51 +2217,162 @@
               </td>
               <td><a href="Contact_Us.html">Contact Us</a></td>
               <td><a href="https://en.wikipedia.org/wiki/Facebook">FaceBook</a></td>
-              <td><a href="About_Us.html">About_Us</a></td>
+              <td><a href="About_Us.html">About Us</a></td>
             </tr>
             <tr>
               <td> </td>
               <td><a href="About_Us.html">About Us</a></td>
               <td><a href="https://en.wikipedia.org/wiki/Mobile_phone">Mobile</a></td>
-             <td><a href="">Contact_Us</a></td>
+              <td><a href="">Contact Us</a></td>
             </tr>
             <tr>
               <td> </td>
               <td> </td>
               <td></td>
-              <td><a href="https://en.wikipedia.org/wiki/Twitter">Instergrame</a></td>
+              <td><a href="https://en.wikipedia.org/wiki/Twitter">Instagram</a></td>
               <td><a href="login.html">Login</a></td>
             </tr>
             <tr>
-              <td>  </td>
+              <td> </td>
               <td> </td>
               <td> </td>
               <td><a href="https://en.wikipedia.org/wiki/WhatsApp">whatsapp</a></td>
               <td><a href="register.html">Register</a></td>
             </tr>
           </table>
-       </section>
+        </section>
+
+        <script>
+          document.getElementById('workoutForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const gender = document.getElementById('gender').value;
+            const height = document.getElementById('height').value;
+            const weight = document.getElementById('weight').value;
+            const age = document.getElementById('age').value;
+            const time = document.getElementById('time').value;
+
+            let workoutPlan = '';
+
+            // Logic to determine the workout plan based on the selections
+            if (gender === 'male' && height === 'short' && weight === 'light' && age === 'young' && time === 'short') {
+              id = 'popup1'
+            } else if (gender === 'male' && height === 'medium' && weight === 'medium' && age === 'middle' && time === 'medium') {
+              id = 'popup2'
+            } else if (gender === 'male' && height === 'tall' && weight === 'heavy' && age === 'old' && time === 'long') {
+              id = 'popup3'
+            }
+            else if (gender === 'female' && height === 'short' && weight === 'light' && age === 'young' && time === 'short') {
+              id = 'popup4'
+            } else if (gender === 'female' && height === 'medium' && weight === 'medium' && age === 'middle' && time === 'medium') {
+              id = 'popup5'
+            } else if (gender === 'female' && height === 'tall' && weight === 'heavy' && age === 'old' && time === 'long') {
+              id = 'popup6'
+            } else if (gender === 'male' && height === 'tall' && weight === 'light' && age === 'young' && time === 'long') {
+              id = 'popup7'
+            } else {
+              id = 'popup8'
+            }
 
 
-      <section>
-        <hr class="h1" />
-        <div class="footer-second-part">
-          <a
-            href="https://en.wikipedia.org/wiki/Language_policy#:~:text=Language%20policy%20has%20been%20defined,xi)."
-            >Language Policy</a
-          >
-          <a href="https://en.wikipedia.org/wiki/Privacy_policy"
-            >Privacy Policy</a
-          >
-          <a href="https://en.wikipedia.org/wiki/Terms_of_service"
-            >Terms of Service</a
-          >
-          <a href="Contact_Us.html">Contact Us</a>
-          <a href="https://en.wikipedia.org/wiki/HTTP_cookie">Cookies</a>
+            document.getElementById(id).classList.add('show');
 
-          <p>@ Group 5 mini project</p>
-        </div>
-      </section>
+          });
+
+
+          function showPopup(id) {
+            document.getElementById(id).classList.add('show');
+          }
+
+          function closePopup(id) {
+            document.getElementById(id).classList.remove('show');
+          }
+
+
+          document.getElementById("download-button8").addEventListener("click", function () {
+
+            const link = document.createElement("a");
+            link.href = "../asset/i8.pdf";
+            link.download = "4 day Advanced upper lower.pdf";
+            link.click();
+          });
+
+          document.getElementById("download-button1").addEventListener("click", function () {
+
+            const link = document.createElement("a");
+            link.href = "../asset/i1.pdf";
+            link.download = "8 week fat loss workout for beginners.pdf";
+            link.click();
+          });
+
+          document.getElementById("download-button2").addEventListener("click", function () {
+
+            const link = document.createElement("a");
+            link.href = "../asset/i2.pdf";
+            link.download = "8 Week Strength Building Workout.pdf";
+            link.click();
+          });
+
+          document.getElementById("download-button3").addEventListener("click", function () {
+
+            const link = document.createElement("a");
+            link.href = "../asset/i3.pdf";
+            link.download = "10 Week Mass Building Program.pdf";
+            link.click();
+          });
+
+          document.getElementById("download-button4").addEventListener("click", function () {
+
+            const link = document.createElement("a");
+            link.href = "../asset/i4.pdf";
+            link.download = "3 Day Push/Pull/Legs Workout.pdf";
+            link.click();
+          });
+
+          document.getElementById("download-button5").addEventListener("click", function () {
+
+            const link = document.createElement("a");
+            link.href = "../asset/i5.pdf";
+            link.download = "4 Day Maximum Mass Workout.pdf";
+            link.click();
+          });
+
+          document.getElementById("download-button6").addEventListener("click", function () {
+
+            const link = document.createElement("a");
+            link.href = "../asset/i6.pdf";
+            link.download = "12 Week Fat Destroyer.pdf";
+            link.click();
+          });
+
+          document.getElementById("download-button7").addEventListener("click", function () {
+
+            const link = document.createElement("a");
+            link.href = "../asset/i7.pdf";
+            link.download = "Fast Mass Program.pdf";
+            link.click();
+          });
+
+          window.onload = function() {
+      document.getElementById("target").scrollIntoView({ behavior: "smooth" });
+   };
+        </script>
+
+        <section>
+          <hr class="h1" />
+          <div class="footer-second-part">
+            <a
+              href="https://en.wikipedia.org/wiki/Language_policy#:~:text=Language%20policy%20has%20been%20defined,xi).">Language
+              Policy</a>
+            <a href="https://en.wikipedia.org/wiki/Privacy_policy">Privacy Policy</a>
+            <a href="https://en.wikipedia.org/wiki/Terms_of_service">Terms of Service</a>
+            <a href="Contact_Us.html">Contact Us</a>
+            <a href="https://en.wikipedia.org/wiki/HTTP_cookie">Cookies</a>
+
+            <p>@ Group 5 mini project</p>
+          </div>
+        </section>
     </footer>
-  </body>
+</body>
+
 </html>
