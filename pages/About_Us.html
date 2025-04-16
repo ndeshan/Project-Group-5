@@ -1,121 +1,268 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="keywords" content="HTML, Helth & Fitness, Fitness, Health, Wellness, yoga, Gym" />
-  <meta name="author" content="Group-5 project" />
-
-  <title>About</title>
-  <link rel="icon" href="../Images/webLogo.png" type="icon" />
-  <link rel="stylesheet" href="../Layout/style.css" />
-</head>
-
-<body>
-  <section class="section-0">
-    <header class="header">
-      <nav class="navbar">
-        <a href="index.html" class="nav-home">Home</a>
-        <a href="Gym_membership_And_Fitness_Articles.html" class="nav-diet">Membership</a>
-        <a href="Blog_and_Articles.html" class="nav-fitness">Blogs</a>
-        <a href="About_Us.html" class="nav-about">About</a>
-        <a href="Contact_Us.html" class="nav-contact">Contact</a>
-        <a href="login.html" class="nav-login">Login</a>
-      </nav>
-      <div class="images">
-        <a href="index.html"><img src="../Images/webLogo.png" alt="logo" />
-        </a>
-      </div>
-    </header>
-    <div id="header-text">Event Registration</div>
-    </div>
-  </section>
-  <footer>
-
-    <div class="footer-flexbox">
-      <div class="footer-img">
-
-      </div>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="keywords"
+      content="HTML, Helth & Fitness, Fitness, Health, Wellness, yoga, Gym"
+    />
+    <meta name="author" content="Group-5 project" />
+    <title>About</title>
+    <link rel="icon" href="../Images/webLogo.png" type="icon"/>
+    <link rel="stylesheet" href="../Layout/style.css" />
+    <style>
+.section-0{
+  height: 150px;
+  background-color: black;
+}      
 
 
-      <section class="footer-section-one">
-        <table class="footer-table">
-          <tr>
-            <th rowspan="4"><img src="../Images/webLogo.png" alt="LOGO" class="logo-footer" /></th>
-            <th>Fitness</th>
-            <th>Services</th>
-            <th>Follow Us</th>
-            <th>Links</th>
-          </tr>
-          <tr>
-            <td>Empowering you with expert health and fitness tips to achieve a stronger, healthier life. Stay
-              motivated, stay fit!</td>
-            <td><a href="User_Feedback.html">Feedback</a></td>
-            <td><a href="https://en.wikipedia.org/wiki/Gmail">Gmail</a></td>
-            <td><a href="index.html">Home</a></td>
+      .grid{
+        display: grid;
+        grid-template-rows: 100px 100px 100px 100px 100px 100px  ;
+        grid-template-columns: 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px 51px 21px  ;
+        
+        
+        
+      }
+      
+      .item-0{
+        grid-row-start: 1;
+        grid-row-end: 8 ;
+        grid-column-start: 1;
+        grid-column-end: 15;
+        background-image: url(../Images/240_F_486189863_lE3HCRi3dLhRR49LyzkZOdtGmuRMz56S.jpg);
+        background-repeat: no-repeat;
 
-          </tr>
-          <tr>
-            <td>
-              <a href="https://en.wikipedia.org/wiki/Gmail">
-                <img src="../Images/footer-email .png" alt="email" class="footer-1">
-              </a>
-              <a href="https://en.wikipedia.org/wiki/Facebook">
-                <img src="../Images/footer-facebook .png" alt="facebook" class="footer-2">
-              </a>
-              <a href="https://en.wikipedia.org/wiki/Mobile_phone">
-                <img src="../Images/footer-mobile .png" alt="mobile" class="footer-3">
-              </a>
-              <a href="https://en.wikipedia.org/wiki/Twitter">
-                <img src="../Images/footer-twiter-logo.png" alt="twitter" class="footer-4">
-              </a>
-              <a href="https://en.wikipedia.org/wiki/WhatsApp">
-                <img src="../Images/footer-whatsapp.png" alt="whatsapp" class="footer-5">
-              </a>
-            </td>
-            <td><a href="Contact_Us.html">Contact Us</a></td>
-            <td><a href="https://en.wikipedia.org/wiki/Facebook">FaceBook</a></td>
-            <td><a href="About_Us.html">About Us</a></td>
-          </tr>
-          <tr>
-            <td> </td>
-            <td><a href="About_Us.html">About Us</a></td>
-            <td><a href="https://en.wikipedia.org/wiki/Mobile_phone">Mobile</a></td>
-            <td><a href="">Contact Us</a></td>
-          </tr>
-          <tr>
-            <td> </td>
-            <td> </td>
-            <td></td>
-            <td><a href="https://en.wikipedia.org/wiki/Twitter">Instagram</a></td>
-            <td><a href="login.html">Login</a></td>
-          </tr>
-          <tr>
-            <td> </td>
-            <td> </td>
-            <td> </td>
-            <td><a href="https://en.wikipedia.org/wiki/WhatsApp">whatsapp</a></td>
-            <td><a href="register.html">Register</a></td>
-          </tr>
-        </table>
-      </section>
+        background-size: cover;
 
+        background-size: cover;
 
-      <section>
-        <hr class="h1" />
-        <div class="footer-second-part">
-          <a href="https://en.wikipedia.org/wiki/Language_policy#:~:text=Language%20policy%20has%20been%20defined,xi).">Language
-            Policy</a>
-          <a href="https://en.wikipedia.org/wiki/Privacy_policy">Privacy Policy</a>
-          <a href="https://en.wikipedia.org/wiki/Terms_of_service">Terms of Service</a>
-          <a href="Contact_Us.html">Contact Us</a>
-          <a href="https://en.wikipedia.org/wiki/HTTP_cookie">Cookies</a>
+      }
+      
+     
+      
+      .item-1{
+        grid-row-start: 2;
+        grid-row-end: auto;
+        grid-column-start: 8;
+        grid-column-end: 14;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: larger;
+      }
+     
+      .item-1:hover{
+        transform: scale(1.1);
+      }
+      .item-2{
+        grid-row-start: 3;
+        grid-row-end: auto;
+        grid-column-start: 8;
+        grid-column-end: 14;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+        font-size: larger;
+      }
+      .item-2:hover{
+        transform: scale(1.1);
+      }
+      .item-3{
+        display: flex;
+        grid-row-start: 1;
+        grid-row-end: 6;
+        grid-column-start: 1;
+        grid-column-end: 4;
+        
+        
+      }
+      .item-3:hover{
+        transform: scale(1.1);
+      }
+      .item-4{
+        display: flex;
+        grid-row-start: 2;
+        grid-row-end: 7;
+        grid-column-start: 4;
+        grid-column-end: 6;
+        
+      }
+      .item-4:hover{
+        transform: scale(1.1);
+      }
+      .item-5{
+        grid-row-start: 3;
+        grid-row-end: auto;
+        grid-column-start: 8;
+        grid-column-end: 14;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin-top: 50px;
+        color: rgb(0, 0, 0);
+        text-align: justify;
+      
+      }
+      .item-5:hover{
+        transform: scale(1.1);
+      }
+      .button {
+        grid-row-start: 6;
+        grid-row-end: 7;
+        grid-column-start: 8;
+        grid-column-end: 14;
+        margin-top: 20px;
+        color: aquamarine;
+        text-decoration: none;
 
-          <p>@ Group 5 mini project</p>
+      }
+      .btn{
+        background-color: rgba(100, 100, 100, 0.414);
+        text-decoration: none;
+        color: black;
+        padding: 12px;
+      }
+      .button a{
+        text-decoration: none;
+        color: rgb(255, 255, 255);
+        font-size: 15px;
+      }
+      
+     
+
+    </style>
+
+  </head>
+  <body>
+    <section class="section-0">
+      <header class="header">
+        <nav class="navbar">
+          <a href="index.html" class="nav-home">Home</a>
+          <a href="Gym_membership_And_Fitness_Articles.html" class="nav-diet">Membership</a>
+          <a href="Blog_and_Articles.html" class="nav-fitness">Blogs</a>
+          <a href="About_Us.html" class="nav-about">About</a>
+          <a href="Contact_Us.html" class="nav-contact">Contact</a>
+          <a href="login.html" class="nav-login">Login</a>
+        </nav>
+        <div class="images">
+          <a href="index.html"><img src="../Images/webLogo.png" alt="logo" />
+          </a>
         </div>
-      </section>
-  </footer>
+      </header>
+      <div id="header-text">Event Registration</div>
+      </div>
+    </section>
+    <footer>
+
+    <div class="grid">
+      <div class="item-0">
+        
+      </div>
+      <div class="item-1">
+        <h1>About Us</h1>
+      </div>
+      <div class="item-2">
+        <h3>RUHUNA CAMPUS HELTH & RECQUET CLUB</h3>
+      </div>
+      <div class="item-3">
+        <img src="../Images/7f912b092e71134f0e7db187be68f37b.jpg" alt="">
+      </div>
+      <div class="item-4">
+        <img src="../Images/f9a7a30e3f6cada77cbd30f47f5a430f.jpg" alt="">
+      </div>
+      <div class="item-5">
+        <p>Welcome to Health & Fitness Hub, your ultimate destination for a healthier, stronger, and more active lifestyle. We are dedicated to helping you achieve your wellness goals by providing expert guidance, fitness tips, and nutritional advice. </p>
+          <p>At Health & Fitness Hub, we believe that fitness is not just about exercise - it’s a way of life. Whether you are a beginner or a seasoned athlete, our platform offers valuable resources to support your journey toward better health. From personalized workout routines and diet plans to motivational blogs and expert insights, we strive to empower you with the knowledge and inspiration you need to stay fit and happy. </p>
+          <p>Join our community today and take the first step towards a healthier you!</p>
+      </div>
+      <div class="button">
+        <a href="index.html"><button class ="btn">More Details</button></a>
+      </div>
+      
+    </div>
+
+    <footer>
+
+      <div class="footer-flexbox">
+        <div class="footer-img">
+  
+        </div>
+  
+  
+        <section class="footer-section-one">
+          <table class="footer-table">
+            <tr>
+              <th rowspan="4"><img src="../Images/webLogo.png" alt="LOGO" class="logo-footer" /></th>
+              <th>Fitness</th>
+              <th>Services</th>
+              <th>Follow Us</th>
+              <th>Links</th>
+            </tr>
+            <tr>
+              <td>Empowering you with expert health and fitness tips to achieve a stronger, healthier life. Stay
+                motivated, stay fit!</td>
+              <td><a href="User_Feedback.html">Feedback</a></td>
+              <td><a href="https://en.wikipedia.org/wiki/Gmail">Gmail</a></td>
+              <td><a href="index.html">Home</a></td>
+  
+            </tr>
+            <tr>
+              <td>
+                <a href="https://en.wikipedia.org/wiki/Gmail">
+                  <img src="../Images/footer-email .png" alt="email" class="footer-1">
+                </a>
+                <a href="https://en.wikipedia.org/wiki/Facebook">
+                  <img src="../Images/footer-facebook .png" alt="facebook" class="footer-2">
+                </a>
+                <a href="https://en.wikipedia.org/wiki/Mobile_phone">
+                  <img src="../Images/footer-mobile .png" alt="mobile" class="footer-3">
+                </a>
+                <a href="https://en.wikipedia.org/wiki/Twitter">
+                  <img src="../Images/footer-twiter-logo.png" alt="twitter" class="footer-4">
+                </a>
+                <a href="https://en.wikipedia.org/wiki/WhatsApp">
+                  <img src="../Images/footer-whatsapp.png" alt="whatsapp" class="footer-5">
+                </a>
+              </td>
+              <td><a href="Contact_Us.html">Contact Us</a></td>
+              <td><a href="https://en.wikipedia.org/wiki/Facebook">FaceBook</a></td>
+              <td><a href="About_Us.html">About Us</a></td>
+            </tr>
+            <tr>
+              <td> </td>
+              <td><a href="About_Us.html">About Us</a></td>
+              <td><a href="https://en.wikipedia.org/wiki/Mobile_phone">Mobile</a></td>
+              <td><a href="">Contact Us</a></td>
+            </tr>
+            <tr>
+              <td> </td>
+              <td> </td>
+              <td></td>
+              <td><a href="https://en.wikipedia.org/wiki/Twitter">Instagram</a></td>
+              <td><a href="login.html">Login</a></td>
+            </tr>
+            <tr>
+              <td> </td>
+              <td> </td>
+              <td> </td>
+              <td><a href="https://en.wikipedia.org/wiki/WhatsApp">whatsapp</a></td>
+              <td><a href="register.html">Register</a></td>
+            </tr>
+          </table>
+        </section>
+  
+  
+        <section>
+          <hr class="h1" />
+          <div class="footer-second-part">
+            <a href="https://en.wikipedia.org/wiki/Language_policy#:~:text=Language%20policy%20has%20been%20defined,xi).">Language
+              Policy</a>
+            <a href="https://en.wikipedia.org/wiki/Privacy_policy">Privacy Policy</a>
+            <a href="https://en.wikipedia.org/wiki/Terms_of_service">Terms of Service</a>
+            <a href="Contact_Us.html">Contact Us</a>
+            <a href="https://en.wikipedia.org/wiki/HTTP_cookie">Cookies</a>
+  
+            <p>@ Group 5 mini project</p>
+          </div>
+        </section>
+    </footer>
 </body>
 
 </html>
