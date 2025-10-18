@@ -8,6 +8,7 @@
   <meta name="author" content="Group-5 project" />
 
   <title>Fitness Tips</title>
+  
   <link rel="icon" href="../Images/webLogo.png" type="icon" />
   <link rel="stylesheet" href="../Layout/fitness-style.css" />
   
@@ -481,6 +482,56 @@
 
 
   </section>
+
+  <!-- Fitness Tips Submission Form -->
+<section style="background-color: #2a3642; padding: 40px; margin-top: 40px; border-radius: 12px; max-width: 700px; margin-left: auto; margin-right: auto;">
+  <h2 style="color: #fd8114; text-align: center; font-size: 32px;">Share Your Fitness Tip!</h2>
+  <form action="submit-tip.php" method="POST" style="color: white; font-size: 18px;">
+    <!-- Honeypot for spam -->
+    <input type="text" name="website" style="display:none;" tabindex="-1" autocomplete="off">
+
+    <div style="margin-bottom: 15px;">
+      <label for="name">Your Name:</label><br>
+      <input type="text" id="name" name="name" required 
+             style="width: 100%; padding: 10px; border-radius: 6px; border: 1px solid #555; background: #333; color: white;">
+    </div>
+
+    <div style="margin-bottom: 15px;">
+      <label for="email">Email:</label><br>
+      <input type="email" id="email" name="email" required 
+             style="width: 100%; padding: 10px; border-radius: 6px; border: 1px solid #555; background: #333; color: white;">
+    </div>
+
+    <div style="margin-bottom: 15px;">
+      <label for="goal">Your Fitness Goal:</label><br>
+      <select id="goal" name="goal" style="width: 100%; padding: 10px; border-radius: 6px; background: #333; color: white; border: 1px solid #555;">
+        <option value="">-- Select --</option>
+        <option value="Weight Loss">Weight Loss</option>
+        <option value="Muscle Gain">Muscle Gain</option>
+        <option value="Mental Wellness">Mental Wellness</option>
+        <option value="General Health">General Health</option>
+        <option value="Other">Other</option>
+      </select>
+    </div>
+
+    <div style="margin-bottom: 15px;">
+      <label for="tip">Your Fitness Tip (max 300 chars):</label><br>
+      <textarea id="tip" name="tip" rows="4" maxlength="300" required
+                style="width: 100%; padding: 10px; border-radius: 6px; border: 1px solid #555; background: #333; color: white; resize: vertical;"></textarea>
+    </div>
+
+    <button type="submit" 
+            style="background-color: #fd8114; color: white; padding: 12px 24px; font-size: 18px; border: none; border-radius: 6px; cursor: pointer; width: 100%;">
+      Submit Tip
+    </button>
+
+    <?php if (isset($_GET['status']) && $_GET['status'] === 'success'): ?>
+      <p style="color: #4caf50; text-align: center; margin-top: 15px;">✅ Thank you! Your tip was submitted.</p>
+    <?php elseif (isset($_GET['status']) && $_GET['status'] === 'error'): ?>
+      <p style="color: #f44336; text-align: center; margin-top: 15px;">⚠️ Something went wrong. Please try again.</p>
+    <?php endif; ?>
+  </form>
+</section>
 
 
 
