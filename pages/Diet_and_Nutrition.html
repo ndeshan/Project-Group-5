@@ -406,7 +406,30 @@
       </div>
     </center>
   </form>
+<br><br>
+<center>
+    <h1 style="color:navy;font-size: 38px;">FOOD & CALORIE DATABASE</h1>
+</center>
 
+<div style="max-width: 800px; margin: 0 auto; padding: 20px; background-color: #f9f9f9; border-radius: 10px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+    <h2 style="color:darkred; text-align:center;">Add a New Food</h2>
+   
+    <form method="POST" style="display:flex; flex-direction:column; gap:12px;">
+        <label>
+            <strong>Food Name:</strong><br>
+            <input type="text" name="name" required style="width:100%; padding:8px; border:1px solid #ccc; border-radius:4px;">
+        </label>
+        <label>
+            <strong>Calories (per serving):</strong><br>
+            <input type="number" name="calories" min="0" required style="width:100%; padding:8px; border:1px solid #ccc; border-radius:4px;">
+        </label>
+        <button type="submit" style="padding:10px 20px; background-color:#c43b11; color:white; border:none; border-radius:5px; cursor:pointer; font-size:16px;">
+            Add Food
+        </button>
+    </form>
+</div>
+
+<br><br>
 
 
 
