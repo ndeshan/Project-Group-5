@@ -135,6 +135,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['name']) && isset($_PO
     <title>share review</title>
 </head>
 <body class="bg-gray-200 p-10">
+    <div class="mb-6">
+        <button type="button" onclick="window.location.href='Workout_plans.html'" class="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded shadow hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-300">
+            <span class="mr-2 text-lg">&larr;</span>
+            <span>Back to plans</span>
+        </button>
+    </div>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6 justify-center">
         <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF'], ENT_QUOTES, 'UTF-8'); ?>" class="bg-white p-6 rounded shadow-md w-full md:col-span-1" method="POST">
             <h2 class="text-xl font-bold mb-4"><?php echo htmlspecialchars("Share your experience about " . $planTitle, ENT_QUOTES, 'UTF-8'); ?></h2>
