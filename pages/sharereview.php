@@ -127,7 +127,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['name']) && isset($_PO
 <body class="bg-gray-200 p-10">
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6 justify-center">
         <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF'], ENT_QUOTES, 'UTF-8'); ?>" class="bg-white p-6 rounded shadow-md w-full md:col-span-1" method="POST">
-            <h2 class="text-xl font-bold mb-4"><?php echo htmlspecialchars($planTitle, ENT_QUOTES, 'UTF-8'); ?></h2>
+            <h2 class="text-xl font-bold mb-4"><?php echo htmlspecialchars("Share your experience about " . $planTitle, ENT_QUOTES, 'UTF-8'); ?></h2>
             <input type="hidden" name="i1" value="<?php echo htmlspecialchars((string)$i1, ENT_QUOTES, 'UTF-8'); ?>">
             <label class="block mb-2">Your name</label>
             <input type="text" name ="name" placeholder = "Enter your name" class="border border-gray-300 p-2 mb-4 w-full">
@@ -138,46 +138,78 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['name']) && isset($_PO
 
         <?php
  
-    $planId = 1;
+   
+    $planId = null;
     if (is_int($i1) && $i1 > 0) {
         $planId = $i1;
     } elseif (is_string($i1) && ctype_digit($i1)) {
         $planId = (int)$i1;
     }
 
-    
     $conn = mysqli_connect("localhost", "root", "", "php_group_project");
     if ($conn) {
-        $sql = "SELECT id, name, plan_no, comment, date FROM reviews WHERE plan_no = ? ORDER BY id DESC";
-        $stmt = mysqli_prepare($conn, $sql);
-        if ($stmt) {
-            mysqli_stmt_bind_param($stmt, "i", $planId);
-            mysqli_stmt_execute($stmt);
-            $result = mysqli_stmt_get_result($stmt);
-            if ($result && mysqli_num_rows($result) > 0) {
-                echo '<div class="bg-white p-6 rounded shadow-md w-full md:col-span-2">';
-                echo '<h3 class="text-lg font-semibold mb-4">Reviews for ' . htmlspecialchars($planTitle, ENT_QUOTES, 'UTF-8') . '</h3>';
-                echo '<table class="w-full border-collapse">';
-                echo '<thead><tr><th class="border px-2 py-1 text-left">ID</th><th class="border px-2 py-1 text-left">Name</th><th class="border px-2 py-1 text-left">Comment</th><th class="border px-2 py-1 text-left">Date</th></tr></thead>';
-                echo '<tbody>';
-                while ($row = mysqli_fetch_assoc($result)) {
-                    echo '<tr>';
-                    echo '<td class="border px-2 py-1">' . (int)$row['id'] . '</td>';
-                    echo '<td class="border px-2 py-1">' . htmlspecialchars($row['name'], ENT_QUOTES, 'UTF-8') . '</td>';
-                    echo '<td class="border px-2 py-1">' . nl2br(htmlspecialchars($row['comment'], ENT_QUOTES, 'UTF-8')) . '</td>';
-                    $date = isset($row['date']) ? htmlspecialchars($row['date'], ENT_QUOTES, 'UTF-8') : '';
-                    echo '<td class="border px-2 py-1">' . $date . '</td>';
-                    echo '</tr>';
-                }
-                echo '</tbody>';
-                echo '</table>';
-                echo '</div>';
-            } else {
-                echo '<div class="bg-white p-6 rounded shadow-md w-full md:col-span-2">No reviews yet for ' . htmlspecialchars($planTitle, ENT_QUOTES, 'UTF-8') . '.</div>';
-            }
-            mysqli_stmt_close($stmt);
+        if ($planId === null) {
+            
+            echo '<div class="bg-white p-6 rounded shadow-md w-full md:col-span-2">Please select a workout plan to view its reviews.</div>';
         } else {
-            echo '<div class="text-red-600">Error preparing statement: ' . htmlspecialchars(mysqli_error($conn), ENT_QUOTES, 'UTF-8') . '</div>';
+            
+            $dateCol = null;
+            $cols = array();
+            $colRes = mysqli_query($conn, "SHOW COLUMNS FROM reviews");
+            if ($colRes) {
+                while ($crow = mysqli_fetch_assoc($colRes)) {
+                    $cols[] = $crow['Field'];
+                }
+                mysqli_free_result($colRes);
+            }
+            $dateCandidates = array('date','created','timestamp','created_at','createdat','dt');
+            foreach ($dateCandidates as $cname) {
+                if (in_array($cname, $cols, true)) { $dateCol = $cname; break; }
+            }
+
+            $selectCols = 'id, name, plan_no, comment';
+            if ($dateCol !== null) {
+                $selectCols .= ', `'. $dateCol . '`';
+            }
+
+            $sql = "SELECT $selectCols FROM reviews WHERE plan_no = ? ORDER BY id DESC";
+            $stmt = mysqli_prepare($conn, $sql);
+            if ($stmt) {
+                mysqli_stmt_bind_param($stmt, "i", $planId);
+                mysqli_stmt_execute($stmt);
+                $result = mysqli_stmt_get_result($stmt);
+                if ($result && mysqli_num_rows($result) > 0) {
+                    echo '<div class="bg-white p-6 rounded shadow-md w-full md:col-span-2">';
+                    echo '<h3 class="text-lg font-semibold mb-4">Reviews for ' . htmlspecialchars($planTitle, ENT_QUOTES, 'UTF-8') . '</h3>';
+                    echo '<table class="w-full border-collapse">';
+                    
+                    if ($dateCol !== null) {
+                        echo '<thead><tr><th class="border px-2 py-1 text-left">ID</th><th class="border px-2 py-1 text-left">Name</th><th class="border px-2 py-1 text-left">Comment</th><th class="border px-2 py-1 text-left">Date</th></tr></thead>';
+                    } else {
+                        echo '<thead><tr><th class="border px-2 py-1 text-left">ID</th><th class="border px-2 py-1 text-left">Name</th><th class="border px-2 py-1 text-left">Comment</th></tr></thead>';
+                    }
+                    echo '<tbody>';
+                    while ($row = mysqli_fetch_assoc($result)) {
+                        echo '<tr>';
+                        echo '<td class="border px-2 py-1">' . (int)$row['id'] . '</td>';
+                        echo '<td class="border px-2 py-1">' . htmlspecialchars($row['name'], ENT_QUOTES, 'UTF-8') . '</td>';
+                        echo '<td class="border px-2 py-1">' . nl2br(htmlspecialchars($row['comment'], ENT_QUOTES, 'UTF-8')) . '</td>';
+                        if ($dateCol !== null) {
+                            $date = isset($row[$dateCol]) ? htmlspecialchars($row[$dateCol], ENT_QUOTES, 'UTF-8') : '';
+                            echo '<td class="border px-2 py-1">' . $date . '</td>';
+                        }
+                        echo '</tr>';
+                    }
+                    echo '</tbody>';
+                    echo '</table>';
+                    echo '</div>';
+                } else {
+                    echo '<div class="bg-white p-6 rounded shadow-md w-full md:col-span-2">No reviews yet for ' . htmlspecialchars($planTitle, ENT_QUOTES, 'UTF-8') . '.</div>';
+                }
+                mysqli_stmt_close($stmt);
+            } else {
+                echo '<div class="text-red-600">Error preparing statement: ' . htmlspecialchars(mysqli_error($conn), ENT_QUOTES, 'UTF-8') . '</div>';
+            }
         }
         mysqli_close($conn);
     } else {
