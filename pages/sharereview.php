@@ -134,22 +134,22 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['name']) && isset($_PO
     <script src="https://cdn.tailwindcss.com"></script>
     <title>share review</title>
 </head>
-<body class="bg-gray-200 p-10">
+<body class="bg-gray-800 p-10">
     <div class="mb-6">
-        <button type="button" onclick="window.location.href='Workout_plans.html'" class="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded shadow hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-300">
+        <button type="button" onclick="window.location.href='Workout_plans.html'" class="inline-flex items-center px-4 py-2 bg-red-600 text-white rounded shadow hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-blue-300">
             <span class="mr-2 text-lg">&larr;</span>
             <span>Back to plans</span>
         </button>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6 justify-center">
-        <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF'], ENT_QUOTES, 'UTF-8'); ?>" class="bg-white p-6 rounded shadow-md w-full md:col-span-1" method="POST">
+        <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF'], ENT_QUOTES, 'UTF-8'); ?>" style="background-color: #FF5733;" class="p-6 rounded shadow-md w-full md:col-span-1" method="POST">
             <h2 class="text-xl font-bold mb-4"><?php echo htmlspecialchars("Share your experience about " . $planTitle, ENT_QUOTES, 'UTF-8'); ?></h2>
             <input type="hidden" name="i1" value="<?php echo htmlspecialchars((string)$i1, ENT_QUOTES, 'UTF-8'); ?>">
-            <label class="block mb-2">Your name</label>
+            <label class="block mb-2 font-bold">Your name</label>
             <input type="text" name ="name" placeholder = "Enter your name" class="border border-gray-300 p-2 mb-4 w-full">
-            <label class="block mb-2">Your review</label>
+            <label class="block mb-2 font-bold">Your review</label>
             <textarea name="comment" id="comment" class="border border-gray-300 p-2 mb-4 w-full" placeholder = "Enter your review"></textarea>
-            <input type="submit" value="submit" class="bg-blue-500 text-white px-4 py-2 rounded">
+            <input type="submit" value="submit" class="bg-green-500 text-white px-4 py-2 rounded cursor-pointer hover:bg-green-700">
         </form>
 
         <?php
@@ -195,25 +195,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['name']) && isset($_PO
                 mysqli_stmt_execute($stmt);
                 $result = mysqli_stmt_get_result($stmt);
                 if ($result && mysqli_num_rows($result) > 0) {
-                    echo '<div class="bg-white p-6 rounded shadow-md w-full md:col-span-2">';
+                    echo '<div style="background-color: #f0937eff;" class="bg-orange-100 p-6 rounded shadow-md w-full md:col-span-2">';
                     echo '<h3 class="text-lg font-semibold mb-4">Reviews for ' . htmlspecialchars($planTitle, ENT_QUOTES, 'UTF-8') . '</h3>';
                     echo '<table class="w-full border-collapse">';
                     
-                    if ($dateCol !== null) {
-                        echo '<thead><tr><th class="border px-2 py-1 text-left">ID</th><th class="border px-2 py-1 text-left">Name</th><th class="border px-2 py-1 text-left">Comment</th><th class="border px-2 py-1 text-left">Date</th></tr></thead>';
-                    } else {
-                        echo '<thead><tr><th class="border px-2 py-1 text-left">ID</th><th class="border px-2 py-1 text-left">Name</th><th class="border px-2 py-1 text-left">Comment</th></tr></thead>';
-                    }
                     echo '<tbody>';
                     while ($row = mysqli_fetch_assoc($result)) {
                         echo '<tr>';
-                        echo '<td class="border px-2 py-1">' . (int)$row['id'] . '</td>';
-                        echo '<td class="border px-2 py-1">' . htmlspecialchars($row['name'], ENT_QUOTES, 'UTF-8') . '</td>';
-                        echo '<td class="border px-2 py-1">' . nl2br(htmlspecialchars($row['comment'], ENT_QUOTES, 'UTF-8')) . '</td>';
-                        if ($dateCol !== null) {
-                            $date = isset($row[$dateCol]) ? htmlspecialchars($row[$dateCol], ENT_QUOTES, 'UTF-8') : '';
-                            echo '<td class="border px-2 py-1">' . $date . '</td>';
-                        }
+                        
+                        $date = isset($row[$dateCol]) ? htmlspecialchars($row[$dateCol], ENT_QUOTES, 'UTF-8') : '';
+                        echo '<td class="py-2">' .'👤 '. htmlspecialchars($row['name'], ENT_QUOTES, 'UTF-8') . '</td>';
+                        echo '<td class="px-2 py-1">' . nl2br(htmlspecialchars($row['comment'], ENT_QUOTES, 'UTF-8')).'<br>'.'📆 '.$date . '<hr></td>';
+                        
                         echo '</tr>';
                     }
                     echo '</tbody>';

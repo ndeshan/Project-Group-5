@@ -68,7 +68,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     $target = 24.9 * ($heightM * $heightM);
                     $guideline = 'You have to decrease your weight ' . $fmtDiff($target, $weight) . ' Kg to keep good BMI value!';
                 } else {
-                    $status = 'You are Obese as a adult male';
+                    $status = 'You are Obese as a young male';
                     $target = 24.9 * ($heightM * $heightM);
                     $guideline = 'You have to decrease your weight ' . $fmtDiff($target, $weight) . ' Kg to keep good BMI value!';
                 }
@@ -122,7 +122,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     $target = 24.9 * ($heightM * $heightM);
                     $guideline = 'You have to decrease your weight ' . $fmtDiff($target, $weight) . ' Kg to keep good BMI value!';
                 } else {
-                    $status = 'You are Obese as a adult female';
+                    $status = 'You are Obese as a young female';
                     $target = 24.9 * ($heightM * $heightM);
                     $guideline = 'You have to decrease your weight ' . $fmtDiff($target, $weight) . ' Kg to keep good BMI value!';
                 }
