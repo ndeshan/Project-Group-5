@@ -57,16 +57,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['name']) && isset($_PO
     $name = trim($_POST['name']);
     $comment = trim($_POST['comment']);
 
-
-    $planNo = null;
-    $post_i1 = filter_input(INPUT_POST, 'i1', FILTER_VALIDATE_INT);
-    if ($post_i1 !== false && $post_i1 !== null) {
-        $planNo = (int)$post_i1;
-    } elseif (is_int($i1) && $i1 > 0) {
-        $planNo = $i1;
-    } elseif (is_string($i1) && ctype_digit($i1)) {
-        $planNo = (int)$i1;
-    }
+   $planNo = $i1;
 
     if ($name === '' || $comment === '' || $planNo === null) {
         echo "Please provide a name and comment, and ensure the plan id is valid.";
@@ -134,7 +125,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['name']) && isset($_PO
     <script src="https://cdn.tailwindcss.com"></script>
     <title>share review</title>
 </head>
-<body class="bg-gray-800 p-10">
+<body class="bg-gray-300 p-10">
     <div class="mb-6">
         <button type="button" onclick="window.location.href='Workout_plans.html'" class="inline-flex items-center px-4 py-2 bg-red-600 text-white rounded shadow hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-blue-300">
             <span class="mr-2 text-lg">&larr;</span>
