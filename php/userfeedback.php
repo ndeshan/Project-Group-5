@@ -13,6 +13,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $lastName=$_POST["lname"];
     $email=$_POST["email"];
 
+    if(empty($feedbackType) || empty($feedbackText) || empty($firstName) || empty($lastName) || empty($email)) {
+        $message = "All fields are required.";
+    } else {
+        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            $message = "Invalid email format.";
+        }
+    }
+
+
   $datainsert= "INSERT INTO user_feedback (feedback_type, feedback_text, first_name, last_name, email) VALUES ('$feedbackType', '$feedbackText', '$firstName', '$lastName', '$email')";
 
     if (mysqli_query($conn, $datainsert) === TRUE) {
@@ -23,6 +32,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     mysqli_close($conn);
 
+    echo $message;
   
 }
     
