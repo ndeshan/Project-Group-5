@@ -64,13 +64,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['name']) && isset($_PO
         mysqli_close($conn);
     } else {
         
-        $cols = array();
+        $cols = array();// to clear old column names nathan ekama column name tika array ekata deparak enter wenawa wenawa 
         $colRes = mysqli_query($conn, "SHOW COLUMNS FROM reviews");
         if ($colRes) {
-            while ($crow = mysqli_fetch_assoc($colRes)) {
-                $cols[] = $crow['Field'];
+            while ($crow = mysqli_fetch_assoc($colRes)) { //column name tika assign karagannawa
+                $cols[] = $crow['Field'];// column name ekata adala field value eka gannawa assosiative array ekata
             }
-            mysqli_free_result($colRes);
+           
         }
 
         $dateCandidates = array('date','created','date','timestamp','createdat','dt');
