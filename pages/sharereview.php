@@ -1,28 +1,6 @@
 <?php
 
-$i1 = null;
-
-
-$i1_get_int = filter_input(INPUT_GET, 'i1', FILTER_VALIDATE_INT);
-if ($i1_get_int !== false && $i1_get_int !== null) {
-    $i1 = $i1_get_int;
-} else {
-    $i1_get_str = filter_input(INPUT_GET, 'i1', FILTER_SANITIZE_SPECIAL_CHARS);
-    if ($i1_get_str !== null && $i1_get_str !== '') {
-        $i1 = trim($i1_get_str);
-    }
-}
-
-
-$i1_post_int = filter_input(INPUT_POST, 'i1', FILTER_VALIDATE_INT);
-if ($i1_post_int !== false && $i1_post_int !== null) {
-    $i1 = $i1_post_int;
-} else {
-    $i1_post_str = filter_input(INPUT_POST, 'i1', FILTER_SANITIZE_SPECIAL_CHARS);
-    if ($i1_post_str !== null && $i1_post_str !== '') {
-        $i1 = trim($i1_post_str);
-    }
-}
+    $i1 =$_REQUEST['i1'];
 
 
 $planTitle = 'Share your experience';
