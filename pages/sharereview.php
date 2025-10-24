@@ -4,7 +4,7 @@
 
 
 $planTitle = 'Share your experience';
-if (is_int($i1)) {
+
     $titles = [
         1 => '8 Week Fat Loss Workout for Beginners',
         2 => '8 Week Strength Building Workout',
@@ -20,9 +20,6 @@ if (is_int($i1)) {
     } else {
         $planTitle = 'Workout Plan ' . htmlspecialchars((string)$i1, ENT_QUOTES, 'UTF-8');
     }
-} elseif (is_string($i1)) {
-    $planTitle = 'Review: ' . htmlspecialchars($i1, ENT_QUOTES, 'UTF-8');
-}
 
 
 
