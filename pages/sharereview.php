@@ -73,15 +73,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['name']) && isset($_PO
            
         }
 
-        $dateCandidates = array('date','created','date','timestamp','createdat','dt');
-        $dateCol = null;
-        foreach ($dateCandidates as $cname) {
-            if (in_array($cname, $cols, true)) { $dateCol = $cname; break; }
-        }
+    
+       $dateCol = 'date';
 
         if ($dateCol !== null) {
       
-            $sql = "INSERT INTO reviews (name, plan_no, comment, `" . $dateCol . "`) VALUES (?, ?, ?, ?)";
+            $sql = "INSERT INTO reviews (name, plan_no, comment,date) VALUES (?, ?, ?, ?)";
             $stmt = mysqli_prepare($conn, $sql);
             if ($stmt) {
                 $now = date('Y-m-d H:i:s');
