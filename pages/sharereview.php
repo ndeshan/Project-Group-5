@@ -74,9 +74,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['name']) && isset($_PO
         }
 
     
-       $dateCol = 'date';
-
-        if ($dateCol !== null) {
       
             $sql = "INSERT INTO reviews (name, plan_no, comment,date) VALUES (?, ?, ?, ?)";
             $stmt = mysqli_prepare($conn, $sql);
@@ -92,22 +89,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['name']) && isset($_PO
             } else {
                 echo "ERROR: Could not prepare statement: " . mysqli_error($conn);
             }
-        } else {
-            
-            $sql = "INSERT INTO reviews (name, plan_no, comment) VALUES (?, ?, ?)";
-            $stmt = mysqli_prepare($conn, $sql);
-            if ($stmt) {
-                mysqli_stmt_bind_param($stmt, "sis", $name, $planNo, $comment);
-                if (mysqli_stmt_execute($stmt)) {
-                    echo "Record inserted successfully.";
-                } else {
-                    echo "ERROR: Could not execute statement: " . mysqli_stmt_error($stmt);
-                }
-                mysqli_stmt_close($stmt);
-            } else {
-                echo "ERROR: Could not prepare statement: " . mysqli_error($conn);
-            }
-        }
+ 
         mysqli_close($conn);
     }
 }
