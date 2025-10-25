@@ -3,14 +3,10 @@
 $bmiDisplay = '';
 $status = '';
 $guideline = '';
-$ageVal = '';
-$weightVal = '';
-$heightVal = '';
-$genderVal = '';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
    
-   $genderVal = isset($_POST['gender']) ? $_POST['gender'] : '';
+   $gender = isset($_POST['gender']) ? $_POST['gender'] : '';
 
    
     $age = $_POST['age'];
@@ -23,7 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $bmiDisplay = number_format($bmi, 2);
 
       
-        $gender = strtolower($genderVal ?? '');
+    
         
         if ($age === null) { $age = 30; }
 
@@ -41,7 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     $target = 18.5 * ($heightM * $heightM);
                     $guideline = 'You have to increase your weight ' . $fmtDiff($target, $weight) . ' Kg to keep good BMI value!';
                 } elseif ($bmi >= 18.5 && $bmi <= 24.9) {
-                    $status = 'You are Healthy as a under 19 male male';
+                    $status = 'You are Healthy as a under 19 male';
                     $guideline = '';
                 } elseif ($bmi >= 25 && $bmi <= 29.9) {
                     $status = 'You are Overweight as a under 19 male';
@@ -333,13 +329,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <table class="t1">
           <tr>
             <td>Age:</td>
-            <td colspan="2"><input type="number" id="age" name="age" class="input" placeholder="Enter your age" min="1" max="100" value="<?php echo htmlspecialchars($ageVal); ?>"></td>
+            <td colspan="2"><input type="number" id="age" name="age" class="input" placeholder="Enter your age" min="1" max="100" value="<?php echo htmlspecialchars($age); ?>"></td>
           </tr>
           <tr>
 
             <td>Gender:</td>
-            <td>Male:<input type="radio" name="gender" value="male" <?php echo ($genderVal === 'male') ? 'checked' : ''; ?>></td>
-            <td>Female: <input type="radio" name="gender" value="female" <?php echo ($genderVal === 'female') ? 'checked' : ''; ?>></td>
+            <td>Male:<input type="radio" name="gender" value="male" <?php echo ($gender === 'male') ? 'checked' : ''; ?>></td>
+            <td>Female: <input type="radio" name="gender" value="female" <?php echo ($gender === 'female') ? 'checked' : ''; ?>></td>
           </tr>
 
           <tr>
@@ -347,7 +343,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
               Weight (kg):
             </td>
             <td colspan="2">
-              <input type="number" id="weight" name="weight" class="input" placeholder="Enter your weight" min="1" max="200" step="0.1" value="<?php echo htmlspecialchars($weightVal); ?>">
+              <input type="number" id="weight" name="weight" class="input" placeholder="Enter your weight" min="1" max="200" step="0.1" value="<?php echo htmlspecialchars($weight); ?>">
             </td>
           </tr>
           <tr>
@@ -355,7 +351,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
               Height (cm):
             </td>
             <td colspan="2">
-              <input type="number" id="height" name="height" class="input" placeholder="Enter your height" min="1" max="300" step="0.1" value="<?php echo htmlspecialchars($heightVal); ?>">
+              <input type="number" id="height" name="height" class="input" placeholder="Enter your height" min="1" max="300" step="0.1" value="<?php echo htmlspecialchars($height); ?>">
             </td>
 
 
