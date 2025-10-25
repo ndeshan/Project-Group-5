@@ -10,15 +10,12 @@ $genderVal = '';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
    
-    $ageVal = isset($_POST['age']) ? trim($_POST['age']) : '';
-    $weightVal = isset($_POST['weight']) ? trim($_POST['weight']) : '';
-    $heightVal = isset($_POST['height']) ? trim($_POST['height']) : '';
-    $genderVal = isset($_POST['gender']) ? trim($_POST['gender']) : '';
+   $genderVal = isset($_POST['gender']) ? $_POST['gender'] : '';
 
    
-    $age = is_numeric($ageVal) ? (int)$ageVal : null;
-    $weight = is_numeric($weightVal) ? (float)$weightVal : null;
-    $height = is_numeric($heightVal) ? (float)$heightVal : null;
+    $age = $_POST['age'];
+    $weight = $_POST['weight'];
+    $height = $_POST['height'];
 
     if ($weight > 0 && $height > 0) {
         $heightM = $height / 100.0;

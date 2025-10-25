@@ -48,7 +48,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['name']) && isset($_PO
            
         }
 
-    
+        if(preg_match("/[a-zA-Z,.]+$/",$name)){
       
             $sql = "INSERT INTO reviews (name, plan_no, comment,date) VALUES (?, ?, ?, ?)";
             $stmt = mysqli_prepare($conn, $sql);
@@ -56,7 +56,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['name']) && isset($_PO
                 $now = date('Y-m-d H:i:s');
                 mysqli_stmt_bind_param($stmt, "siss", $name, $planNo, $comment, $now);
                 if (mysqli_stmt_execute($stmt)) {
-                    echo "Record inserted successfully.";
+                    echo "<p class='text-green-700 text-2xl'>Record inserted successfully.</p>";
                 } else {
                     echo "ERROR: Could not execute statement: " . mysqli_stmt_error($stmt);
                 }
@@ -64,6 +64,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['name']) && isset($_PO
             } else {
                 echo "ERROR: Could not prepare statement: " . mysqli_error($conn);
             }
+        }else{
+            echo "<h1 class='text-red-700 text-2xl'>You can only enter letters for name</h1>";
+        }
  
         mysqli_close($conn);
     }
@@ -140,7 +143,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['name']) && isset($_PO
                 mysqli_stmt_execute($stmt);
                 $result = mysqli_stmt_get_result($stmt);
                 if ($result && mysqli_num_rows($result) > 0) {
-                    echo '<div style="background-color: #f0937eff;" class="bg-orange-100 p-6 rounded shadow-md w-full md:col-span-2">';
+                    echo '<div style="background-color: #f0937eff;" class="bg-orange-100 p-6 rounded shadow-md w-full md:col-span-2 max-h-96 overflow-y-auto">';
                     echo '<h3 class="text-lg font-semibold mb-4">Reviews for ' . htmlspecialchars($planTitle, ENT_QUOTES, 'UTF-8') . '</h3>';
                     echo '<table class="w-full border-collapse">';
                     
