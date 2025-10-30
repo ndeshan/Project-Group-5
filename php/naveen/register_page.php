@@ -25,7 +25,7 @@ if(preg_match($usernameCheck,$get_username)){
     $serverName='localhost:3307';
     $userName='root';
     $password='';
-    $databaseName='web_project_fitness';
+    $databaseName='healthandfitnesshub';
 
     $conn=mysqli_connect($serverName,$userName,$password,$databaseName);
   

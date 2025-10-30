@@ -9,7 +9,7 @@ if(isset($_POST['login_button'])){
     $servername='localhost:3307';
     $username='root';
     $password='';
-    $database='web_project_fitness';
+    $database='healthandfitnesshub';
     $status=FALSE;
 
     if( $get_name===NULL && $get_password===NULL){
@@ -76,7 +76,7 @@ if(isset($_POST['show_button'])){
     $servername='localhost:3307';
     $username='root';
     $password='';
-    $database='web_project_fitness';
+    $database='healthandfitnesshub';
     
  $conn=mysqli_connect($servername,$username,$password,$database);
          if(!$conn){
