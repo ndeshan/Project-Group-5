@@ -131,7 +131,7 @@
     }
 
     .xxx {
-      font-size: 30px;
+      font-size: 50px;
       color: #d9480f;
       font-weight: bold;
       margin-top: 20px;
@@ -141,6 +141,31 @@
     .xxx:hover {
       color: #343a40;
     }
+
+    .xx {
+      font-size: 40px;
+      color: #240faf;
+      font-weight: bold;
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .xx:hover {
+      color: #343a40;
+    }
+
+    .x {
+      font-size: 30px;
+      color: #0f911c;
+      font-weight: bold;
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .x:hover {
+      color: #343a40;
+    }
+    
   </style>
 <!--   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -209,7 +234,8 @@
           </tr>
         </table>
         <p id="result" class="xxx"></p>
-        <p id="status" class="xxx"></p>
+        <p id="status" class="xx"></p>
+        <p id="guideline" class="x"></p>
     </section>
     </center>
 
@@ -226,7 +252,7 @@
   <script>
     let finalBmi;
     let status = document.getElementById("status");
-
+    let guideline = document.getElementById("guideline");
 
 
 
@@ -237,93 +263,143 @@
       var height = document.getElementById("height").value;
       var result = document.getElementById("result");
       let age = document.getElementById("age").value;
+      let increaseweight;
+      let decreaseweight;
       const selectedValue = document.querySelector('input[name="gender"]:checked')?.value;
+      
 
       if (weight > 0 && height > 0) {
         finalBmi = weight / (height / 100 * height / 100);
-        result.innerHTML = "Your BMI is: <br>" + finalBmi.toFixed(2);
+        result.innerHTML = "Your BMI is: " + "<strong style=color:red;>" + finalBmi.toFixed(2) +"</strong>";
         /* window.alert("Your BMI is: " + finalBmi); */
         if (selectedValue == "male") {
           if (age < 19) {
+          
             if (finalBmi < 18.5) {
-              status.innerHTML = "you are Underweight as a teanage male";
+              status.innerHTML = "You are Underweight as a under 19 male";
+              increaseweight = (18.5 * (height / 100) * (height / 100)) - weight;
+              guideline.innerHTML = `You have to increase your weight ${increaseweight.toFixed(2)} Kg to keep good BMI value! `;
             }
             else if (finalBmi >= 18.5 && finalBmi <= 24.9) {
-              status.innerHTML = "you are Healthy as a teenage male";
+              status.innerHTML = "You are Healthy as a  under 19 male male";
+              guideline.innerHTML =  "";
             }
             else if (finalBmi >= 25 && finalBmi <= 29.9) {
-              status.innerHTML = "you are Overweight as a teenage male";
+              status.innerHTML = "You are Overweight as a under 19 male";
+              decreaseweight = (24.9 * (height / 100) * (height / 100)) - weight;
+              guideline.innerHTML = `You have to decrease your weight ${decreaseweight.toFixed(2)} Kg to keep good BMI value! `;
+
             }
             else {
-              status.innerHTML = "you are Obese as a teenage male";
+              status.innerHTML = "You are Obese as a under 19 male";
+              decreaseweight = (24.9 * (height / 100) * (height / 100)) - weight;
+              guideline.innerHTML = `You have to decrease your weight ${decreaseweight.toFixed(2)} Kg to keep good BMI value! `;
             }
           } else if (age >= 19 && age <= 40) {
             if (finalBmi < 18.5) {
-              status.innerHTML = "you are Underweight as a young male";
+              status.innerHTML = "You are Underweight as a young male";
+              increaseweight = (18.5 * (height / 100) * (height / 100)) - weight;
+              guideline.innerHTML = `You have to increase your weight ${increaseweight.toFixed(2)} Kg to keep good BMI value! `;
+
             }
             else if (finalBmi >= 18.5 && finalBmi <= 24.9) {
-              status.innerHTML = "you are Healthy as a young male";
+              status.innerHTML = "You are Healthy as a young male";
+              guideline.innerHTML =  "";
             }
             else if (finalBmi >= 25 && finalBmi <= 29.9) {
-              status.innerHTML = "you are Overweight as a young male";
+              status.innerHTML = "You are Overweight as a young male";
+              decreaseweight = (24.9 * (height / 100) * (height / 100)) - weight;
+              guideline.innerHTML = `You have to decrease your weight ${decreaseweight.toFixed(2)} Kg to keep good BMI value! `;
+              
             }
             else {
-              status.innerHTML = "you are Obese as a adult male";
+              status.innerHTML = "You are Obese as a adult male";
+              decreaseweight = (24.9 * (height / 100) * (height / 100)) - weight;
+              guideline.innerHTML = `You have to decrease your weight ${decreaseweight.toFixed(2)} Kg to keep good BMI value! `;
             }
           } else {
             if (finalBmi < 18.5) {
-              status.innerHTML = "you are Underweight as a adult male";
+              status.innerHTML = "You are Underweight as a adult male";
+              increaseweight = (18.5 * (height / 100) * (height / 100)) - weight;
+              guideline.innerHTML = `You have to increase your weight ${increaseweight.toFixed(2)} Kg to keep good BMI value! `;
             }
             else if (finalBmi >= 18.5 && finalBmi <= 24.9) {
-              status.innerHTML = "you are Healthy as a adult male";
+              status.innerHTML = "You are Healthy as a adult male";
+              guideline.innerHTML =  "";
             }
             else if (finalBmi >= 25 && finalBmi <= 29.9) {
-              status.innerHTML = "you are Overweight as a adult male";
+              status.innerHTML = "You are Overweight as a adult male";
+              decreaseweight = (24.9 * (height / 100) * (height / 100)) - weight;
+              guideline.innerHTML = `You have to decrease your weight ${decreaseweight.toFixed(2)} Kg to keep good BMI value! `;
             }
             else {
-              status.innerHTML = "you are Obese as a adult male";
+              status.innerHTML = "You are Obese as a adult male";
+              decreaseweight = (24.9 * (height / 100) * (height / 100)) - weight;
+              guideline.innerHTML = `You have to decrease your weight ${decreaseweight.toFixed(2)} Kg to keep good BMI value! `;
             }
           }
 
         } else {
           if (age < 19) {
             if (finalBmi < 18.5) {
-              status.innerHTML = "you are Underweight as a teanage female";
+              status.innerHTML = "You are Underweight as a under 19 female";
+              increaseweight = (18.5 * (height / 100) * (height / 100)) - weight;
+              guideline.innerHTML = `You have to increase your weight ${increaseweight.toFixed(2)} Kg to keep good BMI value! `;
+
             }
             else if (finalBmi >= 18.5 && finalBmi <= 24.9) {
-              status.innerHTML = "you are Healthy as a teenage female";
+              status.innerHTML = "You are Healthy as a under 19 female";
+              guideline.innerHTML =  "";
             }
             else if (finalBmi >= 25 && finalBmi <= 29.9) {
-              status.innerHTML = "you are Overweight as a teenage female";
+              status.innerHTML = "You are Overweight as a under 19 female";
+              decreaseweight = (24.9 * (height / 100) * (height / 100)) - weight;
+              guideline.innerHTML = `You have to decrease your weight ${decreaseweight.toFixed(2)} Kg to keep good BMI value! `;
             }
             else {
-              status.innerHTML = "you are Obese as a teenage female";
+              status.innerHTML = "You are Obese as a under 19 female";
+              decreaseweight = (24.9 * (height / 100) * (height / 100)) - weight;
+              guideline.innerHTML = `You have to decrease your weight ${decreaseweight.toFixed(2)} Kg to keep good BMI value! `;
             }
           } else if (age >= 19 && age <= 40) {
             if (finalBmi < 18.5) {
-              status.innerHTML = "you are Underweight as a young female";
+              status.innerHTML = "You are Underweight as a young female";
+              increaseweight = (18.5 * (height / 100) * (height / 100)) - weight;
+              guideline.innerHTML = `You have to increase your weight ${increaseweight.toFixed(2)} Kg to keep good BMI value! `;
             }
             else if (finalBmi >= 18.5 && finalBmi <= 24.9) {
-              status.innerHTML = "you are Healthy as a young female";
+              status.innerHTML = "You are Healthy as a young female";
+              guideline.innerHTML =  "";
             }
             else if (finalBmi >= 25 && finalBmi <= 29.9) {
-              status.innerHTML = "you are Overweight as a young female";
+              status.innerHTML = "You are Overweight as a young female";
+              decreaseweight = (24.9 * (height / 100) * (height / 100)) - weight;
+              guideline.innerHTML = `You have to decrease your weight ${decreaseweight.toFixed(2)} Kg to keep good BMI value! `;
             }
             else {
-              status.innerHTML = "you are Obese as a adult female";
+              status.innerHTML = "You are Obese as a adult female";
+              decreaseweight = (24.9 * (height / 100) * (height / 100)) - weight;
+              guideline.innerHTML = `You have to decrease your weight ${decreaseweight.toFixed(2)} Kg to keep good BMI value! `;
             }
           } else {
             if (finalBmi < 18.5) {
-              status.innerHTML = "you are Underweight as a adult female";
+              status.innerHTML = "You are Underweight as a adult female";
+              increaseweight = (18.5 * (height / 100) * (height / 100)) - weight;
+              guideline.innerHTML = `You have to increase your weight ${increaseweight.toFixed(2)} Kg to keep good BMI value! `;
             }
             else if (finalBmi >= 18.5 && finalBmi <= 24.9) {
-              status.innerHTML = "you are Healthy as a adult female";
+              status.innerHTML = "You are Healthy as a adult female";
+              guideline.innerHTML =  "";
             }
             else if (finalBmi >= 25 && finalBmi <= 29.9) {
-              status.innerHTML = "you are Overweight as a adult female";
+              status.innerHTML = "You are Overweight as a adult female";
+              decreaseweight = (24.9 * (height / 100) * (height / 100)) - weight;
+              guideline.innerHTML = `You have to decrease your weight ${decreaseweight.toFixed(2)} Kg to keep good BMI value! `;
             }
             else {
-              status.innerHTML = "you are Obese as a adult female";
+              status.innerHTML = "You are Obese as a adult female";
+              decreaseweight = (24.9 * (height / 100) * (height / 100)) - weight;
+              guideline.innerHTML = `You have to decrease your weight ${decreaseweight.toFixed(2)} Kg to keep good BMI value! `;
             }
           }
         }

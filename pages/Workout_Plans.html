@@ -119,6 +119,8 @@
 
     .popup.show {
       display: block;
+      z-index: 1;
+      
     }
 
     .close {
@@ -339,6 +341,7 @@
 
 
   </section>
+  
 
   <h1 class="title"><br><br> Workout Plan Selector</h1>
   <p class="cursor typewriter-animation">Fill out the form below to get a workout plan tailored to your needs.</p>
@@ -385,7 +388,7 @@
   <!-- <div id="workoutPlan"></div> -->
   <br><br><br><br><br>
 
-  <h2 class="title">Workout Plans</h2>
+  <h2 class="title" id="target">Workout Plans</h2>
 
   <div class="container">
     <div class="i1">
@@ -2252,18 +2255,18 @@ This workout routine takes advantage of that extra free time that you can’t sp
             let workoutPlan = '';
 
             // Logic to determine the workout plan based on the selections
-            if (gender === 'male' && height === 'tall' && weight === 'heavy' && age === 'old' && time === 'long') {
+            if (gender === 'male' && height === 'short' && weight === 'light' && age === 'young' && time === 'short') {
               id = 'popup1'
-            } else if (gender === 'female' && height === 'medium' && weight === 'medium' && age === 'middle' && time === 'medium') {
+            } else if (gender === 'male' && height === 'medium' && weight === 'medium' && age === 'middle' && time === 'medium') {
               id = 'popup2'
-            } else if (gender === 'male' && height === 'short' && weight === 'light' && age === 'young' && time === 'short') {
+            } else if (gender === 'male' && height === 'tall' && weight === 'heavy' && age === 'old' && time === 'long') {
               id = 'popup3'
             }
-            else if (gender === 'male' && height === 'tall' && weight === 'light' && age === 'young' && time === 'short') {
+            else if (gender === 'female' && height === 'short' && weight === 'light' && age === 'young' && time === 'short') {
               id = 'popup4'
-            } else if (gender === 'male' && height === 'tall' && weight === 'heavy' && age === 'young' && time === 'short') {
+            } else if (gender === 'female' && height === 'medium' && weight === 'medium' && age === 'middle' && time === 'medium') {
               id = 'popup5'
-            } else if (gender === 'male' && height === 'tall' && weight === 'light' && age === 'old' && time === 'short') {
+            } else if (gender === 'female' && height === 'tall' && weight === 'heavy' && age === 'old' && time === 'long') {
               id = 'popup6'
             } else if (gender === 'male' && height === 'tall' && weight === 'light' && age === 'young' && time === 'long') {
               id = 'popup7'
@@ -2349,6 +2352,10 @@ This workout routine takes advantage of that extra free time that you can’t sp
             link.download = "Fast Mass Program.pdf";
             link.click();
           });
+
+          window.onload = function() {
+      document.getElementById("target").scrollIntoView({ behavior: "smooth" });
+   };
         </script>
 
         <section>
