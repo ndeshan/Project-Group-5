@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Event Registration</title>
+  <link rel="icon" href="../Images/webLogo.png" type="icon" />
+  <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+  <script src="https://kit.fontawesome.com/45cc59e5cb.js" crossorigin="anonymous"></script>
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      font-weight: 100;
+
+    }
+
+    .section-0 {
+      background-image: url(../Images/formcover.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 400px;
+      padding-bottom: -100px;
+    }
+
+    .header nav {
+      margin-left: auto;
+      margin-right: auto;
+      background-color: transparent;
+      align-items: center;
+    }
+
+    .navbar {
+      float: inline-end;
+      padding: 20px;
+      font-size: 30px;
+      
+
+    }
+
+    .navbar .nav-login {
+      color: #f5ebeb;
+      padding: 20px 30px;
+      background-color: rgba(255, 0, 0, 0.9);
+      border-radius: 30px 0px 30px 0px;
+      transition: transform 0.3s ease-in-out;
+      border: none;
+    }
+
+    .navbar .nav-login:hover {
+      background-color: rgba(196, 59, 17);
+      color: black;
+      transform: scale(1.5);
+    }
+
+    .navbar a {
+      padding: 40px;
+      text-decoration: none;
+      color: rgb(0, 0, 0);
+      padding: 20px;
+
+    }
+
+    .navbar a:hover {
+      color: orange;
+
+    }
+
+    .images img {
+      width: 120px;
+      float: inline-start;
+      padding: 10px 10px 10px 10px;
+    }
+
+    .navbar {
+      padding-top: 40px;
+
+    }
+
+
+
+    footer {
+      background-color: #464545;
+      bottom: auto;
+      position: relative;
+      width: 100%;
+
+    }
+
+    .footer-section-one {
+      height: 370px;
+    }
+
+    .footer-table {
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+      font-size: 20px;
+      border: none;
+      color: white;
+      padding-top: 20px;
+    }
+
+    .footer-table a {
+      text-decoration: none;
+      color: white;
+    }
+
+    .footer-table a:hover {
+      color: rgb(252, 143, 0);
+    }
+
+    .footer-table th {
+      font-size: 30px;
+      width: 15%;
+    }
+
+    .footer-img img {
+
+      width: 200px;
+    }
+
+    .logo-footer {
+      width: 200px;
+    }
+
+    .footer-1 {
+      width: 40px;
+      transition: transform 0.2s ease-in-out;
+    }
+
+    .footer-1:hover {
+      transform: scale(1.5);
+    }
+
+    .footer-2 {
+      width: 40px;
+      transition: transform 0.2s ease-in-out;
+    }
+
+    .footer-2:hover {
+      transform: scale(1.5);
+    }
+
+    .footer-3 {
+      width: 40px;
+      transition: transform 0.2s ease-in-out;
+    }
+
+    .footer-3:hover {
+      transform: scale(1.5);
+    }
+
+    .footer-4 {
+      width: 40px;
+      transition: transform 0.2s ease-in-out;
+    }
+
+    .footer-4:hover {
+      transform: scale(1.5);
+    }
+
+    .footer-5 {
+      width: 40px;
+      transition: transform 0.2s ease-in-out;
+    }
+
+    .footer-5:hover {
+      transform: scale(1.5);
+    }
+
+    .h1 {
+      width: 50%;
+      margin-left: 20%;
+      border: 2px solid white;
+
+    }
+
+    footer .footer-second-part {
+      text-align: center;
+      background-color: #2f2f2f;
+      padding: 20px;
+      color: white;
+      font-weight: bold;
+
+    }
+
+    footer .footer-second-part a {
+      text-decoration: none;
+      color: white;
+      padding: 40px 20px;
+    }
+
+    footer .footer-second-part p {
+      padding: 10px;
+    }
+
+    .footer-second-part a:hover {
+      text-decoration: underline;
+    }
+
+    body {
+      font-family: 'Poppins';
+      background-color: gray;
+      margin: 0;
+      padding: 0;
+    }
+
+    #header {
+      position: relative;
+
+
+      font-family: 'Poppins';
+    }
+
+    #header img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    #header-text {
+      position: absolute;
+      top: 45%;
+      left: 40%;
+
+      color: rgb(0, 0, 0);
+      font-size: 3em;
+      font-weight: bold;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 20px;
+      display: flex;
+      background-color: #ccc;
+      border-radius: 20px;
+
+      gap: 30px;
+    }
+
+    .form-section,
+    .details-section {
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+
+
+    }
+
+    form label {
+
+
+      font-weight: 600;
+      color: #ff6b00;
+    }
+
+    form input,
+    form textarea,
+    form select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 26px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      resize: vertical;
+      font-weight: 800;
+    }
+
+
+    form button {
+      width: 100%;
+      padding: 10px;
+      background-color: #000;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .trainer img {
+      width: 256px;
+      height: 256px;
+      border-radius: 50%;
+      margin-right: 16px;
+    }
+
+
+    form input:focus,
+    form textarea:focus,
+    form select:focus {
+      outline: none;
+      border-color: #ff6b00;
+      box-shadow: 0 0 5px rgba(255, 107, 0, 0.5);
+    }
+  </style>
+</head>
+
+<body>
+  <section class="section-0">
+    <header class="header">
+      <nav class="navbar">
+        <a href="index.html" class="nav-home">Home</a>
+        <a href="Gym_membership_And_Fitness_Articles.html" class="nav-diet">Membership</a>
+        <a href="Blog_and_Articles.html" class="nav-fitness">Blogs</a>
+        <a href="About_Us.html" class="nav-about">About</a>
+        <a href="Contact_Us.html" class="nav-contact">Contact</a>
+        <a href="login.html" class="nav-login">Login</a>
+      </nav>
+      <div class="images">
+        <a href="index.html"><img src="../Images/webLogo.png" alt="logo" />
+        </a>
+      </div>
+    </header>
+    <div id="header-text" style="font-size: 80px;margin-top: -100px;margin-left: -200px;">Event
+      Registration</div>
+    </div>
+  </section>
+  <div id="header">
+  </div>
+
+  <div class="container">
+
+    <div class="form-section">
+      <h2>Register</h2>
+      <form>
+        <label>Name*</label>
+        <input type="text" id="name" required>
+
+        <label>Email*</label>
+        <input type="email" id="email" required>
+
+        <label>Phone</label>
+        <input type="tel" id="contact">
+
+        <label>Comments</label>
+        <textarea rows="4"></textarea>
+        <label>Event</label>
+        <select id="event_select" onchange="events()">
+          <option value="Yoga Workshop">Yoga Workshop</option>
+          <option value="Weight Loss Challenge">Weight Loss Challenge</option>
+          <option value="Marathon">Marathon</option>
+          <option value="Nutrition workshop">Nutrition workshop</option>
+        </select>
+
+        <button type="button" value="Submit" onclick="Submit()">Register</button>
+      </form>
+    </div>
+
+
+    <div class="details-section">
+      <h2>Event Details</h2>
+      <ul>
+        <li id="event_date"><strong>📅 June 10, 2024</strong></li>
+        <li id="event_time"><strong>⏰ 9:00 AM - 11:00 AM</strong></li>
+        <li id="event_loc"><strong><i class="fas fa-map-marker-alt"></i> Fitness Center, 1234 Eim St.</strong></li>
+      </ul>
+
+      <h3>About the Trainer</h3>
+      <div class="trainer">
+        <img id="trainer_img" src="../Images/trainer2.jpg" alt="Trainer">
+        <div>
+          <p id="trainer"><strong>Sarah Lee</strong></p>
+          <p id="info">Certified Yoga Instructor</p>
+        </div>
+      </div>
+
+      <h3>What to Expect</h3>
+      <p id="disc">Unwind with a calming yoga session focusing on flexibility and mindfulness. All levels welcome. Bring
+        your own mat and water bottle.</p>
+
+
+    </div>
+  </div>
+  <script>
+    function events() {
+      let x = document.getElementById("event_select").value;
+      switch (x) {
+        case 'Yoga Workshop':
+          document.getElementById("event_date").innerHTML = "📅 June 22, 2024";
+          document.getElementById("event_time").innerHTML = "⏰ 9:00 AM - 11:00 AM";
+          document.getElementById("event_loc").innerHTML = '<i class="fas fa-map-marker-alt"></i> Community Center, 909 Central Rd., Matara';
+
+          document.getElementById("trainer_img").src = "../Images/trainer2.jpg";
+          document.getElementById("trainer").innerHTML = "Sarah Lee";
+          document.getElementById("info").innerHTML = "Certified Yoga Instructor";
+          document.getElementById("disc").innerHTML = "Unwind with a calming yoga session focusing on flexibility and mindfulness. All levels welcome. Bring your own mat and water bottle.";
+          break;
+
+        case 'Weight Loss Challenge':
+          document.getElementById("event_date").innerHTML = "📅 May 22, 2024";
+          document.getElementById("event_time").innerHTML = "⏰ 7:00 AM - 11:00 AM";
+          document.getElementById("event_loc").innerHTML = '<i class="fas fa-map-marker-alt"></i> Lakeside Park, 812 River Drive, Kandy';
+
+          document.getElementById("trainer_img").src = "../Images/trainer4.jpg";
+          document.getElementById("trainer").innerHTML = "Mike Johnson";
+          document.getElementById("info").innerHTML = "Strength & Conditioning Coach";
+          document.getElementById("disc").innerHTML = "A strength training workshop with guidance on form, technique, and progression. Open to all fitness levels. Bring a notebook if you want to track your workouts.";
+          break;
+
+        case 'Marathon':
+          document.getElementById("event_date").innerHTML = "📅 December 11, 2024";
+          document.getElementById("event_time").innerHTML = "⏰ 9:00 AM - 12:00 AM";
+          document.getElementById("event_loc").innerHTML = '<i class="fas fa-map-marker-alt"></i> Wellness Studio, 5678 Oak Ave, Colombo';
+
+          document.getElementById("trainer_img").src = "../Images/trainer3.jpg";
+          document.getElementById("trainer").innerHTML = "Jessica Miles";
+          document.getElementById("info").innerHTML = "Event Director";
+          document.getElementById("disc").innerHTML = "Join thousands of runners for a scenic 42.195 km (26.2 miles) route through urban streets and park trails. The event includes hydration stations every 2 km, live music zones, medical support, and cheering squads to keep you motivated from start to finish.";
+          break;
+
+        case 'Nutrition workshop':
+          document.getElementById("event_date").innerHTML = "📅 June 17, 2024";
+          document.getElementById("event_time").innerHTML = "⏰ 7:00 AM - 10:00 AM";
+          document.getElementById("event_loc").innerHTML = '<i class="fas fa-map-marker-alt"></i> Gym, 222 King St, Jaffna';
+
+          document.getElementById("trainer_img").src = "../Images/trainer1.jpg";
+          document.getElementById("trainer").innerHTML = "Rachel Kim";
+          document.getElementById("info").innerHTML = "Registered Dietitian & Nutrition Coach";
+          document.getElementById("disc").innerHTML = "Learn how to fuel your body for energy, performance, and overall wellness. This workshop will cover meal planning, reading nutrition labels, and mindful eating. Materials provided—just bring a notepad and a curious mind!";
+          break;
+      }
+    }
+
+
+    function Submit() {
+      let x = document.getElementById("event_select").value;
+      var name = document.getElementById("name").value;
+
+      var email = document.getElementById("email").value;
+      var contact = document.getElementById("contact").value;
+
+
+
+      if (name == null || name === "") {
+        alert("Name Cant Be Empty");
+        return;
+      }
+      else if (email == null || email === "") {
+        alert("Email Cant Be Empty");
+        return;
+      }
+
+      else if (contact == null || contact === "") {
+        alert("Contact Cant Be Empty");
+        return;
+      }
+      window.alert("You Have Successfully Registerd To the " + x + "Event");
+    }
+
+
+
+
+  </script>
+
+
+
+  <footer>
+
+    <div class="footer-flexbox">
+      <div class="footer-img">
+
+      </div>
+
+
+      <section class="footer-section-one">
+        <table class="footer-table">
+          <tr>
+            <th rowspan="4"><img src="../Images/webLogo.png" alt="LOGO" class="logo-footer" /></th>
+            <th>Fitness</th>
+            <th>Services</th>
+            <th>Follow Us</th>
+            <th>Links</th>
+          </tr>
+          <tr>
+            <td>Empowering you with expert health and fitness tips to achieve a stronger, healthier life. Stay
+              motivated, stay fit!</td>
+            <td><a href="User_Feedback.html">Feedback</a></td>
+            <td><a href="https://en.wikipedia.org/wiki/Gmail">Gmail</a></td>
+            <td><a href="index.html">Home</a></td>
+
+          </tr>
+          <tr>
+            <td>
+              <a href="https://en.wikipedia.org/wiki/Gmail">
+                <img src="../Images/footer-email .png" alt="email" class="footer-1">
+              </a>
+              <a href="https://en.wikipedia.org/wiki/Facebook">
+                <img src="../Images/footer-facebook .png" alt="facebook" class="footer-2">
+              </a>
+              <a href="https://en.wikipedia.org/wiki/Mobile_phone">
+                <img src="../Images/footer-mobile .png" alt="mobile" class="footer-3">
+              </a>
+              <a href="https://en.wikipedia.org/wiki/Twitter">
+                <img src="../Images/footer-twiter-logo.png" alt="twitter" class="footer-4">
+              </a>
+              <a href="https://en.wikipedia.org/wiki/WhatsApp">
+                <img src="../Images/footer-whatsapp.png" alt="whatsapp" class="footer-5">
+              </a>
+            </td>
+            <td><a href="Contact_Us.html">Contact Us</a></td>
+            <td><a href="https://en.wikipedia.org/wiki/Facebook">FaceBook</a></td>
+            <td><a href="About_Us.html">About Us</a></td>
+          </tr>
+          <tr>
+            <td> </td>
+            <td><a href="About_Us.html">About Us</a></td>
+            <td><a href="https://en.wikipedia.org/wiki/Mobile_phone">Mobile</a></td>
+            <td><a href="">Contact Us</a></td>
+          </tr>
+          <tr>
+            <td> </td>
+            <td> </td>
+            <td></td>
+            <td><a href="https://en.wikipedia.org/wiki/Twitter">Instagram</a></td>
+            <td><a href="login.html">Login</a></td>
+          </tr>
+          <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td><a href="https://en.wikipedia.org/wiki/WhatsApp">whatsapp</a></td>
+            <td><a href="register.html">Register</a></td>
+          </tr>
+        </table>
+      </section>
+
+
+      <section>
+        <hr class="h1" />
+        <div class="footer-second-part">
+          <a href="https://en.wikipedia.org/wiki/Language_policy#:~:text=Language%20policy%20has%20been%20defined,xi).">Language
+            Policy</a>
+          <a href="https://en.wikipedia.org/wiki/Privacy_policy">Privacy Policy</a>
+          <a href="https://en.wikipedia.org/wiki/Terms_of_service">Terms of Service</a>
+          <a href="Contact_Us.html">Contact Us</a>
+          <a href="https://en.wikipedia.org/wiki/HTTP_cookie">Cookies</a>
+
+          <p>@ Group 5 mini project</p>
+        </div>
+      </section>
+  </footer>
+</body>
+
+</html>

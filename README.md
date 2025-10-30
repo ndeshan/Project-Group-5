@@ -14,15 +14,17 @@
 
 #
 
-# style-3 / script-3 : Success Stories , Blog & Articles ,  , Fitness Articles
+# style-3 / script-3 : Success Stories , Blog & Articles  , Fitness Articles
 
 #
 
-# style-4 / script-4 : Gym membership pricing , Event and Challenges , Contact
+# style-4 / script-4 : Gym membership pricing , Event and Challenges , Contact , user feedback
 
 #
 
 # style-5 / script-5 : login, register, workoutVideos , BmiCalculater
+
+.
 
 #
 
@@ -36,11 +38,11 @@
 
 #
 
-# Nipuna : Home , Contact_Us
+# Nipuna : Home , Contact_Us , User Feedback, Success Stories
 
 #
 
-# Naveen : Login , Sign up , Gym_membership_And_Fitness_Articles
+# Naveen : Login , Sign up , Gym_membership
 
 #
 

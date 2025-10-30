@@ -1,131 +1,370 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Feedback</title>
-  </head>
-  <body>
-    <section class="section-0">
-        <header class="header">
-          <nav class="navbar">
-            <a href="index.html" class="nav-home">Home</a>
-            <a href="Gym_membership_And_Fitness_Articles.html" class="nav-diet"
-            >Membership</a
-          >
-          <a href="Blog_and_Articles.html" class="nav-fitness">Blogs</a>
-            <a href="About_Us.html" class="nav-about">About</a>
-            <a href="Contact_Us.html" class="nav-contact">Contact</a>
-            <a href="login.html" class="nav-login">Login</a>
-          </nav>
-          <div class="images">
-            <a href="index.html"
-              ><img src="../Images/webLogo.png" alt="logo" />
-            </a>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Feedback</title>
+  <link rel="icon" href="../Images/webLogo.png" type="icon" />
+  <link rel="stylesheet" href="../stylesheet/style-4.css">
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+
+    }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      font-weight: 100;
+
+    }
+
+    .section-0 {
+      background-color: #696262;
+      margin-bottom: 30px;
+      height: 150px;
+    }
+
+    .header nav {
+      margin-left: auto;
+      margin-right: auto;
+      background-color: transparent;
+      align-items: center;
+    }
+
+    .navbar {
+      float: inline-end;
+      padding: 20px;
+      font-size: 30px;
+
+    }
+
+    .navbar .nav-login {
+      color: #f5ebeb;
+      padding: 20px 30px;
+      background-color: rgba(255, 0, 0, 0.9);
+      border-radius: 30px 0px 30px 0px;
+      transition: transform 0.3s ease-in-out;
+      border: none;
+    }
+
+    .navbar .nav-login:hover {
+      background-color: rgba(196, 59, 17);
+      color: black;
+      transform: scale(1.5);
+    }
+
+    .navbar a {
+      padding: 40px;
+      text-decoration: none;
+      color: white;
+      padding: 20px;
+
+    }
+
+    .navbar a:hover {
+      color: orange;
+
+    }
+
+    .images img {
+      width: 120px;
+
+      padding: 10px 10px 10px 10px;
+    }
+
+    .navbar {
+      padding-top: 40px;
+    }
+
+
+
+    footer {
+      background-color: #464545;
+      bottom: auto;
+      position: relative;
+      width: 100%;
+
+    }
+
+    .footer-section-one {
+      height: 300px;
+    }
+
+    .footer-table {
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+      font-size: 20px;
+      border: none;
+      color: white;
+      padding-top: 20px;
+    }
+
+    .footer-table a {
+      text-decoration: none;
+      color: white;
+    }
+
+    .footer-table a:hover {
+      color: rgb(252, 143, 0);
+    }
+
+    .footer-table th {
+      font-size: 30px;
+      width: 15%;
+    }
+
+    .footer-img img {
+
+      width: 200px;
+    }
+
+    .logo-footer {
+      width: 200px;
+    }
+
+    .footer-1 {
+      width: 40px;
+      transition: transform 0.2s ease-in-out;
+    }
+
+    .footer-1:hover {
+      transform: scale(1.5);
+    }
+
+    .footer-2 {
+      width: 40px;
+      transition: transform 0.2s ease-in-out;
+    }
+
+    .footer-2:hover {
+      transform: scale(1.5);
+    }
+
+    .footer-3 {
+      width: 40px;
+      transition: transform 0.2s ease-in-out;
+    }
+
+    .footer-3:hover {
+      transform: scale(1.5);
+    }
+
+    .footer-4 {
+      width: 40px;
+      transition: transform 0.2s ease-in-out;
+    }
+
+    .footer-4:hover {
+      transform: scale(1.5);
+    }
+
+    .footer-5 {
+      width: 40px;
+      transition: transform 0.2s ease-in-out;
+    }
+
+    .footer-5:hover {
+      transform: scale(1.5);
+    }
+
+    .h1 {
+      width: 50%;
+      margin-left: 20%;
+      border: 2px solid white;
+
+    }
+
+    footer .footer-second-part {
+      text-align: center;
+      background-color: #2f2f2f;
+      padding: 20px;
+      color: white;
+      font-weight: bold;
+
+    }
+
+    footer .footer-second-part a {
+      text-decoration: none;
+      color: white;
+      padding: 40px 20px;
+    }
+
+    footer .footer-second-part p {
+      padding: 10px;
+    }
+
+    .footer-second-part a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+  <section class="section-0">
+    <header class="header">
+      <nav class="navbar">
+        <a href="index.html" class="nav-home">Home</a>
+        <a href="Gym_membership_And_Fitness_Articles.html" class="nav-diet">Membership</a>
+        <a href="Blog_and_Articles.html" class="nav-fitness">Blogs</a>
+        <a href="About_Us.html" class="nav-about">About</a>
+        <a href="Contact_Us.html" class="nav-contact">Contact</a>
+        <a href="login.html" class="nav-login">Login</a>
+      </nav>
+      <div class="images">
+        <a href="index.html"><img src="../Images/webLogo.png" alt="logo" />
+        </a>
+      </div>
+    </header>
+
+
+  </section>
+
+  <section class="user-feedback-background-1">
+    <img src="../Images/user-feedback-background-png.png" alt="png">
+    <p class="user-feedback-background-p1">“I hated every minute of training, but I said, ‘Don’t quit. Suffer now and
+      live the rest of your life as a
+      champion.” </p>
+    <p class="user-feedback-background-p2">- Muhammad Ali -</p>
+  </section>
+  <section class="user-feedback-background-2">
+
+
+
+
+
+
+
+
+    <form action="../php/Nipuna/userfeedback.php" method="post" class="user-feedback-form">
+      <div class="form-box">
+        <div style="text-align: center;">
+          <h1>Feedback Form</h1>
+          <p>Your Thoughts and suggestions share with us..</p>
+        </div>
+        <div class="form-hr"></div>
+        <div class="user-feedback-form-inputs">
+          <span>Feedback Type</span>
+          <div class="user-feedback-radio">
+            <input type="radio" name="type" id="" value="Comments"><label>Comments</label>
+            <input type="radio" name="type" id="" value="Suggestions"><label>Suggestions</label>
+            <input type="radio" name="type" id="" value="Questions"><label>Questions</label>
           </div>
-          </header>
-          <p>adasd</p>
-    <p>khkihki</p>
-    <p>hjohjo</p>
-    <p>ojoj</p>
-    <p>ojojohj</p>
-    <p>ojoj</p>
-    <p>ojojohj</p>
-    <p>ojoop</p>
-    <p>pok</p>
-    <p>kjopj</p>
-          </section>
-
-
-
-
-
-    <footer>
-
-        <div class="footer-flexbox">
-          <div class="footer-img">
+          <br>
+          <div class="user-feedback-textarea">
+            <span>Describe Your Feedback:</span>
+            <textarea name="textarea" id=""required>
+        </textarea>
           </div>
-         <section class="footer-section-one">
-            <table class="footer-table">
-              <tr>
-                <th rowspan="4"><img src="../Images/webLogo.png" alt="LOGO" class="logo-footer" /></th>
-                <th>Haircare</th>
-                <th>Services</th>
-                <th>Follow Us</th>
-                <th>Links</th>
-              </tr>
-              <tr>
-                <td>Empowering you with expert health and fitness tips to achieve a stronger, healthier life. Stay motivated, stay fit!</td>
-                <td><a href="User_Feedback.html">Feedback</a></td>
-                <td><a href="https://en.wikipedia.org/wiki/Gmail">Gmail</a></td>
-                <td><a href="index.html">Home</a></td>
-                
-              </tr>
-              <tr>
-                <td>
-                  <a href="https://en.wikipedia.org/wiki/Gmail">
-                    <img src="../Images/footer-email .png" alt="email" class="footer-1">
-                  </a>
-                  <a href="https://en.wikipedia.org/wiki/Facebook">
-                    <img src="../Images/footer-facebook .png" alt="facebook" class="footer-2">
-                  </a>
-                  <a href="https://en.wikipedia.org/wiki/Mobile_phone">
-                    <img src="../Images/footer-mobile .png" alt="mobile" class="footer-3">
-                  </a>
-                  <a href="https://en.wikipedia.org/wiki/Twitter">
-                    <img src="../Images/footer-twiter-logo.png" alt="twitter" class="footer-4">
-                  </a>
-                  <a href="https://en.wikipedia.org/wiki/WhatsApp">
-                    <img src="../Images/footer-whatsapp.png" alt="whatsapp" class="footer-5">
-                  </a>
-                </td>
-                <td><a href="Contact_Us.html">Contact Us</a></td>
-                <td><a href="https://en.wikipedia.org/wiki/Facebook">FaceBook</a></td>
-                <td><a href="About_Us.html">About_Us</a></td>
-              </tr>
-              <tr>
-                <td> </td>
-                <td><a href="About_Us.html">About Us</a></td>
-                <td><a href="https://en.wikipedia.org/wiki/Mobile_phone">Mobile</a></td>
-               <td><a href="">Contact_Us</a></td>
-              </tr>
-              <tr>
-                <td> </td>
-                <td> </td>
-                <td></td>
-                <td><a href="https://en.wikipedia.org/wiki/Twitter">Instergrame</a></td>
-                <td><a href="login.html">Login</a></td>
-              </tr>
-              <tr>
-                <td>  </td>
-                <td> </td>
-                <td> </td>
-                <td><a href="https://en.wikipedia.org/wiki/WhatsApp">whatsapp</a></td>
-                <td><a href="register.html">Register</a></td>
-              </tr>
-            </table>
-         </section>
-  
-  
-        <section>
-          <hr class="h1" />
-          <div class="footer-second-part">
-            <a
-              href="https://en.wikipedia.org/wiki/Language_policy#:~:text=Language%20policy%20has%20been%20defined,xi)."
-              >Language Policy</a
-            >
-            <a href="https://en.wikipedia.org/wiki/Privacy_policy"
-              >Privacy Policy</a
-            >
-            <a href="https://en.wikipedia.org/wiki/Terms_of_service"
-              >Terms of Service</a
-            >
-            <a href="Contact_Us.html">Contact Us</a>
-            <a href="https://en.wikipedia.org/wiki/HTTP_cookie">Cookies</a>
-  
-            <p>@ Group 5 mini project</p>
+          <div class="user-feedback-input-name" style="padding: 20px;">
+            <span>Name:</span>
+            <input type="text" name="fname" id="" placeholder="First name">
+            <input type="text" name="lname" id="" placeholder="Last name">
           </div>
-        </section>
-      </footer>
-  </body>
+          <div class="user-feedback-input-email" style="padding: 15px;">
+            <span>Email:</span>
+            <input type="email" name="email" id="" required>
+          </div>
+          <input type="submit" value="Submit" name="submit">
+        </div>
+      </div>
+    </form>
+
+
+
+
+
+
+
+
+
+  </section>
+
+  <footer>
+
+    <div class="footer-flexbox">
+      <div class="footer-img">
+      </div>
+      <section class="footer-section-one">
+        <table class="footer-table">
+          <tr>
+            <th rowspan="4"><img src="../Images/webLogo.png" alt="LOGO" class="logo-footer" /></th>
+            <th>Fitness</th>
+            <th>Services</th>
+            <th>Follow Us</th>
+            <th>Links</th>
+          </tr>
+          <tr>
+            <td>Empowering you with expert health and fitness tips to achieve a stronger, healthier life. Stay
+              motivated, stay fit!</td>
+            <td><a href="User_Feedback.html">Feedback</a></td>
+            <td><a href="https://en.wikipedia.org/wiki/Gmail">Gmail</a></td>
+            <td><a href="index.html">Home</a></td>
+
+          </tr>
+          <tr>
+            <td>
+              <a href="https://en.wikipedia.org/wiki/Gmail">
+                <img src="../Images/footer-email .png" alt="email" class="footer-1">
+              </a>
+              <a href="https://en.wikipedia.org/wiki/Facebook">
+                <img src="../Images/footer-facebook .png" alt="facebook" class="footer-2">
+              </a>
+              <a href="https://en.wikipedia.org/wiki/Mobile_phone">
+                <img src="../Images/footer-mobile .png" alt="mobile" class="footer-3">
+              </a>
+              <a href="https://en.wikipedia.org/wiki/Twitter">
+                <img src="../Images/footer-twiter-logo.png" alt="twitter" class="footer-4">
+              </a>
+              <a href="https://en.wikipedia.org/wiki/WhatsApp">
+                <img src="../Images/footer-whatsapp.png" alt="whatsapp" class="footer-5">
+              </a>
+            </td>
+            <td><a href="Contact_Us.html">Contact Us</a></td>
+            <td><a href="https://en.wikipedia.org/wiki/Facebook">FaceBook</a></td>
+            <td><a href="About_Us.html">About Us</a></td>
+          </tr>
+          <tr>
+            <td> </td>
+            <td><a href="About_Us.html">About Us</a></td>
+            <td><a href="https://en.wikipedia.org/wiki/Mobile_phone">Mobile</a></td>
+            <td><a href="">Contact Us</a></td>
+          </tr>
+          <tr>
+            <td> </td>
+            <td> </td>
+            <td></td>
+            <td><a href="https://en.wikipedia.org/wiki/Twitter">Instagram</a></td>
+            <td><a href="login.html">Login</a></td>
+          </tr>
+          <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td><a href="https://en.wikipedia.org/wiki/WhatsApp">whatsapp</a></td>
+            <td><a href="register.html">Register</a></td>
+          </tr>
+        </table>
+      </section>
+
+
+      <section>
+        <hr class="h1" />
+        <div class="footer-second-part">
+          <a href="https://en.wikipedia.org/wiki/Language_policy#:~:text=Language%20policy%20has%20been%20defined,xi).">Language
+            Policy</a>
+          <a href="https://en.wikipedia.org/wiki/Privacy_policy">Privacy Policy</a>
+          <a href="https://en.wikipedia.org/wiki/Terms_of_service">Terms of Service</a>
+          <a href="Contact_Us.html">Contact Us</a>
+          <a href="https://en.wikipedia.org/wiki/HTTP_cookie">Cookies</a>
+
+          <p>@ Group 5 mini project</p>
+        </div>
+      </section>
+  </footer>
+</body>
+
 </html>
