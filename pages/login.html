@@ -8,6 +8,40 @@
   <link rel="icon" href="../Images/webLogo.png" type="icon" />
   <link rel="stylesheet" href="../Layout/login-css2.css">
   <link rel="stylesheet" href="../Layout/login-css.css">
+
+  <style>
+    .show_Button{
+
+      margin-top: 10px;
+    }
+      .show_Button input[type="submit"]{
+        margin-top: 0;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        width: 82%;
+        height: 40px;
+        margin-top: 5px;
+        border-radius: 10px;
+        border: 0;
+       background-color:  #ebebeb;
+       color: rgb(147, 147, 147);
+       font-size: 18px;
+       transition: background-color  0.4s;
+       cursor: pointer;
+       margin-bottom: 10px;
+      }
+      .show_Button input[type="submit"]:hover{
+        background-color: #c5c5c5;
+        color: #434343;
+      }
+      .show_Button input[type="submit"]:active{
+        scale: 1.01;
+
+      }
+
+
+  </style>
 </head>
 
 <body>
@@ -29,8 +63,8 @@
 
   <div class="login-container">
     <div class="pic-container">
-      <img src="/Images/webLogo.png" alt="background-image" class="web-Logo">
-      <img src="/Images/login-photo.jpg" alt="background-image" class="back-image">
+      <img src="../Images/webLogo.png" alt="background-image" class="web-Logo">
+      <img src="../Images/login-photo.jpg" alt="background-image" class="back-image">
 
 
     </div>
@@ -40,22 +74,31 @@
         <p>Welcome back ! user,please enter your details</p>
 
         </div>
-<form action="" method="post" onsubmit="return loginDataCheck()">
+<form action="../php/naveen/login.php" method="post" >
         <div class="login-form">
 
         <label for="nameId">User Name</label><br>
-        <input type="text" id="nameId" placeholder="enter user name" required><br>
+        <input type="text" id="nameId" placeholder="enter user name" required name="input_name"><br>
         <label for="passwordId">Password</label><br>
 
-        <input type="password" id="passwrordId" placeholder="enter password" required><br>
-        <input type="submit" value="Login" ><br>
-        <input type="reset" value="Reset">
+        <input type="password" id="passwrordId" placeholder="enter password" name="input_password"required><br>
+
+        <input type="submit" value="Login" name="login_button"><br>
+        <input type="reset" value="Reset"><br>
+      
         <p class="sign-up-part">Don't have an account?  <a href="register.html" class="sign">Sign Up</a></p>
+           
+          
 
-       
-
+          
       </div>
     </form>
+          <form action="../php/naveen/login.php" method="post">
+            <div class="show_Button">  
+ <input type="submit" value="show user accounts"  name="show_button">
+            </div>
+            
+          </form>
     </div>
 
   </div>
@@ -149,7 +192,9 @@
 
 
 
-<script>
+<!-- <script>
+  onsubmit="return loginDataCheck()"
+
 function loginDataCheck(){
   let letters=/^[A-Za-z]+$/;
   let name=document.getElementById("nameId").value;
@@ -174,7 +219,7 @@ function loginDataCheck(){
 }
 
 
-</script>
+</script> -->
 
 
 

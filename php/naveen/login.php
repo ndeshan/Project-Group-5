@@ -53,7 +53,7 @@ if(isset($_POST['login_button'])){
 
                             echo '<br>Login successfully !!!';
 
-                            header('Location: ../pages/index.html');
+                            header('Location: ../../pages/index.html');
                             exit();
 
                     }else {
