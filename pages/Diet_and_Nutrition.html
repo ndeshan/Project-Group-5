@@ -1,233 +1,502 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="keywords"
-      content="HTML, Helth & Fitness, Fitness, Health, Wellness, yoga, Gym"
-    />
-    <meta name="author" content="Group-5 project" />
-    
-    <title>Diet & Nutrition</title>
-    <link rel="stylesheet" href="../Layout/style.css" />
-    <link rel="stylesheet" href="../stylesheet/style-1.css">
-   <style>
-    
-  
-   </style>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" con name="keywords" content="HTML, Helth & Fitness, Fitness, Health, Wellness, yoga, Gym" />
+  <meta name="author" content="Group-5 project" />
+
+  <title>Diet & Nutrition</title>
+  <link rel="icon" href="../Images/webLogo.png" type="icon" />
+
+  <link rel="stylesheet" href="../stylesheet/style-1.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet" />
+  <style>
+    .section-0 {
+      background-color: rgb(0, 0, 0);
+      margin: 0;
+      padding: 0;
+
+    }
+
+    .header nav {
+      margin-left: auto;
+      margin-right: auto;
+      background-color: transparent;
+      align-items: center;
+    }
+
+    .navbar {
+      float: inline-end;
+      padding: 20px;
+      font-size: 30px;
+
+    }
+
+    .navbar .nav-login {
+      color: #f5ebeb;
+      padding: 20px 30px;
+      background-color: rgba(255, 0, 0, 0.9);
+      border-radius: 30px 0px 30px 0px;
+      transition: transform 0.3s ease-in-out;
+      border: none;
+    }
+
+    .navbar .nav-login:hover {
+      background-color: rgba(196, 59, 17);
+      color: black;
+      transform: scale(1.5);
+    }
+
+    .navbar a {
+      padding: 40px;
+      text-decoration: none;
+      color: rgb(0, 0, 0);
+      padding: 20px;
+
+    }
+
+    .navbar a:hover {
+      color: orange;
+
+    }
+
+    .images img {
+      width: 120px;
+      float: inline-start;
+      padding: 10px 10px 10px 10px;
+    }
+
+    .navbar {
+      padding-top: 40px;
+    }
 
 
-  </head>
-  <body>
-    <section class="section-0" >
-      <header class="header" >
-        <nav class="navbar">
-          <a href="index.html" class="nav-home">Home</a>
-          <a href="Gym_membership_And_Fitness_Articles.html" class="nav-diet"
-            >Membership</a
-          >
-          <a href="Blog_and_Articles.html" class="nav-fitness">Blogs</a>
-          <a href="About_Us.html" class="nav-about">About</a>
-          <a href="Contact_Us.html" class="nav-contact">Contact</a>
-          <a href="login.html" class="nav-login">Login</a>
-        </nav>
-        <div class="images">
-          <a href="index.html"
-            ><img src="../Images/webLogo.png" alt="logo" />
-          </a>
-        </div>
-      </header>
-      
-    </section>
-    
-    <form style="margin-top: 60px; ">
-      
-      <center><img src="../Images/diet-balance.jpg"width="950px"height="450px"></center>
-      <center><h1 style="color:navy;font-size: 35px;">Your Daily Food And Beverage Intake Is Your Diet</h1></center>
+    footer {
+      background-color: #464545;
+      bottom: auto;
+      position: relative;
+      width: 100%;
 
-    </form>
-   
-   <center><h1 style="color:brown">A GUIDE TO BALANCED DIET</h1></center>
-    <table style="border-collapse: collapse"width="950px"height="300px">
-   <tr><th><img style="border-radius: 5%;" src="../Images/healthy-food.jpg"width="450px"height="300px">
-   </th>
-   <th><ul style="color:cornflowerblue;list-style: none;";type="circle">
-   <li style="font-size: 28px;">Fruits and vegetables(40%)</li>
-   <li style="font-size: 28px;">Carbohydrate(25%)</li>
-   <li style="font-size: 28px;">Protein(25%)</li>
-   <li style="font-size: 28px;">Fats(10%)</li>
-   </ul></th></tr>
-   </table>
-   <center><div class="new">
-    <img src="../Images/diet-plan-weight-loss.jpg" alt="Avatar" class="image1">
-    <div class="overlay">
-      <div class="text">
-        
-        <h3 style="color:black">WHAT ARE THE DIET PLANS ?</h2><br>
-     <ul style="color:navy;list-style: none; ">
-        <li style="font-size:30px;"><b>Weight Loss Diet</b></li>
-        <li style="font-size: 30px;"><b>Low-Carbohydrate Diet</b></li>
-        <li style="font-size: 30px;"><b>Muscle gain Diet</b></li>
-        <li style="font-size: 30px;"><b>Vegetarian Diet</b></li>
-        <li style="font-size: 30px;"><b>Paleo Diet</b></li>
-       
+    }
 
-     </ul>
+    .footer-section-one {
+      height: 300px;
+    }
+
+    .footer-table {
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+      font-size: 20px;
+      border: none;
+      color: white;
+      padding-top: 20px;
+    }
+
+    .footer-table a {
+      text-decoration: none;
+      color: white;
+    }
+
+    .footer-table a:hover {
+      color: rgb(252, 143, 0);
+    }
+
+    .footer-table th {
+      font-size: 30px;
+      width: 15%;
+    }
+
+    .footer-img img {
+
+      width: 200px;
+    }
+
+    .logo-footer {
+      width: 200px;
+    }
+
+    .footer-1 {
+      width: 40px;
+      transition: transform 0.2s ease-in-out;
+    }
+
+    .footer-1:hover {
+      transform: scale(1.5);
+    }
+
+    .footer-2 {
+      width: 40px;
+      transition: transform 0.2s ease-in-out;
+    }
+
+    .footer-2:hover {
+      transform: scale(1.5);
+    }
+
+    .footer-3 {
+      width: 40px;
+      transition: transform 0.2s ease-in-out;
+    }
+
+    .footer-3:hover {
+      transform: scale(1.5);
+    }
+
+    .footer-4 {
+      width: 40px;
+      transition: transform 0.2s ease-in-out;
+    }
+
+    .footer-4:hover {
+      transform: scale(1.5);
+    }
+
+    .footer-5 {
+      width: 40px;
+      transition: transform 0.2s ease-in-out;
+    }
+
+    .footer-5:hover {
+      transform: scale(1.5);
+    }
+
+    .h1 {
+      width: 50%;
+      margin-left: 20%;
+      border: 2px solid white;
+
+    }
+
+    footer .footer-second-part {
+      text-align: center;
+      background-color: #2f2f2f;
+      padding: 20px;
+      color: white;
+      font-weight: bold;
+
+    }
+
+    footer .footer-second-part a {
+      text-decoration: none;
+      color: white;
+      padding: 40px 20px;
+    }
+
+    footer .footer-second-part p {
+      padding: 10px;
+    }
+
+    .footer-second-part a:hover {
+      text-decoration: underline;
+    }
+  </style>
+
+
+</head>
+
+<body>
+  <section class="section-0">
+    <header class="header">
+      <nav class="navbar">
+        <a href="index.html" class="nav-home">Home</a>
+        <a href="Gym_membership_And_Fitness_Articles.html" class="nav-diet">Membership</a>
+        <a href="Blog_and_Articles.html" class="nav-fitness">Blogs</a>
+        <a href="About_Us.html" class="nav-about">About</a>
+        <a href="Contact_Us.html" class="nav-contact">Contact</a>
+        <a href="login.html" class="nav-login">Login</a>
+      </nav>
+      <div class="images">
+        <a href="index.html"><img src="../Images/Logo.png" alt="logo" />
+        </a>
+      </div>
+    </header>
+
+  </section>
+
+
+
+
+  <section class="diet-section-1">
+    <div>
+      <img src="../Images/diet-balance.jpg" alt="diet" />
+      <h1 style="color:rgb(0, 0, 0);">Your Daily <br><strong style="color: red;">Food</strong> And
+        <strong style="color:red;">Beverage</strong> <br> Intake
+        Is Your Diet
+      </h1>
     </div>
-    </div></div></center>
-    <center><br><br>
-        
-      <h1 style="color:darkred;font-size:30px">IMPORTANCE OF BALANCED DIET</h1>
-        <br><br>
-      <table style="border-collapse: collapse"width="950px"height="300px">
-         <tr style="background-color:#C4FAF8;"><th><h2 style="color:darkblue;font-size:30px;">Maintains healthy blood circulations</h2></th> </tr>
-         <tr style="background-color:white;"><th> <h2 style="color:darkblue;font-size:30px;">Supports growth and development</h2></th> </tr>
-          <tr style="background-color:#C4FAF8;"><th><h2 style="color:darkblue;font-size:30px;">Enhance physical performance</h2></th> </tr>
-          <tr style="background-color:white;"><th><h2 style="color:darkblue;font-size:30px;">Helps to maintain healthy weight</h2></th> </tr>
-        <tr style="background-color:#C4FAF8;"><th><h2 style="color:darkblue;font-size:30px;">Helps to support immune function</h2></th> </tr>
-        </table>
 
-      </center>
-     
+  </section>
 
-     <form>
-      <center><h1 style="color:navy;font-size: 38px;">FOOD AND NUTRITION</h1></center>
+  <section class="diet-section-2">
+    <h1 style="color:brown">A GUIDE TO BALANCED DIET</h1>
+    <div>
 
-          <br><br>
-          <center><h1 style="color:brown"> THE MAIN FOOD GROUPS </h1></center>
-           <table style="border-collapse: collapse"width="950px"height="450px">
-            <tr>
+      <table style="border-collapse: collapse;" width="80%" height="300px">
+        <tr>
+          <th><img style="border-radius: 5px;" src="../Images/healthy-food.jpg" width="450px" height="300px">
+          </th>
+          <th>
+            <ul style="color:cornflowerblue;list-style: none; text-align: left;" type="circle">
+              <table>
+                <tr>
+                  <td>
+                    <li style="font-size: 28px;">Fruits and vegetables
+                  </td>
+                  <td><progress id="file" value="40" max="100"> 40% </progress> (40%)</li>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <li style="font-size: 28px;">Carbohydrate
+                  </td>
+                  <td><progress id="file" value="25" max="100"> 25% </progress> (25%)</li>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <li style="font-size: 28px;">Protein
+                  </td>
+                  <td><progress id="file" value="25" max="100"> 25% </progress> (25%)</li>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <li style="font-size: 28px;">Fats
+                  </td>
+                  <td><progress id="file" value="10" max="100"> 10% </progress> (10%)</li>
+                  </td>
+                </tr>
+              </table>
+            </ul>
+          </th>
+        </tr>
+      </table>
 
-              <th><img style="border-radius: 50%;" src="../Images/fruit.jpg"width="250px"height="250px"></th>
+    </div>
+  </section>
 
-              <th><img style="border-radius: 50%;" src="../Images/vegetable.jpg"width="250px"height="250px"></th>
-              <th><img style="border-radius: 50%;" src="../Images/Grains.jpg"width="250px"height="250px"></th>
-              <th><img style="border-radius: 50%;" src="../Images/protein.jpg"width="250px"height="250px"></th>
-              <th><img style="border-radius: 50%;" src="../Images/diary-food.jpg"width="250px"height="250px"></th>
+  <center>
+    <div class="new">
+      <img src="../Images/diet-plan-weight-loss.jpg" alt="Avatar" class="image1">
+      <div class="overlay">
+        <div class="text">
 
-            </tr>
-            <tr>
-              <th><h2 style="color:darkred">FRUITS</h2></th>
-              <th><h2 style="color:darkred">VEGETABLES</h2></th>
-              <th><h2 style="color:darkred">GRAINS</h2></th>
-              <th><h2 style="color:darkred">PROTEIN FOOD</h2></th>
-              <th><h2 style="color:darkred">DIARY FOOD</h2></th>
-
-           </table>
-           <center><div class="new">
-            <img src="../Images/food-diet.jpg"width="950px"height="450px"alt="Avatar" class="image1">
-          <div class="overlay">
-            <div class="text">
-              
-          <h2 style="color:brown;font-size: 35px;text-align: center;">WHAT ARE THE HEALTHY EATING HABITS?</h2>
-        <ul style="color:darkblue;" type="circle">
-              <li style="font-size: 30px;"><b>Eat more fruits and vegetables</b></li>
-              <li style="font-size: 30px;"><b>Eat more whole grains</b></li>
-              <li style="font-size: 30px;"><b>Limit added sugar and salt</b></li>
-              <li style="font-size: 30px;"><b>Limit processed foods</b></li>
-              <li style="font-size: 30px;"><b>Limit unhealthy foods and drinks</b></li>
-              <li style="font-size: 30px;"><b>Eat regularly and avoid skipping meals</b></li>
-  
-           </ul>
-          </h2></div></div></div></center></form>
-         
-  
-          
+          <h3 style="color:black">&#128221 WHAT ARE THE DIET PLANS ?</h2><br>
+            <ul style="color:navy;list-style: none; " class="listt">
+              <li style="font-size:30px; ;"><b>&#128393 Weight Loss Diet</b></li>
+              <li style="font-size: 30px;"><b>&#128393 Low-Carbohydrate Diet</b></li>
+              <li style="font-size: 30px;"><b>&#128393 Muscle gain Diet</b></li>
+              <li style="font-size: 30px;"><b>&#128393 Vegetarian Diet</b></li>
+              <li style="font-size: 30px;"><b>&#128393 Paleo Diet</b></li>
 
 
-
-
-
-    <footer>
-
-      <div class="footer-flexbox">
-        <div class="footer-img">
-          
+            </ul>
         </div>
+      </div>
+    </div>
+  </center>
+  <center><br><br>
+
+    <h1 style="color:darkred;font-size:30px">IMPORTANCE OF BALANCED DIET</h1>
+    <br><br>
+    <table style="border-collapse: collapse" width="950px" height="300px">
+      <tr style="background-color:#C4FAF8;">
+        <th>
+          <h2 style="color:darkblue;font-size:30px;">Maintains healthy blood circulations</h2>
+        </th>
+      </tr>
+      <tr style="background-color:white;">
+        <th>
+          <h2 style="color:darkblue;font-size:30px;">Supports growth and development</h2>
+        </th>
+      </tr>
+      <tr style="background-color:#C4FAF8;">
+        <th>
+          <h2 style="color:darkblue;font-size:30px;">Enhance physical performance</h2>
+        </th>
+      </tr>
+      <tr style="background-color:white;">
+        <th>
+          <h2 style="color:darkblue;font-size:30px;">Helps to maintain healthy weight</h2>
+        </th>
+      </tr>
+      <tr style="background-color:#C4FAF8;">
+        <th>
+          <h2 style="color:darkblue;font-size:30px;">Helps to support immune function</h2>
+        </th>
+      </tr>
+    </table>
+
+  </center>
 
 
-       <section class="footer-section-one">
-          <table class="footer-table">
-            <tr>
-              <th rowspan="4"><img src="../Images/webLogo.png" alt="LOGO" class="logo-footer" /></th>
-              <th>Haircare</th>
-              <th>Services</th>
-              <th>Follow Us</th>
-              <th>Links</th>
-            </tr>
-            <tr>
-              <td>Empowering you with expert health and fitness tips to achieve a stronger, healthier life. Stay motivated, stay fit!</td>
-              <td><a href="User_Feedback.html">Feedback</a></td>
-              <td><a href="https://en.wikipedia.org/wiki/Gmail">Gmail</a></td>
-              <td><a href="index.html">Home</a></td>
-              
-            </tr>
-            <tr>
-              <td>
-                <a href="https://en.wikipedia.org/wiki/Gmail">
-                  <img src="../Images/footer-email .png" alt="email" class="footer-1">
-                </a>
-                <a href="https://en.wikipedia.org/wiki/Facebook">
-                  <img src="../Images/footer-facebook .png" alt="facebook" class="footer-2">
-                </a>
-                <a href="https://en.wikipedia.org/wiki/Mobile_phone">
-                  <img src="../Images/footer-mobile .png" alt="mobile" class="footer-3">
-                </a>
-                <a href="https://en.wikipedia.org/wiki/Twitter">
-                  <img src="../Images/footer-twiter-logo.png" alt="twitter" class="footer-4">
-                </a>
-                <a href="https://en.wikipedia.org/wiki/WhatsApp">
-                  <img src="../Images/footer-whatsapp.png" alt="whatsapp" class="footer-5">
-                </a>
-              </td>
-              <td><a href="Contact_Us.html">Contact Us</a></td>
-              <td><a href="https://en.wikipedia.org/wiki/Facebook">FaceBook</a></td>
-              <td><a href="About_Us.html">About_Us</a></td>
-            </tr>
-            <tr>
-              <td> </td>
-              <td><a href="About_Us.html">About Us</a></td>
-              <td><a href="https://en.wikipedia.org/wiki/Mobile_phone">Mobile</a></td>
-             <td><a href="">Contact_Us</a></td>
-            </tr>
-            <tr>
-              <td> </td>
-              <td> </td>
-              <td></td>
-              <td><a href="https://en.wikipedia.org/wiki/Twitter">Instergrame</a></td>
-              <td><a href="login.html">Login</a></td>
-            </tr>
-            <tr>
-              <td>  </td>
-              <td> </td>
-              <td> </td>
-              <td><a href="https://en.wikipedia.org/wiki/WhatsApp">whatsapp</a></td>
-              <td><a href="register.html">Register</a></td>
-            </tr>
-          </table>
-       </section>
+  <form>
+    <br>
+    <center>
+      <h1 style="color:navy;font-size: 38px;">FOOD AND NUTRITION</h1>
+    </center>
+
+    <br><br>
+    <center>
+      <h1 style="color:brown"> THE MAIN FOOD GROUPS </h1>
+    </center>
+
+    <center>
+      <table style="border-collapse: collapse" width="950px" height="450px">
+        <tr>
+
+          <th><img style="border-radius: 50%;" src="../Images/fruit.jpg" width="250px" height="250px " class="imgt">
+          </th>
+
+          <th><img style="border-radius: 50%;" src="../Images/vegetable.jpg" width="250px" height="250px" class="imgt">
+          </th>
+          <th><img style="border-radius: 50%;" src="../Images/Grains.jpg" width="250px" height="250px" class="imgt">
+          </th>
+          <th><img style="border-radius: 50%;" src="../Images/protein.jpg" width="250px" height="250px" class="imgt">
+          </th>
+          <th><img style="border-radius: 50%;" src="../Images/diary-food.jpg" width="250px" height="250px" class="imgt">
+          </th>
+
+        </tr>
+        <tr>
+          <th>
+            <h2 style="color:darkred">FRUITS</h2>
+          </th>
+          <th>
+            <h2 style="color:darkred">VEGETABLES</h2>
+          </th>
+          <th>
+            <h2 style="color:darkred">GRAINS</h2>
+          </th>
+          <th>
+            <h2 style="color:darkred">PROTEIN FOOD</h2>
+          </th>
+          <th>
+            <h2 style="color:darkred">DIARY FOOD</h2>
+          </th>
+
+      </table>
+    </center>
+    <center>
+      <div class="new">
+        <img src="../Images/food-diet.jpg" width="950px" height="450px" alt="Avatar" class="image1">
+        <div class="overlay">
+          <div class="text">
+
+            <h2 style="color:brown;font-size: 35px;text-align: center;">WHAT ARE THE HEALTHY EATING HABITS?</h2>
+
+            <ul style="color:darkblue;" class="listt2" >
+              <li style="font-size: 30px;"><b>&#129382Eat more fruits and vegetables</b></li>
+              <li style="font-size: 30px;"><b>&#127834Eat more whole grains</b></li>
+              <li style="font-size: 30px;"><b>&#127853Limit added sugar and salt</b></li>
+              <li style="font-size: 30px;"><b>&#127839Limit processed foods</b></li>
+              <li style="font-size: 30px;"><b>&#129366Limit unhealthy foods and drinks</b></li>
+              <li style="font-size: 30px;"><b>&#127860Eat regularly and avoid skipping meals</b></li>
+
+
+            </ul>
+            </h2>
+          </div>
+        </div>
+      </div>
+    </center>
+  </form>
+
+
+
+
+
+
+
+
+  <footer>
+
+    <div class="footer-flexbox">
+      <div class="footer-img">
+
+      </div>
+      <section class="footer-section-one">
+        <table class="footer-table">
+          <tr>
+            <th rowspan="4"><img src="../Images/webLogo.png" alt="LOGO" class="logo-footer" /></th>
+            <th>Fitness</th>
+            <th>Services</th>
+            <th>Follow Us</th>
+            <th>Links</th>
+          </tr>
+          <tr>
+            <td>Empowering you with expert health and fitness tips to achieve a stronger, healthier life. Stay
+              motivated, stay fit!</td>
+            <td><a href="User_Feedback.html">Feedback</a></td>
+            <td><a href="https://en.wikipedia.org/wiki/Gmail">Gmail</a></td>
+            <td><a href="index.html">Home</a></td>
+
+          </tr>
+          <tr>
+            <td>
+              <a href="https://en.wikipedia.org/wiki/Gmail">
+                <img src="../Images/footer-email .png" alt="email" class="footer-1">
+              </a>
+              <a href="https://en.wikipedia.org/wiki/Facebook">
+                <img src="../Images/footer-facebook .png" alt="facebook" class="footer-2">
+              </a>
+              <a href="https://en.wikipedia.org/wiki/Mobile_phone">
+                <img src="../Images/footer-mobile .png" alt="mobile" class="footer-3">
+              </a>
+              <a href="https://en.wikipedia.org/wiki/Twitter">
+                <img src="../Images/footer-twiter-logo.png" alt="twitter" class="footer-4">
+              </a>
+              <a href="https://en.wikipedia.org/wiki/WhatsApp">
+                <img src="../Images/footer-whatsapp.png" alt="whatsapp" class="footer-5">
+              </a>
+            </td>
+            <td><a href="Contact_Us.html">Contact Us</a></td>
+            <td><a href="https://en.wikipedia.org/wiki/Facebook">FaceBook</a></td>
+            <td><a href="About_Us.html">About Us</a></td>
+          </tr>
+          <tr>
+            <td> </td>
+            <td><a href="About_Us.html">About Us</a></td>
+            <td><a href="https://en.wikipedia.org/wiki/Mobile_phone">Mobile</a></td>
+            <td><a href="">Contact Us</a></td>
+          </tr>
+          <tr>
+            <td> </td>
+            <td> </td>
+            <td></td>
+            <td><a href="https://en.wikipedia.org/wiki/Twitter">Instagram</a></td>
+            <td><a href="login.html">Login</a></td>
+          </tr>
+          <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td><a href="https://en.wikipedia.org/wiki/WhatsApp">whatsapp</a></td>
+            <td><a href="register.html">Register</a></td>
+          </tr>
+        </table>
+      </section>
 
 
       <section>
         <hr class="h1" />
         <div class="footer-second-part">
-          <a
-            href="https://en.wikipedia.org/wiki/Language_policy#:~:text=Language%20policy%20has%20been%20defined,xi)."
-            >Language Policy</a
-          >
-          <a href="https://en.wikipedia.org/wiki/Privacy_policy"
-            >Privacy Policy</a
-          >
-          <a href="https://en.wikipedia.org/wiki/Terms_of_service"
-            >Terms of Service</a
-          >
+          <a href="https://en.wikipedia.org/wiki/Language_policy#:~:text=Language%20policy%20has%20been%20defined,xi).">Language
+            Policy</a>
+          <a href="https://en.wikipedia.org/wiki/Privacy_policy">Privacy Policy</a>
+          <a href="https://en.wikipedia.org/wiki/Terms_of_service">Terms of Service</a>
           <a href="Contact_Us.html">Contact Us</a>
           <a href="https://en.wikipedia.org/wiki/HTTP_cookie">Cookies</a>
 
           <p>@ Group 5 mini project</p>
         </div>
       </section>
-    </footer>
-  </body>
+  </footer>
+</body>
+
 </html>
