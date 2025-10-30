@@ -3,6 +3,10 @@
 $bmiDisplay = '';
 $status = '';
 $guideline = '';
+$age = '';
+$gender = '';
+$weight = '';
+$height ='';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
    
@@ -13,7 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $weight = $_POST['weight'];
     $height = $_POST['height'];
 
-    if ($weight > 0 && $height > 0) {
+    if ($weight > 0 && $height > 0 && $age !== '' && $gender !== '') {
         $heightM = $height / 100.0;
         $bmi = $weight / ($heightM * $heightM);
         $bmiDisplay = number_format($bmi, 2);
@@ -152,8 +156,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>BMI</title>
-  <link rel="icon" href="../Images/webLogo.png" type="icon" />
-  <link rel="stylesheet" href="../Layout/style.css" />
+  <link rel="icon" href="../../Images/webLogo.png" type="icon" />
+  <link rel="stylesheet" href="../../Layout/style.css" />
   <style>
     .section {
       background-color: #343a40;
@@ -173,7 +177,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     body {
       background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(217, 72, 15, 0.5)),
-        url("../Images/bmi3.jpg");
+        url("../../Images/bmi3.jpg");
 
       background-position: center;
       background-attachment: fixed;
@@ -307,15 +311,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   <section class="section-0">
     <header class="header">
       <nav class="navbar">
-        <a href="index.html" class="nav-home">Home</a>
-        <a href="Gym_membership_And_Fitness_Articles.html" class="nav-diet">Membership</a>
-        <a href="Blog_and_Articles.html" class="nav-fitness">Blogs</a>
-        <a href="About_Us.html" class="nav-about">About</a>
-        <a href="Contact_Us.html" class="nav-contact">Contact</a>
-        <a href="login.html" class="nav-login">Login</a>
+        <a href="../../pages/index.html" class="nav-home">Home</a>
+        <a href="../../pages/Gym_membership_And_Fitness_Articles.html" class="nav-diet">Membership</a>
+        <a href="../../pages/Blog_and_Articles.html" class="nav-fitness">Blogs</a>
+        <a href="../../pages/About_Us.html" class="nav-about">About</a>
+        <a href="../../pages/Contact_Us.html" class="nav-contact">Contact</a>
+        <a href="../../pages/login.html" class="nav-login">Login</a>
       </nav>
       <div class="images">
-        <a href="index.html"><img src="../Images/webLogo.png" alt="logo" />
+        <a href="../../pages/index.html"><img src="../../Images/webLogo.png" alt="logo" />
         </a>
       </div>
     </header>

@@ -1,5 +1,5 @@
 <?php
-$conn = mysqli_connect("localhost", "root", "", "php_group_project");
+$conn = mysqli_connect("localhost", "root", "", "healthandfitnesshub");
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
