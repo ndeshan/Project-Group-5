@@ -202,6 +202,28 @@
     .footer-second-part a:hover {
       text-decoration: underline;
     }
+    .form1 {
+      margin-top: 50px;
+      margin-bottom: 50px;
+      text-align: center;
+      background-color: #f5ebeb;
+      padding: 20px;
+      border-radius: 10px;
+      width: 400px;
+      margin-right: auto;
+      margin-left: auto;
+
+    }
+    form input, textarea {
+      display: block;
+      margin: 10px auto;
+      padding: 10px;
+      width: 300px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #f0e7e7;
+      font-size: larger;
+    }
   </style>
 </head>
 
@@ -310,6 +332,19 @@
       </div>
     </div>
   </section>
+
+<div class="form1">
+
+  <form action="../php/Nipuna/success_story.php" method="post">
+    <label for="">Name</label>
+    <input type="text" name="name" required>
+    <label for="">story</label>
+    <textarea name="story" required></textarea>
+    <label for="">telephone</label>
+    <input type="text" name="telephone" required>
+    <input type="submit" value="Submit">
+  </form>
+</div>
 
 
 
