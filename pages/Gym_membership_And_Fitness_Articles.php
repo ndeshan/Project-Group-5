@@ -285,7 +285,7 @@ if(!isset($_SESSION['username'])){
     <header class="header">
       <nav class="navbar">
         <a href="index.html" class="nav-home">Home</a>
-        <a href="Gym_membership_And_Fitness_Articles.html" class="nav-diet">Membership</a>
+        <a href="login.html" class="nav-diet">Membership</a>
         <a href="Blog_and_Articles.html" class="nav-fitness">Blogs</a>
         <a href="About_Us.html" class="nav-about">About</a>
         <a href="Contact_Us.html" class="nav-contact">Contact</a>
