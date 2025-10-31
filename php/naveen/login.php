@@ -53,7 +53,7 @@ mysqli_close($conn);
 
 if(isset($_POST['show_button'])){
 
-    $servername='localhost:3307';
+    $servername='localhost';
     $username='root';
     $password='';
     $database='healthandfitnesshub';
