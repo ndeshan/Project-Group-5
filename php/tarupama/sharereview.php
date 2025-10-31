@@ -24,11 +24,8 @@ $planTitle = 'Share your experience';
 
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['name']) && isset($_POST['comment'])) {
-<<<<<<< HEAD
-    $conn = mysqli_connect("localhost", "root", "", "php_group_project");
-=======
+
     $conn = mysqli_connect("localhost", "root", "", "healthandfitnesshub");
->>>>>>> 6f35819a47c36e0f880a918b41cbca0b05a99ab8
     if (!$conn) {
         die("Connection failed: " . mysqli_connect_error());
     }
@@ -114,11 +111,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['name']) && isset($_PO
         $planId = (int)$i1;
     }
 
-<<<<<<< HEAD
-    $conn = mysqli_connect("localhost", "root", "", "php_group_project");
-=======
+
     $conn = mysqli_connect("localhost", "root", "", "healthandfitnesshub");
->>>>>>> 6f35819a47c36e0f880a918b41cbca0b05a99ab8
     if ($conn) {
         if ($planId === null) {
             

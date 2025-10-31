@@ -1,9 +1,5 @@
 <?php
-<<<<<<< HEAD
-$conn = mysqli_connect("localhost", "root", "", "php_group_project");
-=======
 $conn = mysqli_connect("localhost", "root", "", "healthandfitnesshub");
->>>>>>> 6f35819a47c36e0f880a918b41cbca0b05a99ab8
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
