@@ -6,7 +6,7 @@ if(isset($_POST['login_button'])){
     $get_name=$_POST['input_name'];
     $get_password=$_POST['input_password'];
 
-    $servername='localhost:3307';
+    $servername='localhost';
     $username='root';
     $password='';
     $database='healthandfitnesshub';

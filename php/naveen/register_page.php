@@ -22,7 +22,7 @@ if(preg_match($usernameCheck,$get_username)){
 
 }else{
 
-    $serverName='localhost:3307';
+    $serverName='localhost';
     $userName='root';
     $password='';
     $databaseName='healthandfitnesshub';
