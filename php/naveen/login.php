@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 
 if(isset($_POST['login_button'])){
 
@@ -24,43 +24,23 @@ if(isset($_POST['login_button'])){
 
             }else{
 
-        //echo 'mysql connection successfully<br>';
-        
-                $sql="SELECT username, confirm_password FROM fitness_login_user";
-                $result=mysqli_query($conn,$sql);
 
-                         if(mysqli_num_rows($result)>0){
+    $sql="SELECT * FROM fitness_login_user WHERE username='$get_name' AND password='$get_password'";
+    $result=mysqli_query($conn,$sql);
 
-                                while($row=mysqli_fetch_assoc($result)){
-                                 // echo 'username  '.$row["username"].'  password  '.$row['confirm_password'].'<br>';
+    if(mysqli_num_rows( $result)==1){
+        $row=mysqli_fetch_assoc($result);
 
-                                  if($row["username"]== $get_name && $row['confirm_password']== $get_password){
+        $_SESSION['username']=$row['username'];
+        $_SESSION['password']=$row['password'];
 
-                                                $status=TRUE;
-                                                break;
+        header('Location: ../../pages/Gym_membership_And_Fitness_Articles.php');
+        exit();
 
-                                             }else{
-                                                      $status=FALSE;
-                                                
-                                               
-                                             }
+    }else{
+        echo "<br><h3 style='color:red'>Invalid Username or password!!</h3>";
 
-                                 }
-
-
-                }
-                    if( $status){
-
-                            echo '<br>Login successfully !!!';
-
-                            header('Location: ../../pages/index.html');
-                            exit();
-
-                    }else {
-                            echo "<br><h4 style='color:red'>Password and Username does not match!!.Please check!!</h4>";
-                                               
-
-                    }
+    }
 
 
                 }
@@ -85,7 +65,7 @@ if(isset($_POST['show_button'])){
             }else{
                     $sql="SELECT username, useremail,password FROM fitness_login_user";
                     $result=mysqli_query($conn,$sql);
-                    echo "<table border='1' cellspacing='0'> <tr><th>user name</th> <th>user mail</th> <th>password</th></tr> ";
+                    echo "<table border='0' cellspacing='0' style='width:50%;height:350px;margin-left:auto;margin-right:auto;text-align:center;border:gray solid 1px;background-color:e9ecef;font-family:sans-serif;'> <tr><th style='background-color:#ff8400;'>user name</th> <th style='background-color:#ff8400;'>user mail</th> <th style='background-color:#ff8400;'>password</th></tr> ";
                     if(mysqli_num_rows($result)>0){
                         while($row=mysqli_fetch_assoc( $result)){
                              //   echo "user Name is:".$row['username']."\t";
