@@ -1,9 +1,9 @@
 <?php
     include 'nipuna_conn.php';
-
+    echo "</br>";
     mysqli_select_db($conn, 'healthandfitnesshub');
 
-    $createtable="CREATE TABLE user_feedback (
+    $createtable="CREATE TABLE IF NOT EXISTS user_feedback (
         id INT(6) AUTO_INCREMENT PRIMARY KEY,
         feedback_type VARCHAR(50) ,
         feedback_text TEXT ,
@@ -12,11 +12,12 @@
         email VARCHAR(50) 
     )";
 
-    if (mysqli_query($conn, $createtable) === TRUE) {
+    if (mysqli_query($conn, $createtable)) {
         echo "Table user_feedback created successfully";
     } else {
         echo "Error creating table: " . mysqli_error($conn);
     }
+
 
 mysqli_close($conn);
 

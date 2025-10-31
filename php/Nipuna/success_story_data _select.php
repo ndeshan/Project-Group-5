@@ -1,8 +1,9 @@
 <?php
 include 'nipuna_conn.php';
+echo "<br>";
 mysqli_select_db($conn, 'healthandfitnesshub');
 $message = "";
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+
     $selectquery = "SELECT * FROM success_stories";
     if(mysqli_query($conn, $selectquery)){
         $result = mysqli_query($conn, $selectquery);
@@ -17,5 +18,5 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         echo "Story: " . $row['story'] . "<br>";
         echo "Telephone: " . $row['telephone'] . "<br><br>";
     }
-}   
+
 ?>
