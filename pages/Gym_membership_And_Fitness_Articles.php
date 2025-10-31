@@ -1,3 +1,15 @@
+<?php
+session_start();
+if(!isset($_SESSION['username'])){
+    header('Location: ../../php/naveen/login.html');
+    exit();
+
+}
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -273,11 +285,11 @@
     <header class="header">
       <nav class="navbar">
         <a href="index.html" class="nav-home">Home</a>
-        <a href="Gym_membership_And_Fitness_Articles.html" class="nav-diet">Membership</a>
+        <a href="login.html" class="nav-diet">Membership</a>
         <a href="Blog_and_Articles.html" class="nav-fitness">Blogs</a>
         <a href="About_Us.html" class="nav-about">About</a>
         <a href="Contact_Us.html" class="nav-contact">Contact</a>
-        <a href="login.html" class="nav-login">Login</a>
+        <a href="../php/naveen/logout.php" class="nav-login">logout</a>
       </nav>
       <div class="images">
         <a href="index.html"><img src="../Images/webLogo.png" alt="logo" />
@@ -350,7 +362,7 @@
           <h3>(STANDARD)</h3>
           <h2>$19.9</h2>
           <div class="gold-image">
-            <img src="/Images/membership banner2.png" alt="">
+            <img src="../Images/membership banner2.png" alt="">
           </div>
         </div>
         <table border="0" class="gold-membership-tabel">
@@ -402,7 +414,7 @@
           <h3>(ADVANCED)</h3>
           <h2>$29.9</h2>
           <div class="gold-image">
-            <img src="/Images/membership banner3.png" alt="">
+            <img src="../Images/membership banner3.png" alt="">
           </div>
         </div>
 
