@@ -1,7 +1,7 @@
 <?php
 
 include('binoy_conn.php');
-include('create_contact_table.php');
+//include('create_contact_table.php');
 
 
 
