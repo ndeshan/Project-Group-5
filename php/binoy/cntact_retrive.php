@@ -14,7 +14,7 @@ if ($result->num_rows > 0) {
             <th>Email</th>
             <th>Phone</th>
             <th>Comment</th>
-            <th>Created At</th>
+            
           </tr>";
  
     while($row = $result->fetch_assoc()) {
@@ -24,7 +24,7 @@ if ($result->num_rows > 0) {
                 <td>{$row['email']}</td>
                 <td>{$row['phone']}</td>
                 <td>{$row['comment']}</td>
-                <td>{$row['created_at']}</td>
+                
               </tr>";
     }
     echo "</table>";
