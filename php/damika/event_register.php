@@ -3,9 +3,9 @@ $host = 'localhost';
 $dbname = 'healthandfitnesshub';  
 $username = 'root';    
 $password = '';
-$port = 3306;    
+   
 
-$conn = mysqli_connect($host, $username, $password, $dbname, $port);
+$conn = mysqli_connect($host, $username, $password, $dbname);
 
 
 
@@ -54,7 +54,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if (mysqli_query($conn, $sql)) {
         
-        header("Location: ../pages/thank_you.html");
+        header("Location: ../../pages/thank_you.html");
         exit();
     } else {
         die("Registration failed: " . mysqli_error($conn));

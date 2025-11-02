@@ -189,7 +189,7 @@
 
    
     <?php
-    $conn = mysqli_connect('localhost', 'root', '', 'healthandfitnesshub', 3307);
+    $conn = mysqli_connect('localhost', 'root', '', 'healthandfitnesshub');
     if (!$conn) {
         die("Connection failed: " . mysqli_connect_error());
     }
