@@ -326,29 +326,30 @@
 
     <div class="form-section">
       <h2>Register</h2>
-      <form>
+      <form method="POST" action="../php/damika/event_register.php" >
         <label>Name*</label>
-        <input type="text" id="name" required>
+        <input type="text" name='name'id="name" required>
 
         <label>Email*</label>
-        <input type="email" id="email" required>
+        <input type="email" name='email' id="email" required>
 
         <label>Phone</label>
-        <input type="tel" id="contact">
+        <input type="tel" name='contact' id="contact">
 
         <label>Comments</label>
-        <textarea rows="4"></textarea>
+        <textarea rows="4" name="comments"></textarea>
         <label>Event</label>
-        <select id="event_select" onchange="events()">
+        <select id="event_select" name='event_select' onchange="events()">
           <option value="Yoga Workshop">Yoga Workshop</option>
           <option value="Weight Loss Challenge">Weight Loss Challenge</option>
           <option value="Marathon">Marathon</option>
           <option value="Nutrition workshop">Nutrition workshop</option>
         </select>
 
-        <button type="button" value="Submit" onclick="Submit()">Register</button>
+        <input type="submit" value="Submit">
       </form>
     </div>
+    
 
 
     <div class="details-section">
@@ -374,7 +375,18 @@
 
 
     </div>
+    
   </div>
+  <center><button onclick="window.location.href='../php/damika/reg.php'" 
+        style="padding: 10px 20px; 
+               background-color: #007bff; 
+               color: white; 
+               border: none; 
+               border-radius: 6px; 
+               cursor: pointer; 
+               font-size: 16px;">
+    View Registered Users
+</button></center>
   <script>
     function events() {
       let x = document.getElementById("event_select").value;
@@ -426,31 +438,7 @@
     }
 
 
-    function Submit() {
-      let x = document.getElementById("event_select").value;
-      var name = document.getElementById("name").value;
-
-      var email = document.getElementById("email").value;
-      var contact = document.getElementById("contact").value;
-
-
-
-      if (name == null || name === "") {
-        alert("Name Cant Be Empty");
-        return;
-      }
-      else if (email == null || email === "") {
-        alert("Email Cant Be Empty");
-        return;
-      }
-
-      else if (contact == null || contact === "") {
-        alert("Contact Cant Be Empty");
-        return;
-      }
-      window.alert("You Have Successfully Registerd To the " + x + "Event");
-    }
-
+    
 
 
 

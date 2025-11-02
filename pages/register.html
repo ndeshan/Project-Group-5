@@ -202,10 +202,11 @@
             ><img src="../Images/webLogo.png" alt="logo" />
           </a>
         </div>
-      </header><div class="login-container">
+      </header>
+      <div class="login-container">
         <div class="pic-container">
-          <img src="/Images/webLogo.png" alt="background-image" class="web-Logo" >
-          <img src="/Images/sign-up-photo.jpg" alt="background-image" class="back-image" >
+          <img src="../Images/webLogo.png" alt="background-image" class="web-Logo" >
+          <img src="../Images/sign-up-photo.jpg" alt="background-image" class="back-image" >
   
   
         </div>
@@ -214,21 +215,23 @@
           <h1>Sign Up</h1>
           <p>Let's sign up quickly to get started</p>
           </div>
-          <form action="" method="post" onsubmit="return signDataCheck()">
+
+          
+          <form action="../php/naveen/register_page.php" method="post" >
           <div class="login-form">
           <label for="nameId">User Name</label><br>
-          <input type="text" id="nameId" placeholder="enter user name" required><br>
+          <input type="text" id="nameId" placeholder="enter user name"  name="username" required><br>
   
           <label for="nameId">Email</label><br>
-          <input type="email" id="nameId" placeholder="enter email" required><br>
+          <input type="text" id="nameId" placeholder="enter email" name="user_email"required ><br>
   
           <label for="passwordId">Password</label><br>
-          <input type="password" id="passwrordId1" placeholder="enter password" required><br>
+          <input type="password" id="passwrordId1" placeholder="enter password"  name="password" required><br>
   
           <label for="passwordId">Confirm Password</label><br>
-          <input type="password" id="passwrordId2" placeholder="confirm password" required><br>
+          <input type="password" id="passwrordId2" placeholder="confirm password" name="confirm_password" required><br>
   
-          <input type="submit" value="Sign Up" ><br>
+          <input type="submit" value="Sign Up" name="submit_values"><br>
           <input type="reset" value="Reset">
   
          
@@ -336,9 +339,9 @@
       </section>
 
     </footer>
-<script>
+<!-- <script>
  
- 
+  onsubmit="return signDataCheck()"
 
 function signDataCheck(){
   let letters=/^[A-Za-z]+$/;
@@ -377,7 +380,7 @@ function signDataCheck(){
 }
 
 
-</script>
+</script> -->
 
 
   </body>
