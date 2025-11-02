@@ -8,6 +8,7 @@
   <meta name="author" content="Group-5 project" />
 
   <title>Fitness Tips</title>
+  
   <link rel="icon" href="../Images/webLogo.png" type="icon" />
   <link rel="stylesheet" href="../Layout/fitness-style.css" />
   
@@ -456,31 +457,36 @@
   <br>
 
 
+<section style="background-color: #2a3642; padding: 40px; margin-top: 40px; border-radius: 12px; max-width: 700px; margin-left: auto; margin-right: auto;">
+  <h2 style="color: #fd8114; text-align: center; font-size: 32px;">Share Your Fitness Tip!</h2>
+  <form action="fitness-tips.php" method="POST" style="color: white; font-size: 18px;">
+    
+    
 
-  </section>
+    <div style="margin-bottom: 15px;">
+      <label for="name">Your Name:</label><br>
+      <input type="text" id="name" name="name" required 
+             style="width: 100%; padding: 10px; border-radius: 6px; border: 1px solid #555; background: #333; color: white;">
+    </div>
 
-  <section>
-    <table border="3" width="100%" height="40%">
-      <tr>
-        <td
-          style="font-size: 50px;font-family:Roboto bold; color:rgb(254, 251, 251); background-image: url('../Images/last.jpg'); background-size: cover;">
-          <center>
-            <marquee direction="left" scrollamount="30">
-              <p style="color: rgb(11, 11, 11);"><i><b>"Listen To Your Body, Not Your Ego"
-            </marquee>
-            </p>
+    <div style="margin-bottom: 15px;">
+      <label for="tip">Your Fitness Tip (max 300 chars):</label><br>
+      <textarea id="tip" name="tip" rows="4" maxlength="300" required
+                style="width: 100%; padding: 10px; border-radius: 6px; border: 1px solid #555; background: #333; color: white; resize: vertical;"></textarea>
+    </div>
 
-            </i><br>
-            <p style="background-color: #191f26;opacity: 0.7;">Don't be afraid to put a foot forward for something<br>
-              that's good for your body</p> </b>
-          </center>
-        </td>
-      </tr>
+    <button type="submit" name="submit" value="1"
+            style="background-color: #fd8114; color: white; padding: 12px 24px; font-size: 18px; border: none; border-radius: 6px; cursor: pointer; width: 100%;">
+      Submit Tip
+    </button>
 
-    </table>
-
-
-  </section>
+    <?php if (isset($_GET['status']) && $_GET['status'] === 'success'): ?>
+      <p style="color: #4caf50; text-align: center; margin-top: 15px;">✅ Thank you! Your tip was submitted.</p>
+    <?php elseif (isset($_GET['status']) && $_GET['status'] === 'error'): ?>
+      <p style="color: #f44336; text-align: center; margin-top: 15px;">⚠️ Please fill in valid info (max 300 characters).</p>
+    <?php endif; ?>
+  </form>
+</section>
 
 
 
