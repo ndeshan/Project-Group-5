@@ -1,4 +1,3 @@
-<<<<<<< HEAD:pages/Fitness_Tips.html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -460,9 +459,9 @@
 
 <section style="background-color: #2a3642; padding: 40px; margin-top: 40px; border-radius: 12px; max-width: 700px; margin-left: auto; margin-right: auto;">
   <h2 style="color: #fd8114; text-align: center; font-size: 32px;">Share Your Fitness Tip!</h2>
- <form action="../php/eeshani/fitness.php" method="POST"  style="color: white; font-size: 18px;">
+  <form action="../php/eeshani/fitness.php" method="POST" style="color: white; font-size: 18px;">
 
-    <div style="margin-bottom: 15px;">
+  <div style="margin-bottom: 15px;">
       <label for="name">Your Name:</label><br>
       <input type="text" id="name" name="name" required 
              style="width: 100%; padding: 10px; border-radius: 6px; border: 1px solid #555; background: #333; color: white;">
@@ -1056,6 +1055,7 @@
   <form action="fitness-tips.php" method="POST" style="color: white; font-size: 18px;">
     
     
+    
 
     <div style="margin-bottom: 15px;">
       <label for="name">Your Name:</label><br>
@@ -1177,5 +1177,4 @@
   </footer>
 </body>
 
->>>>>>> 74b899b41a81569a781c7dde20d8646fcb5824ee:pages/Fitness_Tips.php
 </html>
