@@ -2,8 +2,8 @@
 include('binoy_conn.php');
 
 // --- DELETE operation ---
-if (isset($_GET['delete'])) {
-    $id = $_GET['delete'];
+if (isset($_POST['delete'])) {
+    $id = $_POST['delete'];
     $conn->query("DELETE FROM contact_us WHERE id=$id");
     header("Location: cntact_retrive.php");
     exit;
@@ -27,8 +27,8 @@ if (isset($_POST['update'])) {
 
 // --- SEARCH operation ---
 $search = "";
-if (isset($_GET['search'])) {
-    $search = $_GET['search'];
+if (isset($_POST['search'])) {
+    $search = $_POST['search'];
     $sql = "SELECT * FROM contact_us 
             WHERE name LIKE '%$search%' OR email LIKE '%$search%' OR phone LIKE '%$search%' 
             ORDER BY id DESC";
@@ -60,7 +60,7 @@ $result = $conn->query($sql);
 <h2>Search / Update / Delete Contacts</h2>
 
 <!-- Search Box -->
-<form method="get" action="" class="search-box">
+<form method="post" action="" class="search-box">
     <input type="text" name="search" placeholder="Search by name, email or number..." value="<?= htmlspecialchars($search) ?>">
     <button type="submit" class="btn btn-search">Search</button>
 </form>
@@ -72,6 +72,7 @@ if ($result->num_rows > 0) {
         <div class="card">
             <form method="post" action="">
                 <input type="hidden" name="id" value="<?= $row['id'] ?>">
+
                 <label><strong>Name:</strong></label>
                 <input type="text" name="name" value="<?= htmlspecialchars($row['name']) ?>">
 
@@ -85,7 +86,9 @@ if ($result->num_rows > 0) {
                 <textarea name="comment"><?= htmlspecialchars($row['comment']) ?></textarea>
 
                 <button type="submit" name="update" class="btn btn-update">Update</button>
-                <a href="?delete=<?= $row['id'] ?>" class="btn btn-delete" onclick="return confirm('Delete this record?');">Delete</a>
+
+                <!-- DELETE as POST button -->
+                <button type="submit" name="delete" value="<?= $row['id'] ?>" class="btn btn-delete" onclick="return confirm('Delete this record?');">Delete</button>
             </form>
         </div>
         <?php
