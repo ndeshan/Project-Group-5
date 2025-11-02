@@ -218,7 +218,7 @@ $result = $conn->query("SELECT * FROM Diet_Plans");
   ?>
 </div>
 
-<a href="Diet_and_Nutrition.html" class="back-btn">← Back to Diet & Nutrition</a>
+<a href="../../pages/Diet_and_Nutrition.html" class="back-btn">← Back to Diet & Nutrition</a>
 
 </body>
 </html>
