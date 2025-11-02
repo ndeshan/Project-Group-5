@@ -150,6 +150,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $guideline = 'Please enter valid values';
     }
 }
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -355,7 +356,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
               Weight (kg):
             </td>
             <td colspan="2">
-              <input type="number" id="weight" name="weight" class="input" placeholder="Enter your weight" min="1" max="200" step="0.1" value="<?php echo htmlspecialchars($weight); ?>">
+              <input type="number" id="weight" name="weight" class="input" placeholder="Enter your weight" min="1" max="500" step="0.1" value="<?php echo htmlspecialchars($weight); ?>">
             </td>
           </tr>
           <tr>
@@ -376,6 +377,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <p id="result" class="xxx"><?php echo ($bmiDisplay !== '') ? 'Your BMI is: <strong style="color:red;">' . $bmiDisplay . '</strong>' : ''; ?></p>
         <p id="status" class="xx"><?php echo htmlspecialchars($status); ?></p>
         <p id="guideline" class="x"><?php echo htmlspecialchars($guideline); ?></p>
+        
     </section>
     </center>
 
