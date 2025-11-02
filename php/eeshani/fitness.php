@@ -7,9 +7,22 @@ $password = '';
 $conn = mysqli_connect($host, $username, $password, $dbname);
 if (!$conn) die("Connection failed: " . mysqli_connect_error());
 
+$sql = "CREATE TABLE IF NOT EXISTS fitness_tips (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    age INT,
+    tip VARCHAR(300) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+)";
+
+mysqli_query($conn, $sql);
+
 $errors = [];
 $success = false;
 $showTips = false;
+
+
 
 if (isset($_POST['submit_tip'])) {
     $name  = trim($_POST['name'] ?? '');
