@@ -1,7 +1,7 @@
 
 <?php
 include 'nipuna_conn.php';
-
+echo "<br>";
 mysqli_select_db($conn, 'healthandfitnesshub');
 
 $message = "";

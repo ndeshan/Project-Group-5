@@ -10,6 +10,63 @@
   <link rel="icon" href="../Images/webLogo.png" type="icon" />
   <link rel="stylesheet" href="../Layout/style.css" />
   <link rel="stylesheet" href="../stylesheet/style-2.css">
+  <style>
+  .training-section-form {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+  }
+  .form-container {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  .form-container h2 {
+    color: #333;
+    margin-bottom: 10px;
+  }
+  .form-container p {
+    color: #666;
+    margin-bottom: 30px;
+  }
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .form-group {
+    text-align: left;
+  }
+  .form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+    color: #444;
+  }
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+  }
+  .button {
+    background-color: orange;
+    color: white;
+    border: none;
+    padding: 14px 24px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-top: 10px;
+  }
+  .button:hover {
+    background-color: #e67e22;
+  }
+</style>
 </head>
 
 <body>
@@ -126,6 +183,49 @@
       <a href="register.html" class="training-button"><button class="button">Get Started Today</button></a>
     </div>
   </section>
+
+
+  <section class="training-section-form">
+  <div class="form-container">
+    <h2>GET IN TOUCH</h2>
+    <p>Ready to start your fitness journey? Fill out the form below and we’ll contact you within 24 hours.</p>
+
+    <form action="../php/nimnadee/submit request.php" method="POST" class="contact-form">
+      <div class="form-group">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone">
+      </div>
+
+      <div class="form-group">
+        <label for="package">Interested In</label>
+        <select id="package" name="package" required>
+          <option value="">-- Select a Package --</option>
+          <option value="Starter">Starter Package</option>
+          <option value="Pro">Pro Package</option>
+          <option value="Elite">Elite Package</option>
+          <option value="Other">Other / Not Sure</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="message">Your Goals or Questions</label>
+        <textarea id="message" name="message" rows="4" placeholder="E.g., weight loss, muscle gain, flexibility..."></textarea>
+      </div>
+
+      <button type="submit" class="button">Send Request</button>
+    </form>
+  </div>
+</section>
 
   <footer>
 
