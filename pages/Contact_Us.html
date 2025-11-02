@@ -45,15 +45,15 @@
 
   <form action="../php/binoy/contact_us.php" class="contact-form" method="post">
       <p class="name-lable">Name:</p>
-      <input type="text" class="name" required />
+      <input type="text" class="name" name = "name"required />
       <p class="email-lable">Email:</p>
-      <input type="email" class="email" required />
+      <input type="email" class="email" name = "email" required />
 
       <p class="number-lable">Number:</p>
-      <input type="text" class="number" required />
+      <input type="text" class="number" name = "number" required />
       <p class="comment-lable">Comment:</p>
-      <textarea name="textarea" id="textarea"></textarea>
-      <input type="button" class="button" id="button" value="Submit" />
+      <textarea name="comment" id="textarea"></textarea>
+      <input type="submit" class="button" id="button" value="Submit" />
     </form>
     <form action="../php/binoy/cntact_retrive.php" method="get">
   <input type="submit" value="View All Submissions" class="button" />

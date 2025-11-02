@@ -3,7 +3,7 @@
 include('binoy_conn.php');
 
 
-$sql = "SELECT * FROM contact_us ORDER BY created_at DESC";
+$sql = "SELECT * FROM contact_us";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
