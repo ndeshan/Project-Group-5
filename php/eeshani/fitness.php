@@ -251,7 +251,7 @@ mysqli_close($conn);
         </div>
 
         <div class="back-section">
-            <a href="../../pages/fitness_Tips.php" class="btn btn-back">Back to Main Page</a>
+            <a href="../../pages/fitness_Tips.html" class="btn btn-back">Back to Main Page</a>
         </div>
     </div>
     <?php endif; ?>
