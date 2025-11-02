@@ -1,7 +1,7 @@
 <?php
 session_start();
 if(!isset($_SESSION['username'])){
-    header('Location: ../../php/naveen/login.html');
+    header('Location: ../php/naveen/login.html');
     exit();
 
 }
